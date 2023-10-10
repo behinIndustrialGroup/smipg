@@ -19,9 +19,6 @@ yarn-error.log
 /.vscode
 
 /vendor/laravel
-/vendor/league
-/vendor/mockery
-/vendor/monolog
 /vendor/myclabs
 /vendor/nesbot
 /vendor/nette
