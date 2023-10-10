@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/test', function () {
+    $ar=  scandir('C:\xampp\htdocs\smipg\vendor');
+    foreach($ar as $a){
+        echo '/vendor/'. $a . '<br>';
+    }
+});
 
 Route::get('/', function () {
     return view('auth.login');
