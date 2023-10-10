@@ -19,9 +19,6 @@ yarn-error.log
 /.vscode
 
 /vendor/laravel
-/vendor/myclabs
-/vendor/nesbot
-/vendor/nette
 /vendor/nikic
 /vendor/nunomaduro
 /vendor/phar-io
