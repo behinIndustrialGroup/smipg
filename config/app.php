@@ -160,6 +160,7 @@ return [
          * Package Service Providers...
          */
         Mkhodroo\UserRoles\UserRolesServiceProvider::class,
+        Mkhodroo\MkhodrooProcessMaker\MKProcessMakerProvider::class,
 
         /*
          * Application Service Providers...

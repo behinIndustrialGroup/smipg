@@ -4,7 +4,7 @@
     <a href="index3.html" class="brand-link">
         <img src="{{ url('public/dashboard/dist/img/avatar5.png') }}" alt="AdminLTE Logo"
             class="brand-image img-circle elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light">پنل مدیریت</span>
+        <span class="brand-text font-weight-light">پنل کاربری</span>
     </a>
 
     <div class="sidebar" style="direction: ltr">

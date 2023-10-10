@@ -9,13 +9,13 @@ return [
                 'dashboard' => [ 'fa_name' => 'داشبرد', 'route-name' => '', 'route-url' => 'admin' ],
             ]
         ],
-        // 'cases' => [
-        //     'fa_name' => 'کارپوشه',
-        //     'submenu' => [
-        //         'new-case' => [ 'fa_name' => 'فرایند جدید', 'route-name' => 'MkhodrooProcessMaker.forms.start', 'route-url' => '' ],
-        //         'inbox' => [ 'fa_name' => 'انجام نشده', 'route-name' => 'MkhodrooProcessMaker.forms.draft', 'route-url' => '' ]
-        //     ]
-        // ],
+        'cases' => [
+            'fa_name' => 'کارپوشه',
+            'submenu' => [
+                'new-case' => [ 'fa_name' => 'فرایند جدید', 'route-name' => 'MkhodrooProcessMaker.forms.start', 'route-url' => '' ],
+                'inbox' => [ 'fa_name' => 'انجام نشده', 'route-name' => 'MkhodrooProcessMaker.forms.draft', 'route-url' => '' ]
+            ]
+        ],
         // 'agencies' => [
         //     'fa_name' => 'مراکز',
         //     'submenu' => [

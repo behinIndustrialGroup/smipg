@@ -26,7 +26,8 @@
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/",
-            "Mkhodroo\\UserRoles\\": "packages/mkhodroo-user-roles/src"
+            "Mkhodroo\\UserRoles\\": "packages/mkhodroo-user-roles/src",
+            "Mkhodroo\\MkhodrooProcessMaker\\": "packages/mkhodroo-process-maker/src"
         }
     },
     "autoload-dev": {
