@@ -19,12 +19,6 @@ yarn-error.log
 /.vscode
 
 /vendor/laravel
-/vendor/psr
-/vendor/psy
-/vendor/ralouphie
-/vendor/ramsey
-/vendor/sebastian
-/vendor/spatie
 /vendor/symfony
 /vendor/theseer
 /vendor/tijsverkoyen
