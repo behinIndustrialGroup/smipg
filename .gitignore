@@ -19,7 +19,6 @@ yarn-error.log
 /.vscode
 
 /vendor/laravel
-/vendor/symfony
 /vendor/theseer
 /vendor/tijsverkoyen
 /vendor/vlucas
