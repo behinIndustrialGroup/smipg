@@ -19,8 +19,3 @@ yarn-error.log
 /.vscode
 
 /vendor/laravel
-/vendor/theseer
-/vendor/tijsverkoyen
-/vendor/vlucas
-/vendor/voku
-/vendor/webmozart
