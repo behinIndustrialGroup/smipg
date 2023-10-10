@@ -19,7 +19,6 @@ yarn-error.log
 /.vscode
 
 /vendor/laravel
-/vendor/phpunit
 /vendor/psr
 /vendor/psy
 /vendor/ralouphie
