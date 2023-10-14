@@ -118,6 +118,7 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
             'Mockery\\' => 8,
             'Mkhodroo\\UserRoles\\' => 19,
             'Mkhodroo\\MkhodrooProcessMaker\\' => 30,
+            'Mkhodroo\\AgencyInfo\\' => 20,
         ),
         'L' => 
         array (
@@ -401,6 +402,10 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
         'Mkhodroo\\MkhodrooProcessMaker\\' => 
         array (
             0 => __DIR__ . '/../..' . '/packages/mkhodroo-process-maker/src',
+        ),
+        'Mkhodroo\\AgencyInfo\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src',
         ),
         'League\\MimeTypeDetection\\' => 
         array (
@@ -3236,6 +3241,7 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
         'League\\MimeTypeDetection\\GeneratedExtensionToMimeTypeMap' => __DIR__ . '/..' . '/league/mime-type-detection/src/GeneratedExtensionToMimeTypeMap.php',
         'League\\MimeTypeDetection\\MimeTypeDetector' => __DIR__ . '/..' . '/league/mime-type-detection/src/MimeTypeDetector.php',
         'League\\MimeTypeDetection\\OverridingExtensionToMimeTypeMap' => __DIR__ . '/..' . '/league/mime-type-detection/src/OverridingExtensionToMimeTypeMap.php',
+        'Mkhodroo\\AgencyInfo\\AgencyInfoProvider' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/AgencyInfoProvider.php',
         'Mkhodroo\\MkhodrooProcessMaker\\Controllers\\AuthController' => __DIR__ . '/../..' . '/packages/mkhodroo-process-maker/src/Controllers/AuthController.php',
         'Mkhodroo\\MkhodrooProcessMaker\\Controllers\\CaseController' => __DIR__ . '/../..' . '/packages/mkhodroo-process-maker/src/Controllers/CaseController.php',
         'Mkhodroo\\MkhodrooProcessMaker\\Controllers\\CurlRequestController' => __DIR__ . '/../..' . '/packages/mkhodroo-process-maker/src/Controllers/CurlRequestController.php',

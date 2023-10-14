@@ -14,10 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/test', function () {
-    $ar=  scandir('C:\xampp\htdocs\smipg\vendor');
-    foreach($ar as $a){
-        echo '/vendor/'. $a . '<br>';
-    }
+    
 });
 
 Route::get('/', function () {

@@ -2704,6 +2704,7 @@ return array(
     'League\\MimeTypeDetection\\GeneratedExtensionToMimeTypeMap' => $vendorDir . '/league/mime-type-detection/src/GeneratedExtensionToMimeTypeMap.php',
     'League\\MimeTypeDetection\\MimeTypeDetector' => $vendorDir . '/league/mime-type-detection/src/MimeTypeDetector.php',
     'League\\MimeTypeDetection\\OverridingExtensionToMimeTypeMap' => $vendorDir . '/league/mime-type-detection/src/OverridingExtensionToMimeTypeMap.php',
+    'Mkhodroo\\AgencyInfo\\AgencyInfoProvider' => $baseDir . '/packages/mkhodroo-agency-info/src/AgencyInfoProvider.php',
     'Mkhodroo\\MkhodrooProcessMaker\\Controllers\\AuthController' => $baseDir . '/packages/mkhodroo-process-maker/src/Controllers/AuthController.php',
     'Mkhodroo\\MkhodrooProcessMaker\\Controllers\\CaseController' => $baseDir . '/packages/mkhodroo-process-maker/src/Controllers/CaseController.php',
     'Mkhodroo\\MkhodrooProcessMaker\\Controllers\\CurlRequestController' => $baseDir . '/packages/mkhodroo-process-maker/src/Controllers/CurlRequestController.php',

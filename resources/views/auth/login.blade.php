@@ -10,7 +10,7 @@
             <form action="javascript:void(0)" method="post" id="login-form">
                 @csrf
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" name="email" placeholder="موبایل">
+                    <input type="text" class="form-control" name="mobile" placeholder="موبایل">
                     <div class="input-group-append">
                         <div class="input-group-text">
                             <span class="fa fa-phone"></span>
@@ -59,7 +59,7 @@
                 $('#login-form').serialize(),
                 function(response) {
                     show_message("به صفحه داشبورد منتقل میشوید")
-                    window.location = "{{ url('admin') }}"
+                    window.location = "{{ url('dashboard') }}"
                 },
                 function(response) {
                     // console.log(response);

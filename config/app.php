@@ -161,6 +161,7 @@ return [
          */
         Mkhodroo\UserRoles\UserRolesServiceProvider::class,
         Mkhodroo\MkhodrooProcessMaker\MKProcessMakerProvider::class,
+        \Mkhodroo\AgencyInfo\AgencyInfoProvider::class,
 
         /*
          * Application Service Providers...
