@@ -19,6 +19,9 @@
                 </td>
                 <td>
                     @if ($field_detail['type'] == 'text')
+                        @php
+                            $required = $field_detail['required'] ? 'required' : '';
+                        @endphp
                         <input type="text" name="{{ $field_key }}" value="{{ $value }}" class="form-control"
                             id="">
                     @endif
