@@ -70,7 +70,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'Asia/Tehran',
 
     /*
     |--------------------------------------------------------------------------
@@ -83,7 +83,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'fa',
 
     /*
     |--------------------------------------------------------------------------
@@ -96,7 +96,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'en',
+    'fallback_locale' => 'fa',
 
     /*
     |--------------------------------------------------------------------------
@@ -162,6 +162,7 @@ return [
         Mkhodroo\UserRoles\UserRolesServiceProvider::class,
         Mkhodroo\MkhodrooProcessMaker\MKProcessMakerProvider::class,
         \Mkhodroo\AgencyInfo\AgencyInfoProvider::class,
+        Mkhodroo\Cities\CityProvider::class,
 
         /*
          * Application Service Providers...

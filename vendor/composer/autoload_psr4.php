@@ -61,6 +61,7 @@ return array(
     'Mockery\\' => array($vendorDir . '/mockery/mockery/library/Mockery'),
     'Mkhodroo\\UserRoles\\' => array($baseDir . '/packages/mkhodroo-user-roles/src'),
     'Mkhodroo\\MkhodrooProcessMaker\\' => array($baseDir . '/packages/mkhodroo-process-maker/src'),
+    'Mkhodroo\\Cities\\' => array($baseDir . '/packages/mkhodroo-cities/src'),
     'Mkhodroo\\AgencyInfo\\' => array($baseDir . '/packages/mkhodroo-agency-info/src'),
     'League\\MimeTypeDetection\\' => array($vendorDir . '/league/mime-type-detection/src'),
     'League\\Flysystem\\Local\\' => array($vendorDir . '/league/flysystem-local'),

@@ -118,6 +118,7 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
             'Mockery\\' => 8,
             'Mkhodroo\\UserRoles\\' => 19,
             'Mkhodroo\\MkhodrooProcessMaker\\' => 30,
+            'Mkhodroo\\Cities\\' => 16,
             'Mkhodroo\\AgencyInfo\\' => 20,
         ),
         'L' => 
@@ -402,6 +403,10 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
         'Mkhodroo\\MkhodrooProcessMaker\\' => 
         array (
             0 => __DIR__ . '/../..' . '/packages/mkhodroo-process-maker/src',
+        ),
+        'Mkhodroo\\Cities\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/packages/mkhodroo-cities/src',
         ),
         'Mkhodroo\\AgencyInfo\\' => 
         array (
@@ -3242,6 +3247,12 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
         'League\\MimeTypeDetection\\MimeTypeDetector' => __DIR__ . '/..' . '/league/mime-type-detection/src/MimeTypeDetector.php',
         'League\\MimeTypeDetection\\OverridingExtensionToMimeTypeMap' => __DIR__ . '/..' . '/league/mime-type-detection/src/OverridingExtensionToMimeTypeMap.php',
         'Mkhodroo\\AgencyInfo\\AgencyInfoProvider' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/AgencyInfoProvider.php',
+        'Mkhodroo\\AgencyInfo\\Controllers\\AgencyController' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/Controllers/AgencyController.php',
+        'Mkhodroo\\AgencyInfo\\Controllers\\AgencyListController' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/Controllers/AgencyListController.php',
+        'Mkhodroo\\AgencyInfo\\Controllers\\CreateAgencyController' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/Controllers/CreateAgencyController.php',
+        'Mkhodroo\\AgencyInfo\\Controllers\\SaveInfoController' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/Controllers/SaveInfoController.php',
+        'Mkhodroo\\AgencyInfo\\Models\\AgencyInfo' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/Models/AgencyInfo.php',
+        'Mkhodroo\\Cities\\Controllers\\CityController' => __DIR__ . '/../..' . '/packages/mkhodroo-cities/src/Controllers/CityController.php',
         'Mkhodroo\\MkhodrooProcessMaker\\Controllers\\AuthController' => __DIR__ . '/../..' . '/packages/mkhodroo-process-maker/src/Controllers/AuthController.php',
         'Mkhodroo\\MkhodrooProcessMaker\\Controllers\\CaseController' => __DIR__ . '/../..' . '/packages/mkhodroo-process-maker/src/Controllers/CaseController.php',
         'Mkhodroo\\MkhodrooProcessMaker\\Controllers\\CurlRequestController' => __DIR__ . '/../..' . '/packages/mkhodroo-process-maker/src/Controllers/CurlRequestController.php',

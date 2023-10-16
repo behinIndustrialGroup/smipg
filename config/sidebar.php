@@ -22,6 +22,12 @@ return [
         //         'dashboard' => [ 'fa_name' => 'همه', 'route-name' => 'agency.list-form', 'route-url' => '' ],
         //     ]
         // ],
+        'agencies' => [
+            'fa_name' => 'اطلاعات مراکز',
+            'submenu' => [
+                'all' => [ 'fa_name' => 'همه', 'route-name' => 'agencyInfo.listForm', 'route-url' => '' ],
+            ]
+        ],
         'users' => [
             'fa_name' => 'کاربران',
             'submenu' => [

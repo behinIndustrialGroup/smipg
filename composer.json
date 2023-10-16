@@ -28,7 +28,8 @@
             "Database\\Seeders\\": "database/seeders/",
             "Mkhodroo\\UserRoles\\": "packages/mkhodroo-user-roles/src",
             "Mkhodroo\\MkhodrooProcessMaker\\": "packages/mkhodroo-process-maker/src",
-            "Mkhodroo\\AgencyInfo\\": "packages/mkhodroo-agency-info/src"
+            "Mkhodroo\\AgencyInfo\\": "packages/mkhodroo-agency-info/src",
+            "Mkhodroo\\Cities\\": "packages/mkhodroo-cities/src/"
         }
     },
     "autoload-dev": {
