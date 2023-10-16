@@ -14,4 +14,5 @@ Route::name('agencyInfo.')->prefix('agency-info')->middleware(['web', 'auth','ac
     Route::get('list', [AgencyListController::class, 'list'])->name('list');
     Route::get('edit/{parent_id}', [AgencyController::class, 'view'])->name('editForm');
     Route::post('edit', [AgencyController::class, 'edit'])->name('edit');
+    Route::post('fin-edit', [AgencyController::class, 'finEdit'])->name('finEdit');
 });

@@ -6,6 +6,7 @@ use App\CustomClasses\SimpleXLSX;
 use Illuminate\Support\Facades\Route;
 use Mkhodroo\MkhodrooProcessMaker\Controllers\AuthController;
 use Mkhodroo\MkhodrooProcessMaker\Controllers\CaseController;
+use Mkhodroo\MkhodrooProcessMaker\Controllers\CaseTrackerController;
 use Mkhodroo\MkhodrooProcessMaker\Controllers\CurlRequestController;
 use Mkhodroo\MkhodrooProcessMaker\Controllers\DeleteCaseController;
 use Mkhodroo\MkhodrooProcessMaker\Controllers\DraftCaseController;
@@ -18,6 +19,7 @@ use Mkhodroo\MkhodrooProcessMaker\Controllers\PMVacationController;
 use Mkhodroo\MkhodrooProcessMaker\Controllers\ProcessController;
 use Mkhodroo\MkhodrooProcessMaker\Controllers\SetCaseVarsController;
 use Mkhodroo\MkhodrooProcessMaker\Controllers\StartCaseController;
+use Mkhodroo\MkhodrooProcessMaker\Controllers\StepController;
 use Mkhodroo\MkhodrooProcessMaker\Controllers\TaskController;
 use Mkhodroo\MkhodrooProcessMaker\Controllers\ToDoCaseController;
 use Mkhodroo\MkhodrooProcessMaker\Controllers\TriggerController;
@@ -25,6 +27,11 @@ use Mkhodroo\MkhodrooProcessMaker\Controllers\VariableController;
 
 Route::name('MkhodrooProcessMaker.')->prefix('pm')->middleware(['web', 'auth', 'access'])->group(function(){
     Route::get('test', function(){
+        $a = CaseTrackerController::get("932126309652824ec04c005092545041");
+        echo "<pre>";
+        print_r($a);
+        echo "</pre>";
+        exit();
         $docs = InputDocController::list("55328747465212ff51cf735075979441");
         $doc = collect($docs)->where('app_doc_uid', "2642967896523d5d0875784005814484");
         foreach($doc as $doc){

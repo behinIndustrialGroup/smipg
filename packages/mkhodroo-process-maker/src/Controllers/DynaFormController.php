@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 
 class DynaFormController extends Controller
 {
@@ -17,12 +18,18 @@ class DynaFormController extends Controller
     function get(Request $r)
     {
 
-        $task = TaskController::getByTaskId($r->taskId);
-        $triggers =  TriggerController::list();
-        foreach ($triggers as $trigger) {
-            TriggerController::excute($trigger->guid, $r->caseId, $r->delIndex);
+        $steps = StepController::list($r->processId, $r->taskId);
+        foreach($steps as $step){
+            if($step->step_type_obj === "DYNAFORM"){
+                $dynaform = $step->step_uid_obj;
+            }
+            $triggers = $step->triggers;
+            foreach($triggers as $trigger){
+                if($trigger->st_type === "BEFORE"){
+                    TriggerController::excute($trigger->tri_uid, $r->caseId);
+                }
+            }
         }
-        $dynaform = $task->dynaform;
         if (!$dynaform) {
             return response("شناسه فرم پیدا نشد", 400);
         }
@@ -68,7 +75,7 @@ class DynaFormController extends Controller
                     aria-hidden='true'>&times;</button>
             </div>";
         foreach ($fields as $rows) {
-            echo "<div class='row' style='margin-bottom: 10px'>";
+            echo "<div class='row' style='margin-bottom: 20px'>";
             foreach ($rows as $field) {
                 $field_name = isset($field->name) ? $field->name : '';
                 $field_value = isset($variable_values->$field_name) ? $variable_values->$field_name : '';
@@ -97,8 +104,10 @@ class DynaFormController extends Controller
                         echo  "</div>";
                     }
                     if ($field->type == "datetime") {
+                        $date = new SDate();
+                        $field_value = $date->toGrDate($field_value);
                         echo  "<div class='col-sm-$field->colSpan'>";
-                        echo  "$field->label: <input type='text' name='$field->name' class='form-control' value='$field_value' $field_required $field_mode>";
+                        echo  "$field->label: <input type='text' name='$field->name' class='form-control persian-date' value='$field_value' $field_required $field_mode>";
                         echo  "</div>";
                     }
                     if ($field->type == "textarea") {
@@ -121,8 +130,8 @@ class DynaFormController extends Controller
                     if ($field->type == 'dropdown') {
                         echo  "<div class='col-sm-$field->colSpan'>";
                         echo  "$field->label: ";
-                        echo "<div>";
-                        echo "<select name='$field->name' class='form-control' $field_required $field_mode>";
+                        echo "<div class='form-group'>";
+                        echo "<select name='$field->name' class='form-control select2' $field_required $field_mode>";
                         foreach ($field->options as $opt) {
                             $selected = $field_value == $opt->value ? 'selected' : '';
                             echo  "<option value='$opt->value' name='$field->name' $selected>$opt->label</option>";
@@ -148,8 +157,9 @@ class DynaFormController extends Controller
                             
 
                         } else {
-                            // echo "<label for='$field->inp_doc_uid' class='btn'>Select Image</label>";
-                            echo "<input id='$field->inp_doc_uid' type='file' name='$field->inp_doc_uid' class='form-control'>";
+                            if($field->mode != 'view'){
+                                echo "<input id='$field->inp_doc_uid' type='file' name='$field->inp_doc_uid' class='form-control'>";
+                            }
                         }
                         echo "</div>";
                         echo "</div>";
