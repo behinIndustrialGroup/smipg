@@ -17,6 +17,6 @@ class AgencyInfoProvider extends ServiceProvider
         $this->loadMigrationsFrom(__DIR__ . "/migrations");
         $this->loadRoutesFrom(__DIR__. '/routes.php');;
         $this->loadViewsFrom(__DIR__. '/Views', 'AgencyView');
-        $this->loadJsonTranslationsFrom(__DIR__.'/Lang');
+        $this->loadJsonTranslationsFrom(__DIR__.'/Lang/');
     }
 }

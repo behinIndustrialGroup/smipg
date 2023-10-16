@@ -9,15 +9,13 @@ return [
                 'firstname' => ['type' => 'text', 'default' => '', 'required' => false],
                 'lastname' => ['type' => 'text', 'default' => '', 'required' => false],
                 'national_id' => ['type' => 'text', 'default' => '', 'required' => false],
-                'province' => ['type' => 'select', 'default' => '', 'options' => ''],
-                'city' => ['type' => 'select', 'default' => '', 'options' => ''],
+                'province' => ['type' => 'select', 'default' => '', 'options' => '' , 'option-url' => 'city.all'],
                 'status' => [
                     'type' => 'select', 
                     'default' => '', 
                     'options' => [
-                        ['value' => 'new', 'label' => 'جدید'],
-                        ['value' => 'in progress', 'label' => 'در حال بررسی'],
-                        ['value' => '', 'label' => ''],
+                        ['value' => 'جدید', 'label' => 'جدید'],
+                        ['value' => 'درحال بررسی', 'label' => 'در حال بررسی'],
                     ]
                 ]
             ]
@@ -29,15 +27,13 @@ return [
                 'firstname' => ['type' => 'text', 'default' => '', 'required' => false],
                 'lastname' => ['type' => 'text', 'default' => '', 'required' => false],
                 'national_id' => ['type' => 'text', 'default' => '', 'required' => false],
-                'province' => ['type' => 'select', 'default' => '', 'options' => ''],
-                'city' => ['type' => 'select', 'default' => '', 'options' => ''],
+                'province' => ['type' => 'select', 'default' => '', 'options' => '' , 'option-url' => 'city.all'],
                 'status' => [
                     'type' => 'select', 
                     'default' => '', 
                     'options' => [
-                        ['value' => 'new', 'label' => 'جدید'],
-                        ['value' => 'in progress', 'label' => 'در حال بررسی'],
-                        ['value' => '', 'label' => ''],
+                        ['value' => 'جدید', 'label' => 'جدید'],
+                        ['value' => 'درحال بررسی', 'label' => 'در حال بررسی'],  
                     ]
                 ]
             ]

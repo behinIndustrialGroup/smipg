@@ -13,7 +13,7 @@
             </tr>
         </tbody>
     </table>
-    <button onclick="create()">{{ __('Create') }}</button>
+    <button onclick="create()" class="btn btn-primary">{{ __('Create') }}</button>
 </form>
 
 <script>

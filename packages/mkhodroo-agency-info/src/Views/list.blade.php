@@ -3,7 +3,7 @@
 @section('content')
     <div class="box">
         <div class="card p-4">
-            <button onclick="new_agency()" class="btn btn-primary">New</button>
+            <button onclick="new_agency()" class="btn btn-primary col-sm-1">{{__('New')}}</button>
         </div>
         <div class="card p-4">
             <table class="table table-stripped"  id="infos">
@@ -15,7 +15,6 @@
                         <th>{{__('catagory')}}</th>
                         <th>{{__('national id')}}</th>
                         <th>{{__('province')}}</th>
-                        <th>{{__('city')}}</th>
                         <th>{{__('status')}}</th>
                         <th>{{__('created at')}}</th>
                     </tr>
@@ -42,8 +41,12 @@
                 {data : 'lastname'},
                 {data : 'catagory'},
                 {data : 'national_id'},
-                {data : 'province'},
-                {data : 'city'},
+                {data : 'province_detail', render: function(province_detail){
+                    if(province_detail != null){
+                        return `${province_detail.province} - ${province_detail.city}`;
+                    }
+                    return '';
+                }},
                 {data : 'status'},
                 {data : 'created_at'}
             ]
