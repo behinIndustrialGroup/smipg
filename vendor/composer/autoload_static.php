@@ -36,6 +36,7 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
         'ce9671a430e4846b44e1c68c7611f9f5' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery.php',
         'a1cfe24d14977df6878b9bf804af2d1c' => __DIR__ . '/..' . '/nunomaduro/collision/src/Adapters/Phpunit/Autoload.php',
         'ec07570ca5a812141189b1fa81503674' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
+        'c379e2a4ec3735f6c4915556c8c81813' => __DIR__ . '/..' . '/rap2hpoutre/fast-excel/src/functions/fastexcel.php',
         '320163ac6b93aebe3dc25b60a0533d56' => __DIR__ . '/..' . '/spatie/laravel-ignition/src/helpers.php',
     );
 
@@ -93,6 +94,7 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
         ),
         'R' => 
         array (
+            'Rap2hpoutre\\FastExcel\\' => 22,
             'Ramsey\\Uuid\\' => 12,
             'Ramsey\\Collection\\' => 18,
         ),
@@ -343,6 +345,10 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
         'Spatie\\Backtrace\\' => 
         array (
             0 => __DIR__ . '/..' . '/spatie/backtrace/src',
+        ),
+        'Rap2hpoutre\\FastExcel\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/rap2hpoutre/fast-excel/src',
         ),
         'Ramsey\\Uuid\\' => 
         array (
@@ -5333,6 +5339,12 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
         'Ramsey\\Uuid\\UuidInterface' => __DIR__ . '/..' . '/ramsey/uuid/src/UuidInterface.php',
         'Ramsey\\Uuid\\Validator\\GenericValidator' => __DIR__ . '/..' . '/ramsey/uuid/src/Validator/GenericValidator.php',
         'Ramsey\\Uuid\\Validator\\ValidatorInterface' => __DIR__ . '/..' . '/ramsey/uuid/src/Validator/ValidatorInterface.php',
+        'Rap2hpoutre\\FastExcel\\Exportable' => __DIR__ . '/..' . '/rap2hpoutre/fast-excel/src/Exportable.php',
+        'Rap2hpoutre\\FastExcel\\Facades\\FastExcel' => __DIR__ . '/..' . '/rap2hpoutre/fast-excel/src/Facades/FastExcel.php',
+        'Rap2hpoutre\\FastExcel\\FastExcel' => __DIR__ . '/..' . '/rap2hpoutre/fast-excel/src/FastExcel.php',
+        'Rap2hpoutre\\FastExcel\\Importable' => __DIR__ . '/..' . '/rap2hpoutre/fast-excel/src/Importable.php',
+        'Rap2hpoutre\\FastExcel\\Providers\\FastExcelServiceProvider' => __DIR__ . '/..' . '/rap2hpoutre/fast-excel/src/Providers/FastExcelServiceProvider.php',
+        'Rap2hpoutre\\FastExcel\\SheetCollection' => __DIR__ . '/..' . '/rap2hpoutre/fast-excel/src/SheetCollection.php',
         'SebastianBergmann\\CliParser\\AmbiguousOptionException' => __DIR__ . '/..' . '/sebastian/cli-parser/src/exceptions/AmbiguousOptionException.php',
         'SebastianBergmann\\CliParser\\Exception' => __DIR__ . '/..' . '/sebastian/cli-parser/src/exceptions/Exception.php',
         'SebastianBergmann\\CliParser\\OptionDoesNotAllowArgumentException' => __DIR__ . '/..' . '/sebastian/cli-parser/src/exceptions/OptionDoesNotAllowArgumentException.php',
