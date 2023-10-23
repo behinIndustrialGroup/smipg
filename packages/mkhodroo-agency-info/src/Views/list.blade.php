@@ -10,6 +10,7 @@
                 <thead>
                     <tr>
                         <th>{{__('id')}}</th>
+                        <th>{{__('file number')}}</th>
                         <th>{{__('firstname')}}</th>
                         <th>{{__('lastname')}}</th>
                         <th>{{__('guild_catagory')}}</th>
@@ -38,11 +39,24 @@
             "{{ route('agencyInfo.list') }}",
             [
                 {data : 'id'},
-                {data : 'firstname'},
-                {data : 'lastname'},
-                {data : 'guild_catagory'},
-                {data : 'catagory'},
-                {data : 'national_id'},
+                {data : 'file_number', render: function(data){
+                    return data ? data : '';
+                }},
+                {data : 'firstname', render: function(data){
+                    return data ? data : '';
+                }},
+                {data : 'lastname', render: function(data){
+                    return data ? data : '';
+                }},
+                {data : 'guild_catagory', render: function(data){
+                    return data ? data : '';
+                }},
+                {data : 'catagory', render: function(data){
+                    return data ? data : '';
+                }},
+                {data : 'national_id', render: function(data){
+                    return data ? data : '';
+                }},
                 {data : 'province', render: function(province){
                     return province;
                     if(province_detail != null){
@@ -50,7 +64,9 @@
                     }
                     return '';
                 }},
-                {data : 'status'},
+                {data : 'status', render: function(data){
+                    return data ? data : '';
+                }},
                 {data : 'created_at', render: function(created_at){
                     return created_at.split("T")[0];
                 }}

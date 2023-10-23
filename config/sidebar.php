@@ -28,6 +28,13 @@ return [
                 'all' => [ 'fa_name' => 'همه', 'route-name' => 'agencyInfo.listForm', 'route-url' => '' ],
             ]
         ],
+        'tickets' => [
+            'fa_name' => 'تیکت پشتیبانی',
+            'submenu' => [
+                'create' => [ 'fa_name' => 'ایجاد', 'route-name' => 'ATRoutes.index', 'route-url' => '' ],
+                'show' => [ 'fa_name' => 'مشاهده', 'route-name' => 'ATRoutes.show.listForm', 'route-url' => '' ],
+            ]
+        ],
         'users' => [
             'fa_name' => 'کاربران',
             'submenu' => [

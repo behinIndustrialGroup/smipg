@@ -32,7 +32,8 @@
             "Mkhodroo\\MkhodrooProcessMaker\\": "packages/mkhodroo-process-maker/src",
             "Mkhodroo\\AgencyInfo\\": "packages/mkhodroo-agency-info/src",
             "Mkhodroo\\Cities\\": "packages/mkhodroo-cities/src/",
-            "Mkhodroo\\DateConvertor\\": "packages/mkhodroo-date-convertor/src"
+            "Mkhodroo\\DateConvertor\\": "packages/mkhodroo-date-convertor/src",
+            "Mkhodroo\\AltfuelTicket\\": "packages/altfuel-ticket/src"
         }
     },
     "autoload-dev": {

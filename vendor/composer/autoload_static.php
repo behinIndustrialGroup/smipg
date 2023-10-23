@@ -127,6 +127,7 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
             'Mkhodroo\\MkhodrooProcessMaker\\' => 30,
             'Mkhodroo\\DateConvertor\\' => 23,
             'Mkhodroo\\Cities\\' => 16,
+            'Mkhodroo\\AltfuelTicket\\' => 23,
             'Mkhodroo\\AgencyInfo\\' => 20,
         ),
         'L' => 
@@ -431,6 +432,10 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
         'Mkhodroo\\Cities\\' => 
         array (
             0 => __DIR__ . '/../..' . '/packages/mkhodroo-cities/src',
+        ),
+        'Mkhodroo\\AltfuelTicket\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/packages/altfuel-ticket/src',
         ),
         'Mkhodroo\\AgencyInfo\\' => 
         array (
@@ -3274,8 +3279,26 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
         'Mkhodroo\\AgencyInfo\\Controllers\\AgencyController' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/Controllers/AgencyController.php',
         'Mkhodroo\\AgencyInfo\\Controllers\\AgencyListController' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/Controllers/AgencyListController.php',
         'Mkhodroo\\AgencyInfo\\Controllers\\CreateAgencyController' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/Controllers/CreateAgencyController.php',
+        'Mkhodroo\\AgencyInfo\\Controllers\\FileController' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/Controllers/FileController.php',
+        'Mkhodroo\\AgencyInfo\\Controllers\\GetAgencyController' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/Controllers/GetAgencyController.php',
         'Mkhodroo\\AgencyInfo\\Controllers\\SaveInfoController' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/Controllers/SaveInfoController.php',
         'Mkhodroo\\AgencyInfo\\Models\\AgencyInfo' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/Models/AgencyInfo.php',
+        'Mkhodroo\\AltfuelTicket\\AltfuelTicketServiceProvider' => __DIR__ . '/../..' . '/packages/altfuel-ticket/src/AltfuelTicketServiceProvider.php',
+        'Mkhodroo\\AltfuelTicket\\Controllers\\AddTicketCommentAttachmentController' => __DIR__ . '/../..' . '/packages/altfuel-ticket/src/Controllers/AddTicketCommentAttachmentController.php',
+        'Mkhodroo\\AltfuelTicket\\Controllers\\AddTicketCommentController' => __DIR__ . '/../..' . '/packages/altfuel-ticket/src/Controllers/AddTicketCommentController.php',
+        'Mkhodroo\\AltfuelTicket\\Controllers\\CommentAttachmentController' => __DIR__ . '/../..' . '/packages/altfuel-ticket/src/Controllers/CommentAttachmentController.php',
+        'Mkhodroo\\AltfuelTicket\\Controllers\\CommentVoiceController' => __DIR__ . '/../..' . '/packages/altfuel-ticket/src/Controllers/CommentVoiceController.php',
+        'Mkhodroo\\AltfuelTicket\\Controllers\\CreateTicketController' => __DIR__ . '/../..' . '/packages/altfuel-ticket/src/Controllers/CreateTicketController.php',
+        'Mkhodroo\\AltfuelTicket\\Controllers\\GetTicketController' => __DIR__ . '/../..' . '/packages/altfuel-ticket/src/Controllers/GetTicketController.php',
+        'Mkhodroo\\AltfuelTicket\\Controllers\\ReportController' => __DIR__ . '/../..' . '/packages/altfuel-ticket/src/Controllers/ReportController.php',
+        'Mkhodroo\\AltfuelTicket\\Controllers\\ShowTicketController' => __DIR__ . '/../..' . '/packages/altfuel-ticket/src/Controllers/ShowTicketController.php',
+        'Mkhodroo\\AltfuelTicket\\Controllers\\TicketCatagoryController' => __DIR__ . '/../..' . '/packages/altfuel-ticket/src/Controllers/TicketCatagoryController.php',
+        'Mkhodroo\\AltfuelTicket\\Models\\CatagoryActor' => __DIR__ . '/../..' . '/packages/altfuel-ticket/src/Models/CatagoryActor.php',
+        'Mkhodroo\\AltfuelTicket\\Models\\CommentAttachments' => __DIR__ . '/../..' . '/packages/altfuel-ticket/src/Models/CommentAttachments.php',
+        'Mkhodroo\\AltfuelTicket\\Models\\Ticket' => __DIR__ . '/../..' . '/packages/altfuel-ticket/src/Models/Ticket.php',
+        'Mkhodroo\\AltfuelTicket\\Models\\TicketCatagory' => __DIR__ . '/../..' . '/packages/altfuel-ticket/src/Models/TicketCatagory.php',
+        'Mkhodroo\\AltfuelTicket\\Models\\TicketComment' => __DIR__ . '/../..' . '/packages/altfuel-ticket/src/Models/TicketComment.php',
+        'Mkhodroo\\AltfuelTicket\\Requests\\TicketRequest' => __DIR__ . '/../..' . '/packages/altfuel-ticket/src/Requests/TicketRequest.php',
         'Mkhodroo\\Cities\\CityProvider' => __DIR__ . '/../..' . '/packages/mkhodroo-cities/src/CityProvider.php',
         'Mkhodroo\\Cities\\Controllers\\CityController' => __DIR__ . '/../..' . '/packages/mkhodroo-cities/src/Controllers/CityController.php',
         'Mkhodroo\\Cities\\Models\\City' => __DIR__ . '/../..' . '/packages/mkhodroo-cities/src/Models/City.php',

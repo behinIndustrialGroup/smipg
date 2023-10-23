@@ -20,6 +20,7 @@ class AgencyListController extends Controller
         $agencies =  AgencyInfo::where('parent_id', DB::raw('id'))->get();
 
         $agencies =  AgencyInfo::where('parent_id', DB::raw('id'))->get()->each(function ($agency) {
+            $agency->file_number = GetAgencyController::getByKey($agency->id, 'file_number')?->value;
             $agency->firstname = GetAgencyController::getByKey($agency->id, 'firstname')?->value;
             $agency->lastname = GetAgencyController::getByKey($agency->id, 'lastname')?->value;
             $agency->guild_catagory = __(GetAgencyController::getByKey($agency->id, 'guild_catagory')?->value);
