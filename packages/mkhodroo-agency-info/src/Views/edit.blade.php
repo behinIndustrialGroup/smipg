@@ -1,6 +1,9 @@
 <h4>
     اصلاح اطلاعات مرکز : {{ $agency_fields->where('key', 'firstname')->first()?->value }}
     {{ $agency_fields->where('key', 'lastname')->first()?->value }}
+    @php
+        $catagory = $agency_fields->where('key', 'guild_catagory')->first();
+    @endphp
 </h4>
 
 <div class="card card-primary card-tabs">
@@ -23,11 +26,10 @@
                 aria-labelledby="custom-tabs-one-home-tab">
                 <form action="javascript:void(0)" id="edit-form">
                     @php
-                        $catagory = $agency_fields->where('key', 'catagory')->first();
+                        $catagory = $agency_fields->where('key', 'guild_catagory')->first();
                     @endphp
-                    <input type="hidden" name="id" id="" value="{{ $catagory->id }}">
+                    <input type="hidden" name="id" id="" value="{{ $catagory->id ?? '' }}">
                     <table class="table table-striped ">
-
                         @foreach (config("agency_info.agency.$catagory->value")['fields'] as $field_key => $field_detail)
                             @php
                                 $value = $agency_fields->where('key', $field_key)->first()?->value;
@@ -86,12 +88,8 @@
             </div>
             <div class="tab-pane fade" id="custom-tabs-one-profile" role="tabpanel"
                 aria-labelledby="custom-tabs-one-profile-tab">
-                <form action="javascript:void(0)" id="fin-form">
-                    <input type="hidden" name="id" id="" value="{{ $catagory->id }}">
-                    @php
-                        $catagory = $agency_fields->where('key', 'catagory')->first();
-                    @endphp
-                    <input type="hidden" name="id" id="" value="{{ $catagory->id }}">
+                <form action="javascript:void(0)" id="fin-form" enctype="multipart/form-data">
+                    <input type="hidden" name="id" id="" value="{{ $catagory->id ?? '' }}">
                     <table class="table table-striped ">
                         <thead>
                             <tr>
@@ -110,14 +108,18 @@
                                     @php
                                         $value = $agency_fields->where('key', $item)->first()?->value;
                                     @endphp
-                                    <td>
+                                    <td style="text-align: center">
                                         @if (str_contains($item, 'file'))
-                                            <input type="file" name="{{$item}}" id="" class="form-control">
                                             @if ($value)
-                                                <img src="{{$value}}" alt="{{$item}}">
+                                                <a href="{{ url("public/$value") }}" download="{{ __($item) }}">{{ __($item) }}</a>
+                                                <i class="fa fa-trash" onclick="delete_fin_pay_file('{{$item}}')" style="float: left; color: red; cursor: pointer"></i>
+                                            @else
+                                                <input type="file" name="{{ $item }}" id=""
+                                                class="form-control">
                                             @endif
                                         @else
-                                            <input type="text" name="{{$item}}" value="{{$value}}" class="form-control" id="">
+                                            <input type="text" name="{{ $item }}"
+                                                value="{{ $value }}" class="form-control {{ str_contains($item, 'pay') ? '' : 'cama-seprator' }}" id="">
                                         @endif
                                     </td>
                                 @endforeach
@@ -146,15 +148,36 @@
     }
 
     function fin_edit() {
-        send_ajax_request(
+        var fd = new FormData($('#fin-form')[0]);
+        send_ajax_formdata_request(
             "{{ route('agencyInfo.finEdit') }}",
-            $('#fin-form').serialize(),
+            fd,
             function(res) {
                 console.log(res);
                 show_message("{{ __('Edited') }}");
                 refresh_table()
             }
         )
+        
+    }
+    function delete_fin_pay_file(key) {
+        var fd = new FormData();
+        fd.append('parent_id', $($('input[name=id]')[1]).val());
+        fd.append('key', key);
+        send_ajax_formdata_request_with_confirm(
+            "{{ route('agencyInfo.deleteByKey') }}",
+            fd,
+            function(res) {
+                console.log(res);
+                show_message("{{ __('Deleted') }}");
+            },
+            null
+            ,
+            "{{__('Are you sure?')}}"
+        )
+        
     }
     initial_view()
+    runCamaSeprator('cama-seprator')
+    camaSeprator('cama-seprator')
 </script>

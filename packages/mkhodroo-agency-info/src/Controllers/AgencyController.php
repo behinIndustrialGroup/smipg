@@ -25,7 +25,7 @@ class AgencyController extends Controller
                 $row->update([
                     'value' => $value
                 ]);
-            }else{
+            } else {
                 $row = new AgencyInfo();
                 $row->key = $key;
                 $row->value = $value;
@@ -42,20 +42,44 @@ class AgencyController extends Controller
         $agency_fields =  AgencyInfo::where('parent_id', $r->id)->get();
         $data = $r->except('id');
         foreach ($data as $key => $value) {
+            //files
+            if(gettype($r->$key) === 'object'){
+                $value = FileController::store($r->file($key));
+            }
             $row = $agency_fields->where('key', $key)->first();
             if ($row) {
                 $row->update([
-                    'value' => $value
+                    'value' => str_replace(',', '', $value)
                 ]);
-            }else{
+            } else {
                 $row = new AgencyInfo();
                 $row->key = $key;
-                $row->value = $value;
+                $row->value = str_replace(',', '', $value);
                 $row->parent_id = $r->id;
                 $row->save();
             }
         }
         return $agency_fields;
         // return view('AgencyView::edit')->with([ 'agency_fields' => $agency_fields ]);
+    }
+
+    public static function create($parent_id, $key, $value, $des = null)
+    {
+        AgencyInfo::updateOrCreate(
+            [
+                'key' => $key,
+                'parent_id' => $parent_id,
+            ],
+            [
+                'value' => $value,
+                'description' => $des
+            ]
+        );
+    }
+
+    public static function deleteByKey(Request $r){
+        $row = GetAgencyController::getByKey($r->parent_id, $r->key);
+        $row->delete();
+        return $row;
     }
 }

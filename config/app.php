@@ -164,6 +164,7 @@ return [
         Mkhodroo\MkhodrooProcessMaker\MKProcessMakerProvider::class,
         \Mkhodroo\AgencyInfo\AgencyInfoProvider::class,
         Mkhodroo\Cities\CityProvider::class,
+        \Mkhodroo\DateConvertor\DateConvertorProvider::class,
 
         /*
          * Application Service Providers...

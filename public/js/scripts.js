@@ -15,7 +15,7 @@ function show_message(msg = "انجام شد" ){
     toastr.success(msg);
 }
 
-function camaSeprator(className){
+function camaSeprator(className = 'cama-seprator'){
     $('.'+ className).on('keyup', function(){
         if($(this).val()){
             $(this).val(parseInt($(this).val().replace(/,/g, '')).toLocaleString())
@@ -23,7 +23,7 @@ function camaSeprator(className){
     })
 }
 
-function runCamaSeprator(className){
+function runCamaSeprator(className = 'cama-seprator'){
     $('.'+ className).each(function(){
         if($(this).val()){
             $(this).val(parseInt($(this).val().replace(/,/g, '')).toLocaleString())

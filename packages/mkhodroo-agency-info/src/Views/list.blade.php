@@ -12,6 +12,7 @@
                         <th>{{__('id')}}</th>
                         <th>{{__('firstname')}}</th>
                         <th>{{__('lastname')}}</th>
+                        <th>{{__('guild_catagory')}}</th>
                         <th>{{__('catagory')}}</th>
                         <th>{{__('national id')}}</th>
                         <th>{{__('province')}}</th>
@@ -39,16 +40,20 @@
                 {data : 'id'},
                 {data : 'firstname'},
                 {data : 'lastname'},
+                {data : 'guild_catagory'},
                 {data : 'catagory'},
                 {data : 'national_id'},
-                {data : 'province_detail', render: function(province_detail){
+                {data : 'province', render: function(province){
+                    return province;
                     if(province_detail != null){
                         return `${province_detail.province} - ${province_detail.city}`;
                     }
                     return '';
                 }},
                 {data : 'status'},
-                {data : 'created_at'}
+                {data : 'created_at', render: function(created_at){
+                    return created_at.split("T")[0];
+                }}
             ]
         )
 
