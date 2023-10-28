@@ -2,6 +2,7 @@
 
 return [
     'fin_uploads' => 'fin_uploads',
+    'main_field_name' => 'guild_catagory',
     'agency' => [
         'charging-fire-cylenders' => [
             'catagory_fa' => 'شارژ سیلندرهای آتش نشانی',
@@ -43,6 +44,11 @@ return [
                 '00' => ['membership00', 'memebership00_pay_date', 'memebership00_pay_file'],
                 '01' => ['membership01', 'memebership01_pay_date', 'memebership01_pay_file'],
                 '02' => ['membership02', 'memebership02_pay_date', 'memebership02_pay_file'],
+            ],
+            'docs' => [
+                'national_card',
+                'birth_certificate_image',
+                'personal_image', 
             ]
         ],
         'retail' => [
@@ -86,6 +92,11 @@ return [
                 '00' => ['membership00', 'memebership00_pay_date', 'memebership00_pay_file'],
                 '01' => ['membership01', 'memebership01_pay_date', 'memebership01_pay_file'],
                 '02' => ['membership02', 'memebership02_pay_date', 'memebership02_pay_file'],
+            ],
+            'docs' => [
+                'national_card',
+                'birth_certificate_image',
+                'personal_image', 
             ]
         ],
         'sale-and-charging-insdustrial-gas' => [
@@ -127,6 +138,11 @@ return [
                 '00' => ['membership00', 'memebership00_pay_date', 'memebership00_pay_file'],
                 '01' => ['membership01', 'memebership01_pay_date', 'memebership01_pay_file'],
                 '02' => ['membership02', 'memebership02_pay_date', 'memebership02_pay_file'],
+            ],
+            'docs' => [
+                'national_card',
+                'birth_certificate_image',
+                'personal_image', 
             ]
         ],
         'saling-fire-cylenders' => [
@@ -170,6 +186,11 @@ return [
                 '00' => ['membership00', 'memebership00_pay_date', 'memebership00_pay_file'],
                 '01' => ['membership01', 'memebership01_pay_date', 'memebership01_pay_file'],
                 '02' => ['membership02', 'memebership02_pay_date', 'memebership02_pay_file'],
+            ],
+            'docs' => [
+                'national_card',
+                'birth_certificate_image',
+                'personal_image', 
             ]
         ],
         'wholesaling-industrial-gas' => [
@@ -213,6 +234,11 @@ return [
                 '00' => ['membership00', 'memebership00_pay_date', 'memebership00_pay_file'],
                 '01' => ['membership01', 'memebership01_pay_date', 'memebership01_pay_file'],
                 '02' => ['membership02', 'memebership02_pay_date', 'memebership02_pay_file'],
+            ],
+            'docs' => [
+                'national_card',
+                'birth_certificate_image',
+                'personal_image', 
             ]
         ],
         'producer' => [
@@ -254,6 +280,11 @@ return [
                 '00' => ['membership00', 'memebership00_pay_date', 'memebership00_pay_file'],
                 '01' => ['membership01', 'memebership01_pay_date', 'memebership01_pay_file'],
                 '02' => ['membership02', 'memebership02_pay_date', 'memebership02_pay_file'],
+            ],
+            'docs' => [
+                'national_card',
+                'birth_certificate_image',
+                'personal_image', 
             ]
         ],
         'unknown' => [
@@ -297,6 +328,11 @@ return [
                 '00' => ['membership00', 'memebership00_pay_date', 'memebership00_pay_file'],
                 '01' => ['membership01', 'memebership01_pay_date', 'memebership01_pay_file'],
                 '02' => ['membership02', 'memebership02_pay_date', 'memebership02_pay_file'],
+            ],
+            'docs' => [
+                'national_card',
+                'birth_certificate_image',
+                'personal_image', 
             ]
         ],
     ]

@@ -2,7 +2,7 @@
     اصلاح اطلاعات مرکز : {{ $agency_fields->where('key', 'firstname')->first()?->value }}
     {{ $agency_fields->where('key', 'lastname')->first()?->value }}
     @php
-        $catagory = $agency_fields->where('key', 'guild_catagory')->first();
+        $catagory = $agency_fields->where('key', config("agency_info.agency.main_field_name"))->first();
     @endphp
 </h4>
 
@@ -17,6 +17,10 @@
                 <a class="nav-link" id="custom-tabs-one-profile-tab" data-toggle="pill" href="#custom-tabs-one-profile"
                     role="tab" aria-controls="custom-tabs-one-profile"
                     aria-selected="false">{{ __('Agency Fin Info') }}</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="docs" data-toggle="pill" href="#docs-tab" role="tab"
+                    aria-controls="docs-tab" aria-selected="false">{{ __('Docs') }}</a>
             </li>
         </ul>
     </div>
@@ -111,15 +115,20 @@
                                     <td style="text-align: center">
                                         @if (str_contains($item, 'file'))
                                             @if ($value)
-                                                <a href="{{ url("public/$value") }}" download="{{ __($item) }}">{{ __($item) }}</a>
-                                                <i class="fa fa-trash" onclick="delete_fin_pay_file('{{$item}}')" style="float: left; color: red; cursor: pointer"></i>
+                                                <a href="{{ url("public/$value") }}"
+                                                    download="{{ __($item) }}">{{ __($item) }}</a>
+                                                <i class="fa fa-trash"
+                                                    onclick="delete_fin_pay_file('{{ $item }}')"
+                                                    style="float: left; color: red; cursor: pointer"></i>
                                             @else
                                                 <input type="file" name="{{ $item }}" id=""
-                                                class="form-control">
+                                                    class="form-control">
                                             @endif
                                         @else
                                             <input type="text" name="{{ $item }}"
-                                                value="{{ $value }}" class="form-control {{ str_contains($item, 'pay') ? '' : 'cama-seprator' }}" id="">
+                                                value="{{ $value }}"
+                                                class="form-control {{ str_contains($item, 'pay') ? '' : 'cama-seprator' }}"
+                                                id="">
                                         @endif
                                     </td>
                                 @endforeach
@@ -127,6 +136,41 @@
                         @endforeach
                     </table>
                     <button class="btn btn-primary" onclick="fin_edit()">{{ __('Edit') }}</button>
+                </form>
+            </div>
+            <div class="tab-pane fade" id="docs-tab" role="tabpanel" aria-labelledby="docs-tab">
+                <form action="javascript:void(0)" id="docs-form" enctype="multipart/form-data">
+                    <input type="hidden" name="id" id="" value="{{ $catagory->id ?? '' }}">
+                    <table class="table table-striped ">
+                        <thead>
+                            <tr>
+                                <th>{{ __('Title') }}</th>
+                                <th>{{ __('Doc') }}</th>
+                            </tr>
+                        </thead>
+                        @foreach (config("agency_info.agency.$catagory->value")['docs'] as $field_key => $field_detail)
+                            <tr>
+                                <td>
+                                    {{ __($field_detail) }}
+                                </td>
+                                @php
+                                        $value = $agency_fields->where('key', $field_detail)->first()?->value;
+                                    @endphp
+                                    <td style="text-align: center">
+                                        @if ($value)
+                                            <a href="{{ url("public/$value") }}"
+                                                download="{{ __($field_detail) }}">{{ __($field_detail) }}</a>
+                                            <i class="fa fa-trash" onclick="delete_fin_pay_file('{{ $field_detail }}')"
+                                                style="float: left; color: red; cursor: pointer"></i>
+                                        @else
+                                            <input type="file" name="{{ $field_detail }}" id=""
+                                                class="form-control">
+                                        @endif
+                                    </td>
+                            </tr>
+                        @endforeach
+                    </table>
+                    <button class="btn btn-primary" onclick="docs_edit()">{{ __('Edit') }}</button>
                 </form>
             </div>
         </div>
@@ -158,8 +202,22 @@
                 refresh_table()
             }
         )
-        
     }
+
+    function docs_edit() {
+        var fd = new FormData($('#docs-form')[0]);
+        send_ajax_formdata_request(
+            "{{ route('agencyInfo.docsEdit') }}",
+            fd,
+            function(res) {
+                console.log(res);
+                show_message("{{ __('Edited') }}");
+                refresh_table()
+            }
+        )
+
+    }
+
     function delete_fin_pay_file(key) {
         var fd = new FormData();
         fd.append('parent_id', $($('input[name=id]')[1]).val());
@@ -171,11 +229,10 @@
                 console.log(res);
                 show_message("{{ __('Deleted') }}");
             },
-            null
-            ,
-            "{{__('Are you sure?')}}"
+            null,
+            "{{ __('Are you sure?') }}"
         )
-        
+
     }
     initial_view()
     runCamaSeprator('cama-seprator')

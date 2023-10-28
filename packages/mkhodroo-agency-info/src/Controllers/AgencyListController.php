@@ -3,6 +3,7 @@
 namespace Mkhodroo\AgencyInfo\Controllers;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Mkhodroo\AgencyInfo\Models\AgencyInfo;
 use Mkhodroo\Cities\Controllers\CityController;
@@ -17,29 +18,42 @@ class AgencyListController extends Controller
 
     public static function list()
     {
-        $agencies =  AgencyInfo::where('parent_id', DB::raw('id'))->get();
+        return [
+            'data' => []
+        ];
+    }
+    public static function filterList(Request $r)
+    {
+        $main_field = config('agency_info.main_field_name');
+        if($r->field_value === null and $r->$main_field === null){
+            $agencies =  AgencyInfo::where('parent_id', DB::raw('id'))->get();
+        }else{
+            if($r->field_value == null){
+                $agencies =  AgencyInfo::where('value', $r->$main_field)->groupBy('parent_id')->get();
+            }
+            elseif($r->$main_field == null){
+                $agencies =  AgencyInfo::where('value', 'like', "%". $r->field_value. "%")->groupBy('parent_id')->get();
+            }else{
+                $parent_ids =  AgencyInfo::where('value', 'like', "%". $r->field_value. "%")->groupBy('parent_id')->pluck('parent_id');
+                $agencies = AgencyInfo::whereIn('id', $parent_ids)->where('value', $r->$main_field)->groupBy('parent_id')->get();
+                                    // ->where('value',$r->$main_field)->groupBy('parent_id')->get();
+            }
+            
 
-        $agencies =  AgencyInfo::where('parent_id', DB::raw('id'))->get()->each(function ($agency) {
-            $agency->file_number = GetAgencyController::getByKey($agency->id, 'file_number')?->value;
-            $agency->firstname = GetAgencyController::getByKey($agency->id, 'firstname')?->value;
-            $agency->lastname = GetAgencyController::getByKey($agency->id, 'lastname')?->value;
-            $agency->guild_catagory = __(GetAgencyController::getByKey($agency->id, 'guild_catagory')?->value);
-            $agency->catagory = __(GetAgencyController::getByKey($agency->id, 'catagory')?->value);
-            $agency->national_id = GetAgencyController::getByKey($agency->id, 'national_id')?->value;
-            $agency->status = GetAgencyController::getByKey($agency->id, 'status')?->value;
-            $agency->province_detail = CityController::getById($agency->province);
+        }
+        // return $agencies;
+        $agencies =  $agencies->each(function ($agency) {
+            $agency->file_number = GetAgencyController::getByKey($agency->parent_id, 'file_number')?->value;
+            $agency->firstname = GetAgencyController::getByKey($agency->parent_id, 'firstname')?->value;
+            $agency->lastname = GetAgencyController::getByKey($agency->parent_id, 'lastname')?->value;
+            $agency->guild_catagory = __(GetAgencyController::getByKey($agency->parent_id, 'guild_catagory')?->value);
+            $agency->catagory = __(GetAgencyController::getByKey($agency->parent_id, 'catagory')?->value);
+            $agency->national_id = GetAgencyController::getByKey($agency->parent_id, 'national_id')?->value;
+            $agency->status = GetAgencyController::getByKey($agency->parent_id, 'status')?->value;
+            $agency->province_detail = CityController::getById(GetAgencyController::getByKey($agency->parent_id, 'province')?->value);
             $agency->created_at = (new SDate())->toShaDate(explode(" ", $agency->created_at)[0]);
 
         });
-        // foreach($agencies as $agency){
-        //     // return "agency_info.agency.$agency->value";
-        //     foreach(config("agency_info.agency.$agency->value")['fields'] as $fields_key => $fields_value){
-        //         $agency->$fields_key = self::getByKey($agency->id, $fields_key)?->value;
-        //         if($fields_key === 'province'){
-        //             $agency->province_detail = CityController::getById($agency->$fields_key);
-        //         }
-        //     }
-        // }
         return ['data' => $agencies];
     }
 

@@ -44,7 +44,7 @@ class AgencyController extends Controller
         foreach ($data as $key => $value) {
             //files
             if(gettype($r->$key) === 'object'){
-                $value = FileController::store($r->file($key));
+                $value = FileController::store($r->file($key), config('agency_info.fin_uploads'));
             }
             $row = $agency_fields->where('key', $key)->first();
             if ($row) {
