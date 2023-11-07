@@ -33,7 +33,8 @@
             "Mkhodroo\\AgencyInfo\\": "packages/mkhodroo-agency-info/src",
             "Mkhodroo\\Cities\\": "packages/mkhodroo-cities/src/",
             "Mkhodroo\\DateConvertor\\": "packages/mkhodroo-date-convertor/src",
-            "Mkhodroo\\AltfuelTicket\\": "packages/altfuel-ticket/src"
+            "Mkhodroo\\AltfuelTicket\\": "packages/altfuel-ticket/src",
+            "Mkhodroo\\CorrespondenceSystem\\": "packages/mkhodroo-correspondence-system/src"
         }
     },
     "autoload-dev": {

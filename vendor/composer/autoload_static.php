@@ -126,6 +126,7 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
             'Mkhodroo\\UserRoles\\' => 19,
             'Mkhodroo\\MkhodrooProcessMaker\\' => 30,
             'Mkhodroo\\DateConvertor\\' => 23,
+            'Mkhodroo\\CorrespondenceSystem\\' => 30,
             'Mkhodroo\\Cities\\' => 16,
             'Mkhodroo\\AltfuelTicket\\' => 23,
             'Mkhodroo\\AgencyInfo\\' => 20,
@@ -428,6 +429,10 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
         'Mkhodroo\\DateConvertor\\' => 
         array (
             0 => __DIR__ . '/../..' . '/packages/mkhodroo-date-convertor/src',
+        ),
+        'Mkhodroo\\CorrespondenceSystem\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/packages/mkhodroo-correspondence-system/src',
         ),
         'Mkhodroo\\Cities\\' => 
         array (
@@ -3277,6 +3282,7 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
         'League\\MimeTypeDetection\\OverridingExtensionToMimeTypeMap' => __DIR__ . '/..' . '/league/mime-type-detection/src/OverridingExtensionToMimeTypeMap.php',
         'Mkhodroo\\AgencyInfo\\AgencyInfoProvider' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/AgencyInfoProvider.php',
         'Mkhodroo\\AgencyInfo\\Controllers\\AgencyController' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/Controllers/AgencyController.php',
+        'Mkhodroo\\AgencyInfo\\Controllers\\AgencyDocsController' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/Controllers/AgencyDocsController.php',
         'Mkhodroo\\AgencyInfo\\Controllers\\AgencyListController' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/Controllers/AgencyListController.php',
         'Mkhodroo\\AgencyInfo\\Controllers\\CreateAgencyController' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/Controllers/CreateAgencyController.php',
         'Mkhodroo\\AgencyInfo\\Controllers\\FileController' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/Controllers/FileController.php',

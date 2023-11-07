@@ -65,6 +65,7 @@ return array(
     'Mkhodroo\\UserRoles\\' => array($baseDir . '/packages/mkhodroo-user-roles/src'),
     'Mkhodroo\\MkhodrooProcessMaker\\' => array($baseDir . '/packages/mkhodroo-process-maker/src'),
     'Mkhodroo\\DateConvertor\\' => array($baseDir . '/packages/mkhodroo-date-convertor/src'),
+    'Mkhodroo\\CorrespondenceSystem\\' => array($baseDir . '/packages/mkhodroo-correspondence-system/src'),
     'Mkhodroo\\Cities\\' => array($baseDir . '/packages/mkhodroo-cities/src'),
     'Mkhodroo\\AltfuelTicket\\' => array($baseDir . '/packages/altfuel-ticket/src'),
     'Mkhodroo\\AgencyInfo\\' => array($baseDir . '/packages/mkhodroo-agency-info/src'),

@@ -166,6 +166,7 @@ return [
         Mkhodroo\Cities\CityProvider::class,
         \Mkhodroo\DateConvertor\DateConvertorProvider::class,
         Mkhodroo\AltfuelTicket\AltfuelTicketServiceProvider::class,
+        Mkhodroo\CorrespondenceSystem\CorrespondenceSystemProvider::class,
 
         /*
          * Application Service Providers...

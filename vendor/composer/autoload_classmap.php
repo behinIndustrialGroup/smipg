@@ -2706,6 +2706,7 @@ return array(
     'League\\MimeTypeDetection\\OverridingExtensionToMimeTypeMap' => $vendorDir . '/league/mime-type-detection/src/OverridingExtensionToMimeTypeMap.php',
     'Mkhodroo\\AgencyInfo\\AgencyInfoProvider' => $baseDir . '/packages/mkhodroo-agency-info/src/AgencyInfoProvider.php',
     'Mkhodroo\\AgencyInfo\\Controllers\\AgencyController' => $baseDir . '/packages/mkhodroo-agency-info/src/Controllers/AgencyController.php',
+    'Mkhodroo\\AgencyInfo\\Controllers\\AgencyDocsController' => $baseDir . '/packages/mkhodroo-agency-info/src/Controllers/AgencyDocsController.php',
     'Mkhodroo\\AgencyInfo\\Controllers\\AgencyListController' => $baseDir . '/packages/mkhodroo-agency-info/src/Controllers/AgencyListController.php',
     'Mkhodroo\\AgencyInfo\\Controllers\\CreateAgencyController' => $baseDir . '/packages/mkhodroo-agency-info/src/Controllers/CreateAgencyController.php',
     'Mkhodroo\\AgencyInfo\\Controllers\\FileController' => $baseDir . '/packages/mkhodroo-agency-info/src/Controllers/FileController.php',
