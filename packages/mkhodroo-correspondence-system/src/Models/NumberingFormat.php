@@ -8,8 +8,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class NumberingFormat extends Model
 {
     use SoftDeletes;
-    public $table = "correspondence_" . "";
+    public $table = "correspondence_" . "numbering_formats";
     protected $fillable = [
-        
+        'name', 'format', 'start_from'
     ];
 }

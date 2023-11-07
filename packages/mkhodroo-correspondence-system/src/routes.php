@@ -1,8 +1,56 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Mkhodroo\UserRoles\Controllers\GetRoleController;
+use Mkhodroo\CorrespondenceSystem\Controllers\NumberingFormatController;
+use Mkhodroo\CorrespondenceSystem\Controllers\RoleController;
+use Mkhodroo\CorrespondenceSystem\Controllers\TemplateController;
+use Mkhodroo\CorrespondenceSystem\Controllers\UserRoleController;
 
-Route::name('atmn.')->prefix('atmn')->middleware(['web', 'auth','access'])->group(function(){
-    
+Route::name('atmn.')->prefix('atmn')->middleware(['web', 'auth'])->group(function () {
+    Route::name('download.')->prefix('download')->group(function () {
+        Route::get('', function () {
+            header("Cache-Control: public"); // needed for internet explorer
+            header("Content-Type: application/wav");
+            header("Content-Transfer-Encoding: Binary");
+            header("Content-Disposition: attachment; filename=template.docx");
+            readfile('data:application/vnd.openxmlformats-officedocument.wordprocessingml.document;base64,' . TemplateController::get(4)->file);
+        });
+    });
+
+    Route::name('role.')->prefix('role')->group(function () {
+        Route::get('list-form', [RoleController::class, 'listForm'])->name('listForm');
+        Route::get('list', [RoleController::class, 'list'])->name('list');
+        Route::get('create-form', [RoleController::class, 'createForm'])->name('createForm');
+        Route::post('create', [RoleController::class, 'create'])->name('create');
+        Route::post('edit-form', [RoleController::class, 'editForm'])->name('editForm');
+        Route::post('edit', [RoleController::class, 'edit'])->name('edit');
+    });
+
+    Route::name('userRole.')->prefix('user-role')->group(function () {
+        Route::get('list-form', [UserRoleController::class, 'listForm'])->name('listForm');
+        Route::get('list', [UserRoleController::class, 'list'])->name('list');
+        Route::get('create-form', [UserRoleController::class, 'createForm'])->name('createForm');
+        Route::post('create', [UserRoleController::class, 'create'])->name('create');
+        Route::post('edit-form', [UserRoleController::class, 'editForm'])->name('editForm');
+        Route::post('edit', [UserRoleController::class, 'edit'])->name('edit');
+    });
+
+    Route::name('numberingFormat.')->prefix('numbering-format')->group(function () {
+        Route::get('list-form', [NumberingFormatController::class, 'listForm'])->name('listForm');
+        Route::get('list', [NumberingFormatController::class, 'list'])->name('list');
+        Route::get('create-form', [NumberingFormatController::class, 'createForm'])->name('createForm');
+        Route::post('create', [NumberingFormatController::class, 'create'])->name('create');
+        Route::post('edit-form', [NumberingFormatController::class, 'editForm'])->name('editForm');
+        Route::post('edit', [NumberingFormatController::class, 'edit'])->name('edit');
+    });
+
+    Route::name('template.')->prefix('template')->group(function () {
+        Route::get('list-form', [TemplateController::class, 'listForm'])->name('listForm');
+        Route::get('list', [TemplateController::class, 'list'])->name('list');
+        Route::get('create-form', [TemplateController::class, 'createForm'])->name('createForm');
+        Route::post('create', [TemplateController::class, 'create'])->name('create');
+        Route::post('edit-form', [TemplateController::class, 'editForm'])->name('editForm');
+        Route::post('edit', [TemplateController::class, 'edit'])->name('edit');
+        Route::get('download/{id}', [TemplateController::class, 'download'])->name('download');
+    });
 });

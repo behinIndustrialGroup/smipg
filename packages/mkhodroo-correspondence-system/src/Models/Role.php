@@ -8,8 +8,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Role extends Model
 {
     use SoftDeletes;
-    public $table = "correspondence_" . "";
+    public $table = "correspondence_" . "roles";
     protected $fillable = [
-        
+        'name'
     ];
 }
