@@ -3,17 +3,21 @@
 use Illuminate\Support\Facades\Route;
 use Mkhodroo\CorrespondenceSystem\Controllers\NumberingFormatController;
 use Mkhodroo\CorrespondenceSystem\Controllers\RoleController;
+use Mkhodroo\CorrespondenceSystem\Controllers\TemplateAccessController;
 use Mkhodroo\CorrespondenceSystem\Controllers\TemplateController;
 use Mkhodroo\CorrespondenceSystem\Controllers\UserRoleController;
+use PhpOffice\PhpWord\TemplateProcessor;
 
 Route::name('atmn.')->prefix('atmn')->middleware(['web', 'auth'])->group(function () {
     Route::name('download.')->prefix('download')->group(function () {
         Route::get('', function () {
-            header("Cache-Control: public"); // needed for internet explorer
-            header("Content-Type: application/wav");
-            header("Content-Transfer-Encoding: Binary");
-            header("Content-Disposition: attachment; filename=template.docx");
-            readfile('data:application/vnd.openxmlformats-officedocument.wordprocessingml.document;base64,' . TemplateController::get(4)->file);
+            
+            $file = fopen(public_path('file.docx'), 'wb');
+            fwrite($file, base64_decode(TemplateController::get(4)->file));
+            fclose($file);
+            $phpword = new TemplateProcessor(public_path('file.docx'));
+            $phpword->setValue('{Receivers}','Santosh');
+            $phpword->saveAs(public_path('edited.docx'));
         });
     });
 
@@ -52,5 +56,15 @@ Route::name('atmn.')->prefix('atmn')->middleware(['web', 'auth'])->group(functio
         Route::post('edit-form', [TemplateController::class, 'editForm'])->name('editForm');
         Route::post('edit', [TemplateController::class, 'edit'])->name('edit');
         Route::get('download/{id}', [TemplateController::class, 'download'])->name('download');
+    });
+
+    Route::name('templateAccess.')->prefix('template-access')->group(function () {
+        Route::get('list-form', [TemplateAccessController::class, 'listForm'])->name('listForm');
+        Route::get('list', [TemplateAccessController::class, 'list'])->name('list');
+        Route::get('create-form', [TemplateAccessController::class, 'createForm'])->name('createForm');
+        Route::post('create', [TemplateAccessController::class, 'create'])->name('create');
+        Route::post('edit-form', [TemplateAccessController::class, 'editForm'])->name('editForm');
+        Route::post('edit', [TemplateAccessController::class, 'edit'])->name('edit');
+        Route::get('download/{id}', [TemplateAccessController::class, 'download'])->name('download');
     });
 });
