@@ -170,17 +170,5 @@
             )
         }
 
-        function filter2() {
-            var fd = new FormData($('#filter-form2')[0]);
-
-            send_ajax_formdata_request(
-                "{{ route('agencyInfo.filterList') }}",
-                fd,
-                function(res) {
-                    console.log(res);
-                    update_datatable(res.data);
-                }
-            )
-        }
     </script>
 @endsection
