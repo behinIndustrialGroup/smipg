@@ -8,8 +8,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Letter extends Model
 {
     use SoftDeletes;
-    public $table = "correspondence_" . "";
+    public $table = "correspondence_" . "letters";
     protected $fillable = [
-        
+        'template_id', 'title', 'body', 'tags', 'number', 'date', 'file'
     ];
 }

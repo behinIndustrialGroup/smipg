@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Mkhodroo\CorrespondenceSystem\Controllers\LetterController;
 use Mkhodroo\CorrespondenceSystem\Controllers\NumberingFormatController;
+use Mkhodroo\CorrespondenceSystem\Controllers\ReceiverController;
 use Mkhodroo\CorrespondenceSystem\Controllers\RoleController;
 use Mkhodroo\CorrespondenceSystem\Controllers\TemplateAccessController;
 use Mkhodroo\CorrespondenceSystem\Controllers\TemplateController;
@@ -66,5 +68,25 @@ Route::name('atmn.')->prefix('atmn')->middleware(['web', 'auth'])->group(functio
         Route::post('edit-form', [TemplateAccessController::class, 'editForm'])->name('editForm');
         Route::post('edit', [TemplateAccessController::class, 'edit'])->name('edit');
         Route::get('download/{id}', [TemplateAccessController::class, 'download'])->name('download');
+    });
+
+    Route::name('letter.')->prefix('letter')->group(function () {
+        Route::get('select-template-form', [LetterController::class, 'selectLetterTemplateForm'])->name('selectLetterTemplateForm');
+        Route::get('select-template', [LetterController::class, 'selectLetterTemplate'])->name('selectLetterTemplate');
+        Route::post('create-form', [LetterController::class, 'createForm'])->name('createForm');
+        Route::post('create', [LetterController::class, 'create'])->name('create');
+        Route::post('edit-form', [LetterController::class, 'editForm'])->name('editForm');
+        Route::post('edit', [LetterController::class, 'edit'])->name('edit');
+        Route::get('download/{id}', [LetterController::class, 'download'])->name('download');
+    });
+
+    Route::name('letterReceiver.')->prefix('letter-receiver')->group(function () {
+        Route::get('list-form', [ReceiverController::class, 'listForm'])->name('listForm');
+        Route::get('list', [ReceiverController::class, 'list'])->name('list');
+        Route::get('create-form', [ReceiverController::class, 'createForm'])->name('createForm');
+        Route::post('create', [ReceiverController::class, 'create'])->name('create');
+        Route::post('edit-form', [ReceiverController::class, 'editForm'])->name('editForm');
+        Route::post('edit', [ReceiverController::class, 'edit'])->name('edit');
+        Route::get('download/{id}', [ReceiverController::class, 'download'])->name('download');
     });
 });

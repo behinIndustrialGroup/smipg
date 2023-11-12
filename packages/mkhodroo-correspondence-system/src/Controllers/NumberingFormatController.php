@@ -36,4 +36,8 @@ class NumberingFormatController extends Controller
         $row->save();
         return $row;
     }
+
+    public static function getNewNumber($numbering_format_id){
+        
+    }
 }
