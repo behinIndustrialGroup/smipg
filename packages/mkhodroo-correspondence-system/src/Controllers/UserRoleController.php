@@ -12,6 +12,9 @@ class UserRoleController extends Controller
     public static function get($id){
         return UserRole::find($id);
     }
+    public static function getByUserId($user_id){
+        return UserRole::where('user_id', $user_id)->first();
+    }
     public static function listForm(){
         return view('CSViews::user-role.list');
     }
@@ -28,7 +31,14 @@ class UserRoleController extends Controller
         ]);
     }
     public static function create(Request $r){
-        return UserRole::create($r->except('_token'));
+        return UserRole::updateOrCreate(
+            [
+                'user_id' => $r->user_id
+            ],
+            [
+                'role_id' => $r->role_id
+            ]
+        );
     }
     public static function editForm(Request $r){
         return view('CSViews::user-role.edit')->with([

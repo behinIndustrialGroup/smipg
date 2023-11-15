@@ -1,26 +1,22 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Mkhodroo\CorrespondenceSystem\Controllers\ActivityController;
 use Mkhodroo\CorrespondenceSystem\Controllers\LetterController;
 use Mkhodroo\CorrespondenceSystem\Controllers\NumberingFormatController;
 use Mkhodroo\CorrespondenceSystem\Controllers\ReceiverController;
 use Mkhodroo\CorrespondenceSystem\Controllers\RoleController;
+use Mkhodroo\CorrespondenceSystem\Controllers\SignController;
 use Mkhodroo\CorrespondenceSystem\Controllers\TemplateAccessController;
 use Mkhodroo\CorrespondenceSystem\Controllers\TemplateController;
 use Mkhodroo\CorrespondenceSystem\Controllers\UserRoleController;
 use PhpOffice\PhpWord\TemplateProcessor;
 
 Route::name('atmn.')->prefix('atmn')->middleware(['web', 'auth'])->group(function () {
-    Route::name('download.')->prefix('download')->group(function () {
-        Route::get('', function () {
-            
-            $file = fopen(public_path('file.docx'), 'wb');
-            fwrite($file, base64_decode(TemplateController::get(4)->file));
-            fclose($file);
-            $phpword = new TemplateProcessor(public_path('file.docx'));
-            $phpword->setValue('{Receivers}','Santosh');
-            $phpword->saveAs(public_path('edited.docx'));
-        });
+    Route::get('test' , function () {
+        $base64_image = SignController::get(1)->file;
+        $image = base64_decode($base64_image);
+        file_put_contents('sign.jpg', $image);
     });
 
     Route::name('role.')->prefix('role')->group(function () {
@@ -75,7 +71,6 @@ Route::name('atmn.')->prefix('atmn')->middleware(['web', 'auth'])->group(functio
         Route::get('select-template', [LetterController::class, 'selectLetterTemplate'])->name('selectLetterTemplate');
         Route::post('create-form', [LetterController::class, 'createForm'])->name('createForm');
         Route::post('create', [LetterController::class, 'create'])->name('create');
-        Route::post('edit-form', [LetterController::class, 'editForm'])->name('editForm');
         Route::post('edit', [LetterController::class, 'edit'])->name('edit');
         Route::get('download/{id}', [LetterController::class, 'download'])->name('download');
     });
@@ -88,5 +83,21 @@ Route::name('atmn.')->prefix('atmn')->middleware(['web', 'auth'])->group(functio
         Route::post('edit-form', [ReceiverController::class, 'editForm'])->name('editForm');
         Route::post('edit', [ReceiverController::class, 'edit'])->name('edit');
         Route::get('download/{id}', [ReceiverController::class, 'download'])->name('download');
+    });
+
+    Route::name('sign.')->prefix('sign')->group(function () {
+        Route::get('list-form', [SignController::class, 'listForm'])->name('listForm');
+        Route::get('list', [SignController::class, 'list'])->name('list');
+        Route::get('create-form', [SignController::class, 'createForm'])->name('createForm');
+        Route::post('create', [SignController::class, 'create'])->name('create');
+        Route::post('edit-form', [SignController::class, 'editForm'])->name('editForm');
+        Route::post('edit', [SignController::class, 'edit'])->name('edit');
+        Route::get('download/{id}', [SignController::class, 'download'])->name('download');
+    });
+
+    Route::name('activity.')->prefix('activity')->group(function () {
+        Route::post('numbering', [ActivityController::class, 'numbering'])->name('numbering');
+        Route::post('signing', [ActivityController::class, 'signing'])->name('signing');
+        Route::post('unsigning', [ActivityController::class, 'unsigning'])->name('unsigning');
     });
 });

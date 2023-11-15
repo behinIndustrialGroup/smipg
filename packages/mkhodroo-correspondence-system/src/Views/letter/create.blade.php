@@ -33,7 +33,14 @@
         </div>
         <div class="col-sm-4">
             <div class="card">
-                <button class="btn btn-info">{{ __('Numbering') }}</button>
+                <button class="btn btn-info" onclick="numbering()">{{ __('Numbering') }}</button>
+                <select name="sign_id" id="" class="form-control">
+                    @foreach ($signs as $sign)
+                        <option value="{{$sign->id}}">{{$sign->name}}</option>
+                    @endforeach
+                </select>
+                <button class="btn btn-danger" onclick="siging()">{{__('Signing')}}</button>
+                <button class="btn btn-danger" onclick="unsigning()">{{__('Unsigning')}}</button>
                 <button class="btn btn-info">{{ __('Jump To') }}</button>
             </div>
             <div class="card">
@@ -67,6 +74,42 @@
             var url = "{{route('atmn.letter.download', ['id' => 'id'])}}";
             url = url.replace('id', id);
             window.open(url);
+        }
+
+        function numbering(){
+            var fd = new FormData();
+            fd.append('letter_id', $('input[name="id"]').val());
+            send_ajax_formdata_request(
+                "{{route('atmn.activity.numbering')}}",
+                fd,
+                function(res){
+                    console.log(res);
+                }
+            )
+        }
+
+        function siging(){
+            var fd = new FormData();
+            fd.append('letter_id', $('input[name="id"]').val());
+            fd.append('sign_id', $('select[name="sign_id"]').val());
+            send_ajax_formdata_request(
+                "{{route('atmn.activity.signing')}}",
+                fd,
+                function(res){
+                    console.log(res);
+                }
+            )
+        }
+        function unsigning(){
+            var fd = new FormData();
+            fd.append('letter_id', $('input[name="id"]').val());
+            send_ajax_formdata_request(
+                "{{route('atmn.activity.unsigning')}}",
+                fd,
+                function(res){
+                    console.log(res);
+                }
+            )
         }
     </script>
 @endsection

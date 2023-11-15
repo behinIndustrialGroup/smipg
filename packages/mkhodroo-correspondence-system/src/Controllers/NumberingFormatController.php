@@ -5,6 +5,7 @@ namespace Mkhodroo\CorrespondenceSystem\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Mkhodroo\CorrespondenceSystem\Models\NumberingFormat;
+use Mkhodroo\DateConvertor\Controllers\SDate;
 
 class NumberingFormatController extends Controller
 {
@@ -36,8 +37,28 @@ class NumberingFormatController extends Controller
         $row->save();
         return $row;
     }
+    public static function IncrementLastNumber($numbering_format_id){
+        $row = self::get($numbering_format_id);
+        if($row->last_number){
+            $row->last_number = $row->last_number+1;
+        }else{
+            $row->last_number = $row->start_from;
+        }
+        $row->save();
+    }
 
     public static function getNewNumber($numbering_format_id){
-        
+        $row = self::get($numbering_format_id);
+        return $row->last_number ? $row->last_number+1 : $row->start_from;
+    }
+
+    public static function Numbering($numbering_format_id){
+        $row = self::get($numbering_format_id);
+        $date = (new SDate())->toShaDate(date('Y-m-d'));
+        $year = explode('/', $date)[0];
+        $number = str_replace('@year', $year, $row->format);
+        $number = str_replace('@number', self::getNewNumber($row->id), $number);
+        self::IncrementLastNumber($row->id);
+        return $number;
     }
 }

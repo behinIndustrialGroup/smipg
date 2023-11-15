@@ -11,6 +11,10 @@ class ReceiverController extends Controller
     public static function get($id){
         return Receiver::find($id);
     }
+
+    public static function getByLetterId($letter_id){
+        return Receiver::where('letter_id', $letter_id)->get();
+    }
     public static function listForm(){
         return view('CSViews::template-access.list');
     }

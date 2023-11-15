@@ -5,11 +5,11 @@ namespace Mkhodroo\CorrespondenceSystem\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Activity extends Model
+class Sign extends Model
 {
     use SoftDeletes;
-    public $table = "correspondence_" . "letter_activities";
+    public $table = "correspondence_" . "signs";
     protected $fillable = [
-        'letter_id', 'user_id', 'action'
+        'user_id', 'file', 'name'
     ];
 }

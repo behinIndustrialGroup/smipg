@@ -17,6 +17,10 @@ class TemplateController extends Controller
     {
         return view('CSViews::template.list');
     }
+    public static function templatesThatUserCanCreated(){
+        $template_id = TemplateAccessController::getTemplatesThatHasCreateAccessForLoginUser();
+        return Template::whereIn('id', $template_id)->get();
+    }
     public static function list()
     {
         return ['data' => Template::get()->each(function ($row) {

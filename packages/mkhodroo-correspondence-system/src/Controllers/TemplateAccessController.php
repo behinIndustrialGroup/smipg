@@ -4,12 +4,23 @@ namespace Mkhodroo\CorrespondenceSystem\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Mkhodroo\CorrespondenceSystem\Models\TemplateAccess;
 
 class TemplateAccessController extends Controller
 {
     public static function get($id){
         return TemplateAccess::find($id);
+    }
+    public static function getByTemplateAndRoleId($template_id){
+        return TemplateAccess::where('template_id', $template_id)->where(
+            'role_id', UserRoleController::getByUserId(Auth::id())->role_id
+        )->first();
+    }
+    public static function getTemplatesThatHasCreateAccessForLoginUser(){
+        return TemplateAccess::where(
+            'role_id', UserRoleController::getByUserId(Auth::id())->role_id
+        )->where('create', 1)->pluck('template_id');
     }
     public static function listForm(){
         return view('CSViews::template-access.list');
@@ -27,9 +38,12 @@ class TemplateAccessController extends Controller
         ]);
     }
     public static function create(Request $r){
-        return TemplateAccess::create([
-            'template_id' => $r->template_id,
-            'role_id' => $r->role_id,
+        return TemplateAccess::updateOrCreate(
+            [
+                'template_id' => $r->template_id,
+                'role_id' => $r->role_id,
+            ],
+            [
             'create' => $r->create ? 1 : 0,
             'numbering' => $r->numbering ? 1 : 0,
             'signing' => $r->signing ? 1 : 0,
@@ -51,5 +65,9 @@ class TemplateAccessController extends Controller
         $row->signing = $r->signing ? 1 : 0;
         $row->save();
         return $row;
+    }
+
+    public static function userCanSignTemplate($template_id){
+        return self::getByTemplateAndRoleId($template_id)?->signing;
     }
 }
