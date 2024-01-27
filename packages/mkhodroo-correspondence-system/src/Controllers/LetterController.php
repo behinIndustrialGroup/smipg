@@ -8,8 +8,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Mkhodroo\CorrespondenceSystem\Models\Letter;
 use Mkhodroo\DateConvertor\Controllers\SDate;
+use Mpdf\Mpdf;
 use PhpOffice\PhpWord\Element\TextRun;
 use PhpOffice\PhpWord\IOFactory;
+use PhpOffice\PhpWord\Settings;
 use PhpOffice\PhpWord\Shared\Html;
 use PhpOffice\PhpWord\TemplateProcessor;
 
@@ -33,7 +35,10 @@ class LetterController extends Controller
         $letter->file = TemplateController::get($r->template_id)->file;
         $letter->body = TemplateController::get($r->template_id)->file;
         $letter->save();
-        return self::createForm($letter->id, $letter->template_id);
+        // send to inbox 
+        $inbox = InboxController::create($letter->id, Auth::id(), 'DRAFT', '');
+        return ShowInboxController::showLetter($inbox->id, $letter->id);
+        // return self::createForm($letter->id, $letter->template_id);
     }
 
     public static function createForm($letter_id, $template_id)
@@ -48,7 +53,7 @@ class LetterController extends Controller
     public static function create(Request $r)
     {
         $letter = Letter::find($r->id);
-        if($letter->sign_id){
+        if ($letter->sign_id) {
             return response(trans("You Cant Edit Body After Signing"), 300);
         }
         $letter->title = $r->title;
@@ -64,6 +69,43 @@ class LetterController extends Controller
             $letter->save();
         }
         return $letter;
+    }
+
+    public static function letterPreview($letter_id)
+    {
+        $letter = self::get($letter_id);
+        $receivers = ReceiverController::getByLetterId($letter->id);
+        $file = fopen(public_path('file.docx'), 'wb');
+        fwrite($file, base64_decode($letter->body));
+        fclose($file);
+
+        $phpword = new TemplateProcessor(public_path('file.docx'));
+        if ($letter->number) {
+            $phpword->setValue('Number', $letter->number);
+            $phpword->setValue('Date', $letter->date);
+        }
+        $phpword->setValue('Title', $letter->title);
+        $phpword->setValue('SignerName', Auth::user()->name);
+        $receiversStr = '';
+        foreach ($receivers as $receiver) {
+            $receiversStr .= $receiver->name . '<w:br/>';
+        }
+        $phpword->setValue('Receivers', $receiversStr);
+        if($letter->sign_id){
+            $base64_image = SignController::get($letter->sign_id)->file;
+            $image = base64_decode($base64_image);
+            file_put_contents(public_path('sign.png'), $image);
+            $image = public_path('sign.png');
+            $phpword->setImageValue('Sign', $image);
+        }
+        $phpword->saveAs(public_path('edited.docx'));
+        
+
+        $mpdf = new Mpdf();
+
+        $phpword = IOFactory::load(public_path('edited.docx'));
+        $htmlWriter = IOFactory::createWriter($phpword, 'HTML');
+        $htmlContent = $htmlWriter->save('php://output');
     }
     public static function editForm(Request $r)
     {
@@ -87,11 +129,17 @@ class LetterController extends Controller
 
     public static function download($id)
     {
+        $letter = self::get($id);
+        if($letter->sign_id){
+            $file = $letter->file;
+        }else{
+            $file = $letter->body;
+        }
         header("Cache-Control: public"); // needed for internet explorer
         header("Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document");
         header("Content-Transfer-Encoding: Binary");
         header("Content-Disposition: attachment; filename=template.docx");
-        readfile('data:application/vnd.openxmlformats-officedocument.wordprocessingml.document;base64,' . self::get($id)->file);
+        readfile('data:application/vnd.openxmlformats-officedocument.wordprocessingml.document;base64,' . $file);
     }
 
     public static function putContentToTemplate($letter_id)

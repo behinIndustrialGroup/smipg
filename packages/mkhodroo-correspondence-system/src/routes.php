@@ -2,21 +2,22 @@
 
 use Illuminate\Support\Facades\Route;
 use Mkhodroo\CorrespondenceSystem\Controllers\ActivityController;
+use Mkhodroo\CorrespondenceSystem\Controllers\JumpController;
 use Mkhodroo\CorrespondenceSystem\Controllers\LetterController;
 use Mkhodroo\CorrespondenceSystem\Controllers\NumberingFormatController;
 use Mkhodroo\CorrespondenceSystem\Controllers\ReceiverController;
 use Mkhodroo\CorrespondenceSystem\Controllers\RoleController;
+use Mkhodroo\CorrespondenceSystem\Controllers\ShowInboxController;
 use Mkhodroo\CorrespondenceSystem\Controllers\SignController;
 use Mkhodroo\CorrespondenceSystem\Controllers\TemplateAccessController;
 use Mkhodroo\CorrespondenceSystem\Controllers\TemplateController;
 use Mkhodroo\CorrespondenceSystem\Controllers\UserRoleController;
+use Mkhodroo\CorrespondenceSystem\Controllers\WordToImageController;
 use PhpOffice\PhpWord\TemplateProcessor;
 
 Route::name('atmn.')->prefix('atmn')->middleware(['web', 'auth'])->group(function () {
     Route::get('test' , function () {
-        $base64_image = SignController::get(1)->file;
-        $image = base64_decode($base64_image);
-        file_put_contents('sign.jpg', $image);
+        WordToImageController::convertToImage();
     });
 
     Route::name('role.')->prefix('role')->group(function () {
@@ -73,6 +74,7 @@ Route::name('atmn.')->prefix('atmn')->middleware(['web', 'auth'])->group(functio
         Route::post('create', [LetterController::class, 'create'])->name('create');
         Route::post('edit', [LetterController::class, 'edit'])->name('edit');
         Route::get('download/{id}', [LetterController::class, 'download'])->name('download');
+        Route::any('preview/{id}', [LetterController::class, 'letterPreview'])->name('preview');
     });
 
     Route::name('letterReceiver.')->prefix('letter-receiver')->group(function () {
@@ -96,8 +98,20 @@ Route::name('atmn.')->prefix('atmn')->middleware(['web', 'auth'])->group(functio
     });
 
     Route::name('activity.')->prefix('activity')->group(function () {
+        Route::get('get/{letter_id}', [ActivityController::class, 'get'])->name('get');
         Route::post('numbering', [ActivityController::class, 'numbering'])->name('numbering');
         Route::post('signing', [ActivityController::class, 'signing'])->name('signing');
         Route::post('unsigning', [ActivityController::class, 'unsigning'])->name('unsigning');
+    });
+
+    Route::name('inbox.')->prefix('inbox')->group(function () {
+        Route::get('list-form', [ShowInboxController::class, 'listForm'])->name('listForm');
+        Route::get('list', [ShowInboxController::class, 'list'])->name('list');
+        Route::get('show-letter/{inbox_id}/{letter_id}', [ShowInboxController::class, 'showLetter'])->name('showLetter');
+    });
+
+    Route::name('jump.')->prefix('jump')->group(function () {
+        Route::post('form', [JumpController::class, 'form'])->name('form');
+        Route::post('jump', [JumpController::class, 'jump'])->name('jump');
     });
 });

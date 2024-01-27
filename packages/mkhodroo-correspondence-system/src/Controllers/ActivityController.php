@@ -3,6 +3,7 @@
 namespace Mkhodroo\CorrespondenceSystem\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
@@ -17,6 +18,16 @@ class ActivityController extends Controller
             'user_id' => Auth::id(),
             'action' => $action
         ]);
+    }
+    public static function get($letter_id){
+        return Activity::where('letter_id', $letter_id)->get()->each(function($row){
+            $row->string = User::find($row->user_id)?->name . ' : ' . trans($row->action);
+            $datetime = explode(' ',$row->created_at);
+            $date = $datetime[0];
+            $time = $datetime[1];
+            $row->shDate = (new SDate())->toShaDate($date);
+            $row->time = $time;
+        });
     }
     public static function numbering(Request $r){
         $letter = LetterController::get($r->letter_id);
