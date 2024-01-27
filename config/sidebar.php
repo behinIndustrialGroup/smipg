@@ -6,7 +6,7 @@ return [
         'dashboard' => [
             'fa_name' => 'داشبرد',
             'submenu' => [
-                'dashboard' => [ 'fa_name' => 'داشبرد', 'route-name' => '', 'route-url' => 'admin' ],
+                'dashboard' => [ 'fa_name' => 'داشبرد', 'route-name' => '', 'route-url' => 'dashboard' ],
             ]
         ],
         'cases' => [
