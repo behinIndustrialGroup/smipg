@@ -2,7 +2,6 @@ body {
     width: 100%;
     height: 100%;
     background: #ffffff;
-    background: url('../../../images/altfuel-bg.jpg');
     background-size:100% 100%;
   }
 
@@ -185,5 +184,20 @@ legend {
 
 .dt-buttons{
   float: left;
+}
+
+.main-sidebar{
+  background: #0EB29A !important;
+}
+
+.brand-text, .info a{
+  color: #F5FDFF !important;
+  font-family: 'IranSans';
+}
+
+.btn-type1{
+  background-color: #DDF0C2;
+  border-color: #DDF0C2;
+  color: black;
 }
 

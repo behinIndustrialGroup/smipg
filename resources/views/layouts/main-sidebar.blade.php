@@ -1,5 +1,5 @@
 
-<aside class="main-sidebar sidebar-dark-primary elevation-4">
+<aside class="main-sidebar elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
         <img src="{{ url('public/dashboard/dist/img/avatar5.png') }}" alt="AdminLTE Logo"
@@ -25,7 +25,7 @@
                     @foreach (config('sidebar.menu') as $menu)
                         @if (auth()->user()->access('منو >>' . $menu['fa_name']))
                             <li class="nav-item has-treeview">
-                                <a href="#" class="nav-link active">
+                                <a href="#" class="nav-link">
                                     <i class="nav-icon fa fa-dashboard"></i>
                                     <p>
                                         {{ $menu['fa_name'] }}
@@ -42,7 +42,7 @@
                                                     {{ $submenu['static-url'] }}
                                                 @else
                                                     {{ url($submenu['route-url']) }} @endif"
-                                                    class="nav-link active">
+                                                    class="nav-link">
                                                     <i class="fa fa-circle-o nav-icon"></i>
                                                     <p>{{ $submenu['fa_name'] }}</p>
                                                 </a>
