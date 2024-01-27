@@ -38,7 +38,7 @@ use App\CustomClasses\Access;
     <!-- Right navbar links -->
     <ul class="navbar-nav mr-auto">
         <!-- Messages Dropdown Menu -->
-        <li class="nav-item dropdown">
+        {{-- <li class="nav-item dropdown">
             <a class="nav-link" data-toggle="dropdown" href="#">
                 <i class="fa fa-comments-o"></i>
                 <span class="badge badge-danger navbar-badge">3</span>
@@ -46,11 +46,10 @@ use App\CustomClasses\Access;
             <div class="dropdown-menu dropdown-menu-lg dropdown-menu-left">
                 <a href="{{ url('admin/messages/list') }}" class="dropdown-item dropdown-footer">نمایش تماام پیام ها</a>
             </div>
-        </li>
+        </li> --}}
         <li class="">
             <a class="" href="{{ route('logout') }}">
                 <i class="fa fa-power-off"></i>
-                <button class="btn btn-danger">خروج</button>
             </a>
         </li>
     </ul>
