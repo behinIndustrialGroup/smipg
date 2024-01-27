@@ -49,6 +49,7 @@ use App\CustomClasses\Access;
         </li>
         <li class="">
             <a class="" href="{{ route('logout') }}">
+                <i class="fa fa-power-off"></i>
                 <button class="btn btn-danger">خروج</button>
             </a>
         </li>
