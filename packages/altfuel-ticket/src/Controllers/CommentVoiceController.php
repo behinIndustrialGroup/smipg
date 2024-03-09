@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Mkhodroo\AltfuelTicket\Models\Ticket;
 use Mkhodroo\AltfuelTicket\Models\TicketComment;
+use Illuminate\Support\Str;
 
 class CommentVoiceController extends Controller
 {
@@ -22,7 +23,7 @@ class CommentVoiceController extends Controller
 
 
     public static function upload($file, $ticket_id) {
-        $name = RandomStringController::Generate() . '.wav';
+        $name = Str::random() . '.wav';
         $full_path = public_path(config('ATConfig.ticket-uploads-folder'))  . "/$ticket_id";
         if ( ! is_dir($full_path)) {
             mkdir($full_path);
