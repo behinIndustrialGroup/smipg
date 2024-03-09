@@ -5,7 +5,7 @@ use Illuminate\Support\ServiceProvider;
 use Rap2hpoutre\FastExcel\FastExcel;
 
 return [
-    'default_user_role_id' => 2,
+    'default_user_role_id' => 3,
 
     /*
     |--------------------------------------------------------------------------
