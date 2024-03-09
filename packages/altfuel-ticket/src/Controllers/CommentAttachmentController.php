@@ -11,7 +11,6 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 use Mkhodroo\AltfuelTicket\Models\Ticket;
 use Mkhodroo\AltfuelTicket\Models\TicketComment;
-use Illuminate\Support\Str;
 
 class CommentAttachmentController extends Controller
 {
@@ -25,7 +24,7 @@ class CommentAttachmentController extends Controller
 
 
     public static function upload($file, $ticket_id) {
-        $name = Str::random() . '.' . $file->getClientOriginalExtension();
+        $name = RandomStringController::Generate() . '.' . $file->getClientOriginalExtension();
         $full_path = public_path(config('ATConfig.ticket-uploads-folder'))  . "/$ticket_id";
         if ( ! is_dir($full_path)) {
             mkdir($full_path);

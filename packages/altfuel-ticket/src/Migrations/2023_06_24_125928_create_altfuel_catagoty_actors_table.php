@@ -13,9 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('altfuel_catagoty_actors', function (Blueprint $table) {
+        Schema::create('altfuel_catagory_actors', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('user_id')->unsigned();
+            $table->unsignedBigInteger('user_id');
             $table->bigInteger('cat_id')->unsigned();
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users');
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('altfuel_catagoty_actors');
+        Schema::dropIfExists('altfuel_catagory_actors');
     }
 };

@@ -22,7 +22,7 @@ return new class extends Migration
 
         Schema::create('altfuel_tickets', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('user_id')->unsigned();
+            $table->unsignedBigInteger('user_id');
             $table->bigInteger('cat_id')->unsigned();
             $table->string('title');
             $table->string('status')->default('new');
@@ -35,7 +35,7 @@ return new class extends Migration
         Schema::create('altfuel_ticket_comments', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('ticket_id')->unsigned();
-            $table->bigInteger('user_id')->unsigned();
+            $table->unsignedBigInteger('user_id');
             $table->text('text')->nullable();
             $table->string('voice')->nullable();
             $table->timestamps();

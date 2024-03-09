@@ -11,7 +11,6 @@ use Illuminate\Support\Facades\Log;
 use Mkhodroo\AltfuelTicket\Models\CatagoryActor;
 use Mkhodroo\AltfuelTicket\Models\Ticket;
 use Mkhodroo\AltfuelTicket\Requests\TicketRequest;
-use Illuminate\Support\Str;
 
 class CreateTicketController extends Controller
 {
@@ -25,12 +24,14 @@ class CreateTicketController extends Controller
         }else{//Create new Ticket
             $ticket = Ticket::create([
                 'user_id' => Auth::id(),
-                'ticket_id' => Str::random(20),
+                'ticket_id' => RandomStringController::Generate(20),
                 'cat_id' => $r->catagory,
                 'title' => $r->title,
+                'status' => config('ATConfig.status.new')
             ]);
         }
-        $ticket->status = $this->changeStatus($ticket->cat_id);
+        $status = $this->changeStatus($ticket->cat_id);
+        $ticket->status = $status ? $status : $ticket->status;
         $ticket->save();
         $file_path = ($r->file('payload')) ? CommentVoiceController::upload($r->file('payload'), $ticket->ticket_id): '';
 
@@ -47,11 +48,10 @@ class CreateTicketController extends Controller
         ], 200);
     }
 
-    function changeStatus($cat_id) {
-        if(CatagoryActor::where('cat_id', $cat_id)->where('user_id', Auth::id())->first()){
-            return config('ATConfig.status.answered');
-        }else{
+    function changeStatus($cat_id, $status = '') {
+        if(!CatagoryActor::where('cat_id', $cat_id)->where('user_id', Auth::id())->first()){
             return config('ATConfig.status.new');
         }
+        return null;
     }
 }
