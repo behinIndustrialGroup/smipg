@@ -25,11 +25,11 @@ class CommentAttachmentController extends Controller
 
     public static function upload($file, $ticket_id) {
         $name = RandomStringController::Generate() . '.' . $file->getClientOriginalExtension();
-        $full_path = public_path(config('ATConfig.ticket-uploads-folder'))  ;
+        $full_path = public_path(config('ATConfig.ticket-uploads-folder')) . "/$ticket_id" ;
         Log::info($full_path);
-        if ( ! is_dir($full_path)) {
-            mkdir(str_replace("/","",$full_path));
-        }
+        // if ( ! is_dir($full_path)) {
+        //     mkdir(str_replace("/","",$full_path));
+        // }
         $full_name = $full_path . '/' . $name;
         
         $a = Storage::disk('ticket')->put($ticket_id,$file);
