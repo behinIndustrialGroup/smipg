@@ -63,6 +63,9 @@ Route::name('agencyInfo.')->prefix('agency-info')->middleware(['web', 'auth', 'a
                 } elseif ($cat === "تولید-غیر مجاز") {
                     $line['رسته صنفی'] = 'producer';
                     $line['دسته بندی'] = 'unknown';
+                }else{
+                    $line['رسته صنفی'] = 'unknown';
+                    $line['دسته بندی'] = 'unknown';
                 }
                 $line['province'] = CityController::getCityByName($line['استان'], $line['شهر/شهرستان'])?->id;
                 if (!$line['province']) {
