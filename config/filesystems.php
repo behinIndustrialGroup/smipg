@@ -58,6 +58,7 @@ return [
         'ticket' => [
             'driver' => 'local',
             'root' => public_path(config('ATConfig.ticket-uploads-folder')),
+            'visibility' => 'public',
         ],
 
     ],
