@@ -96,6 +96,7 @@ Route::name('agencyInfo.')->prefix('agency-info')->middleware(['web', 'auth', 'a
             AgencyController::create($agency_id, 'membership00', $line['سال  1400']);
             AgencyController::create($agency_id, 'membership01', $line['سال 1401']);
             AgencyController::create($agency_id, 'membership02', $line['سال1402']);
+            $n++;
         }
         echo "</pre>";
     });
