@@ -18,7 +18,7 @@ Route::name('agencyInfo.')->prefix('agency-info')->middleware(['web', 'auth', 'a
         $collection = (new FastExcel)->import(public_path('test.xlsx'));
         $n = 1;
         foreach ($collection as $line) {
-            if ($n > 300 and $n < 800) {
+            if ($n > 800 and $n < 1300) {
                 $cat = trim($line['رسته صنفی']);
                 if ($cat === "__" || $cat === "") {
                     $line['رسته صنفی'] = 'unknown';
