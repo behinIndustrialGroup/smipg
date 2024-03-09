@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/migrate', function () {
-    Artisan::call('config:clear');
+    Artisan::call('storage:link');
     Artisan::call('migrate');
 });
 
