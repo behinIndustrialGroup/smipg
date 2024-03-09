@@ -127,7 +127,7 @@
                                         @else
                                             <input type="text" name="{{ $item }}"
                                                 value="{{ $value }}"
-                                                class="form-control {{ str_contains($item, 'pay') ? '' : 'cama-seprator' }}"
+                                                class="form-control"
                                                 id="">
                                         @endif
                                     </td>
