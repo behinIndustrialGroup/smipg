@@ -163,6 +163,7 @@
     "previous_business_license": "پروانه کسب قبلی",
     "postal_code_certificate": "گواهی کد پستی",
     "lease_or_ownership_doc": "سند مالکیت یا اجاره نامه",
-    "new_status": "وضعیت جدید"
+    "new_status": "وضعیت جدید",
+    "last_referral": "آخرین ارجاع"
 
 }
