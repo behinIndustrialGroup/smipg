@@ -81,6 +81,19 @@ return [
                 'national_card',
                 'birth_certificate_image',
                 'personal_image', 
+                'education_degree',
+                'military_card',
+                'business_rules_certificate',
+                'lease_or_ownership_doc',
+                'partner_consent_letter',
+                'tax',
+                'nitrogen_cylinder_hidrostatic_test_certificate',
+                'pressure_gauge_calibration_certificate',
+                'weightbridge_calibration_certificate',
+                'gas_storage_tank_certificate',
+                'commitment',
+                'revoke_business_license_form',
+                'previous_business_license'
             ]
         ],
         'retail' => [
@@ -159,6 +172,19 @@ return [
                 'national_card',
                 'birth_certificate_image',
                 'personal_image', 
+                'education_degree',
+                'military_card',
+                'business_rules_certificate',
+                'lease_or_ownership_doc',
+                'partner_consent_letter',
+                'tax',
+                'nitrogen_cylinder_hidrostatic_test_certificate',
+                'pressure_gauge_calibration_certificate',
+                'weightbridge_calibration_certificate',
+                'gas_storage_tank_certificate',
+                'commitment',
+                'revoke_business_license_form',
+                'previous_business_license'
             ]
         ],
         'sale-and-charging-insdustrial-gas' => [
@@ -236,6 +262,19 @@ return [
                 'national_card',
                 'birth_certificate_image',
                 'personal_image', 
+                'education_degree',
+                'military_card',
+                'business_rules_certificate',
+                'lease_or_ownership_doc',
+                'partner_consent_letter',
+                'tax',
+                'nitrogen_cylinder_hidrostatic_test_certificate',
+                'pressure_gauge_calibration_certificate',
+                'weightbridge_calibration_certificate',
+                'gas_storage_tank_certificate',
+                'commitment',
+                'revoke_business_license_form',
+                'previous_business_license'
             ]
         ],
         'saling-fire-cylenders' => [
@@ -314,6 +353,19 @@ return [
                 'national_card',
                 'birth_certificate_image',
                 'personal_image', 
+                'education_degree',
+                'military_card',
+                'business_rules_certificate',
+                'lease_or_ownership_doc',
+                'partner_consent_letter',
+                'tax',
+                'nitrogen_cylinder_hidrostatic_test_certificate',
+                'pressure_gauge_calibration_certificate',
+                'weightbridge_calibration_certificate',
+                'gas_storage_tank_certificate',
+                'commitment',
+                'revoke_business_license_form',
+                'previous_business_license'
             ]
         ],
         'wholesaling-industrial-gas' => [
@@ -392,6 +444,19 @@ return [
                 'national_card',
                 'birth_certificate_image',
                 'personal_image', 
+                'education_degree',
+                'military_card',
+                'business_rules_certificate',
+                'lease_or_ownership_doc',
+                'partner_consent_letter',
+                'tax',
+                'nitrogen_cylinder_hidrostatic_test_certificate',
+                'pressure_gauge_calibration_certificate',
+                'weightbridge_calibration_certificate',
+                'gas_storage_tank_certificate',
+                'commitment',
+                'revoke_business_license_form',
+                'previous_business_license'
             ]
         ],
         'producer' => [
@@ -469,6 +534,19 @@ return [
                 'national_card',
                 'birth_certificate_image',
                 'personal_image', 
+                'education_degree',
+                'military_card',
+                'business_rules_certificate',
+                'lease_or_ownership_doc',
+                'partner_consent_letter',
+                'tax',
+                'nitrogen_cylinder_hidrostatic_test_certificate',
+                'pressure_gauge_calibration_certificate',
+                'weightbridge_calibration_certificate',
+                'gas_storage_tank_certificate',
+                'commitment',
+                'revoke_business_license_form',
+                'previous_business_license'
             ]
         ],
         'unknown' => [
@@ -547,6 +625,19 @@ return [
                 'national_card',
                 'birth_certificate_image',
                 'personal_image', 
+                'education_degree',
+                'military_card',
+                'business_rules_certificate',
+                'lease_or_ownership_doc',
+                'partner_consent_letter',
+                'tax',
+                'nitrogen_cylinder_hidrostatic_test_certificate',
+                'pressure_gauge_calibration_certificate',
+                'weightbridge_calibration_certificate',
+                'gas_storage_tank_certificate',
+                'commitment',
+                'revoke_business_license_form',
+                'previous_business_license'
             ]
         ],
     ]
