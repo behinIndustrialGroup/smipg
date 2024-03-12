@@ -60,6 +60,7 @@ return [
                 '00' => ['membership_00', 'membership_00_pay_date', 'membership_00_ref_id', 'membership_00_pay_file'],
                 '01' => ['membership_01', 'membership_01_pay_date', 'membership_01_ref_id', 'membership_01_pay_file'],
                 '02' => ['membership_02', 'membership_02_pay_date', 'membership_02_ref_id', 'membership_02_pay_file'],
+                'donate1' => ['donate1', 'donate1_pay_date', 'donate1_ref_id', 'donate1_pay_file'],
             ],
             'fin_fields' => [
                 'fin_details' => ['type' => 'textarea'],
@@ -137,6 +138,7 @@ return [
                 '00' => ['membership_00', 'membership_00_pay_date', 'membership_00_ref_id', 'membership_00_pay_file'],
                 '01' => ['membership_01', 'membership_01_pay_date', 'membership_01_ref_id', 'membership_01_pay_file'],
                 '02' => ['membership_02', 'membership_02_pay_date', 'membership_02_ref_id', 'membership_02_pay_file'],
+                'donate1' => ['donate1', 'donate1_pay_date', 'donate1_ref_id', 'donate1_pay_file'],
             ],
             'fin_fields' => [
                 'fin_details' => ['type' => 'textarea'],
@@ -213,6 +215,7 @@ return [
                 '00' => ['membership_00', 'membership_00_pay_date', 'membership_00_ref_id', 'membership_00_pay_file'],
                 '01' => ['membership_01', 'membership_01_pay_date', 'membership_01_ref_id', 'membership_01_pay_file'],
                 '02' => ['membership_02', 'membership_02_pay_date', 'membership_02_ref_id', 'membership_02_pay_file'],
+                'donate1' => ['donate1', 'donate1_pay_date', 'donate1_ref_id', 'donate1_pay_file'],
             ],
             'fin_fields' => [
                 'fin_details' => ['type' => 'textarea'],
@@ -290,6 +293,7 @@ return [
                 '00' => ['membership_00', 'membership_00_pay_date', 'membership_00_ref_id', 'membership_00_pay_file'],
                 '01' => ['membership_01', 'membership_01_pay_date', 'membership_01_ref_id', 'membership_01_pay_file'],
                 '02' => ['membership_02', 'membership_02_pay_date', 'membership_02_ref_id', 'membership_02_pay_file'],
+                'donate1' => ['donate1', 'donate1_pay_date', 'donate1_ref_id', 'donate1_pay_file'],
             ],
             'fin_fields' => [
                 'fin_details' => ['type' => 'textarea'],
@@ -367,6 +371,7 @@ return [
                 '00' => ['membership_00', 'membership_00_pay_date', 'membership_00_ref_id', 'membership_00_pay_file'],
                 '01' => ['membership_01', 'membership_01_pay_date', 'membership_01_ref_id', 'membership_01_pay_file'],
                 '02' => ['membership_02', 'membership_02_pay_date', 'membership_02_ref_id', 'membership_02_pay_file'],
+                'donate1' => ['donate1', 'donate1_pay_date', 'donate1_ref_id', 'donate1_pay_file'],
             ],
             'fin_fields' => [
                 'fin_details' => ['type' => 'textarea'],
@@ -443,6 +448,7 @@ return [
                 '00' => ['membership_00', 'membership_00_pay_date', 'membership_00_ref_id', 'membership_00_pay_file'],
                 '01' => ['membership_01', 'membership_01_pay_date', 'membership_01_ref_id', 'membership_01_pay_file'],
                 '02' => ['membership_02', 'membership_02_pay_date', 'membership_02_ref_id', 'membership_02_pay_file'],
+                'donate1' => ['donate1', 'donate1_pay_date', 'donate1_ref_id', 'donate1_pay_file'],
             ],
             'fin_fields' => [
                 'fin_details' => ['type' => 'textarea'],
@@ -520,6 +526,7 @@ return [
                 '00' => ['membership_00', 'membership_00_pay_date', 'membership_00_ref_id', 'membership_00_pay_file'],
                 '01' => ['membership_01', 'membership_01_pay_date', 'membership_01_ref_id', 'membership_01_pay_file'],
                 '02' => ['membership_02', 'membership_02_pay_date', 'membership_02_ref_id', 'membership_02_pay_file'],
+                'donate1' => ['donate1', 'donate1_pay_date', 'donate1_ref_id', 'donate1_pay_file'],
             ],
             'fin_fields' => [
                 'fin_details' => ['type' => 'textarea'],
