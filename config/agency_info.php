@@ -33,6 +33,19 @@ return [
                         ['value' => 'درحال بررسی', 'label' => 'در حال بررسی'],
                     ]
                 ],
+                'reviewer' => [
+                    'type' => 'select',
+                    'default' => '',
+                    'options' => [
+                        ['value' => 'اصفهانی', 'label' => 'اصفهانی'],
+                        ['value' => 'اسدی', 'label' => 'اسدی'],
+                        ['value' => 'حیدری', 'label' => 'حیدری'],
+                        ['value' => 'نعمتی', 'label' => 'نعمتی'],
+                        ['value' => 'مقدسی', 'label' => 'مقدسی'],
+                        ['value' => 'میرزایی', 'label' => 'میرزایی'],
+                        ['value' => 'بام افکن', 'label' => 'بام افکن'],
+                    ]
+                ],
                 'description' => ['type' => 'text', 'default' => '', 'required' => false],
 
             ],
@@ -78,6 +91,19 @@ return [
                     'options' => [
                         ['value' => 'جدید', 'label' => 'جدید'],
                         ['value' => 'درحال بررسی', 'label' => 'در حال بررسی'],
+                    ]
+                ],
+                'reviewer' => [
+                    'type' => 'select',
+                    'default' => '',
+                    'options' => [
+                        ['value' => 'اصفهانی', 'label' => 'اصفهانی'],
+                        ['value' => 'اسدی', 'label' => 'اسدی'],
+                        ['value' => 'حیدری', 'label' => 'حیدری'],
+                        ['value' => 'نعمتی', 'label' => 'نعمتی'],
+                        ['value' => 'مقدسی', 'label' => 'مقدسی'],
+                        ['value' => 'میرزایی', 'label' => 'میرزایی'],
+                        ['value' => 'بام افکن', 'label' => 'بام افکن'],
                     ]
                 ],
                 'description' => ['type' => 'text', 'default' => '', 'required' => false],
@@ -174,6 +200,19 @@ return [
                         ['value' => 'درحال بررسی', 'label' => 'در حال بررسی'],
                     ]
                 ],
+                'reviewer' => [
+                    'type' => 'select',
+                    'default' => '',
+                    'options' => [
+                        ['value' => 'اصفهانی', 'label' => 'اصفهانی'],
+                        ['value' => 'اسدی', 'label' => 'اسدی'],
+                        ['value' => 'حیدری', 'label' => 'حیدری'],
+                        ['value' => 'نعمتی', 'label' => 'نعمتی'],
+                        ['value' => 'مقدسی', 'label' => 'مقدسی'],
+                        ['value' => 'میرزایی', 'label' => 'میرزایی'],
+                        ['value' => 'بام افکن', 'label' => 'بام افکن'],
+                    ]
+                ],
                 'description' => ['type' => 'text', 'default' => '', 'required' => false],
 
 
@@ -220,6 +259,19 @@ return [
                     'options' => [
                         ['value' => 'جدید', 'label' => 'جدید'],
                         ['value' => 'درحال بررسی', 'label' => 'در حال بررسی'],
+                    ]
+                ],
+                'reviewer' => [
+                    'type' => 'select',
+                    'default' => '',
+                    'options' => [
+                        ['value' => 'اصفهانی', 'label' => 'اصفهانی'],
+                        ['value' => 'اسدی', 'label' => 'اسدی'],
+                        ['value' => 'حیدری', 'label' => 'حیدری'],
+                        ['value' => 'نعمتی', 'label' => 'نعمتی'],
+                        ['value' => 'مقدسی', 'label' => 'مقدسی'],
+                        ['value' => 'میرزایی', 'label' => 'میرزایی'],
+                        ['value' => 'بام افکن', 'label' => 'بام افکن'],
                     ]
                 ],
                 'description' => ['type' => 'text', 'default' => '', 'required' => false],
