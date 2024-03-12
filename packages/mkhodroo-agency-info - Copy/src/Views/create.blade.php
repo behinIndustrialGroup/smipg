@@ -2,11 +2,11 @@
     <table class="table table-striped">
         <tbody>
             <tr>
-                <td>{{ __(config('agency_info.main_field_name')) }}</td>
+                <td>{{ __('catagory') }}</td>
                 <td>
-                    <select name="{{ config('agency_info.main_field_name') }}" id="" class="form-control">
-                        @foreach (config('agency_info.customer_type') as $catagory => $catagory_detail)
-                            <option value="{{ $catagory }}">{{ __($catagory_detail['name']) }}</option>
+                    <select name="guild_catagory" id="" class="form-control">
+                        @foreach (config('agency_info.agency') as $catagory => $catagory_detail)
+                            <option value="{{ $catagory }}">{{ $catagory_detail['catagory_fa'] }}</option>
                         @endforeach
                     </select>
                 </td>
@@ -23,8 +23,13 @@
             $('#new-agency-form').serialize(),
             function(res) {
                 console.log(res);
-                open_edit_form(res.id)
-                filter()
+                url = "{{ route('agencyInfo.editForm', ['parent_id' => 'parent_id']) }}";
+                url = url.replace('parent_id', res.id);
+                open_admin_modal(
+                    url
+                )
+                refresh_table()
+
             }
         )
     }

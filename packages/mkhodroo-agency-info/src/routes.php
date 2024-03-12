@@ -1,110 +1,219 @@
 <?php
 
+use App\Models\FinInfo;
+use App\Models\HidroModel;
+use App\Models\KamFesharModel;
+use App\Models\MarakezModel;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Route;
 use Mkhodroo\AgencyInfo\Controllers\AgencyController;
 use Mkhodroo\AgencyInfo\Controllers\AgencyDocsController;
 use Mkhodroo\AgencyInfo\Controllers\AgencyListController;
 use Mkhodroo\AgencyInfo\Controllers\CreateAgencyController;
+use Mkhodroo\AgencyInfo\Controllers\DebtController;
 use Mkhodroo\AgencyInfo\Models\AgencyInfo;
 use Mkhodroo\Cities\Controllers\CityController;
 use Mkhodroo\UserRoles\Controllers\GetRoleController;
 use Rap2hpoutre\FastExcel\FastExcel;
 
-Route::name('agencyInfo.')->prefix('agency-info')->middleware(['web', 'auth', 'access'])->group(function () {
-    Route::get('test', function () {
-        return Hash::make('MM123456@');
-        // echo "<pre>";
+Route::name('agencyInfo.')->prefix('agency-info')->middleware(['web', 'auth'])->group(function () {
+    // Route::get('import-data', function () {
+    //     $marakez = MarakezModel::get();
+    //     echo "<pre>";
+    //     foreach ($marakez as $agency) {
+    //         $main = new AgencyInfo();
+    //         $main->key = 'customer_type';
+    //         $main->value = 'agency';
+    //         $main->save();
+    //         $main->parent_id = $main->id;
+    //         $main->save();
 
-        // $collection = (new FastExcel)->import(public_path('test.xlsx'));
-        // $n = 1;
-        // foreach ($collection as $line) {
-        //     if ($n > 1200 and $n < 1500) {
-        //         print_r($line);
-        //         $cat = trim($line['رسته صنفی']);
-        //         if ($cat === "__" || $cat === "") {
-        //             $line['رسته صنفی'] = 'unknown';
-        //             $line['دسته بندی'] = 'unknown';
-        //         } elseif ($cat === "ایمنی-شارژ") {
-        //             $line['رسته صنفی'] = 'charging-fire-cylenders';
-        //             $line['دسته بندی'] = 'safety';
-        //         } elseif ($cat === "صنعتی-خرده") {
-        //             $line['رسته صنفی'] = 'retail';
-        //             $line['دسته بندی'] = 'industrial';
-        //         } elseif ($cat === "صنعتی") {
-        //             $line['رسته صنفی'] = 'unknown';
-        //             $line['دسته بندی'] = 'industrial';
-        //         } elseif ($cat === "صنعتی-شارژ") {
-        //             $line['رسته صنفی'] = 'sale-and-charging-insdustrial-gas';
-        //             $line['دسته بندی'] = 'industrial';
-        //         } elseif ($cat === "ایمنی-فروش") {
-        //             $line['رسته صنفی'] = 'saling-fire-cylenders';
-        //             $line['دسته بندی'] = 'safety';
-        //         } elseif ($cat === "ایمنی") {
-        //             $line['رسته صنفی'] = 'unknown';
-        //             $line['دسته بندی'] = 'safety';
-        //         } elseif ($cat === "صنعتی-عمده") {
-        //             $line['رسته صنفی'] = 'wholesaling-industrial-gas';
-        //             $line['دسته بندی'] = 'industrial';
-        //         } elseif ($cat === "تولید کننده") {
-        //             $line['رسته صنفی'] = 'producer';
-        //             $line['دسته بندی'] = 'unknown';
-        //         } elseif ($cat === "صنعتی-تولید") {
-        //             $line['رسته صنفی'] = 'producer';
-        //             $line['دسته بندی'] = 'industrial';
-        //         } elseif ($cat === "صنعتی -خرده") {
-        //             $line['رسته صنفی'] = 'retail';
-        //             $line['دسته بندی'] = 'industrial';
-        //         } elseif ($cat === "ایمنی-خرده") {
-        //             $line['رسته صنفی'] = 'saling-fire-cylenders';
-        //             $line['دسته بندی'] = 'safety';
-        //         } elseif ($cat === "ایمنی-شارز") {
-        //             $line['رسته صنفی'] = 'charging-fire-cylenders';
-        //             $line['دسته بندی'] = 'safety';
-        //         } elseif ($cat === "تولید-غیر مجاز") {
-        //             $line['رسته صنفی'] = 'producer';
-        //             $line['دسته بندی'] = 'unknown';
-        //         }else{
-        //             $line['رسته صنفی'] = 'unknown';
-        //             $line['دسته بندی'] = 'unknown';
-        //         }
-        //         $line['province'] = CityController::getCityByName($line['استان'], $line['شهر/شهرستان'])?->id;
-        //         if (!$line['province']) {
-        //             CityController::create($line['استان'], $line['شهر/شهرستان']);
-        //             $line['province'] = CityController::getCityByName($line['استان'], $line['شهر/شهرستان'])?->id;
-        //         }
-        //         $r = new Request([
-        //             'guild_catagory' => $line['رسته صنفی']
-        //         ]);
+    //         AgencyInfo::create(['key' => 'firstname', 'value' => $agency->Name, 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'national_id', 'value' => $agency->NationalID, 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'enable', 'value' => $agency->enable, 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'receiving_code_year', 'value' => $agency->ReceivingCodeYear, 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'agency_code', 'value' => $agency->CodeEtehadie , 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'mobile', 'value' => $agency->Cellphone, 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'phone', 'value' => $agency->Tel, 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'guild_number', 'value' => $agency->GuildNumber, 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'issued_date', 'value' => $agency->IssueDate, 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'exp_date', 'value' => $agency->ExpDate, 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'province', 'value' => CityController::create($agency->Province, $agency->City)->id, 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'address', 'value' => $agency->Address, 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'location', 'value' => $agency->Location, 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'description', 'value' => $agency->Details, 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'inspection_user', 'value' => $agency->InsUserDelivered, 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'fin_green', 'value' => $agency->FinGreen, 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'irngv', 'value' => $agency->IrngvFee, 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'irngv_pay_date', 'value' => $agency->IrngvFee_PayDate, 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'irngv_ref_id', 'value' => $agency->IrngvFee_Refid, 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'plate_reader', 'value' => $agency->LockFee, 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'plate_reader_pay_date', 'value' => $agency->LockFee_PayDate, 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'plate_reader_ref_id', 'value' => $agency->LockFee_Refid, 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'debt1', 'value' => $agency->debt, 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'debt1_pay_date', 'value' => $agency->LockFee_PayDate, 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'debt1_ref_id', 'value' => $agency->debt_RefID, 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'debt1_description', 'value' => $agency->debt_description, 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'fin_details', 'value' => $agency->FinDetails, 'parent_id' => $main->id]);
 
-        //         $agency_id = CreateAgencyController::create($r)?->id;
-        //         AgencyController::create($agency_id, 'file_number', $line['شماره پرونده']);
-        //         AgencyController::create($agency_id, 'catagory', $line['دسته بندی']);
-        //         AgencyController::create($agency_id, 'firstname', $line['نام']);
-        //         AgencyController::create($agency_id, 'lastname', $line['نام خانوادگی']);
-        //         AgencyController::create($agency_id, 'national_id', $line['کد ملی']);
-        //         AgencyController::create($agency_id, 'mobile', $line['تلفن']);
-        //         AgencyController::create($agency_id, 'phone', '');
-        //         AgencyController::create($agency_id, 'guild_number', $line['شناسه صنفی']);
-        //         AgencyController::create($agency_id, 'issued_date', $line['تاریخ صدور']);
-        //         AgencyController::create($agency_id, 'province', $line['province']);
-        //         AgencyController::create($agency_id, 'status', $line['وضعیت']);
-        //         AgencyController::create($agency_id, 'request_type', $line['نوع درخواست']);
-        //         AgencyController::create($agency_id, 'warning', $line['اخطاریه/ اماکن ']);
-        //         AgencyController::create($agency_id, 'description', $line['توضیحات']);
-        //         AgencyController::create($agency_id, 'membership96', $line['سال 96 ']);
-        //         AgencyController::create($agency_id, 'membership97', $line['سال 97']);
-        //         AgencyController::create($agency_id, 'membership98', $line['سال 98']);
-        //         AgencyController::create($agency_id, 'membership99', $line['سال 99']);
-        //         AgencyController::create($agency_id, 'membership00', $line['سال  1400']);
-        //         AgencyController::create($agency_id, 'membership01', $line['سال 1401']);
-        //         AgencyController::create($agency_id, 'membership02', $line['سال1402']);
-        //     }
-        //     $n++;
-        // }
-        // echo "</pre>";
-    });
+            
+    //         $fin_infos = FinInfo::where('agency_table', 'marakez1')->where('agency_id', $agency->id)->groupBy('name', 'agency_id')->get();
+    //         echo "number of fin info for $agency->id $agency->Name: ". count($fin_infos) . "<br>";
+
+    //         foreach($fin_infos as $fin_info){
+    //             $key = $fin_info->name;
+    //             $record = new AgencyInfo();
+    //             $record->key = $key;
+    //             $record->value = $fin_info->price;
+    //             $record->parent_id = $main->id;
+    //             $record->save();
+
+    //             $key = $fin_info->name. '_pay_date';
+    //             $record = new AgencyInfo();
+    //             $record->key = $key;
+    //             $record->value = $fin_info->pay_date;
+    //             $record->parent_id = $main->id;
+    //             $record->save();
+
+    //             $key = $fin_info->name. '_ref_id';
+    //             $record = new AgencyInfo();
+    //             $record->key = $key;
+    //             $record->value = $fin_info->ref_id;
+    //             $record->parent_id = $main->id;
+    //             $record->save();
+
+    //             $key = $fin_info->name. '_description';
+    //             $record = new AgencyInfo();
+    //             $record->key = $key;
+    //             $record->value = $fin_info->description;
+    //             $record->parent_id = $main->id;
+    //             $record->save();
+    //         }
+    //         // print_r($fin_info);
+    //     }
+
+    // });
+    // Route::get('import-kamfeshar', function () {
+    //     $marakez = KamFesharModel::get();
+    //     echo "<pre>";   
+    //     foreach ($marakez as $agency) {
+    //         $main = new AgencyInfo();
+    //         $main->key = 'customer_type';
+    //         $main->value = 'low-pressure';
+    //         $main->save();
+    //         $main->parent_id = $main->id;
+    //         $main->save();
+
+    //         AgencyInfo::create(['key' => 'firstname', 'value' => $agency->Name, 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'national_id', 'value' => $agency->NationalID, 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'enable', 'value' => $agency->enable, 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'receiving_code_year', 'value' => $agency->ReceivingCodeYear, 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'agency_code', 'value' => $agency->CodeEtehadie , 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'mobile', 'value' => $agency->Cellphone, 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'phone', 'value' => $agency->Tel, 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'guild_number', 'value' => $agency->GuildNumber, 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'issued_date', 'value' => $agency->IssueDate, 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'exp_date', 'value' => $agency->ExpDate, 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'province', 'value' => CityController::create($agency->Province, $agency->City)->id, 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'address', 'value' => $agency->Address, 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'location', 'value' => $agency->Location, 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'description', 'value' => $agency->Details, 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'inspection_user', 'value' => $agency->InsUserDelivered, 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'fin_green', 'value' => $agency->FinGreen, 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'irngv', 'value' => $agency->IrngvFee, 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'irngv_pay_date', 'value' => $agency->IrngvFee_PayDate, 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'irngv_ref_id', 'value' => $agency->IrngvFee_Refid, 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'plate_reader', 'value' => $agency->LockFee, 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'plate_reader_pay_date', 'value' => $agency->LockFee_PayDate, 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'plate_reader_ref_id', 'value' => $agency->LockFee_Refid, 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'debt1', 'value' => $agency->debt, 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'debt1_pay_date', 'value' => $agency->LockFee_PayDate, 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'debt1_ref_id', 'value' => $agency->debt_RefID, 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'debt1_description', 'value' => $agency->debt_description, 'parent_id' => $main->id]);
+    //         AgencyInfo::create(['key' => 'fin_details', 'value' => $agency->FinDetails, 'parent_id' => $main->id]);
+
+            
+    //         $fin_infos = FinInfo::where('agency_table', 'kamfeshar')->where('agency_id', $agency->id)->groupBy('name', 'agency_id')->get();
+    //         foreach($fin_infos as $fin_info){
+    //             $key = $fin_info->name;
+    //             $record = new AgencyInfo();
+    //             $record->key = $key;
+    //             $record->value = $fin_info->price;
+    //             $record->parent_id = $main->id;
+    //             $record->save();
+
+    //             $key = $fin_info->name. '_pay_date';
+    //             $record = new AgencyInfo();
+    //             $record->key = $key;
+    //             $record->value = $fin_info->pay_date;
+    //             $record->parent_id = $main->id;
+    //             $record->save();
+
+    //             $key = $fin_info->name. '_ref_id';
+    //             $record = new AgencyInfo();
+    //             $record->key = $key;
+    //             $record->value = $fin_info->ref_id;
+    //             $record->parent_id = $main->id;
+    //             $record->save();
+
+    //             $key = $fin_info->name. '_description';
+    //             $record = new AgencyInfo();
+    //             $record->key = $key;
+    //             $record->value = $fin_info->description;
+    //             $record->parent_id = $main->id;
+    //             $record->save();
+    //         }
+    //         // print_r($fin_info);
+    //         echo "######################<br>";
+    //     }
+    // });
+
+    // Route::get('import-hidro', function () {
+    //     $marakez = HidroModel::get();
+    //     $i=1;
+    //     foreach ($marakez as $agency) {
+    //         if($agency->CodeEtehadie){
+    //             $parent_id = AgencyInfo::where('key', 'agency_code')->where('value', $agency->CodeEtehadie)->first()->parent_id;
+    //             echo $i. ' - '. $parent_id .' - '.$agency->CodeEtehadie.' - '.  $agency->PostalCode. '<br>';
+    //             $i++;
+    //             AgencyInfo::create(['key' => 'postal_code', 'value' => (string)$agency->PostalCode, 'parent_id' => $parent_id]);
+    //             AgencyInfo::create(['key' => 'standard_certificate_exp_date', 'value' => $agency->standardCertificateExpDate, 'parent_id' => $parent_id]);
+    //             AgencyInfo::create(['key' => 'standard_certificate_number', 'value' => $agency->standardCertificateNumber, 'parent_id' => $parent_id]);
+    //         }elseif($agency->legalNationalId){
+    //             $parent_id = AgencyInfo::where('key', 'legal_national_id')->where('value', $agency->legalNationalId)->first()->parent_id;
+    //             echo $i. ' - '. $parent_id .' - '.$agency->CodeEtehadie.' - '.  $agency->PostalCode. '<br>';
+    //             $i++;
+    //             AgencyInfo::create(['key' => 'postal_code', 'value' => (string)$agency->PostalCode, 'parent_id' => $parent_id]);
+    //             AgencyInfo::create(['key' => 'standard_certificate_exp_date', 'value' => $agency->standardCertificateExpDate, 'parent_id' => $parent_id]);
+    //             AgencyInfo::create(['key' => 'standard_certificate_number', 'value' => $agency->standardCertificateNumber, 'parent_id' => $parent_id]);
+    //         }
+            
+
+            
+    //     }
+
+    //     $marakez = MarakezModel::get();
+    //     $i=1;
+    //     foreach ($marakez as $agency) {
+    //         if($agency->CodeEtehadie){
+    //             $parent_id = AgencyInfo::where('key', 'agency_code')->where('value', $agency->CodeEtehadie)->first()->parent_id;
+    //             echo $i. ' - '. $parent_id .' - '.$agency->CodeEtehadie.' - '.  $agency->PostalCode. '<br>';
+    //             $i++;
+    //             AgencyInfo::create(['key' => 'postal_code', 'value' => (string)$agency->PostalCode, 'parent_id' => $parent_id]);
+    //         }
+    //     }
+
+    //     $marakez = KamFesharModel::get();
+    //     $i=1;
+    //     foreach ($marakez as $agency) {
+    //         if($agency->CodeEtehadie){
+    //             $parent_id = AgencyInfo::where('key', 'agency_code')->where('value', $agency->CodeEtehadie)->first()->parent_id;
+    //             echo $i. ' - '. $parent_id .' - '.$agency->CodeEtehadie.' - '.  $agency->PostalCode. '<br>';
+    //             $i++;
+    //             AgencyInfo::create(['key' => 'postal_code', 'value' => (string)$agency->PostalCode, 'parent_id' => $parent_id]);
+    //         }
+    //     }
+    // });
     Route::get('create-form', [CreateAgencyController::class, 'view'])->name('createForm');
     Route::post('create', [CreateAgencyController::class, 'create'])->name('create');
     Route::get('list-form', [AgencyListController::class, 'view'])->name('listForm');
@@ -115,4 +224,17 @@ Route::name('agencyInfo.')->prefix('agency-info')->middleware(['web', 'auth', 'a
     Route::post('fin-edit', [AgencyController::class, 'finEdit'])->name('finEdit');
     Route::post('docs-edit', [AgencyDocsController::class, 'docsEdit'])->name('docsEdit');
     Route::post('delete-info', [AgencyController::class, 'deleteByKey'])->name('deleteByKey');
+});
+
+Route::prefix('/bedehi')->group(function () {
+    Route::get('/', [DebtController::class, 'bedehiHomePage']);
+    Route::post('/confirm-debt', [DebtController::class, 'confirmForm'])->name('confirmForm');
+    Route::post('/', [DebtController::class, 'confirmBedehi'])->name('confirm-bedehi');
+    Route::post('/pay', [DebtController::class, 'pay'])->name('pay');
+    Route::get('/callback', [DebtController::class, 'callback'])->name('callback');
+});
+
+
+Route::prefix('api/agencies')->group(function(){
+    Route::get('{type?}', [AgencyListController::class, 'getValidAgencies']);
 });

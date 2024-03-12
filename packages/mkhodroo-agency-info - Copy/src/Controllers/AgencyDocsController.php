@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Mkhodroo\AgencyInfo\Models\AgencyInfo;
-use Mkhodroo\AgencyInfo\Requests\AgencyDocRequest;
 
 class AgencyDocsController extends Controller
 {
@@ -18,12 +17,6 @@ class AgencyDocsController extends Controller
         $data = $r->except('id');
         foreach ($data as $key => $value) {
             $value = FileController::store($r->file($key));
-            if($value['status'] !== 200){
-                return response($value['message'], $value['status']);
-            }
-            else{
-                $value = $value['dir'];
-            }
             $row = $agency_fields->where('key', $key)->first();
             if ($row) {
                 $row->update([
@@ -37,7 +30,7 @@ class AgencyDocsController extends Controller
                 $row->save();
             }
         }
-        return $agency_fields->first();
+        return $agency_fields;
         // return view('AgencyView::edit')->with([ 'agency_fields' => $agency_fields ]);
     }
 }

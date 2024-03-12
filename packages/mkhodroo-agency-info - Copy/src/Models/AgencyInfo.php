@@ -13,9 +13,7 @@ class AgencyInfo extends Model
         'key', 'value', 'parent_id', 'desciption'
     ];
 
-    function children() {
-        return AgencyInfo::where('parent_id', $this->parent_id)->get();
-    }
-
-    
+    // function role() {
+    //     return 
+    // }
 }

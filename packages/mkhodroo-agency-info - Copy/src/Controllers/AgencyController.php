@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Mkhodroo\AgencyInfo\Models\AgencyInfo;
-use Mkhodroo\AgencyInfo\Requests\AgencyInfoRequest;
 
 class AgencyController extends Controller
 {
@@ -24,17 +23,18 @@ class AgencyController extends Controller
             $row = $agency_fields->where('key', $key)->first();
             if ($row) {
                 $row->update([
-                    'value' => str_replace(',', '', $value)
+                    'value' => $value
                 ]);
             } else {
                 $row = new AgencyInfo();
                 $row->key = $key;
-                $row->value = str_replace(',', '', $value);
+                $row->value = $value;
                 $row->parent_id = $r->id;
                 $row->save();
             }
         }
-        return $agency_fields->first();
+        return $agency_fields;
+        // return view('AgencyView::edit')->with([ 'agency_fields' => $agency_fields ]);
     }
 
     public static function finEdit(Request $r)
@@ -45,12 +45,6 @@ class AgencyController extends Controller
             //files
             if(gettype($r->$key) === 'object'){
                 $value = FileController::store($r->file($key), config('agency_info.fin_uploads'));
-                if($value['status'] !== 200){
-                    return response($value['message'], $value['status']);
-                }
-                else{
-                    $value = $value['dir'];
-                }
             }
             $row = $agency_fields->where('key', $key)->first();
             if ($row) {
@@ -65,7 +59,7 @@ class AgencyController extends Controller
                 $row->save();
             }
         }
-        return $agency_fields->first();
+        return $agency_fields;
         // return view('AgencyView::edit')->with([ 'agency_fields' => $agency_fields ]);
     }
 
