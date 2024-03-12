@@ -93,7 +93,8 @@ return [
                 'gas_storage_tank_certificate',
                 'commitment',
                 'revoke_business_license_form',
-                'previous_business_license'
+                'previous_business_license',
+                'postal_code_certificate'
             ]
         ],
         'retail' => [
@@ -184,7 +185,8 @@ return [
                 'gas_storage_tank_certificate',
                 'commitment',
                 'revoke_business_license_form',
-                'previous_business_license'
+                'previous_business_license',
+                'postal_code_certificate'
             ]
         ],
         'sale-and-charging-insdustrial-gas' => [
@@ -274,7 +276,8 @@ return [
                 'gas_storage_tank_certificate',
                 'commitment',
                 'revoke_business_license_form',
-                'previous_business_license'
+                'previous_business_license',
+                'postal_code_certificate'
             ]
         ],
         'saling-fire-cylenders' => [
@@ -365,7 +368,8 @@ return [
                 'gas_storage_tank_certificate',
                 'commitment',
                 'revoke_business_license_form',
-                'previous_business_license'
+                'previous_business_license',
+                'postal_code_certificate'
             ]
         ],
         'wholesaling-industrial-gas' => [
@@ -456,7 +460,8 @@ return [
                 'gas_storage_tank_certificate',
                 'commitment',
                 'revoke_business_license_form',
-                'previous_business_license'
+                'previous_business_license',
+                'postal_code_certificate'
             ]
         ],
         'producer' => [
@@ -546,7 +551,8 @@ return [
                 'gas_storage_tank_certificate',
                 'commitment',
                 'revoke_business_license_form',
-                'previous_business_license'
+                'previous_business_license',
+                'postal_code_certificate'
             ]
         ],
         'unknown' => [
@@ -637,7 +643,8 @@ return [
                 'gas_storage_tank_certificate',
                 'commitment',
                 'revoke_business_license_form',
-                'previous_business_license'
+                'previous_business_license',
+                'postal_code_certificate'
             ]
         ],
     ]
