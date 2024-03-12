@@ -11,7 +11,7 @@ return [
             'catagory_fa' => 'شارژ سیلندرهای آتش نشانی',
             'fields' => [
                 'file_number' => ['type' => 'text', 'required' => true],
-                'guild_catagory' => ['type' => 'text', 'default' => 'شارژ سیلندرهای آتش نشانی', 'required' => false, 'disabled' => true],
+                'guild_catagory' => ['type' => 'text', 'disabled' => true, 'default' => 'شارژ سیلندرهای آتش نشانی', 'required' => false],
                 'catagory' => [
                     'type' => 'select',
                     'default' => '',
@@ -105,7 +105,7 @@ return [
             'catagory_fa' => 'خرده فروشی گازهای طبی و صنعتی',
             'fields' => [
                 'file_number' => ['type' => 'text', 'required' => true],
-                'guild_catagory' => ['type' => 'text', 'default' => 'خرده فروشی گازهای طبی و صنعتی', 'required' => false],
+                'guild_catagory' => ['type' => 'text', 'disabled' => true, 'default' => 'خرده فروشی گازهای طبی و صنعتی', 'required' => false],
                 'catagory' => [
                     'type' => 'select',
                     'default' => '',
@@ -200,7 +200,7 @@ return [
             'catagory_fa' => 'شارژ و فروش گازهای طبی و صنعتی',
             'fields' => [
                 'file_number' => ['type' => 'text', 'required' => true],
-                'guild_catagory' => ['type' => 'text', 'default' => 'شارژ و فروش گازهای طبی و صنعتی', 'required' => false],
+                'guild_catagory' => ['type' => 'text', 'disabled' => true, 'default' => 'شارژ و فروش گازهای طبی و صنعتی', 'required' => false],
                 'catagory' => [
                     'type' => 'select',
                     'default' => '',
@@ -294,7 +294,7 @@ return [
             'catagory_fa' => 'فروش سیلندرهای آتش نشانی',
             'fields' => [
                 'file_number' => ['type' => 'text', 'required' => true],
-                'guild_catagory' => ['type' => 'text', 'default' => 'فروش سیلندرهای آتش نشانی', 'required' => false],
+                'guild_catagory' => ['type' => 'text', 'disabled' => true, 'default' => 'فروش سیلندرهای آتش نشانی', 'required' => false],
                 'catagory' => [
                     'type' => 'select',
                     'default' => '',
@@ -389,7 +389,7 @@ return [
             'catagory_fa' => 'عمده فروشی گازهای طبی و صنعتی',
             'fields' => [
                 'file_number' => ['type' => 'text', 'required' => true],
-                'guild_catagory' => ['type' => 'text', 'default' => 'عمده فروشی گازهای طبی و صنعتی', 'required' => false],
+                'guild_catagory' => ['type' => 'text', 'disabled' => true, 'default' => 'عمده فروشی گازهای طبی و صنعتی', 'required' => false],
                 'catagory' => [
                     'type' => 'select',
                     'default' => '',
@@ -484,7 +484,7 @@ return [
             'catagory_fa' => 'تولیدکننده',
             'fields' => [
                 'file_number' => ['type' => 'text', 'required' => true],
-                'guild_catagory' => ['type' => 'text', 'default' => 'تولیدکننده', 'required' => false],
+                'guild_catagory' => ['type' => 'text', 'disabled' => true, 'default' => 'تولیدکننده', 'required' => false],
                 'catagory' => [
                     'type' => 'select',
                     'default' => '',
@@ -578,7 +578,7 @@ return [
             'catagory_fa' => 'بدون رسته',
             'fields' => [
                 'file_number' => ['type' => 'text', 'required' => true],
-                'guild_catagory' => ['type' => 'text', 'default' => 'بدون رسته', 'required' => false],
+                'guild_catagory' => ['type' => 'text', 'disabled' => true, 'default' => 'بدون رسته', 'required' => false],
                 'catagory' => [
                     'type' => 'select',
                     'default' => '',
