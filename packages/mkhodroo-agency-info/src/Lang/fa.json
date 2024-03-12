@@ -148,6 +148,20 @@
     "charging fire cylenders":"شارژ سیلندرهای آتش نشانی",
     "sale and charging insdustrial gas":"فروش و شارژ گازهای صنعتی",
     "saling fire cylenders":"فروش سیلندرهای آتش نشانی",
-    "donate1": "همیاری 1"
+    "donate1": "همیاری 1",
+    "education_degree": "مدرک تحصیلی",
+    "military_card": "کارت پایان خدمت/ معافیت /...",
+    "business_rules_certificate": "گواهی احکام کسب و تجارت",
+    "partner_consent_letter": "رضایت نامه شریک",
+    "tax": "مالیات",
+    "nitrogen_cylinder_hidrostatic_test_certificate": "گواهی تست هیدرواستاتیک سیلندرهای نیتروژن",
+    "pressure_gauge_calibration_certificate": "گواهی کالیبراسیون گیج فشار",
+    "weightbridge_calibration_certificate": "گواهی کالیبراسیون باسکول",
+    "gas_storage_tank_certificate": "گواهی مخزن ذخیره گاز",
+    "commitment": "تعهدنامه",
+    "revoke_business_license_form": "فرم ابطال پروانه",
+    "previous_business_license": "پروانه کسب قبلی",
+    "postal_code_certificate": "گواهی کد پستی",
+    "lease_or_ownership_doc": "سند مالکیت یا اجاره نامه"
 
 }
