@@ -52,6 +52,19 @@ return [
                         ['value' => 'بام افکن', 'label' => 'بام افکن'],
                     ]
                 ],
+                'last_referral' => [
+                    'type' => 'select',
+                    'default' => '',
+                    'options' => [
+                        ['value' => 'اصفهانی', 'label' => 'اصفهانی'],
+                        ['value' => 'اسدی', 'label' => 'اسدی'],
+                        ['value' => 'حیدری', 'label' => 'حیدری'],
+                        ['value' => 'نعمتی', 'label' => 'نعمتی'],
+                        ['value' => 'مقدسی', 'label' => 'مقدسی'],
+                        ['value' => 'میرزایی', 'label' => 'میرزایی'],
+                        ['value' => 'بام افکن', 'label' => 'بام افکن'],
+                    ]
+                ],
                 'description' => ['type' => 'text', 'default' => '', 'required' => false],
 
             ],
@@ -134,6 +147,19 @@ return [
                     ]
                 ],
                 'reviewer' => [
+                    'type' => 'select',
+                    'default' => '',
+                    'options' => [
+                        ['value' => 'اصفهانی', 'label' => 'اصفهانی'],
+                        ['value' => 'اسدی', 'label' => 'اسدی'],
+                        ['value' => 'حیدری', 'label' => 'حیدری'],
+                        ['value' => 'نعمتی', 'label' => 'نعمتی'],
+                        ['value' => 'مقدسی', 'label' => 'مقدسی'],
+                        ['value' => 'میرزایی', 'label' => 'میرزایی'],
+                        ['value' => 'بام افکن', 'label' => 'بام افکن'],
+                    ]
+                ],
+                'last_referral' => [
                     'type' => 'select',
                     'default' => '',
                     'options' => [
@@ -241,6 +267,19 @@ return [
                         ['value' => 'بام افکن', 'label' => 'بام افکن'],
                     ]
                 ],
+                'last_referral' => [
+                    'type' => 'select',
+                    'default' => '',
+                    'options' => [
+                        ['value' => 'اصفهانی', 'label' => 'اصفهانی'],
+                        ['value' => 'اسدی', 'label' => 'اسدی'],
+                        ['value' => 'حیدری', 'label' => 'حیدری'],
+                        ['value' => 'نعمتی', 'label' => 'نعمتی'],
+                        ['value' => 'مقدسی', 'label' => 'مقدسی'],
+                        ['value' => 'میرزایی', 'label' => 'میرزایی'],
+                        ['value' => 'بام افکن', 'label' => 'بام افکن'],
+                    ]
+                ],
                 'description' => ['type' => 'text', 'default' => '', 'required' => false],
 
             ],
@@ -323,6 +362,19 @@ return [
                     ]
                 ],
                 'reviewer' => [
+                    'type' => 'select',
+                    'default' => '',
+                    'options' => [
+                        ['value' => 'اصفهانی', 'label' => 'اصفهانی'],
+                        ['value' => 'اسدی', 'label' => 'اسدی'],
+                        ['value' => 'حیدری', 'label' => 'حیدری'],
+                        ['value' => 'نعمتی', 'label' => 'نعمتی'],
+                        ['value' => 'مقدسی', 'label' => 'مقدسی'],
+                        ['value' => 'میرزایی', 'label' => 'میرزایی'],
+                        ['value' => 'بام افکن', 'label' => 'بام افکن'],
+                    ]
+                ],
+                'last_referral' => [
                     'type' => 'select',
                     'default' => '',
                     'options' => [
@@ -430,6 +482,19 @@ return [
                         ['value' => 'بام افکن', 'label' => 'بام افکن'],
                     ]
                 ],
+                'last_referral' => [
+                    'type' => 'select',
+                    'default' => '',
+                    'options' => [
+                        ['value' => 'اصفهانی', 'label' => 'اصفهانی'],
+                        ['value' => 'اسدی', 'label' => 'اسدی'],
+                        ['value' => 'حیدری', 'label' => 'حیدری'],
+                        ['value' => 'نعمتی', 'label' => 'نعمتی'],
+                        ['value' => 'مقدسی', 'label' => 'مقدسی'],
+                        ['value' => 'میرزایی', 'label' => 'میرزایی'],
+                        ['value' => 'بام افکن', 'label' => 'بام افکن'],
+                    ]
+                ],
                 'description' => ['type' => 'text', 'default' => '', 'required' => false],
 
 
@@ -525,6 +590,19 @@ return [
                         ['value' => 'بام افکن', 'label' => 'بام افکن'],
                     ]
                 ],
+                'last_referral' => [
+                    'type' => 'select',
+                    'default' => '',
+                    'options' => [
+                        ['value' => 'اصفهانی', 'label' => 'اصفهانی'],
+                        ['value' => 'اسدی', 'label' => 'اسدی'],
+                        ['value' => 'حیدری', 'label' => 'حیدری'],
+                        ['value' => 'نعمتی', 'label' => 'نعمتی'],
+                        ['value' => 'مقدسی', 'label' => 'مقدسی'],
+                        ['value' => 'میرزایی', 'label' => 'میرزایی'],
+                        ['value' => 'بام افکن', 'label' => 'بام افکن'],
+                    ]
+                ],
                 'description' => ['type' => 'text', 'default' => '', 'required' => false],
 
             ],
@@ -607,6 +685,19 @@ return [
                     ]
                 ],
                 'reviewer' => [
+                    'type' => 'select',
+                    'default' => '',
+                    'options' => [
+                        ['value' => 'اصفهانی', 'label' => 'اصفهانی'],
+                        ['value' => 'اسدی', 'label' => 'اسدی'],
+                        ['value' => 'حیدری', 'label' => 'حیدری'],
+                        ['value' => 'نعمتی', 'label' => 'نعمتی'],
+                        ['value' => 'مقدسی', 'label' => 'مقدسی'],
+                        ['value' => 'میرزایی', 'label' => 'میرزایی'],
+                        ['value' => 'بام افکن', 'label' => 'بام افکن'],
+                    ]
+                ],
+                'last_referral' => [
                     'type' => 'select',
                     'default' => '',
                     'options' => [
