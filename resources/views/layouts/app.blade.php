@@ -124,11 +124,11 @@
     </script>
 
     <script>
-        $('form').keypress(function(event) {
-            if (event.keyCode == 13) {
-                event.preventDefault();
-            }
-        });
+        // $('form').keypress(function(event) {
+        //     if (event.keyCode == 13) {
+        //         event.preventDefault();
+        //     }
+        // });
     </script>
     <script src="{{ url('public/js/loader.js') . '?' . config('app.version') }}"></script>
     <script src="{{ url('public/js/clearcach.js') . '?' . config('app.version') }}"></script>
