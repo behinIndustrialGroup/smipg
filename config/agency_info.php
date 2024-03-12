@@ -11,7 +11,7 @@ return [
             'catagory_fa' => 'شارژ سیلندرهای آتش نشانی',
             'fields' => [
                 'file_number' => ['type' => 'text', 'required' => true],
-                'guild_catagory' => ['type' => 'text', 'default' => 'شارژ سیلندرهای آتش نشانی', 'required' => false],
+                'guild_catagory' => ['type' => 'text', 'default' => 'شارژ سیلندرهای آتش نشانی', 'required' => false, 'disabled' => true],
                 'catagory' => [
                     'type' => 'select',
                     'default' => '',
