@@ -28,12 +28,15 @@ return [
                 'guild_number' => ['type' => 'text', 'default' => '', 'required' => false],
                 'issued_date' => ['type' => 'text', 'default' => '', 'required' => false],
                 'province' => ['type' => 'select', 'default' => '', 'options' => '', 'option-url' => 'city.all'],
-                'status' => [
+                'status' => ['type' => 'text', 'default' => '', 'disabled' => true],
+                'new_status' => [
                     'type' => 'select',
                     'default' => '',
                     'options' => [
                         ['value' => 'جدید', 'label' => 'جدید'],
                         ['value' => 'درحال بررسی', 'label' => 'در حال بررسی'],
+                        ['value' => 'در حال تکمیل', 'label' => 'در حال تکمیل'],
+                        ['value' => 'صادر شده', 'label' => 'صادر شده'],
                     ]
                 ],
                 'reviewer' => [
@@ -119,12 +122,15 @@ return [
                 'guild_number' => ['type' => 'text', 'default' => '', 'required' => false],
                 'issued_date' => ['type' => 'text', 'default' => '', 'required' => false],
                 'province' => ['type' => 'select', 'default' => '', 'options' => '', 'option-url' => 'city.all'],
-                'status' => [
+                'status' => ['type' => 'text', 'default' => '', 'disabled' => true],
+                'new_status' => [
                     'type' => 'select',
                     'default' => '',
                     'options' => [
                         ['value' => 'جدید', 'label' => 'جدید'],
                         ['value' => 'درحال بررسی', 'label' => 'در حال بررسی'],
+                        ['value' => 'در حال تکمیل', 'label' => 'در حال تکمیل'],
+                        ['value' => 'صادر شده', 'label' => 'صادر شده'],
                     ]
                 ],
                 'reviewer' => [
@@ -211,12 +217,15 @@ return [
                 'guild_number' => ['type' => 'text', 'default' => '', 'required' => false],
                 'issued_date' => ['type' => 'text', 'default' => '', 'required' => false],
                 'province' => ['type' => 'select', 'default' => '', 'options' => '', 'option-url' => 'city.all'],
-                'status' => [
+                'status' => ['type' => 'text', 'default' => '', 'disabled' => true],
+                'new_status' => [
                     'type' => 'select',
                     'default' => '',
                     'options' => [
                         ['value' => 'جدید', 'label' => 'جدید'],
                         ['value' => 'درحال بررسی', 'label' => 'در حال بررسی'],
+                        ['value' => 'در حال تکمیل', 'label' => 'در حال تکمیل'],
+                        ['value' => 'صادر شده', 'label' => 'صادر شده'],
                     ]
                 ],
                 'reviewer' => [
@@ -302,12 +311,15 @@ return [
                 'guild_number' => ['type' => 'text', 'default' => '', 'required' => false],
                 'issued_date' => ['type' => 'text', 'default' => '', 'required' => false],
                 'province' => ['type' => 'select', 'default' => '', 'options' => '', 'option-url' => 'city.all'],
-                'status' => [
+                'status' => ['type' => 'text', 'default' => '', 'disabled' => true],
+                'new_status' => [
                     'type' => 'select',
                     'default' => '',
                     'options' => [
                         ['value' => 'جدید', 'label' => 'جدید'],
                         ['value' => 'درحال بررسی', 'label' => 'در حال بررسی'],
+                        ['value' => 'در حال تکمیل', 'label' => 'در حال تکمیل'],
+                        ['value' => 'صادر شده', 'label' => 'صادر شده'],
                     ]
                 ],
                 'reviewer' => [
@@ -394,12 +406,15 @@ return [
                 'guild_number' => ['type' => 'text', 'default' => '', 'required' => false],
                 'issued_date' => ['type' => 'text', 'default' => '', 'required' => false],
                 'province' => ['type' => 'select', 'default' => '', 'options' => '', 'option-url' => 'city.all'],
-                'status' => [
+                'status' => ['type' => 'text', 'default' => '', 'disabled' => true],
+                'new_status' => [
                     'type' => 'select',
                     'default' => '',
                     'options' => [
                         ['value' => 'جدید', 'label' => 'جدید'],
                         ['value' => 'درحال بررسی', 'label' => 'در حال بررسی'],
+                        ['value' => 'در حال تکمیل', 'label' => 'در حال تکمیل'],
+                        ['value' => 'صادر شده', 'label' => 'صادر شده'],
                     ]
                 ],
                 'reviewer' => [
@@ -486,12 +501,15 @@ return [
                 'guild_number' => ['type' => 'text', 'default' => '', 'required' => false],
                 'issued_date' => ['type' => 'text', 'default' => '', 'required' => false],
                 'province' => ['type' => 'select', 'default' => '', 'options' => '', 'option-url' => 'city.all'],
-                'status' => [
+                'status' => ['type' => 'text', 'default' => '', 'disabled' => true],
+                'new_status' => [
                     'type' => 'select',
                     'default' => '',
                     'options' => [
                         ['value' => 'جدید', 'label' => 'جدید'],
                         ['value' => 'درحال بررسی', 'label' => 'در حال بررسی'],
+                        ['value' => 'در حال تکمیل', 'label' => 'در حال تکمیل'],
+                        ['value' => 'صادر شده', 'label' => 'صادر شده'],
                     ]
                 ],
                 'reviewer' => [
@@ -577,12 +595,15 @@ return [
                 'guild_number' => ['type' => 'text', 'default' => '', 'required' => false],
                 'issued_date' => ['type' => 'text', 'default' => '', 'required' => false],
                 'province' => ['type' => 'select', 'default' => '', 'options' => '', 'option-url' => 'city.all'],
-                'status' => [
+                'status' => ['type' => 'text', 'default' => '', 'disabled' => true],
+                'new_status' => [
                     'type' => 'select',
                     'default' => '',
                     'options' => [
                         ['value' => 'جدید', 'label' => 'جدید'],
                         ['value' => 'درحال بررسی', 'label' => 'در حال بررسی'],
+                        ['value' => 'در حال تکمیل', 'label' => 'در حال تکمیل'],
+                        ['value' => 'صادر شده', 'label' => 'صادر شده'],
                     ]
                 ],
                 'reviewer' => [
