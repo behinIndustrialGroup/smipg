@@ -111,6 +111,12 @@ return [
                 'revoke_business_license_form',
                 'previous_business_license',
                 'postal_code_certificate'
+            ],
+            'foreman' => [
+                'foreman_firstname' => ['type' => 'text'],
+                'foreman_lastname' => ['type' => 'text'],
+                'foreman_national_id' => ['type' => 'text'],
+                'foreman_mobile' => ['type' => 'text'],
             ]
         ],
         'retail' => [
@@ -219,6 +225,12 @@ return [
                 'revoke_business_license_form',
                 'previous_business_license',
                 'postal_code_certificate'
+            ],
+            'foreman' => [
+                'foreman_firstname' => ['type' => 'text'],
+                'foreman_lastname' => ['type' => 'text'],
+                'foreman_national_id' => ['type' => 'text'],
+                'foreman_mobile' => ['type' => 'text'],
             ]
         ],
         'sale-and-charging-insdustrial-gas' => [
@@ -326,12 +338,6 @@ return [
                 'revoke_business_license_form',
                 'previous_business_license',
                 'postal_code_certificate'
-            ],
-            'foreman' => [
-                'foreman_firstname' => ['type' => 'text'],
-                'foreman_lastname' => ['type' => 'text'],
-                'foreman_national_id' => ['type' => 'text'],
-                'foreman_mobile' => ['type' => 'text'],
             ]
         ],
         'saling-fire-cylenders' => [
@@ -440,6 +446,12 @@ return [
                 'revoke_business_license_form',
                 'previous_business_license',
                 'postal_code_certificate'
+            ],
+            'foreman' => [
+                'foreman_firstname' => ['type' => 'text'],
+                'foreman_lastname' => ['type' => 'text'],
+                'foreman_national_id' => ['type' => 'text'],
+                'foreman_mobile' => ['type' => 'text'],
             ]
         ],
         'wholesaling-industrial-gas' => [
@@ -548,6 +560,12 @@ return [
                 'revoke_business_license_form',
                 'previous_business_license',
                 'postal_code_certificate'
+            ],
+            'foreman' => [
+                'foreman_firstname' => ['type' => 'text'],
+                'foreman_lastname' => ['type' => 'text'],
+                'foreman_national_id' => ['type' => 'text'],
+                'foreman_mobile' => ['type' => 'text'],
             ]
         ],
         'producer' => [
@@ -655,6 +673,12 @@ return [
                 'revoke_business_license_form',
                 'previous_business_license',
                 'postal_code_certificate'
+            ],
+            'foreman' => [
+                'foreman_firstname' => ['type' => 'text'],
+                'foreman_lastname' => ['type' => 'text'],
+                'foreman_national_id' => ['type' => 'text'],
+                'foreman_mobile' => ['type' => 'text'],
             ]
         ],
         'unknown' => [
@@ -763,6 +787,12 @@ return [
                 'revoke_business_license_form',
                 'previous_business_license',
                 'postal_code_certificate'
+            ],
+            'foreman' => [
+                'foreman_firstname' => ['type' => 'text'],
+                'foreman_lastname' => ['type' => 'text'],
+                'foreman_national_id' => ['type' => 'text'],
+                'foreman_mobile' => ['type' => 'text'],
             ]
         ],
     ]
