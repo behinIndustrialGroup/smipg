@@ -1,4 +1,4 @@
-@if (auth()->user()->access('Show Agency Simfa Info'))
+@if (auth()->user()->access('Show Agency Foreman Info'))
 @php
     $tab_name = "foreman";
 @endphp
