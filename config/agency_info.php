@@ -3,7 +3,7 @@
 return [
     'fin_uploads' => 'fin_uploads',
     'main_field_name' => 'guild_catagory',
-    'default_fields' => ['guild_catagory','firstname', 'lastname', 'national_id', 'agency_code', 'status', 'mobile'],
+    'default_fields' => ['guild_catagory','firstname', 'lastname', 'national_id', 'agency_code', 'status', 'mobile', 'new_status', 'last_referral'],
     'valid_file_type' => ['image/jpg', 'image/jpeg', 'image/png', 'application/pdf'],
     'customer_type' => [
         'charging-fire-cylenders' => [
@@ -326,6 +326,12 @@ return [
                 'revoke_business_license_form',
                 'previous_business_license',
                 'postal_code_certificate'
+            ],
+            'foreman' => [
+                'firstname' => ['type' => 'text'],
+                'lastname' => ['type' => 'text'],
+                'national_id' => ['type' => 'text'],
+                'mobile' => ['type' => 'text'],
             ]
         ],
         'saling-fire-cylenders' => [
