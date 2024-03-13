@@ -18,7 +18,7 @@ use Mkhodroo\AgencyInfo\Controllers\HtmlCreatorController;
                     aria-selected="true">{{ __('Agency Info') }}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="foreman-tab" data-toggle="pill" href="#foreman" role="tab" aria-controls="foreman"
+                <a class="nav-link" id="foreman-tab" data-toggle="pill" href="#foreman" role="tab" aria-controls="foreman-info"
                     aria-selected="true">{{ __('Foreman Info') }}</a>
             </li>
             <li class="nav-item">
