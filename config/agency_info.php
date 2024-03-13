@@ -328,10 +328,10 @@ return [
                 'postal_code_certificate'
             ],
             'foreman' => [
-                'firstname' => ['type' => 'text'],
-                'lastname' => ['type' => 'text'],
-                'national_id' => ['type' => 'text'],
-                'mobile' => ['type' => 'text'],
+                'foreman_firstname' => ['type' => 'text'],
+                'foreman_lastname' => ['type' => 'text'],
+                'foreman_national_id' => ['type' => 'text'],
+                'foreman_mobile' => ['type' => 'text'],
             ]
         ],
         'saling-fire-cylenders' => [

@@ -221,6 +221,7 @@ Route::name('agencyInfo.')->prefix('agency-info')->middleware(['web', 'auth', 'a
     Route::post('filter-list', [AgencyListController::class, 'filterList'])->name('filterList');
     Route::get('edit/{parent_id}', [AgencyController::class, 'view'])->name('editForm');
     Route::post('edit', [AgencyController::class, 'edit'])->name('edit');
+    Route::post('foreman-edit', [AgencyController::class, 'foremanEdit'])->name('foremanEdit');
     Route::post('fin-edit', [AgencyController::class, 'finEdit'])->name('finEdit');
     Route::post('docs-edit', [AgencyDocsController::class, 'docsEdit'])->name('docsEdit');
     Route::post('delete-info', [AgencyController::class, 'deleteByKey'])->name('deleteByKey');

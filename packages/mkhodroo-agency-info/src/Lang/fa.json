@@ -164,6 +164,11 @@
     "postal_code_certificate": "گواهی کد پستی",
     "lease_or_ownership_doc": "سند مالکیت یا اجاره نامه",
     "new_status": "وضعیت جدید",
-    "last_referral": "آخرین ارجاع"
+    "last_referral": "آخرین ارجاع",
+    "Foreman Info": "اطلاعات مباشر",
+    "foreman_firstname": "نام مباشر",
+    "foreman_lastname": "نام خانوادگی مباشر",
+    "foreman_national_id": "کدملی مباشر",
+    "foreman_mobile": "موبایل مباشر"
 
 }

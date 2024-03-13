@@ -18,6 +18,10 @@ use Mkhodroo\AgencyInfo\Controllers\HtmlCreatorController;
                     aria-selected="true">{{ __('Agency Info') }}</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" id="foreman-tab" data-toggle="pill" href="#foreman" role="tab" aria-controls="foreman"
+                    aria-selected="true">{{ __('Foreman Info') }}</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" id="docs-tab" data-toggle="pill" href="#docs" role="tab" aria-controls="docs"
                     aria-selected="false">{{ __('Docs') }}</a>
             </li>
@@ -35,6 +39,10 @@ use Mkhodroo\AgencyInfo\Controllers\HtmlCreatorController;
     <div class="card-body">
         <div class="tab-content" id="custom-tabs-one-tabContent">
             @include('AgencyView::edit-tabs.main-info', [
+                'customer_type' => $customer_type,
+                'agency_fields' => $agency_fields
+            ])
+            @include('AgencyView::edit-tabs.foreman-info', [
                 'customer_type' => $customer_type,
                 'agency_fields' => $agency_fields
             ])
@@ -116,6 +124,19 @@ use Mkhodroo\AgencyInfo\Controllers\HtmlCreatorController;
     function simfa_edit() {
         send_ajax_request(
             "{{ route('agencyInfo.edit') }}",
+            $('#simfa-form').serialize(),
+            function(res) {
+                console.log(res);
+                show_message("{{ __('Edited') }}");
+                open_edit_form(res.parent_id, 'info')
+                filter()
+            }
+        )
+    }
+
+    function foreman_edit() {
+        send_ajax_request(
+            "{{ route('agencyInfo.foremanEdit') }}",
             $('#simfa-form').serialize(),
             function(res) {
                 console.log(res);
