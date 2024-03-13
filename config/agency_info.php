@@ -3,7 +3,7 @@
 return [
     'fin_uploads' => 'fin_uploads',
     'main_field_name' => 'guild_catagory',
-    'default_fields' => ['guild_catagory','firstname', 'lastname', 'national_id', 'agency_code', 'status', 'mobile', 'new_status', 'last_referral'],
+    'default_fields' => ['guild_catagory','firstname', 'lastname', 'national_id', 'agency_code', 'mobile', 'new_status', 'last_referral'],
     'valid_file_type' => ['image/jpg', 'image/jpeg', 'image/png', 'application/pdf'],
     'customer_type' => [
         'charging-fire-cylenders' => [
