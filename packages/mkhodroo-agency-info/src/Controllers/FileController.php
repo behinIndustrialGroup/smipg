@@ -18,7 +18,8 @@ class FileController extends Controller
         }
         $name = Str::random(40) . '.' . $file->getClientOriginalExtension();
         $full_path = public_path($dir);
-        if ( ! is_dir($full_path)) {
+        Log::info(str_replace("/", "\\",$full_path));
+        if ( !is_dir(str_replace("/", "\\",$full_path))) {
             mkdir(str_replace("/", "\\",$full_path), 0644, true);
         }
         $full_name = $full_path . '/' . $name;
