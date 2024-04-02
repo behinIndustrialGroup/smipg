@@ -26,6 +26,10 @@ use Mkhodroo\AgencyInfo\Controllers\HtmlCreatorController;
                     aria-selected="false">{{ __('Docs') }}</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" id="inspection-tab" data-toggle="pill" href="#inspection" role="tab" aria-controls="inspection-info"
+                    aria-selected="true">{{ __('Inspection Info') }}</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" id="fin-info-tab" data-toggle="pill" href="#fin-info" role="tab"
                     aria-controls="fin-info" aria-selected="false">{{ __('Agency Fin Info') }}</a>
             </li>
@@ -42,10 +46,7 @@ use Mkhodroo\AgencyInfo\Controllers\HtmlCreatorController;
                 'customer_type' => $customer_type,
                 'agency_fields' => $agency_fields
             ])
-            @include('AgencyView::edit-tabs.foreman-info', [
-                'customer_type' => $customer_type,
-                'agency_fields' => $agency_fields
-            ])
+            
             @include('AgencyView::edit-tabs.fin-info', [
                 'customer_type' => $customer_type,
                 'agency_fields' => $agency_fields
@@ -55,6 +56,14 @@ use Mkhodroo\AgencyInfo\Controllers\HtmlCreatorController;
                 'agency_fields' => $agency_fields
             ])
             @include('AgencyView::edit-tabs.debt-info', [
+                'customer_type' => $customer_type,
+                'agency_fields' => $agency_fields
+            ])
+            @include('AgencyView::edit-tabs.foreman-info', [
+                'customer_type' => $customer_type,
+                'agency_fields' => $agency_fields
+            ])
+            @include('AgencyView::edit-tabs.inspection-info', [
                 'customer_type' => $customer_type,
                 'agency_fields' => $agency_fields
             ])

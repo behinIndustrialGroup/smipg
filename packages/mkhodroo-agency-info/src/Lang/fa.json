@@ -169,6 +169,8 @@
     "foreman_firstname": "نام مباشر",
     "foreman_lastname": "نام خانوادگی مباشر",
     "foreman_national_id": "کدملی مباشر",
-    "foreman_mobile": "موبایل مباشر"
+    "foreman_mobile": "موبایل مباشر",
+    "Inspection Info": "اطلاعات بازرسی",
+    "file": "فایل"
 
 }

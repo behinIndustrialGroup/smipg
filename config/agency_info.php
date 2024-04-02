@@ -2,6 +2,8 @@
 
 return [
     'fin_uploads' => 'fin_uploads',
+    'ins_uploads' => 'ins_uploads',
+    'doc_uploads' => 'doc_uploads',
     'main_field_name' => 'guild_catagory',
     'default_fields' => ['guild_catagory','firstname', 'lastname', 'national_id', 'agency_code', 'mobile', 'new_status', 'last_referral'],
     'valid_file_type' => ['image/jpg', 'image/jpeg', 'image/png', 'application/pdf'],
@@ -338,7 +340,20 @@ return [
                 'revoke_business_license_form',
                 'previous_business_license',
                 'postal_code_certificate'
-            ]
+            ],
+            'foreman' => [
+                'foreman_firstname' => ['type' => 'text'],
+                'foreman_lastname' => ['type' => 'text'],
+                'foreman_national_id' => ['type' => 'text'],
+                'foreman_mobile' => ['type' => 'text'],
+            ],
+            'inspection' => [
+                '01' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
+                '02' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
+                '03' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
+                '04' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
+                '05' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
+            ],
         ],
         'saling-fire-cylenders' => [
             'name' => 'saling fire cylenders',
