@@ -119,7 +119,14 @@ return [
                 'foreman_lastname' => ['type' => 'text'],
                 'foreman_national_id' => ['type' => 'text'],
                 'foreman_mobile' => ['type' => 'text'],
-            ]
+            ],
+            'inspection' => [
+                '01' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
+                '02' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
+                '03' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
+                '04' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
+                '05' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
+            ],
         ],
         'retail' => [
             'name' => 'retail',
@@ -233,7 +240,14 @@ return [
                 'foreman_lastname' => ['type' => 'text'],
                 'foreman_national_id' => ['type' => 'text'],
                 'foreman_mobile' => ['type' => 'text'],
-            ]
+            ],
+            'inspection' => [
+                '01' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
+                '02' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
+                '03' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
+                '04' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
+                '05' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
+            ],
         ],
         'sale-and-charging-insdustrial-gas' => [
             'name' => 'sale and charging insdustrial gas',
@@ -467,7 +481,14 @@ return [
                 'foreman_lastname' => ['type' => 'text'],
                 'foreman_national_id' => ['type' => 'text'],
                 'foreman_mobile' => ['type' => 'text'],
-            ]
+            ],
+            'inspection' => [
+                '01' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
+                '02' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
+                '03' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
+                '04' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
+                '05' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
+            ],
         ],
         'wholesaling-industrial-gas' => [
             'name' => 'wholesaling industrial gas',
@@ -581,7 +602,14 @@ return [
                 'foreman_lastname' => ['type' => 'text'],
                 'foreman_national_id' => ['type' => 'text'],
                 'foreman_mobile' => ['type' => 'text'],
-            ]
+            ],
+            'inspection' => [
+                '01' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
+                '02' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
+                '03' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
+                '04' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
+                '05' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
+            ],
         ],
         'producer' => [
             'name' => 'producer',
@@ -694,7 +722,14 @@ return [
                 'foreman_lastname' => ['type' => 'text'],
                 'foreman_national_id' => ['type' => 'text'],
                 'foreman_mobile' => ['type' => 'text'],
-            ]
+            ],
+            'inspection' => [
+                '01' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
+                '02' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
+                '03' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
+                '04' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
+                '05' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
+            ],
         ],
         'unknown' => [
             'name' => 'unknown',
@@ -808,7 +843,14 @@ return [
                 'foreman_lastname' => ['type' => 'text'],
                 'foreman_national_id' => ['type' => 'text'],
                 'foreman_mobile' => ['type' => 'text'],
-            ]
+            ],
+            'inspection' => [
+                '01' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
+                '02' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
+                '03' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
+                '04' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
+                '05' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
+            ],
         ],
     ]
 ];
