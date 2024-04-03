@@ -17,7 +17,7 @@ class FileController extends Controller
             ];
         }
         $name = Str::random(40) . '.' . $file->getClientOriginalExtension();
-        $full_path = public_path($dir);
+        $full_path = ($dir);
         Log::info($full_path);
         if ( !is_dir($full_path)) {
             mkdir($full_path);
