@@ -20,7 +20,7 @@ class FileController extends Controller
         $full_path = public_path($dir);
         Log::info($full_path);
         if ( !is_dir($full_path)) {
-            mkdir($full_path, 0644, true);
+            mkdir($full_path, 0644, false);
         }
         $full_name = $full_path . '/' . $name;
         $result = move_uploaded_file($file,$full_name);
