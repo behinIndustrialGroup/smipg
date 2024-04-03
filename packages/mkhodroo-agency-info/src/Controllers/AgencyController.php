@@ -13,13 +13,13 @@ class AgencyController extends Controller
     public static function docDir($id, $type = "fin"){
         $prefix = "user_docs";
         if($type === 'doc'){
-            return $prefix . "/" . $id ."/". config('agency_info.doc_uploads') ;
+            return $prefix . "/u_" . $id ."/". config('agency_info.doc_uploads') ;
         }
         if($type === 'fin'){
-            return $prefix . "/" . $id  ."/". config('agency_info.fin_uploads') ;
+            return $prefix . "/u_" . $id  ."/". config('agency_info.fin_uploads') ;
         }
         if($type === 'ins'){
-            return $prefix . "/" . $id  ."/". config('agency_info.ins_uploads') ;
+            return $prefix . "/u_" . $id  ."/". config('agency_info.ins_uploads') ;
         }
     }
 
