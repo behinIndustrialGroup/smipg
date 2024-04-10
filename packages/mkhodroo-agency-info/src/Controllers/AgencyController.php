@@ -19,7 +19,6 @@ class AgencyController extends Controller
         if ( !is_dir($full_path)) {
             mkdir($full_path);
         }
-
         
         if($type === 'doc'){
             return $user_dir. config('agency_info.doc_uploads') ;
