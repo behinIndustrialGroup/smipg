@@ -70,6 +70,7 @@ return array(
     'Monolog\\' => array($vendorDir . '/monolog/monolog/src/Monolog'),
     'Mockery\\' => array($vendorDir . '/mockery/mockery/library/Mockery'),
     'Mkhodroo\\UserRoles\\' => array($baseDir . '/packages/mkhodroo-user-roles/src'),
+    'Mkhodroo\\Nerkhnameh\\' => array($baseDir . '/packages/nerkhnameh/src'),
     'Mkhodroo\\MkhodrooProcessMaker\\' => array($baseDir . '/packages/mkhodroo-process-maker/src'),
     'Mkhodroo\\DateConvertor\\' => array($baseDir . '/packages/mkhodroo-date-convertor/src'),
     'Mkhodroo\\CorrespondenceSystem\\' => array($baseDir . '/packages/mkhodroo-correspondence-system/src'),

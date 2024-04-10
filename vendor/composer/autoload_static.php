@@ -138,6 +138,7 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
             'Monolog\\' => 8,
             'Mockery\\' => 8,
             'Mkhodroo\\UserRoles\\' => 19,
+            'Mkhodroo\\Nerkhnameh\\' => 20,
             'Mkhodroo\\MkhodrooProcessMaker\\' => 30,
             'Mkhodroo\\DateConvertor\\' => 23,
             'Mkhodroo\\CorrespondenceSystem\\' => 30,
@@ -476,6 +477,10 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
         'Mkhodroo\\UserRoles\\' => 
         array (
             0 => __DIR__ . '/../..' . '/packages/mkhodroo-user-roles/src',
+        ),
+        'Mkhodroo\\Nerkhnameh\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/packages/nerkhnameh/src',
         ),
         'Mkhodroo\\MkhodrooProcessMaker\\' => 
         array (
@@ -3891,13 +3896,19 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
         'Mccarlosen\\LaravelMpdf\\LaravelMpdfWrapper' => __DIR__ . '/..' . '/carlos-meneses/laravel-mpdf/src/LaravelMpdfWrapper.php',
         'Mkhodroo\\AgencyInfo\\AgencyInfoProvider' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/AgencyInfoProvider.php',
         'Mkhodroo\\AgencyInfo\\Controllers\\AgencyController' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/Controllers/AgencyController.php',
+        'Mkhodroo\\AgencyInfo\\Controllers\\AgencyDebtPaymentController' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/Controllers/AgencyDebtPaymentController.php',
         'Mkhodroo\\AgencyInfo\\Controllers\\AgencyDocsController' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/Controllers/AgencyDocsController.php',
         'Mkhodroo\\AgencyInfo\\Controllers\\AgencyListController' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/Controllers/AgencyListController.php',
         'Mkhodroo\\AgencyInfo\\Controllers\\CreateAgencyController' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/Controllers/CreateAgencyController.php',
+        'Mkhodroo\\AgencyInfo\\Controllers\\DebtController' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/Controllers/DebtController.php',
         'Mkhodroo\\AgencyInfo\\Controllers\\FileController' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/Controllers/FileController.php',
         'Mkhodroo\\AgencyInfo\\Controllers\\GetAgencyController' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/Controllers/GetAgencyController.php',
+        'Mkhodroo\\AgencyInfo\\Controllers\\HtmlCreatorController' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/Controllers/HtmlCreatorController.php',
         'Mkhodroo\\AgencyInfo\\Controllers\\SaveInfoController' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/Controllers/SaveInfoController.php',
+        'Mkhodroo\\AgencyInfo\\Models\\AgencyDebtPayment' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/Models/AgencyDebtPayment.php',
         'Mkhodroo\\AgencyInfo\\Models\\AgencyInfo' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/Models/AgencyInfo.php',
+        'Mkhodroo\\AgencyInfo\\Requests\\AgencyDocRequest' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/Requests/AgencyDocRequest.php',
+        'Mkhodroo\\AgencyInfo\\Requests\\AgencyInfoRequest' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/Requests/AgencyInfoRequest.php',
         'Mkhodroo\\AltfuelTicket\\AltfuelTicketServiceProvider' => __DIR__ . '/../..' . '/packages/altfuel-ticket/src/AltfuelTicketServiceProvider.php',
         'Mkhodroo\\AltfuelTicket\\Controllers\\AddTicketCommentAttachmentController' => __DIR__ . '/../..' . '/packages/altfuel-ticket/src/Controllers/AddTicketCommentAttachmentController.php',
         'Mkhodroo\\AltfuelTicket\\Controllers\\AddTicketCommentController' => __DIR__ . '/../..' . '/packages/altfuel-ticket/src/Controllers/AddTicketCommentController.php',
@@ -3978,6 +3989,8 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
         'Mkhodroo\\MkhodrooProcessMaker\\Models\\PMUsers' => __DIR__ . '/../..' . '/packages/mkhodroo-process-maker/src/Models/PMUsers.php',
         'Mkhodroo\\MkhodrooProcessMaker\\Models\\PMVacation' => __DIR__ . '/../..' . '/packages/mkhodroo-process-maker/src/Models/PMVacation.php',
         'Mkhodroo\\MkhodrooProcessMaker\\Models\\PMVariable' => __DIR__ . '/../..' . '/packages/mkhodroo-process-maker/src/Models/PMVariable.php',
+        'Mkhodroo\\Nerkhnameh\\Controllers\\RegisterController' => __DIR__ . '/../..' . '/packages/nerkhnameh/src/Controllers/RegisterController.php',
+        'Mkhodroo\\Nerkhnameh\\NerkhnamehProvider' => __DIR__ . '/../..' . '/packages/nerkhnameh/src/NerkhnamehProvider.php',
         'Mkhodroo\\UserRoles\\Controllers\\AccessController' => __DIR__ . '/../..' . '/packages/mkhodroo-user-roles/src/Controllers/AccessController.php',
         'Mkhodroo\\UserRoles\\Controllers\\GetMethodsController' => __DIR__ . '/../..' . '/packages/mkhodroo-user-roles/src/Controllers/GetMethodsController.php',
         'Mkhodroo\\UserRoles\\Controllers\\GetRoleController' => __DIR__ . '/../..' . '/packages/mkhodroo-user-roles/src/Controllers/GetRoleController.php',

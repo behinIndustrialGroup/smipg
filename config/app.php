@@ -168,7 +168,7 @@ return [
         \Mkhodroo\DateConvertor\DateConvertorProvider::class,
         Mkhodroo\AltfuelTicket\AltfuelTicketServiceProvider::class,
         Mkhodroo\CorrespondenceSystem\CorrespondenceSystemProvider::class,
-
+        Mkhodroo\Nerkhnameh\NerkhnamehProvider::class,
         /*
          * Application Service Providers...
          */
