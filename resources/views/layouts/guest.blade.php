@@ -52,7 +52,7 @@
 
 
 
-    <footer class="main-footer" style="margin: 0; position: absolute; width: 100%; bottom: 0">
+    <footer class="main-footer" style="margin: 0; position: fixed; width: 100%; bottom: 0">
         <strong> &copy; {{date('Y')}} - تمامی حقوق محفوظ است - <a href="https://smipg.ir">اتحادیه کشوری فروشندگان و تولیدکنندگان گازهای طبی و صنعتی</a></strong>
     </footer>
 
