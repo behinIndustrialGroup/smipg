@@ -1,5 +1,27 @@
 @extends('layouts.guest')
 
+@section('style')
+    <style>
+        body{
+            background: url('{{url("public/packages/nerkhnameh/bg.jpg")}}') !important;
+            background-repeat: no-repeat !important;
+            background-size: cover !important;
+            background-position: center center;
+        }
+
+        @keyframes fadeInOut {
+            0% { top: -50px} /* Start with transparency */
+            50% { top: 0} /* Fully visible halfway through */
+        }
+
+        #etelaeie {
+            position: relative;
+            animation-name: fadeInOut;
+            animation-duration: 3s; /* Animation duration (in seconds) */
+        }
+    </style>
+@endsection
+
 @section('content')
 <div class="register-box">
     <div class="card card-outline card-primary">
@@ -8,7 +30,7 @@
         </div>
         <div class="card-body">
             <div>
-                <p>
+                <p id="etelaeie">
                     لینک ثبت نام نرخنامه از روز دوشنبه 27 فروردین 1403 در دسترس خواهد بود
                 </p>
             </div>
