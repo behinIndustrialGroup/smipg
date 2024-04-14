@@ -8,13 +8,7 @@ use App\CustomClasses\Access;
         <li class="nav-item">
             <a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
         </li>
-        {{-- <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">خانه</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">تماس</a>
-      </li> --}}
-        @if (auth()->user()->access('send-sms'))
+        @if (Auth::user()->access('send-sms'))
             <li class="nav-item d-none d-sm-inline-block">
                 <a href="{{ url('admin/send-sms') }}" class="nav-link">
                     ارسال پیامک

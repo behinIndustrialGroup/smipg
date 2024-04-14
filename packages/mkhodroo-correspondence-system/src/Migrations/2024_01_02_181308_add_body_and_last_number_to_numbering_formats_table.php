@@ -16,7 +16,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('correspondence_numbering_formats', function (Blueprint $table) {
-            // $table->bigInteger('last_number')->nullable()->after('start_from');
+            $table->bigInteger('last_number')->nullable()->after('start_from');
         });
 
     }

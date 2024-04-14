@@ -42,13 +42,13 @@ return [
                 'role' => [ 'fa_name' => 'نقش ها', 'route-name' => 'role.listForm', 'route-url' => '' ],
             ]
         ],
-        // 'tickets' => [
-        //     'fa_name' => 'تیکت پشتیبانی',
-        //     'submenu' => [
-        //         'create' => [ 'fa_name' => 'ایجاد', 'route-name' => 'ATRoutes.index', 'route-url' => '' ],
-        //         'show' => [ 'fa_name' => 'مشاهده', 'route-name' => 'ATRoutes.show.listForm', 'route-url' => '' ],
-        //     ]
-        // ],
+        'nerkhnameh' => [
+            'fa_name' => 'نرخنامه',
+            'submenu' => [
+                'registration' => [ 'fa_name' => 'ثبت نامی ها', 'route-name' => 'nerkhnameh.registration.listForm', 'route-url' => '' ]
+            ]
+        ],
+        
 
     ]
 ];

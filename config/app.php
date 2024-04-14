@@ -6,6 +6,7 @@ use Rap2hpoutre\FastExcel\FastExcel;
 
 return [
     'default_user_role_id' => 3,
+    'valid_upload_file_type' => ['image/jpg', 'image/jpeg', 'image/png', 'application/pdf'],
 
     /*
     |--------------------------------------------------------------------------

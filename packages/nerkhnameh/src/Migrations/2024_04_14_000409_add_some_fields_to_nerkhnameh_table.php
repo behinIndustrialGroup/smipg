@@ -11,8 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('agency_info', function (Blueprint $table) {
-            $table->softDeletes();
+        Schema::table('nerkhnameh', function (Blueprint $table) {
+            $table->string('catagory')->nullable()->after('national_id');
+            $table->unsignedBigInteger('city_id')->nullable()->after('guild_number');
         });
     }
 
@@ -21,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        
+        // Schema::dropIfExists('nerkhnameh');
     }
 };

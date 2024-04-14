@@ -13,27 +13,45 @@ use Mkhodroo\Nerkhnameh\Models\NerkhnamehModel;
 use SoapClient;
 
 
-class RegisterController extends Controller{
-    public function registerForm(){
-        return view('NerkhnamehView::register')->with([
+class UploadFinPaymentController extends Controller{
+    public function uploadForm(){
+        return view('NerkhnamehView::upload-fin-payment')->with([
             'cities' => CityController::all()
         ]);
     }
 
-    public function register(Request $r) {
+    public function check(Request $r){
         $r->validate([
-            'guild_name' => 'required|string',
-            'fullname' => 'required|string',
             'national_id' => 'required|digits:10',
-            'catagory' => 'required|string',
-            'city_id' => 'required|numeric',
             'guild_number' => 'required|numeric',
-            'phone' => 'required|digits:11',
-            'mobile' => 'required|digits:11',
-            'address' => 'required|string',
-            'personal_image_file' => 'required',
-            'commitment_file' => 'required'
+            'mobile' => 'required|digits:11'
         ]);
+
+        $data = NerkhnamehModel::where(
+            'national_id' , $r->national_id
+        )->where(
+            'guild_number', $r->guild_number
+        )->where(
+            'mobile', $r->mobile
+        )->first();
+
+        if(!$data){
+            return response("", 404);
+        }
+        return view('NerkhnamehView::fin-details-div')->with([
+            'data' => $data
+        ]);
+    }
+
+    public function upload(Request $r) {
+        $r->validate([
+            'national_id' => 'required|digits:10',
+            'guild_number' => 'required|numeric',
+            'mobile' => 'required|digits:11',
+            'price' => 'required',
+            'price_payment_file' => 'required'
+        ]);
+        return $r->all();
         $data = $r->except('_token', 'personal_image_file', 'commitment_file');
         if( $r->file('personal_image_file') !== null ){
             $data['personal_image_file'] = FileController::store(

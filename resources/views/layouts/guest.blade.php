@@ -27,6 +27,8 @@
     <link rel="stylesheet"
         href="{{ url('public/dashboard/dist/css/custom-style.css') . '?' . config('app.version') }}">
     <link rel="stylesheet" href="{{ url('public/dashboard/dist/css/custom.css') . '?' . config('app.version') }}">
+    <link rel="stylesheet"
+        href="{{ url('public/dashboard/plugins/select2/select2.min.css') . '?' . config('app.version') }}">
 
     {{-- <link rel="stylesheet" href="{{ url('public/dashboard/dist/css/custom.css')  . '?' . config('app.version') }}"> --}}
     <link rel="stylesheet" type="text/css"
@@ -69,6 +71,7 @@
     </script>
     <!-- Morris.js charts -->
     <script src="{{ url('public/dashboard/dist/js/adminlte.js') . '?' . config('app.version') }}"></script>
+    <script src="{{ url('public/dashboard/plugins/select2/select2.full.min.js') . '?' . config('app.version') }}"></script>
 
     <script src="https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>

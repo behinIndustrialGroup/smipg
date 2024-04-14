@@ -16,9 +16,9 @@ return new class extends Migration
     public function up()
     {
         Schema::table('correspondence_letters', function (Blueprint $table) {
-            // $table->text('body')->nullable()->after('title');
-            // $table->bigInteger('template_id')->unsigned()->nullable()->after('id');
-            // $table->foreign('template_id')->references('id')->on('correspondence_templates');
+            $table->text('body')->nullable()->after('title');
+            $table->bigInteger('template_id')->unsigned()->nullable()->after('id');
+            $table->foreign('template_id')->references('id')->on('correspondence_templates');
         });
 
     }

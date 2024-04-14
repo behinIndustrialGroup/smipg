@@ -26,8 +26,10 @@ class NerkhnamehProvider extends ServiceProvider
         $this->loadMigrationsFrom(__DIR__ . '/Migrations');
         $this->loadViewsFrom(__DIR__ . '/Views', 'NerkhnamehView');
         $this->loadRoutesFrom(__DIR__ . '/routes.php');
+        $this->loadJsonTranslationsFrom(__DIR__ .'/Lang');
         $this->publishes([
-            __DIR__ . '/public' => public_path('/packages/nerkhnameh')
+            __DIR__ . '/public' => public_path('/packages/nerkhnameh'),
+            __DIR__ . '/nerkhnameh_config.php' => config_path('nerkhnameh_config.php')
         ]);
     }
 }
