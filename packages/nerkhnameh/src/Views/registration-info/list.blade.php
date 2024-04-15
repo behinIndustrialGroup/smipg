@@ -1,22 +1,25 @@
 @extends('layouts.app')
 
 @section('content')
-    <table class="table table-stripped" id="nerkhnameh-registration">
-        <thead>
-            <tr>
-                <th>{{ __('id') }}</th>
-                <th>{{ __('fullname') }}</th>
-                <th>{{ __('national id') }}</th>
-                <th>{{ __('mobile') }}</th>
-                <th>{{ __('guild number') }}</th>
-                <th>{{ __('guild name') }}</th>
-                <th>{{ __('catagory') }}</th>
-                <th>{{ __('address') }}</th>
-                <th>{{ __('personal image file') }}</th>
-                <th>{{ __('operation license') }}</th>
-            </tr>
-        </thead>
-    </table>
+    <div class=" table-responsive">
+        <table class="table table-stripped" id="nerkhnameh-registration">
+            <thead>
+                <tr>
+                    <th>{{ __('id') }}</th>
+                    <th>{{ __('fullname') }}</th>
+                    <th>{{ __('national id') }}</th>
+                    <th>{{ __('mobile') }}</th>
+                    <th>{{ __('guild number') }}</th>
+                    <th>{{ __('guild name') }}</th>
+                    <th>{{ __('catagory') }}</th>
+                    <th>{{ __('address') }}</th>
+                    <th>{{ __('personal image file') }}</th>
+                    <th>{{ __('operation license') }}</th>
+                    <th>{{ __('commitment file') }}</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
 @endsection
 
 @section('script')
@@ -37,6 +40,9 @@
                     return `<a href='{{ url('${data}') }}'>{{ __('download') }}</a>`;
                 }},
                 { data: 'operation_license', render: function(data){
+                    return `<a href='{{ url('${data}') }}'>{{ __('download') }}</a>`;
+                }},
+                { data: 'commitment_file', render: function(data){
                     return `<a href='{{ url('${data}') }}'>{{ __('download') }}</a>`;
                 }},
             ]
