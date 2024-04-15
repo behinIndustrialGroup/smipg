@@ -194,6 +194,11 @@ return [
         'City' => 'شهر',
         'standardCertificateNumber' => 'شماره گواهی تاييد صلاحيت آزمایشگاه',
         'standardCertificateExpDate' => 'تاریخ اعتبار گواهی:',
+        'guild name' => 'عنوان واحد صنفی',
+        'fullname' => 'نام و نام خانوادگی',
+        'catagory' => 'رسته صنفی',
+        'national_id' => 'کدملی'
+        
     ],
 
 ];
