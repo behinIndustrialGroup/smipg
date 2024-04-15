@@ -13,5 +13,7 @@
     "Operation License Image must be uploaded": "تصویر پروانه بهره برداری باید آپلود شود",
     "operation license": "پروانه بهره برداری",
     "guild address": "آدرس واحد صنفی",
-    "guild phone": "تلفن ثابت واحد صنفی"
+    "guild phone": "تلفن ثابت واحد صنفی",
+    "not found": "یافت نشد",
+    "check": "بررسی"
 }
