@@ -13,7 +13,7 @@
                 <th>{{ __('catagory') }}</th>
                 <th>{{ __('address') }}</th>
                 <th>{{ __('personal image file') }}</th>
-                <th>{{ __('commitment file') }}</th>
+                <th>{{ __('operation license') }}</th>
             </tr>
         </thead>
     </table>
@@ -36,7 +36,7 @@
                 { data: 'personal_image_file', render: function(data){
                     return `<a href='{{ url('${data}') }}'>{{ __('download') }}</a>`;
                 }},
-                { data: 'commitment_file', render: function(data){
+                { data: 'operation_license', render: function(data){
                     return `<a href='{{ url('${data}') }}'>{{ __('download') }}</a>`;
                 }},
             ]

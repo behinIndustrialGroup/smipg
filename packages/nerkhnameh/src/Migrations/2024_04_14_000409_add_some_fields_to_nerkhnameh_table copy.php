@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('nerkhnameh', function (Blueprint $table) {
-            $table->string('catagory')->nullable()->after('national_id');
-            $table->unsignedBigInteger('city_id')->nullable()->after('guild_number');
+            // $table->string('catagory')->nullable()->after('national_id');
+            // $table->unsignedBigInteger('city_id')->nullable()->after('guild_number');
         });
     }
 

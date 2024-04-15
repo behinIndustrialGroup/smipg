@@ -34,6 +34,9 @@ class RegisterController extends Controller{
             'personal_image_file' => 'required',
             'commitment_file' => 'required'
         ]);
+        if($r->catagory === config('nerkhnameh_config.catagory')[4] and $r->file('operation_license') === null){
+            return response(trans("Operation License Image must be uploaded"), 402);
+        }
         $data = $r->except('_token', 'personal_image_file', 'commitment_file');
         if( $r->file('personal_image_file') !== null ){
             $data['personal_image_file'] = FileController::store(
@@ -47,17 +50,17 @@ class RegisterController extends Controller{
             }
             $data['personal_image_file'] = $data['personal_image_file']['dir'];
         }
-        if( $r->file('commitment_file') !== null ){
-            $data['commitment_file'] = FileController::store(
-                $r->file('commitment_file'),
+        if( $r->file('operation_license') !== null ){
+            $data['operation_license'] = FileController::store(
+                $r->file('operation_license'),
                 config('nerkhnameh_config.nerkhnameh_files') );
-            if( $data['commitment_file']['status'] !== 200 ){
+            if( $data['operation_license']['status'] !== 200 ){
                 return response(
-                    trans("Commitment Image") . ' ' . $data['commitment_file']['message'], 
-                    $data['commitment_file']['status']
+                    trans("Operation License Image") . ' ' . $data['operation_license']['message'], 
+                    $data['operation_license']['status']
                 );
             }
-            $data['commitment_file'] = $data['commitment_file']['dir'];
+            $data['operation_license'] = $data['operation_license']['dir'];
         }
         NerkhnamehModel::create($data);
     }
