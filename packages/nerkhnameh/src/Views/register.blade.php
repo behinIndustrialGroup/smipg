@@ -77,13 +77,13 @@
                             placeholder="{{ __('guild number') }}">
                     </div>
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" name="tel" placeholder="{{ __('phone') }}">
+                        <input type="text" class="form-control" name="tel" placeholder="{{ __('guild phone') }}">
                     </div>
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" name="mobile" placeholder="{{ __('mobile') }}">
                     </div>
                     <div class="input-group mb-3">
-                        <textarea type="text" class="form-control" name="address" placeholder="{{ __('address') }}"></textarea>
+                        <textarea type="text" class="form-control" name="address" placeholder="{{ __('guild address') }}"></textarea>
                     </div>
 
                     <div class="input-group mb-3">

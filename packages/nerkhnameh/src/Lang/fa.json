@@ -10,5 +10,8 @@
     "province and city": "استان و شهرستان",
     "operation license file": "تصویر پروانه بهره برداری",
     "Operation License Image": "تصویر پروانه بهره برداری",
-    "Operation License Image must be uploaded": "تصویر پروانه بهره برداری باید آپلود شود"
+    "Operation License Image must be uploaded": "تصویر پروانه بهره برداری باید آپلود شود",
+    "operation license": "پروانه بهره برداری",
+    "guild address": "آدرس واحد صنفی",
+    "guild phone": "تلفن ثابت واحد صنفی"
 }
