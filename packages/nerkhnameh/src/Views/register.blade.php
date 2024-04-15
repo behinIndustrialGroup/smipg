@@ -112,7 +112,8 @@
                 fd,
                 function(response) {
                     console.log(response);
-                    show_message("به صفحه داشبورد منتقل میشوید")
+                    show_message("اطلاعات با موفقیت ثبت شد")
+                    location.reload()
                 },
                 function(response) {
                     // console.log(response);
