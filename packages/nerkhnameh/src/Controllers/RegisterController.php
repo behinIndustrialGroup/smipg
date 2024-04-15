@@ -28,7 +28,7 @@ class RegisterController extends Controller{
             'catagory' => 'required|string',
             'city_id' => 'required|numeric',
             'guild_number' => 'required|numeric',
-            'phone' => 'required|digits:11',
+            'tel' => 'required|digits:11',
             'mobile' => 'required|digits:11',
             'address' => 'required|string',
             'personal_image_file' => 'required',
