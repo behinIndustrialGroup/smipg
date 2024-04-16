@@ -1,7 +1,7 @@
 {
     "guild name": "عنوان واحد صنفی",
     "fullname": "نام و نام خانوادگی",
-    "guild number": "شناسه صنفی",
+    "guild number to en": "شناسه صنفی (با اعداد انگلیسی وارد کنید) ",
     "personal image file": "عکس 3*4",
     "commitment file": "فایل تعهدنامه",
     "download template": "دانلود نمونه",
@@ -13,7 +13,11 @@
     "Operation License Image must be uploaded": "تصویر پروانه بهره برداری باید آپلود شود",
     "operation license": "پروانه بهره برداری",
     "guild address": "آدرس واحد صنفی",
-    "guild phone": "تلفن ثابت واحد صنفی",
+    "guild phone to en": "تلفن ثابت واحد صنفی (با اعداد انگلیسی وارد کنید) ",
     "not found": "یافت نشد",
-    "check": "بررسی"
+    "check": "بررسی",
+    "fin validation": "تاییدیه مالی",
+    "nerkhnameh file": "فایل نرخنامه",
+    "national id to en": "کدملی (با اعداد انگلیسی وارد کنید)",
+    "mobile to en": "موبایل (با اعداد انگلیسی وارد کنید)"
 }
