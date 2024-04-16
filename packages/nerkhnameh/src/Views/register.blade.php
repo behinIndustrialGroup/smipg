@@ -126,7 +126,14 @@
                 function(response) {
                     console.log(response);
                     show_message("اطلاعات با موفقیت ثبت شد")
-                    location.reload()
+                    $('#register-form').html(
+                        '<div class="alert alert-success">'
+                            + 'متقاضی گرامی، تقاضای شما ثبت گردید.'
+                            + 'رسیدگی به تقاضای شما طی ۴ روز کاری انجام خواهد شد.'
+                            + 'لطفا منتظر تماس ما باشید</div>'
+                    )
+                    // location.reload()
+                    $("html, body").animate({ scrollTop: 0 }, "slow");
                 },
                 function(response) {
                     // console.log(response);
