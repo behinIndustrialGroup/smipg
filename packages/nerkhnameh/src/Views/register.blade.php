@@ -50,7 +50,7 @@
                         <input type="text" class="form-control" name="fullname" placeholder="{{ __('fullname') }}">
                     </div>
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" name="national_id" placeholder="{{ __('national id') }}">
+                        <input type="text" class="form-control" name="national_id" placeholder="{{ __('national id to en') }}">
                     </div>
                     <div class="input-group mb-3">
                         {{ __('catagory') }}
@@ -74,13 +74,13 @@
                     </div>
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" name="guild_number"
-                            placeholder="{{ __('guild number') }}">
+                            placeholder="{{ __('guild number to en') }}">
                     </div>
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" name="tel" placeholder="{{ __('guild phone') }}">
+                        <input type="text" class="form-control" name="tel" placeholder="{{ __('guild phone to en') }}">
                     </div>
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" name="mobile" placeholder="{{ __('mobile') }}">
+                        <input type="text" class="form-control" name="mobile" placeholder="{{ __('mobile to en') }}">
                     </div>
                     <div class="input-group mb-3">
                         <textarea type="text" class="form-control" name="address" placeholder="{{ __('guild address') }}"></textarea>
@@ -115,7 +115,6 @@
         var footer_h = parseInt(($('footer').css('height')).split('px')[0])
         $('.register-box').css('height', login_page_h + footer_h + 150 + 'px')
         initial_view()
-
         function register() {
             var form = $('#register-form')[0]
             var fd = new FormData(form);
