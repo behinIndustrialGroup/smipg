@@ -36,6 +36,35 @@ class NerkhnamehRegistrationInfoController extends Controller{
         ]);
     }
 
+    public static function edit(Request $r){
+        $data = $r->all();
+        if($r->file('nerkhnameh_file') !== null){
+            $data['nerkhnameh_file'] = FileController::store(
+                $r->file('nerkhnameh_file'),
+                config('nerkhnameh_config.nerkhnameh_files') );
+            if( $data['nerkhnameh_file']['status'] !== 200 ){
+                return response(
+                    trans("nerkhnameh file") . ' ' . $data['nerkhnameh_file']['message'],
+                    $data['nerkhnameh_file']['status']
+                );
+            }
+            $data['nerkhnameh_file'] = $data['nerkhnameh_file']['dir'];
+        }
+        return NerkhnamehModel::where(
+            'id', $r->id
+        )->update($data);
+    }
+
+    public static function getByNidMobileGuildNumber($nid, $mobile, $guild_number){
+        return NerkhnamehModel::where(
+            'national_id', $nid
+        )->where(
+            'mobile', $mobile
+        )->where(
+            'guild_number', $guild_number
+        )->first();
+    }
+
 }
 
 
