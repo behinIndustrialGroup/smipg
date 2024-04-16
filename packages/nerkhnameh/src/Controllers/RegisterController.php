@@ -34,6 +34,12 @@ class RegisterController extends Controller{
             'personal_image_file' => 'required',
             'commitment_file' => 'required'
         ]);
+        if(
+            NerkhnamehRegistrationInfoController::getByNidMobileGuildNumber(
+                $r->national_id, $r->mobile, $r->guild_number)
+        ){
+            return ;
+        }
         if($r->catagory === config('nerkhnameh_config.catagory')[4] and $r->file('operation_license') === null){
             return response(trans("Operation License Image must be uploaded"), 402);
         }
