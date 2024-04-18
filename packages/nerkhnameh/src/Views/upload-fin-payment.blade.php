@@ -38,6 +38,9 @@
                 <img src="{{ url('public/logo.png') }}" class="col-sm-12" alt="">
             </div>
             <div class="card-body">
+                <p>
+                    جهت مشاهده وضعیت پرداخت اطلاعات زیر را تکمیل کنید
+                </p>
                 <form action="javascript:void(0)" method="post" id="fin-form" enctype="multipart/form-data">
                     @csrf
                     <div class="input-group mb-3">

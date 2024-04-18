@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Mkhodroo\DateConvertor\Controllers\SDate;
 use Mkhodroo\Nerkhnameh\Controllers\NerkhnamehRegistrationInfoController;
 use Mkhodroo\Nerkhnameh\Controllers\RegisterController;
+use Mkhodroo\Nerkhnameh\Controllers\TemplateController;
 use Mkhodroo\Nerkhnameh\Controllers\UploadFinPaymentController;
 use Mkhodroo\Voip\Controllers\VoipController;
 
@@ -15,6 +16,8 @@ Route::name('nerkhnameh.')->prefix('nerkhnameh')->middleware(['web'])->group(fun
         Route::get('', [NerkhnamehRegistrationInfoController::class, 'listForm'])->name('listForm');
         Route::get('list', [NerkhnamehRegistrationInfoController::class, 'list'])->name('list');
         Route::post('get', [NerkhnamehRegistrationInfoController::class, 'getView'])->name('getView');
+        Route::post('edit', [NerkhnamehRegistrationInfoController::class, 'edit'])->name('edit');
+        Route::post('create-nerkhnameh', [TemplateController::class, 'createNerkhnameh'])->name('createNerkhnameh');
     });
 
     Route::name('finPayment.')->prefix('fin-payment')->group(function(){

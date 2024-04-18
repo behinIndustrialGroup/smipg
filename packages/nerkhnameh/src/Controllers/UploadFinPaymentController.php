@@ -36,7 +36,7 @@ class UploadFinPaymentController extends Controller{
         )->first();
 
         if(!$data){
-            return response("", 404);
+            return response(trans("not found"), 404);
         }
         return view('NerkhnamehView::fin-details-div')->with([
             'data' => $data
