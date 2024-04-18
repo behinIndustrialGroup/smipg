@@ -1,43 +1,51 @@
-<div>
-    <div class="input-group mb-3">
-        <input type="text" class="form-control" name="guild_name" placeholder="{{ __('guild name') }}"
-        value="{{ $data->guild_name }}">
+<form action="javascript:void(0)" method="post" id="info-form">
+    <input type="hidden" name="id" id="" value="{{$data->id}}">
+    <div>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" name="guild_name" placeholder="{{ __('guild name') }}"
+            value="{{ $data->guild_name }}">
+        </div>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" name="fullname" placeholder="{{ __('fullname') }}"
+            value="{{ $data->fullname }}">
+        </div>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" name="national_id" placeholder="{{ __('national id') }}"
+            value="{{ $data->national_id }}">
+        </div>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" name="catagory" placeholder="{{ __('catagory') }}"
+            value="{{ $data->catagory }}">
+        </div>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" name="city"
+                placeholder="{{ __('city') }}"
+                value="{{ $data->city_id }}"
+                disabled>
+        </div>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" name="guild_number"
+                placeholder="{{ __('guild number') }}"
+                value="{{ $data->guild_number }}">
+        </div>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" name="tel" placeholder="{{ __('phone') }}"
+            value="{{ $data->tel }}">
+        </div>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" name="mobile" placeholder="{{ __('mobile') }}"
+            value="{{ $data->mobile }}">
+        </div>
+        <div class="input-group mb-3">
+            <textarea type="text" class="form-control" name="address" placeholder="{{ __('address') }}"
+            value="{{ $data->address }}"></textarea>
+        </div>
+        <div class="input-group mb-3">
+            <button class="btn btn-success" onclick="edit_info()">{{ __('Edit') }}</button>
+        </div>
     </div>
-    <div class="input-group mb-3">
-        <input type="text" class="form-control" name="fullname" placeholder="{{ __('fullname') }}"
-        value="{{ $data->fullname }}">
-    </div>
-    <div class="input-group mb-3">
-        <input type="text" class="form-control" name="national_id" placeholder="{{ __('national id') }}"
-        value="{{ $data->national_id }}">
-    </div>
-    <div class="input-group mb-3">
-        <input type="text" class="form-control" name="catagory" placeholder="{{ __('catagory') }}"
-        value="{{ $data->catagory }}">
-    </div>
-    <div class="input-group mb-3">
-        <input type="text" class="form-control" name="city"
-            placeholder="{{ __('city') }}"
-            value="{{ $data->city_id }}">
-    </div>
-    <div class="input-group mb-3">
-        <input type="text" class="form-control" name="guild_number"
-            placeholder="{{ __('guild number') }}"
-            value="{{ $data->guild_number }}">
-    </div>
-    <div class="input-group mb-3">
-        <input type="text" class="form-control" name="tel" placeholder="{{ __('phone') }}"
-        value="{{ $data->tel }}">
-    </div>
-    <div class="input-group mb-3">
-        <input type="text" class="form-control" name="mobile" placeholder="{{ __('mobile') }}"
-        value="{{ $data->mobile }}">
-    </div>
-    <div class="input-group mb-3">
-        <textarea type="text" class="form-control" name="address" placeholder="{{ __('address') }}"
-        value="{{ $data->address }}"></textarea>
-    </div>
-</div>
+
+</form>
 
 <hr>
 <form action="javascript:void(0)" method="post" id="fin-form" enctype="multipart/form-data">
@@ -82,6 +90,26 @@
 
 
 <script>
+    function edit_info(){
+        var form = $('#info-form')[0]
+        var fd = new FormData(form);
+
+        send_ajax_formdata_request(
+            "{{ route('nerkhnameh.registration.edit') }}",
+            fd,
+            function(response) {
+                console.log(response);
+                show_message("{{ __('edited') }}")
+            },
+            function(response) {
+                // console.log(response);
+                show_error(response)
+                hide_loading();
+            }
+        )
+    }
+
+
     function fin_validate(){
         var form = $('#fin-form')[0]
         var fd = new FormData(form);
