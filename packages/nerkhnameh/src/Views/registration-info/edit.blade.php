@@ -41,6 +41,10 @@
             value="{{ $data->address }}"></textarea>
         </div>
         <div class="input-group mb-3">
+            <input type="text" class="form-control" name="price" placeholder="{{ __('price') }}"
+            value="{{ $data->price }}">
+        </div>
+        <div class="input-group mb-3">
             <button class="btn btn-success" onclick="edit_info()">{{ __('Edit') }}</button>
         </div>
     </div>
@@ -54,9 +58,20 @@
         {{__('fin validation')}}
     </div>
     <div class="col-sm-4">
+        <p>{{__('price payment file')}}</p>
+        @if ($data->price_payment_file)
+            <img src="{{ url($data->price_payment_file) }}" alt="" width="200">
+        @else
+            <p style="color: red">
+            هنوز آپلود نشده است
+            </p>
+        @endif
+    </div>
+    <div class="col-sm-4">
+        {{__('fin validation')}}
         <select name="fin_validation" class="form-control" id="">
             <option value="0">{{__('declined')}}</option>
-            <option value="1">{{__('approved')}}</option>
+            <option value="1" @if($data->fin_validation) selected @endif>{{__('approved')}}</option>
         </select>
         <button class="btn btn-success" onclick="fin_validate()">{{ __('save') }}</button>
     </div>

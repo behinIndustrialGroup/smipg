@@ -9,7 +9,8 @@ use Mkhodroo\Nerkhnameh\Controllers\UploadFinPaymentController;
 use Mkhodroo\Voip\Controllers\VoipController;
 
 Route::name('nerkhnameh.')->prefix('nerkhnameh')->middleware(['web'])->group(function(){
-    Route::get('', [RegisterController::class, 'registerForm'])->name('registerForm');
+    Route::get('', [RegisterController::class, 'homeForm'])->name('homeForm');
+    Route::get('register', [RegisterController::class, 'registerForm'])->name('registerForm');
     Route::post('register', [RegisterController::class, 'register'])->name('register');
 
     Route::name('registration.')->prefix('registration')->group(function(){

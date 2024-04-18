@@ -1,23 +1,16 @@
-@if ($data->fin_validation === null)
+@if ($data->price === null)
     <div class="alert alert-warning">
         اطلاعات شما توسط تاکنون اتحادیه بررسی نشده است. لطفا تا بررسی اطلاعات توسط اتحادیه منتظر بمانید
     </div>
-@elseif($data->fin_validation === 0)
+@elseif($data->fin_validation === 1)
     <div class="alert alert-danger">
-        اطلاعات شما توسط اتحادیه تایید نشد. جهت بررسی موضوع با اتحادیه تماس بگیرید
+        اطلاعات پرداخت شما توسط اتحادیه تایید شده است. از قسمت دانلود نرخنامه اقدام به دانلود نمایید
+    </div>
+@elseif($data->price_payment_file)
+    <div class="alert alert-danger">
+    شما قبلا رسید پرداخت را آپلود کرده اید. منتظر تایید واحد مالی باشید
     </div>
 @else
-    <div class="input-group mb-3">
-        {{ __('price for payment to rial') }}:
-        <input 
-            type="text" 
-            class="form-control" 
-            name="price" 
-            value="{{ $data->price }}"
-            placeholder="{{ __('price') }}" 
-            style="width: 100%"
-            disabled>
-    </div>
     <div class="input-group mb-3">
         {{ __('price payment file') }}<br>
         <input 

@@ -14,6 +14,13 @@ use SoapClient;
 
 
 class RegisterController extends Controller{
+
+    public function homeForm(){
+        return view('NerkhnamehView::home')->with([
+            'cities' => CityController::all()
+        ]);
+    }
+
     public function registerForm(){
         return view('NerkhnamehView::register')->with([
             'cities' => CityController::all()

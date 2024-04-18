@@ -48,36 +48,25 @@ class UploadFinPaymentController extends Controller{
             'national_id' => 'required|digits:10',
             'guild_number' => 'required|numeric',
             'mobile' => 'required|digits:11',
-            'price' => 'required',
             'price_payment_file' => 'required'
         ]);
-        return $r->all();
-        $data = $r->except('_token', 'personal_image_file', 'commitment_file');
-        if( $r->file('personal_image_file') !== null ){
-            $data['personal_image_file'] = FileController::store(
-                $r->file('personal_image_file'),
-                config('nerkhnameh_config.nerkhnameh_files') );
-            if( $data['personal_image_file']['status'] !== 200 ){
-                return response(
-                    trans("Personal image") . ' ' . $data['personal_image_file']['message'],
-                    $data['personal_image_file']['status']
-                );
-            }
-            $data['personal_image_file'] = $data['personal_image_file']['dir'];
+        $row = NerkhnamehRegistrationInfoController::getByNidMobileGuildNumber(
+            $r->national_id,
+            $r->mobile,
+            $r->guild_number
+        );
+        $upload = FileController::store(
+            $r->file('price_payment_file'),
+            config('nerkhnameh_config.nerkhnameh_files') 
+        );
+        if( $upload['status'] !== 200 ){
+            return response(
+                trans("Price Payment") . ' ' . $upload['message'],
+                $upload['status']
+            );
         }
-        if( $r->file('commitment_file') !== null ){
-            $data['commitment_file'] = FileController::store(
-                $r->file('commitment_file'),
-                config('nerkhnameh_config.nerkhnameh_files') );
-            if( $data['commitment_file']['status'] !== 200 ){
-                return response(
-                    trans("Commitment Image") . ' ' . $data['commitment_file']['message'], 
-                    $data['commitment_file']['status']
-                );
-            }
-            $data['commitment_file'] = $data['commitment_file']['dir'];
-        }
-        NerkhnamehModel::create($data);
+        $row->price_payment_file = $upload['dir'];
+        $row->save();
     }
 }
 

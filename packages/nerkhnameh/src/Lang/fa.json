@@ -25,5 +25,10 @@
     "nerkhnameh pdf file upload": "آپلود فایل pdf نرخنامه",
     "catagory is not valid": "رسته معتبر نیست",
     "create nerkhnameh": "ایجاد فایل ورد نرخنامه",
-    "fin does not valid": "مالی تایید نیست"
+    "fin does not valid": "مالی تایید نیست",
+    "register nerkhnameh": "ثبت نام جهت دریافت نرخنامه",
+    "upload fin payment file": "آپلود رسید مالی",
+    "download nerkhnameh": "دانلود نرخنامه",
+    "price payment file": "رسید پرداخت وجه",
+    "guild number": "شناسه صنفی"
 }
