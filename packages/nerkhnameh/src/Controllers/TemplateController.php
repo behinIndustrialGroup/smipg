@@ -3,6 +3,7 @@
 namespace Mkhodroo\Nerkhnameh\Controllers;
 
 use App\Http\Controllers\Controller;
+use Hekmatinasser\Verta\Facades\Verta;
 use Illuminate\Http\Request;
 use Mkhodroo\CorrespondenceSystem\Models\Template;
 use PhpOffice\PhpWord\TemplateProcessor;
@@ -71,7 +72,8 @@ class TemplateController extends Controller
         }else{
             return ;
         }
-        $phpword->setValue('date', date('y-m-d'));
+        $date = verta();
+        $phpword->setValue('date', "$date->year-$date->month-$date->day");
         $phpword->setValue('name', $row->fullname);
         $phpword->setValue('guild_name', $row->guild_name);
         $phpword->setValue('guild_number', $row->guild_number);
