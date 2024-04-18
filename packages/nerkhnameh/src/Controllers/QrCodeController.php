@@ -15,11 +15,14 @@ use SoapClient;
 
 
 class QrCodeController extends Controller{
-    public static function generate(){
+    public static function generate($link){
         
         $qrCodes = [];
-        $qrCodes['simple'] = QrCode::format('png')->size(150)->generate('https://crm.smipg.ir/');
-        // $im = new Imagick();
+        if (extension_loaded('imagick')){
+            $qrCodes['simple'] = QrCode::format('png')->size(150)->generate($link);
+        }else{
+            $qrCodes['simple'] = QrCode::size(150)->generate($link);
+        }
         $file = fopen(public_path('qr-code.png'), 'wb');
         fwrite($file, $qrCodes['simple']);
         fclose($file);

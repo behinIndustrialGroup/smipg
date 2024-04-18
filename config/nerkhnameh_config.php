@@ -2,6 +2,7 @@
 
 return [
     'nerkhnameh_files' => 'nerkhnameh_uploads',
+    'link' => 'https://crm.smipg.ir/nerkhnameh/get/',
     'catagory' => [
         'توزیعی - خرده فروشی گازهای طبی و صنعتی',
         'توزیعی - عمده فروشی گازهای طبی و صنعتی',

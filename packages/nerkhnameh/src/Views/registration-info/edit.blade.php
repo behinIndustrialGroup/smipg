@@ -90,7 +90,7 @@
 </form>
 
 <div class="row" id="qr-code">
-    {{ $qrCode }}
+    {{ $qrCode ?? '' }}
 </div>
 <script>
     function fin_validate(){
@@ -129,16 +129,5 @@
                 hide_loading();
             }
         )
-    }
-
-    downloadSVG()
-    function downloadSVG() {
-      const svg = document.getElementById('qr-code').innerHTML;
-      const blob = new Blob([svg.toString()]);
-      const element = document.createElement("a");
-      element.download = "qr-code.svg";
-      element.href = window.URL.createObjectURL(blob);
-      element.click();
-      element.remove();
     }
 </script>
