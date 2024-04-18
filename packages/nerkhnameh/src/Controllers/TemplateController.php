@@ -18,9 +18,19 @@ class TemplateController extends Controller
 
     public static function createNerkhnameh(Request $r){
         $row = NerkhnamehRegistrationInfoController::get($r->id);
-        $row->unique_id = self::createUniqueId();
+        if($row->nerkhnameh_word_file){
+            return ;
+        }
+        if(!$row->unique_id){
+            $row->unique_id = self::createUniqueId();
+        }
         $row->save();
-        return self::putContentToTemplate($row);
+        $nerkhnameh_word_file = self::putContentToTemplate($row);
+        if(!$nerkhnameh_word_file){
+            return response(trans("catagory is not valid"), 402);
+        }
+        $row->nerkhnameh_word_file = $nerkhnameh_word_file;
+        $row->save();
     }
 
     public static function createUniqueId() {
@@ -38,7 +48,26 @@ class TemplateController extends Controller
         // $file = fopen(public_path('file.docx'), 'wb');
         // fwrite($file, base64_decode(self::get($template_id)->file));
         // fclose($file);
-        $phpword = new TemplateProcessor(public_path('tozi-nerkh.docx'));
+        if(
+            $row->catagory === config('nerkhnameh_config.catagory')[0] or
+            $row->catagory === config('nerkhnameh_config.catagory')[1] or
+            $row->catagory === config('nerkhnameh_config.catagory')[2] 
+            ){
+                $phpword = new TemplateProcessor(public_path('nerkh-tozi-temp.docx'));
+        }
+        elseif(
+            $row->catagory === config('nerkhnameh_config.catagory')[3]
+            ){
+                $phpword = new TemplateProcessor(public_path('nerkh-fire-temp.docx'));
+        }
+        elseif(
+            $row->catagory === config('nerkhnameh_config.catagory')[4] or
+            $row->catagory === config('nerkhnameh_config.catagory')[5] 
+            ){
+                $phpword = new TemplateProcessor(public_path('nerkh-tolid-temp.docx'));
+        }else{
+            return ;
+        }
         $phpword->setValue('date', date('y-m-d'));
         $phpword->setValue('name', $row->fullname);
         $phpword->setValue('guild_name', $row->guild_name);

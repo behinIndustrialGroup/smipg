@@ -53,45 +53,34 @@
         <button class="btn btn-success" onclick="fin_validate()">{{ __('save') }}</button>
     </div>
 </form>
-<script>
-    function fin_validate(){
-        var form = $('#fin-form')[0]
-        var fd = new FormData(form);
-
-        send_ajax_formdata_request(
-            "{{ route('nerkhnameh.registration.edit') }}",
-            fd,
-            function(response) {
-                console.log(response);
-                show_message("{{ __('edited') }}")
-            },
-            function(response) {
-                // console.log(response);
-                show_error(response)
-                hide_loading();
-            }
-        )
-    }
-</script>
 
 <hr>
 <form action="javascript:void(0)" method="post" id="nerkhnameh-form" enctype="multipart/form-data">
     <input type="hidden" name="id" id="" value="{{$data->id}}">
-    <div class="input-group mb-3">
-        {{__('nerkhnameh file')}}
-        @if ($data->nerkhnameh_file)
-            <a href="{{ url($data->nerkhnameh_file) }}">{{__('download')}}</a>
-        @endif
-        <input type="file" class="form-control" name="nerkhnameh_file" id="">
+    <div class="row">
+        <div class="col-sm-4">
+            @if ($data->nerkhnameh_word_file)
+                <a href="{{ url($data->nerkhnameh_word_file) }}">{{__('download word file')}}</a><br>
+            @else
+                <button class="btn btn-danger" onclick="create_nerkhnameh()">{{ __('create nerkhnameh') }}</button>
+            @endif
+            @if ($data->nerkhnameh_file)
+                <a href="{{ url($data->nerkhnameh_file) }}">{{__('download pdf file')}}</a><br>
+            @endif
+        </div>
+        <div class="col-sm-4">
+            {{__('nerkhnameh pdf file upload')}}
+
+            <input type="file" class="form-control col-sm-12" name="nerkhnameh_file" id="">
+            <button class="btn btn-success" onclick="save_nerkhnameh()">{{ __('save') }}</button>
+
+        </div>
     </div>
     <div class="input-group mb-3">
-        <button class="btn btn-success" onclick="create_nerkhnameh()">{{ __('save') }}</button>
     </div>
 </form>
 
-<div class="row" id="qr-code">
-    {{ $qrCode ?? '' }}
-</div>
+
 <script>
     function fin_validate(){
         var form = $('#fin-form')[0]
@@ -118,6 +107,26 @@
 
         send_ajax_formdata_request(
             "{{ route('nerkhnameh.registration.createNerkhnameh') }}",
+            fd,
+            function(response) {
+                console.log(response);
+                show_message("{{ __('edited') }}")
+                show_edit_modal("{{ $data->id }}")
+            },
+            function(response) {
+                // console.log(response);
+                show_error(response)
+                hide_loading();
+            }
+        )
+    }
+
+    function save_nerkhnameh(){
+        var form = $('#nerkhnameh-form')[0]
+        var fd = new FormData(form);
+
+        send_ajax_formdata_request(
+            "{{ route('nerkhnameh.registration.edit') }}",
             fd,
             function(response) {
                 console.log(response);

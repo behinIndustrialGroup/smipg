@@ -41,7 +41,7 @@ class NerkhnamehRegistrationInfoController extends Controller{
         if($r->file('nerkhnameh_file') !== null){
             $data['nerkhnameh_file'] = FileController::store(
                 $r->file('nerkhnameh_file'),
-                config('nerkhnameh_config.nerkhnameh_files') );
+                config('nerkhnameh_config.nerkhnameh_files') . '/nerkhnameh' );
             if( $data['nerkhnameh_file']['status'] !== 200 ){
                 return response(
                     trans("nerkhnameh file") . ' ' . $data['nerkhnameh_file']['message'],

@@ -20,12 +20,12 @@ class QrCodeController extends Controller{
         $qrCodes = [];
         if (extension_loaded('imagick')){
             $qrCodes['simple'] = QrCode::format('png')->size(150)->generate($link);
+            $file = fopen(public_path('qr-code.png'), 'wb');
+            fwrite($file, $qrCodes['simple']);
+            fclose($file);
         }else{
             $qrCodes['simple'] = QrCode::size(150)->generate($link);
         }
-        $file = fopen(public_path('qr-code.png'), 'wb');
-        fwrite($file, $qrCodes['simple']);
-        fclose($file);
         return $qrCodes['simple'];
     }
 
