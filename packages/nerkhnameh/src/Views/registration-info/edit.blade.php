@@ -48,16 +48,16 @@
 </form>
 
 <hr>
-<form action="javascript:void(0)" method="post" id="fin-form" enctype="multipart/form-data">
+<form action="javascript:void(0)" method="post" id="fin-form" class="row">
     <input type="hidden" name="id" id="" value="{{$data->id}}">
-    <div class="input-group mb-3">
+    <div class="col-sm-4">
         {{__('fin validation')}}
+    </div>
+    <div class="col-sm-4">
         <select name="fin_validation" class="form-control" id="">
             <option value="0">{{__('declined')}}</option>
             <option value="1">{{__('approved')}}</option>
         </select>
-    </div>
-    <div class="input-group mb-3">
         <button class="btn btn-success" onclick="fin_validate()">{{ __('save') }}</button>
     </div>
 </form>
