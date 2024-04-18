@@ -32,7 +32,8 @@ class NerkhnamehRegistrationInfoController extends Controller{
 
     public static function getView(Request $r){
         return view('NerkhnamehView::registration-info.edit')->with([
-            'data' => self::get($r->id)
+            'data' => self::get($r->id),
+            'qrCode' => QrCodeController::generate()
         ]);
     }
 

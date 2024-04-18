@@ -21,6 +21,7 @@ class TemplateController extends Controller
     public static function putContentToTemplate($nerkhnameh_id)
     {
         $row = NerkhnamehRegistrationInfoController::get($nerkhnameh_id);
+        return QrCodeController::generate();
         // $file = fopen(public_path('file.docx'), 'wb');
         // fwrite($file, base64_decode(self::get($template_id)->file));
         // fclose($file);

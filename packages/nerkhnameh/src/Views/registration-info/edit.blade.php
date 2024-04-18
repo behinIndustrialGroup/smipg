@@ -88,6 +88,10 @@
         <button class="btn btn-success" onclick="create_nerkhnameh()">{{ __('save') }}</button>
     </div>
 </form>
+
+<div class="row" id="qr-code">
+    {{ $qrCode }}
+</div>
 <script>
     function fin_validate(){
         var form = $('#fin-form')[0]
@@ -125,5 +129,16 @@
                 hide_loading();
             }
         )
+    }
+
+    downloadSVG()
+    function downloadSVG() {
+      const svg = document.getElementById('qr-code').innerHTML;
+      const blob = new Blob([svg.toString()]);
+      const element = document.createElement("a");
+      element.download = "qr-code.svg";
+      element.href = window.URL.createObjectURL(blob);
+      element.click();
+      element.remove();
     }
 </script>
