@@ -20,7 +20,7 @@ class QrCodeController extends Controller{
         $qrCodes = [];
         $qrCodes['simple'] = QrCode::size(150)->generate('https://crm.smipg.ir/');
         // $im = new Imagick();
-        $file = fopen(public_path('qr-code.svg'), 'wb');
+        $file = fopen(public_path('qr-code.png'), 'wb');
         fwrite($file, $qrCodes['simple']);
         fclose($file);
         return $qrCodes['simple'];
