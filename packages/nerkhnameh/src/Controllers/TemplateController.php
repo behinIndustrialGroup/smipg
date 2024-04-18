@@ -18,6 +18,9 @@ class TemplateController extends Controller
 
     public static function createNerkhnameh(Request $r){
         $row = NerkhnamehRegistrationInfoController::get($r->id);
+        if(!$row->fin_validation){
+            return response(trans("fin does not valid"), 402);
+        }
         if($row->nerkhnameh_word_file){
             return ;
         }
