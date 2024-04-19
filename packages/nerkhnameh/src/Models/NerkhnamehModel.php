@@ -4,10 +4,12 @@ namespace Mkhodroo\Nerkhnameh\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class NerkhnamehModel extends Model
 {
     use HasFactory;
+    use SoftDeletes;
     public $table = "nerkhnameh";
     protected $fillable = [
         'guild_name', 'fullname', 'national_id', 'catagory', 'operation_license', 'mobile', 'tel', 

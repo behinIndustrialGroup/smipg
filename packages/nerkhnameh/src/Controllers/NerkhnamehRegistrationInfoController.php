@@ -65,6 +65,10 @@ class NerkhnamehRegistrationInfoController extends Controller{
         )->first();
     }
 
+    public static function delete(Request $r){
+        return self::get($r->id)->delete();
+    }
+
 }
 
 

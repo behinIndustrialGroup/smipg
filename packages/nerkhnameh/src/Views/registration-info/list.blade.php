@@ -16,6 +16,9 @@
                     <th>{{ __('personal image file') }}</th>
                     <th>{{ __('operation license') }}</th>
                     <th>{{ __('commitment file') }}</th>
+                    <th>{{ __('created at') }}</th>
+                    <th>{{ __('price') }}</th>
+                    <th>{{ __('fin validation') }}</th>
                 </tr>
             </thead>
         </table>
@@ -45,6 +48,15 @@
                 { data: 'commitment_file', render: function(data){
                     return `<a href='{{ url('${data}') }}'>{{ __('download') }}</a>`;
                 }},
+                { data: 'created_at', render: function(data){
+                    datetime = new Date(data);
+                    date = datetime.toLocaleDateString('fa-IR');
+                    time = datetime.toLocaleTimeString('fa-IR');
+                    return '<span dir="auto" style="float: left">' + date + ' ' + time + '</span>';
+                }},
+                { data: 'price'},
+                { data: 'fin_validation'},
+
             ]
         )
         table.on('dblclick', 'tr', function(){

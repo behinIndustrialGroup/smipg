@@ -41,8 +41,14 @@
             value="{{ $data->address }}"></textarea>
         </div>
         <div class="input-group mb-3">
-            <input type="text" class="form-control" name="price" placeholder="{{ __('price') }}"
-            value="{{ $data->price }}">
+            <div class="col-sm-3">{{ __('price') }}</div>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" name="price" placeholder="{{ __('price') }}"
+                value="{{ $data->price }}">
+                <p>
+                    در این قسمت قیمتی را که با متقاضی توافق کرده اید تا پرداخت کند، وارد کنید. با وارد کردن این قسمت امکان آپلود رسید برای متقاضی فعال خواهد شد.
+                </p>
+            </div>
         </div>
         <div class="input-group mb-3">
             <button class="btn btn-success" onclick="edit_info()">{{ __('Edit') }}</button>
@@ -99,8 +105,12 @@
 
         </div>
     </div>
-    <div class="input-group mb-3">
-    </div>
+</form>
+
+<hr>
+<form action="javascript:void(0)" method="post" id="delete-form">
+    <input type="hidden" name="id" id="" value="{{$data->id}}">
+    <button class="btn btn-danger" onclick="delete_nerkhnameh()">{{ __('delete') }}</button>
 </form>
 
 
@@ -115,6 +125,7 @@
             function(response) {
                 console.log(response);
                 show_message("{{ __('edited') }}")
+                refresh_table()
             },
             function(response) {
                 // console.log(response);
@@ -135,6 +146,7 @@
             function(response) {
                 console.log(response);
                 show_message("{{ __('edited') }}")
+                refresh_table()
             },
             function(response) {
                 // console.log(response);
@@ -174,6 +186,25 @@
             function(response) {
                 console.log(response);
                 show_message("{{ __('edited') }}")
+            },
+            function(response) {
+                // console.log(response);
+                show_error(response)
+                hide_loading();
+            }
+        )
+    }
+
+    function delete_nerkhnameh(){
+        var form = $('#delete-form')[0]
+        var fd = new FormData(form);
+
+        send_ajax_formdata_request_with_confirm(
+            "{{ route('nerkhnameh.registration.delete') }}",
+            fd,
+            function(response) {
+                show_message("{{ __('deleted') }}")
+                refresh_table()
             },
             function(response) {
                 // console.log(response);
