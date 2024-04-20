@@ -50,6 +50,24 @@
             >{{ $data->address }}</textarea>
         </div>
         <div class="input-group mb-3">
+            <div class="col-sm-3">{{ __('personal image file') }}</div>
+            @if($data->personal_image_file)
+                <a href="{{ url($data->personal_image_file) }}">{{ __('download') }}</a>
+            @endif
+        </div>
+        <div class="input-group mb-3">
+            <div class="col-sm-3">{{ __('operation license') }}</div>
+            @if($data->operation_license)
+                <a href="{{ url($data->operation_license) }}">{{ __('download') }}</a>
+            @endif
+        </div>
+        <div class="input-group mb-3">
+            <div class="col-sm-3">{{ __('commitment file') }}</div>
+            @if($data->commitment_file)
+                <a href="{{ url($data?->commitment_file) }}">{{ __('download') }}</a>
+            @endif
+        </div>
+        <div class="input-group mb-3">
             <div class="col-sm-3">{{ __('price') }}</div>
             <div class="col-sm-9">
                 <input type="text" class="form-control" name="price" placeholder="{{ __('price') }}"

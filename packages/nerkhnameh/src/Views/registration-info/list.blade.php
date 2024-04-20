@@ -13,9 +13,6 @@
                     <th>{{ __('guild name') }}</th>
                     <th>{{ __('catagory') }}</th>
                     <th>{{ __('address') }}</th>
-                    <th>{{ __('personal image file') }}</th>
-                    <th>{{ __('operation license') }}</th>
-                    <th>{{ __('commitment file') }}</th>
                     <th>{{ __('created at') }}</th>
                     <th>{{ __('price') }}</th>
                     <th>{{ __('fin validation') }}</th>
@@ -39,15 +36,6 @@
                 { data: 'guild_name'},
                 { data: 'catagory'},
                 { data: 'address'},
-                { data: 'personal_image_file', render: function(data){
-                    return `<a href='{{ url('${data}') }}'>{{ __('download') }}</a>`;
-                }},
-                { data: 'operation_license', render: function(data){
-                    return `<a href='{{ url('${data}') }}'>{{ __('download') }}</a>`;
-                }},
-                { data: 'commitment_file', render: function(data){
-                    return `<a href='{{ url('${data}') }}'>{{ __('download') }}</a>`;
-                }},
                 { data: 'created_at', render: function(data){
                     datetime = new Date(data);
                     date = datetime.toLocaleDateString('fa-IR');
