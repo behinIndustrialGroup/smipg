@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Mkhodroo\DateConvertor\Controllers\SDate;
+use Mkhodroo\Nerkhnameh\Controllers\downloadNerkhnamehController;
 use Mkhodroo\Nerkhnameh\Controllers\NerkhnamehRegistrationInfoController;
 use Mkhodroo\Nerkhnameh\Controllers\RegisterController;
 use Mkhodroo\Nerkhnameh\Controllers\TemplateController;
@@ -26,6 +27,11 @@ Route::name('nerkhnameh.')->prefix('nerkhnameh')->middleware(['web'])->group(fun
         Route::get('', [UploadFinPaymentController::class, 'uploadForm'])->name('uploadForm');
         Route::post('check', [UploadFinPaymentController::class, 'check'])->name('check');
         Route::post('upload', [UploadFinPaymentController::class, 'upload'])->name('upload');
+    });
+
+    Route::name('download.')->prefix('download')->group(function(){
+        Route::get('', [downloadNerkhnamehController::class, 'downloadForm'])->name('downloadForm');
+        Route::post('', [downloadNerkhnamehController::class, 'check'])->name('check');
     });
 
 

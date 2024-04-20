@@ -62,6 +62,9 @@
             if(id == 2){
                 window.location.href = "{{ route('nerkhnameh.finPayment.uploadForm') }}"
             }
+            if(id == 3){
+                window.location.href = "{{ route('nerkhnameh.download.downloadForm') }}"
+            }
         }
     </script>
 @endsection

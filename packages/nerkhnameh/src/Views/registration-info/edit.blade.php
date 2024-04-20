@@ -47,7 +47,7 @@
         <div class="input-group mb-3">
             <div class="col-sm-3">{{ __('address') }}</div>
             <textarea type="text" class="form-control" name="address" placeholder="{{ __('address') }}"
-            value="{{ $data->address }}"></textarea>
+            >{{ $data->address }}</textarea>
         </div>
         <div class="input-group mb-3">
             <div class="col-sm-3">{{ __('price') }}</div>
