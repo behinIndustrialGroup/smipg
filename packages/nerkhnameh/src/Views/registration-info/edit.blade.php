@@ -2,41 +2,50 @@
     <input type="hidden" name="id" id="" value="{{$data->id}}">
     <div>
         <div class="input-group mb-3">
+            <div class="col-sm-3">{{ __('guild name') }}</div>
             <input type="text" class="form-control" name="guild_name" placeholder="{{ __('guild name') }}"
             value="{{ $data->guild_name }}">
         </div>
         <div class="input-group mb-3">
+            <div class="col-sm-3">{{ __('fullname') }}</div>
             <input type="text" class="form-control" name="fullname" placeholder="{{ __('fullname') }}"
             value="{{ $data->fullname }}">
         </div>
         <div class="input-group mb-3">
+            <div class="col-sm-3">{{ __('national id') }}</div>
             <input type="text" class="form-control" name="national_id" placeholder="{{ __('national id') }}"
             value="{{ $data->national_id }}">
         </div>
         <div class="input-group mb-3">
+            <div class="col-sm-3">{{ __('catagory') }}</div>
             <input type="text" class="form-control" name="catagory" placeholder="{{ __('catagory') }}"
             value="{{ $data->catagory }}">
         </div>
         <div class="input-group mb-3">
+            <div class="col-sm-3">{{ __('city') }}</div>
             <input type="text" class="form-control" name="city"
                 placeholder="{{ __('city') }}"
                 value="{{ $data->city_id }}"
                 disabled>
         </div>
         <div class="input-group mb-3">
+            <div class="col-sm-3">{{ __('guild number') }}</div>
             <input type="text" class="form-control" name="guild_number"
                 placeholder="{{ __('guild number') }}"
                 value="{{ $data->guild_number }}">
         </div>
         <div class="input-group mb-3">
+            <div class="col-sm-3">{{ __('phone') }}</div>
             <input type="text" class="form-control" name="tel" placeholder="{{ __('phone') }}"
             value="{{ $data->tel }}">
         </div>
         <div class="input-group mb-3">
+            <div class="col-sm-3">{{ __('mobile') }}</div>
             <input type="text" class="form-control" name="mobile" placeholder="{{ __('mobile') }}"
             value="{{ $data->mobile }}">
         </div>
         <div class="input-group mb-3">
+            <div class="col-sm-3">{{ __('address') }}</div>
             <textarea type="text" class="form-control" name="address" placeholder="{{ __('address') }}"
             value="{{ $data->address }}"></textarea>
         </div>
