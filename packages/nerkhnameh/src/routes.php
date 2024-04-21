@@ -4,12 +4,14 @@ use Illuminate\Support\Facades\Route;
 use Mkhodroo\DateConvertor\Controllers\SDate;
 use Mkhodroo\Nerkhnameh\Controllers\downloadNerkhnamehController;
 use Mkhodroo\Nerkhnameh\Controllers\NerkhnamehRegistrationInfoController;
+use Mkhodroo\Nerkhnameh\Controllers\QrCodeController;
 use Mkhodroo\Nerkhnameh\Controllers\RegisterController;
 use Mkhodroo\Nerkhnameh\Controllers\TemplateController;
 use Mkhodroo\Nerkhnameh\Controllers\UploadFinPaymentController;
 use Mkhodroo\Voip\Controllers\VoipController;
 
 Route::name('nerkhnameh.')->prefix('nerkhnameh')->middleware(['web'])->group(function(){
+    Route::get('test/{link}', [QrCodeController::class, 'generate'])->name('test');
     Route::get('', [RegisterController::class, 'homeForm'])->name('homeForm');
     Route::get('register', [RegisterController::class, 'registerForm'])->name('registerForm');
     Route::post('register', [RegisterController::class, 'register'])->name('register');

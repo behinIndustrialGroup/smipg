@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Mkhodroo\CorrespondenceSystem\Models\Template;
 use PhpOffice\PhpWord\TemplateProcessor;
 use Illuminate\Support\Str;
+use Mkhodroo\Cities\Controllers\CityController;
 use Mkhodroo\Nerkhnameh\Models\NerkhnamehModel;
 
 class TemplateController extends Controller
@@ -74,14 +75,30 @@ class TemplateController extends Controller
         }
         $date = verta();
         $phpword->setValue('date', "$date->year-$date->month-$date->day");
-        $phpword->setValue('name', $row->fullname);
+        $phpword->setValue('fullname', $row->fullname);
         $phpword->setValue('guild_name', $row->guild_name);
         $phpword->setValue('guild_number', $row->guild_number);
+        $catagory = str_replace(["(", ")"], ["-", ""], $row->catagory);
+        $phpword->setValue('catagory', $catagory);
+        $phpword->setValue('national_id', $row->national_id);
         $phpword->setValue('tel', $row->tel);
         $phpword->setValue('mobile', $row->mobile);
         $phpword->setValue('address', $row->address);
+        $city = CityController::getById($row->city_id);
+        $phpword->setValue('province', $city->province);
+        $phpword->setValue('city', $city->city);
         $image = public_path('qr-code.png');
-        $phpword->setImageValue('qr_code', $image);
+        $phpword->setImageValue('qr_code', [
+            'path' => $image,
+            'width' => 90,
+            'height' => 90,
+          ]);
+        $personal_image = str_replace("public/", "", $row->personal_image_file);
+        $phpword->setImageValue('personal_image', [
+            'path' => public_path($personal_image),
+            'width' => 90,
+            'height' => 130,
+          ]);
         
         // $receiversStr = '';
         // foreach($receivers as $receiver){
