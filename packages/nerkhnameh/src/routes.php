@@ -15,6 +15,8 @@ Route::name('nerkhnameh.')->prefix('nerkhnameh')->middleware(['web'])->group(fun
     Route::get('', [RegisterController::class, 'homeForm'])->name('homeForm');
     Route::get('register', [RegisterController::class, 'registerForm'])->name('registerForm');
     Route::post('register', [RegisterController::class, 'register'])->name('register');
+    Route::get('get/{link}', [NerkhnamehRegistrationInfoController::class, 'inquiry'])->name('inquiry');
+
 
     Route::name('registration.')->middleware(['auth'])->prefix('registration')->group(function(){
         Route::get('', [NerkhnamehRegistrationInfoController::class, 'listForm'])->name('listForm');

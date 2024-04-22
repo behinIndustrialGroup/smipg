@@ -30,6 +30,10 @@ class NerkhnamehRegistrationInfoController extends Controller{
         return NerkhnamehModel::find($id);
     }
 
+    public static function getByUniqueId($unique_id){
+        return NerkhnamehModel::where('unique_id', $unique_id)->first();
+    }
+
     public static function getView(Request $r){
         return view('NerkhnamehView::registration-info.edit')->with([
             'data' => self::get($r->id),
@@ -67,6 +71,12 @@ class NerkhnamehRegistrationInfoController extends Controller{
 
     public static function delete(Request $r){
         return self::get($r->id)->delete();
+    }
+
+    public static function inquiry($unique_id){
+        return view('NerkhnamehView::inquiry')->with([
+            'data' => self::getByUniqueId($unique_id)
+        ]);
     }
 
 }
