@@ -72,12 +72,37 @@ return [
             ],
             'memberships' => [
                 '96' => ['membership96', 'membership96_pay_date', 'membership96_ref_id', 'membership96_pay_file'],
+                'donate96' => ['donate96', 'donate96_pay_date', 'donate96_ref_id', 'donate96_pay_file'],
+                'sodur96' => ['sodur96', 'sodur96_pay_date', 'sodur96_ref_id', 'sodur96_pay_file'],
+
                 '97' => ['membership97', 'membership97_pay_date', 'membership97_ref_id', 'membership97_pay_file'],
+                'donate97' => ['donate97', 'donate97_pay_date', 'donate97_ref_id', 'donate97_pay_file'],
+                'sodur97' => ['sodur97', 'sodur97_pay_date', 'sodur97_ref_id', 'sodur97_pay_file'],
+
                 '98' => ['membership98', 'membership98_pay_date', 'membership98_ref_id', 'membership98_pay_file'],
+                'donate98' => ['donate98', 'donate98_pay_date', 'donate98_ref_id', 'donate98_pay_file'],
+                'sodur98' => ['sodur98', 'sodur98_pay_date', 'sodur98_ref_id', 'sodur98_pay_file'],
+
                 '99' => ['membership99', 'membership99_pay_date', 'membership99_ref_id', 'membership99_pay_file'],
+                'donate99' => ['donate99', 'donate99_pay_date', 'donate99_ref_id', 'donate99_pay_file'],
+                'sodur99' => ['sodur99', 'sodur99_pay_date', 'sodur99_ref_id', 'sodur99_pay_file'],
+
                 '00' => ['membership00', 'membership00_pay_date', 'membership00_ref_id', 'membership00_pay_file'],
+                'donate00' => ['donate00', 'donate00_pay_date', 'donate00_ref_id', 'donate00_pay_file'],
+                'sodur00' => ['sodur00', 'sodur00_pay_date', 'sodur00_ref_id', 'sodur00_pay_file'],
+
                 '01' => ['membership01', 'membership01_pay_date', 'membership01_ref_id', 'membership01_pay_file'],
+                'donate01' => ['donate01', 'donate01_pay_date', 'donate01_ref_id', 'donate01_pay_file'],
+                'sodur01' => ['sodur01', 'sodur01_pay_date', 'sodur01_ref_id', 'sodur01_pay_file'],
+
                 '02' => ['membership02', 'membership02_pay_date', 'membership02_ref_id', 'membership02_pay_file'],
+                'donate02' => ['donate02', 'donate02_pay_date', 'donate02_ref_id', 'donate02_pay_file'],
+                'sodur02' => ['sodur02', 'sodur02_pay_date', 'sodur02_ref_id', 'sodur02_pay_file'],
+
+                '03' => ['membership03', 'membership03_pay_date', 'membership03_ref_id', 'membership03_pay_file'],
+                'donate03' => ['donate03', 'donate03_pay_date', 'donate03_ref_id', 'donate03_pay_file'],
+                'sodur03' => ['sodur03', 'sodur03_pay_date', 'sodur03_ref_id', 'sodur03_pay_file'],
+
                 'donate1' => ['donate1', 'donate1_pay_date', 'donate1_ref_id', 'donate1_pay_file'],
             ],
             'fin_fields' => [
@@ -193,12 +218,37 @@ return [
             ],
             'memberships' => [
                 '96' => ['membership96', 'membership96_pay_date', 'membership96_ref_id', 'membership96_pay_file'],
+                'donate96' => ['donate96', 'donate96_pay_date', 'donate96_ref_id', 'donate96_pay_file'],
+                'sodur96' => ['sodur96', 'sodur96_pay_date', 'sodur96_ref_id', 'sodur96_pay_file'],
+
                 '97' => ['membership97', 'membership97_pay_date', 'membership97_ref_id', 'membership97_pay_file'],
+                'donate97' => ['donate97', 'donate97_pay_date', 'donate97_ref_id', 'donate97_pay_file'],
+                'sodur97' => ['sodur97', 'sodur97_pay_date', 'sodur97_ref_id', 'sodur97_pay_file'],
+
                 '98' => ['membership98', 'membership98_pay_date', 'membership98_ref_id', 'membership98_pay_file'],
+                'donate98' => ['donate98', 'donate98_pay_date', 'donate98_ref_id', 'donate98_pay_file'],
+                'sodur98' => ['sodur98', 'sodur98_pay_date', 'sodur98_ref_id', 'sodur98_pay_file'],
+
                 '99' => ['membership99', 'membership99_pay_date', 'membership99_ref_id', 'membership99_pay_file'],
+                'donate99' => ['donate99', 'donate99_pay_date', 'donate99_ref_id', 'donate99_pay_file'],
+                'sodur99' => ['sodur99', 'sodur99_pay_date', 'sodur99_ref_id', 'sodur99_pay_file'],
+
                 '00' => ['membership00', 'membership00_pay_date', 'membership00_ref_id', 'membership00_pay_file'],
+                'donate00' => ['donate00', 'donate00_pay_date', 'donate00_ref_id', 'donate00_pay_file'],
+                'sodur00' => ['sodur00', 'sodur00_pay_date', 'sodur00_ref_id', 'sodur00_pay_file'],
+
                 '01' => ['membership01', 'membership01_pay_date', 'membership01_ref_id', 'membership01_pay_file'],
+                'donate01' => ['donate01', 'donate01_pay_date', 'donate01_ref_id', 'donate01_pay_file'],
+                'sodur01' => ['sodur01', 'sodur01_pay_date', 'sodur01_ref_id', 'sodur01_pay_file'],
+
                 '02' => ['membership02', 'membership02_pay_date', 'membership02_ref_id', 'membership02_pay_file'],
+                'donate02' => ['donate02', 'donate02_pay_date', 'donate02_ref_id', 'donate02_pay_file'],
+                'sodur02' => ['sodur02', 'sodur02_pay_date', 'sodur02_ref_id', 'sodur02_pay_file'],
+
+                '03' => ['membership03', 'membership03_pay_date', 'membership03_ref_id', 'membership03_pay_file'],
+                'donate03' => ['donate03', 'donate03_pay_date', 'donate03_ref_id', 'donate03_pay_file'],
+                'sodur03' => ['sodur03', 'sodur03_pay_date', 'sodur03_ref_id', 'sodur03_pay_file'],
+
                 'donate1' => ['donate1', 'donate1_pay_date', 'donate1_ref_id', 'donate1_pay_file'],
             ],
             'fin_fields' => [
@@ -313,12 +363,37 @@ return [
             ],
             'memberships' => [
                 '96' => ['membership96', 'membership96_pay_date', 'membership96_ref_id', 'membership96_pay_file'],
+                'donate96' => ['donate96', 'donate96_pay_date', 'donate96_ref_id', 'donate96_pay_file'],
+                'sodur96' => ['sodur96', 'sodur96_pay_date', 'sodur96_ref_id', 'sodur96_pay_file'],
+
                 '97' => ['membership97', 'membership97_pay_date', 'membership97_ref_id', 'membership97_pay_file'],
+                'donate97' => ['donate97', 'donate97_pay_date', 'donate97_ref_id', 'donate97_pay_file'],
+                'sodur97' => ['sodur97', 'sodur97_pay_date', 'sodur97_ref_id', 'sodur97_pay_file'],
+
                 '98' => ['membership98', 'membership98_pay_date', 'membership98_ref_id', 'membership98_pay_file'],
+                'donate98' => ['donate98', 'donate98_pay_date', 'donate98_ref_id', 'donate98_pay_file'],
+                'sodur98' => ['sodur98', 'sodur98_pay_date', 'sodur98_ref_id', 'sodur98_pay_file'],
+
                 '99' => ['membership99', 'membership99_pay_date', 'membership99_ref_id', 'membership99_pay_file'],
+                'donate99' => ['donate99', 'donate99_pay_date', 'donate99_ref_id', 'donate99_pay_file'],
+                'sodur99' => ['sodur99', 'sodur99_pay_date', 'sodur99_ref_id', 'sodur99_pay_file'],
+
                 '00' => ['membership00', 'membership00_pay_date', 'membership00_ref_id', 'membership00_pay_file'],
+                'donate00' => ['donate00', 'donate00_pay_date', 'donate00_ref_id', 'donate00_pay_file'],
+                'sodur00' => ['sodur00', 'sodur00_pay_date', 'sodur00_ref_id', 'sodur00_pay_file'],
+
                 '01' => ['membership01', 'membership01_pay_date', 'membership01_ref_id', 'membership01_pay_file'],
+                'donate01' => ['donate01', 'donate01_pay_date', 'donate01_ref_id', 'donate01_pay_file'],
+                'sodur01' => ['sodur01', 'sodur01_pay_date', 'sodur01_ref_id', 'sodur01_pay_file'],
+
                 '02' => ['membership02', 'membership02_pay_date', 'membership02_ref_id', 'membership02_pay_file'],
+                'donate02' => ['donate02', 'donate02_pay_date', 'donate02_ref_id', 'donate02_pay_file'],
+                'sodur02' => ['sodur02', 'sodur02_pay_date', 'sodur02_ref_id', 'sodur02_pay_file'],
+
+                '03' => ['membership03', 'membership03_pay_date', 'membership03_ref_id', 'membership03_pay_file'],
+                'donate03' => ['donate03', 'donate03_pay_date', 'donate03_ref_id', 'donate03_pay_file'],
+                'sodur03' => ['sodur03', 'sodur03_pay_date', 'sodur03_ref_id', 'sodur03_pay_file'],
+
                 'donate1' => ['donate1', 'donate1_pay_date', 'donate1_ref_id', 'donate1_pay_file'],
             ],
             'fin_fields' => [
@@ -434,12 +509,37 @@ return [
             ],
             'memberships' => [
                 '96' => ['membership96', 'membership96_pay_date', 'membership96_ref_id', 'membership96_pay_file'],
+                'donate96' => ['donate96', 'donate96_pay_date', 'donate96_ref_id', 'donate96_pay_file'],
+                'sodur96' => ['sodur96', 'sodur96_pay_date', 'sodur96_ref_id', 'sodur96_pay_file'],
+
                 '97' => ['membership97', 'membership97_pay_date', 'membership97_ref_id', 'membership97_pay_file'],
+                'donate97' => ['donate97', 'donate97_pay_date', 'donate97_ref_id', 'donate97_pay_file'],
+                'sodur97' => ['sodur97', 'sodur97_pay_date', 'sodur97_ref_id', 'sodur97_pay_file'],
+
                 '98' => ['membership98', 'membership98_pay_date', 'membership98_ref_id', 'membership98_pay_file'],
+                'donate98' => ['donate98', 'donate98_pay_date', 'donate98_ref_id', 'donate98_pay_file'],
+                'sodur98' => ['sodur98', 'sodur98_pay_date', 'sodur98_ref_id', 'sodur98_pay_file'],
+
                 '99' => ['membership99', 'membership99_pay_date', 'membership99_ref_id', 'membership99_pay_file'],
+                'donate99' => ['donate99', 'donate99_pay_date', 'donate99_ref_id', 'donate99_pay_file'],
+                'sodur99' => ['sodur99', 'sodur99_pay_date', 'sodur99_ref_id', 'sodur99_pay_file'],
+
                 '00' => ['membership00', 'membership00_pay_date', 'membership00_ref_id', 'membership00_pay_file'],
+                'donate00' => ['donate00', 'donate00_pay_date', 'donate00_ref_id', 'donate00_pay_file'],
+                'sodur00' => ['sodur00', 'sodur00_pay_date', 'sodur00_ref_id', 'sodur00_pay_file'],
+
                 '01' => ['membership01', 'membership01_pay_date', 'membership01_ref_id', 'membership01_pay_file'],
+                'donate01' => ['donate01', 'donate01_pay_date', 'donate01_ref_id', 'donate01_pay_file'],
+                'sodur01' => ['sodur01', 'sodur01_pay_date', 'sodur01_ref_id', 'sodur01_pay_file'],
+
                 '02' => ['membership02', 'membership02_pay_date', 'membership02_ref_id', 'membership02_pay_file'],
+                'donate02' => ['donate02', 'donate02_pay_date', 'donate02_ref_id', 'donate02_pay_file'],
+                'sodur02' => ['sodur02', 'sodur02_pay_date', 'sodur02_ref_id', 'sodur02_pay_file'],
+
+                '03' => ['membership03', 'membership03_pay_date', 'membership03_ref_id', 'membership03_pay_file'],
+                'donate03' => ['donate03', 'donate03_pay_date', 'donate03_ref_id', 'donate03_pay_file'],
+                'sodur03' => ['sodur03', 'sodur03_pay_date', 'sodur03_ref_id', 'sodur03_pay_file'],
+
                 'donate1' => ['donate1', 'donate1_pay_date', 'donate1_ref_id', 'donate1_pay_file'],
             ],
             'fin_fields' => [
@@ -555,12 +655,37 @@ return [
             ],
             'memberships' => [
                 '96' => ['membership96', 'membership96_pay_date', 'membership96_ref_id', 'membership96_pay_file'],
+                'donate96' => ['donate96', 'donate96_pay_date', 'donate96_ref_id', 'donate96_pay_file'],
+                'sodur96' => ['sodur96', 'sodur96_pay_date', 'sodur96_ref_id', 'sodur96_pay_file'],
+
                 '97' => ['membership97', 'membership97_pay_date', 'membership97_ref_id', 'membership97_pay_file'],
+                'donate97' => ['donate97', 'donate97_pay_date', 'donate97_ref_id', 'donate97_pay_file'],
+                'sodur97' => ['sodur97', 'sodur97_pay_date', 'sodur97_ref_id', 'sodur97_pay_file'],
+
                 '98' => ['membership98', 'membership98_pay_date', 'membership98_ref_id', 'membership98_pay_file'],
+                'donate98' => ['donate98', 'donate98_pay_date', 'donate98_ref_id', 'donate98_pay_file'],
+                'sodur98' => ['sodur98', 'sodur98_pay_date', 'sodur98_ref_id', 'sodur98_pay_file'],
+
                 '99' => ['membership99', 'membership99_pay_date', 'membership99_ref_id', 'membership99_pay_file'],
+                'donate99' => ['donate99', 'donate99_pay_date', 'donate99_ref_id', 'donate99_pay_file'],
+                'sodur99' => ['sodur99', 'sodur99_pay_date', 'sodur99_ref_id', 'sodur99_pay_file'],
+
                 '00' => ['membership00', 'membership00_pay_date', 'membership00_ref_id', 'membership00_pay_file'],
+                'donate00' => ['donate00', 'donate00_pay_date', 'donate00_ref_id', 'donate00_pay_file'],
+                'sodur00' => ['sodur00', 'sodur00_pay_date', 'sodur00_ref_id', 'sodur00_pay_file'],
+
                 '01' => ['membership01', 'membership01_pay_date', 'membership01_ref_id', 'membership01_pay_file'],
+                'donate01' => ['donate01', 'donate01_pay_date', 'donate01_ref_id', 'donate01_pay_file'],
+                'sodur01' => ['sodur01', 'sodur01_pay_date', 'sodur01_ref_id', 'sodur01_pay_file'],
+
                 '02' => ['membership02', 'membership02_pay_date', 'membership02_ref_id', 'membership02_pay_file'],
+                'donate02' => ['donate02', 'donate02_pay_date', 'donate02_ref_id', 'donate02_pay_file'],
+                'sodur02' => ['sodur02', 'sodur02_pay_date', 'sodur02_ref_id', 'sodur02_pay_file'],
+
+                '03' => ['membership03', 'membership03_pay_date', 'membership03_ref_id', 'membership03_pay_file'],
+                'donate03' => ['donate03', 'donate03_pay_date', 'donate03_ref_id', 'donate03_pay_file'],
+                'sodur03' => ['sodur03', 'sodur03_pay_date', 'sodur03_ref_id', 'sodur03_pay_file'],
+
                 'donate1' => ['donate1', 'donate1_pay_date', 'donate1_ref_id', 'donate1_pay_file'],
             ],
             'fin_fields' => [
@@ -675,12 +800,37 @@ return [
             ],
             'memberships' => [
                 '96' => ['membership96', 'membership96_pay_date', 'membership96_ref_id', 'membership96_pay_file'],
+                'donate96' => ['donate96', 'donate96_pay_date', 'donate96_ref_id', 'donate96_pay_file'],
+                'sodur96' => ['sodur96', 'sodur96_pay_date', 'sodur96_ref_id', 'sodur96_pay_file'],
+
                 '97' => ['membership97', 'membership97_pay_date', 'membership97_ref_id', 'membership97_pay_file'],
+                'donate97' => ['donate97', 'donate97_pay_date', 'donate97_ref_id', 'donate97_pay_file'],
+                'sodur97' => ['sodur97', 'sodur97_pay_date', 'sodur97_ref_id', 'sodur97_pay_file'],
+
                 '98' => ['membership98', 'membership98_pay_date', 'membership98_ref_id', 'membership98_pay_file'],
+                'donate98' => ['donate98', 'donate98_pay_date', 'donate98_ref_id', 'donate98_pay_file'],
+                'sodur98' => ['sodur98', 'sodur98_pay_date', 'sodur98_ref_id', 'sodur98_pay_file'],
+
                 '99' => ['membership99', 'membership99_pay_date', 'membership99_ref_id', 'membership99_pay_file'],
+                'donate99' => ['donate99', 'donate99_pay_date', 'donate99_ref_id', 'donate99_pay_file'],
+                'sodur99' => ['sodur99', 'sodur99_pay_date', 'sodur99_ref_id', 'sodur99_pay_file'],
+
                 '00' => ['membership00', 'membership00_pay_date', 'membership00_ref_id', 'membership00_pay_file'],
+                'donate00' => ['donate00', 'donate00_pay_date', 'donate00_ref_id', 'donate00_pay_file'],
+                'sodur00' => ['sodur00', 'sodur00_pay_date', 'sodur00_ref_id', 'sodur00_pay_file'],
+
                 '01' => ['membership01', 'membership01_pay_date', 'membership01_ref_id', 'membership01_pay_file'],
+                'donate01' => ['donate01', 'donate01_pay_date', 'donate01_ref_id', 'donate01_pay_file'],
+                'sodur01' => ['sodur01', 'sodur01_pay_date', 'sodur01_ref_id', 'sodur01_pay_file'],
+
                 '02' => ['membership02', 'membership02_pay_date', 'membership02_ref_id', 'membership02_pay_file'],
+                'donate02' => ['donate02', 'donate02_pay_date', 'donate02_ref_id', 'donate02_pay_file'],
+                'sodur02' => ['sodur02', 'sodur02_pay_date', 'sodur02_ref_id', 'sodur02_pay_file'],
+
+                '03' => ['membership03', 'membership03_pay_date', 'membership03_ref_id', 'membership03_pay_file'],
+                'donate03' => ['donate03', 'donate03_pay_date', 'donate03_ref_id', 'donate03_pay_file'],
+                'sodur03' => ['sodur03', 'sodur03_pay_date', 'sodur03_ref_id', 'sodur03_pay_file'],
+
                 'donate1' => ['donate1', 'donate1_pay_date', 'donate1_ref_id', 'donate1_pay_file'],
             ],
             'fin_fields' => [
@@ -796,12 +946,37 @@ return [
             ],
             'memberships' => [
                 '96' => ['membership96', 'membership96_pay_date', 'membership96_ref_id', 'membership96_pay_file'],
+                'donate96' => ['donate96', 'donate96_pay_date', 'donate96_ref_id', 'donate96_pay_file'],
+                'sodur96' => ['sodur96', 'sodur96_pay_date', 'sodur96_ref_id', 'sodur96_pay_file'],
+
                 '97' => ['membership97', 'membership97_pay_date', 'membership97_ref_id', 'membership97_pay_file'],
+                'donate97' => ['donate97', 'donate97_pay_date', 'donate97_ref_id', 'donate97_pay_file'],
+                'sodur97' => ['sodur97', 'sodur97_pay_date', 'sodur97_ref_id', 'sodur97_pay_file'],
+
                 '98' => ['membership98', 'membership98_pay_date', 'membership98_ref_id', 'membership98_pay_file'],
+                'donate98' => ['donate98', 'donate98_pay_date', 'donate98_ref_id', 'donate98_pay_file'],
+                'sodur98' => ['sodur98', 'sodur98_pay_date', 'sodur98_ref_id', 'sodur98_pay_file'],
+
                 '99' => ['membership99', 'membership99_pay_date', 'membership99_ref_id', 'membership99_pay_file'],
+                'donate99' => ['donate99', 'donate99_pay_date', 'donate99_ref_id', 'donate99_pay_file'],
+                'sodur99' => ['sodur99', 'sodur99_pay_date', 'sodur99_ref_id', 'sodur99_pay_file'],
+
                 '00' => ['membership00', 'membership00_pay_date', 'membership00_ref_id', 'membership00_pay_file'],
+                'donate00' => ['donate00', 'donate00_pay_date', 'donate00_ref_id', 'donate00_pay_file'],
+                'sodur00' => ['sodur00', 'sodur00_pay_date', 'sodur00_ref_id', 'sodur00_pay_file'],
+
                 '01' => ['membership01', 'membership01_pay_date', 'membership01_ref_id', 'membership01_pay_file'],
+                'donate01' => ['donate01', 'donate01_pay_date', 'donate01_ref_id', 'donate01_pay_file'],
+                'sodur01' => ['sodur01', 'sodur01_pay_date', 'sodur01_ref_id', 'sodur01_pay_file'],
+
                 '02' => ['membership02', 'membership02_pay_date', 'membership02_ref_id', 'membership02_pay_file'],
+                'donate02' => ['donate02', 'donate02_pay_date', 'donate02_ref_id', 'donate02_pay_file'],
+                'sodur02' => ['sodur02', 'sodur02_pay_date', 'sodur02_ref_id', 'sodur02_pay_file'],
+
+                '03' => ['membership03', 'membership03_pay_date', 'membership03_ref_id', 'membership03_pay_file'],
+                'donate03' => ['donate03', 'donate03_pay_date', 'donate03_ref_id', 'donate03_pay_file'],
+                'sodur03' => ['sodur03', 'sodur03_pay_date', 'sodur03_ref_id', 'sodur03_pay_file'],
+
                 'donate1' => ['donate1', 'donate1_pay_date', 'donate1_ref_id', 'donate1_pay_file'],
             ],
             'fin_fields' => [
