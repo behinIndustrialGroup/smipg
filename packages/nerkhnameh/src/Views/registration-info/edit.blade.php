@@ -70,8 +70,8 @@
         <div class="input-group mb-3">
             <div class="col-sm-3">{{ __('fin detail') }}</div>
             <div class="col-sm-9">
-                <input type="text" class="form-control" name="fin_detail" placeholder="{{ __('fin detail') }}"
-                value="{{ $data->fin_detail }}">
+                <textarea type="text" class="form-control" name="fin_detail" placeholder="{{ __('fin detail') }}"
+                >{{ $data->fin_detail }}</textarea>
             </div>
         </div>
         <div class="input-group mb-3">
