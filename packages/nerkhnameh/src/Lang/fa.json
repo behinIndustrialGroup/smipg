@@ -51,5 +51,8 @@
     "donate02":"همیاری 02",
     "sodur03":"صدور 03",
     "donate03":"همیاری 03",
-    "fin detail": "توضیحات مالی"
+    "fin detail": "توضیحات مالی",
+    "Not Found": "یافت نشد",
+    "Nerkhnameh Is Generated": "نرخنامه ایجاد شده است.",
+    "You cant edit this record because: ": "نمیتوانید این رکورد را ویرایش کنید زیرا: "
 }

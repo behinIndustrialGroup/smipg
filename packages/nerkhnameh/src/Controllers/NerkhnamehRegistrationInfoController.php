@@ -69,6 +69,18 @@ class NerkhnamehRegistrationInfoController extends Controller{
         )->first();
     }
 
+    public static function getByNidMobileGuildNumberCatagory($nid, $mobile, $guild_number, $catagory){
+        return NerkhnamehModel::where(
+            'national_id', $nid
+        )->where(
+            'mobile', $mobile
+        )->where(
+            'guild_number', $guild_number
+        )->where(
+            'catagory', $catagory
+        )->first();
+    }
+
     public static function delete(Request $r){
         return self::get($r->id)->delete();
     }
