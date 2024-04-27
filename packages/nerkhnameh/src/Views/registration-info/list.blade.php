@@ -18,6 +18,8 @@
                     <th>{{ __('price') }}</th>
                     <th>{{ __('fin payment file') }}</th>
                     <th>{{ __('fin validation') }}</th>
+                    <th>{{ __('nerkhnameh word file') }}</th>
+                    <th>{{ __('nerkhnameh pdf file') }}</th>
                 </tr>
             </thead>
         </table>
@@ -67,7 +69,20 @@
                         return '';
                     }
                 }},
-
+                { data: 'nerkhnameh_word_file', render: function(data){
+                    if(data){
+                        return 'ایجاد شده';
+                    }else{
+                        return '';
+                    }
+                }},
+                { data: 'nerkhnameh_file', render: function(data){
+                    if(data){
+                        return 'ایجاد شده';
+                    }else{
+                        return '';
+                    }
+                }},
             ]
         )
         table.on('dblclick', 'tr', function(){
