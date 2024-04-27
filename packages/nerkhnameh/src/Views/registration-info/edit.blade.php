@@ -100,7 +100,7 @@
     <div class="col-sm-4">
         <p>{{__('price payment file')}}</p>
         @if ($data->price_payment_file)
-            <img src="{{ url($data->price_payment_file) }}" alt="" width="200">
+            <a href="{{ url($data->price_payment_file) }}" target="_blank">{{__('download')}}</a>
         @else
             <p style="color: red">
             هنوز آپلود نشده است
