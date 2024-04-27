@@ -28,7 +28,7 @@
     </div>
     <script>
         function register() {
-            var form = $('#fin-form')[0]
+            var form = $('#find-form')[0]
             var fd = new FormData(form);
 
             send_ajax_formdata_request(
@@ -36,10 +36,8 @@
                 fd,
                 function(response) {
                     console.log(response);
-                    show_message("{{ __('Data Founded') }}")
-                    fin_details_div = $('#fin-datails-div')
-                    fin_details_div.html('') // clear the div 
-                    fin_details_div.html(response)
+                    show_message("{{ trans('Registered') }}")
+                    location.reload()
                 },
                 function(response) {
                     // console.log(response);

@@ -27,13 +27,12 @@ class UploadFinPaymentController extends Controller{
             'mobile' => 'required|digits:11'
         ]);
 
-        $data = NerkhnamehModel::where(
-            'national_id' , $r->national_id
-        )->where(
-            'guild_number', $r->guild_number
-        )->where(
-            'mobile', $r->mobile
-        )->first();
+        $data = NerkhnamehRegistrationInfoController::getByNidMobileGuildNumberCatagory(
+            $r->national_id,
+            $r->mobile,
+            $r->guild_number,
+            $r->catagory
+        ); 
 
         if(!$data){
             return response(trans("not found"), 404);
