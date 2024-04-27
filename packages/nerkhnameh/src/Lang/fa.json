@@ -57,5 +57,7 @@
     "You cant edit this record because: ": "نمیتوانید این رکورد را ویرایش کنید زیرا: ",
     "edit request": "ویرایش درخواست",
     "updated_at": "تاریخ آخرین تغییرات",
-    "fin payment file": "رسید پرداخت"
+    "fin payment file": "رسید پرداخت",
+    "nerkhnameh word file": "فایل ورد نرخنامه",
+    "nerkhnameh pdf file": "فایل pdf نرخنامه"
 }
