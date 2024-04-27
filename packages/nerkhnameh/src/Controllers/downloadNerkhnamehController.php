@@ -20,10 +20,11 @@ class DownloadNerkhnamehController extends Controller{
 
 
     public function check(Request $r){
-        $data = NerkhnamehRegistrationInfoController::getByNidMobileGuildNumber(
+        $data = NerkhnamehRegistrationInfoController::getByNidMobileGuildNumberCatagory(
             $r->national_id, 
             $r->mobile,
-            $r->guild_number
+            $r->guild_number,
+            $r->catagory
         );
         return view('NerkhnamehView::download-details')->with([
             'data' => $data
