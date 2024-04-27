@@ -210,7 +210,6 @@ return [
                     'type' => 'select',
                     'default' => '',
                     'options' => [
-                        ['value' => 'اصفهانی', 'label' => 'اصفهانی'],
                         ['value' => 'اسدی', 'label' => 'اسدی'],
                         ['value' => 'حیدری', 'label' => 'حیدری'],
                         ['value' => 'نعمتی', 'label' => 'نعمتی'],
