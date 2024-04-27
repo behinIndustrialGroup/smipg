@@ -42,8 +42,8 @@ class RegisterController extends Controller{
             'commitment_file' => 'required'
         ]);
         if(
-            NerkhnamehRegistrationInfoController::getByNidMobileGuildNumber(
-                $r->national_id, $r->mobile, $r->guild_number)
+            NerkhnamehRegistrationInfoController::getByNidMobileGuildNumberCatagory(
+                $r->national_id, $r->mobile, $r->guild_number, $r->catagory)
         ){
             return ;
         }
