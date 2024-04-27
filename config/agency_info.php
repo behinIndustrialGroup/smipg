@@ -5,7 +5,7 @@ return [
     'ins_uploads' => 'ins_uploads',
     'doc_uploads' => 'doc_uploads',
     'main_field_name' => 'guild_catagory',
-    'default_fields' => ['file_number','guild_catagory','firstname', 'lastname', 'national_id', 'agency_code', 'mobile', 'new_status', 'last_referral'],
+    'default_fields' => ['file_number','guild_catagory','firstname', 'lastname', 'national_id', 'agency_code', 'mobile', 'new_status', 'last_referral', 'province', 'city'],
     'valid_file_type' => ['image/jpg', 'image/jpeg', 'image/png', 'application/pdf'],
     'customer_type' => [
         'charging-fire-cylenders' => [
@@ -13,6 +13,18 @@ return [
             'catagory_fa' => 'شارژ سیلندرهای آتش نشانی',
             'fields' => [
                 'file_number' => ['type' => 'text', 'required' => true],
+                'last_request_date' => ['type' => 'text', 'required' => true],
+                'last_request_type' => [
+                    'type' => 'select',
+                    'default' => '',
+                    'options' => [
+                        ['value' => 'صدور پروانه', 'label' => 'صدور پروانه'],
+                        ['value' => 'تمدید پروانه کسب', 'label' => 'تمدید پروانه کسب'],
+                        ['value' => 'تغییر نشانی', 'label' => 'تغییر نشانی'],
+                        ['value' => 'تغییر رسته', 'label' => 'تغییر رسته'],
+                        ['value' => 'تغییر مالکیت', 'label' => 'تغییر مالکیت'],
+                    ]
+                ],
                 'guild_catagory' => ['type' => 'text', 'disabled' => true, 'default' => 'شارژ سیلندرهای آتش نشانی', 'required' => false],
                 'catagory' => [
                     'type' => 'select',
@@ -29,6 +41,7 @@ return [
                 'phone' => ['type' => 'text', 'default' => '', 'required' => false],
                 'guild_number' => ['type' => 'text', 'default' => '', 'required' => false],
                 'issued_date' => ['type' => 'text', 'default' => '', 'required' => false],
+                'guild_or_legal_name' => ['type' => 'text', 'default' => '', 'required' => false],
                 'province' => ['type' => 'select', 'default' => '', 'options' => '', 'option-url' => 'city.all'],
                 'status' => ['type' => 'text', 'default' => '', 'disabled' => true],
                 'new_status' => [
@@ -72,7 +85,7 @@ return [
                         ['value' => 'بایگانی', 'label' => 'بایگانی'],
                     ]
                 ],
-                'description' => ['type' => 'text', 'default' => '', 'required' => false],
+                'description' => ['type' => 'textarea', 'default' => '', 'required' => false],
 
             ],
             'memberships' => [
@@ -163,6 +176,18 @@ return [
             'catagory_fa' => 'خرده فروشی گازهای طبی و صنعتی',
             'fields' => [
                 'file_number' => ['type' => 'text', 'required' => true],
+                'last_request_date' => ['type' => 'text', 'required' => true],
+                'last_request_type' => [
+                    'type' => 'select',
+                    'default' => '',
+                    'options' => [
+                        ['value' => 'صدور پروانه', 'label' => 'صدور پروانه'],
+                        ['value' => 'تمدید پروانه کسب', 'label' => 'تمدید پروانه کسب'],
+                        ['value' => 'تغییر نشانی', 'label' => 'تغییر نشانی'],
+                        ['value' => 'تغییر رسته', 'label' => 'تغییر رسته'],
+                        ['value' => 'تغییر مالکیت', 'label' => 'تغییر مالکیت'],
+                    ]
+                ],
                 'guild_catagory' => ['type' => 'text', 'disabled' => true, 'default' => 'خرده فروشی گازهای طبی و صنعتی', 'required' => false],
                 'catagory' => [
                     'type' => 'select',
@@ -179,6 +204,7 @@ return [
                 'phone' => ['type' => 'text', 'default' => '', 'required' => false],
                 'guild_number' => ['type' => 'text', 'default' => '', 'required' => false],
                 'issued_date' => ['type' => 'text', 'default' => '', 'required' => false],
+                'guild_or_legal_name' => ['type' => 'text', 'default' => '', 'required' => false],
                 'province' => ['type' => 'select', 'default' => '', 'options' => '', 'option-url' => 'city.all'],
                 'status' => ['type' => 'text', 'default' => '', 'disabled' => true],
                 'new_status' => [
@@ -223,7 +249,7 @@ return [
                         ['value' => 'بایگانی', 'label' => 'بایگانی'],
                     ]
                 ],
-                'description' => ['type' => 'text', 'default' => '', 'required' => false],
+                'description' => ['type' => 'textarea', 'default' => '', 'required' => false],
 
 
             ],
@@ -315,6 +341,18 @@ return [
             'catagory_fa' => 'شارژ و فروش گازهای طبی و صنعتی',
             'fields' => [
                 'file_number' => ['type' => 'text', 'required' => true],
+                'last_request_date' => ['type' => 'text', 'required' => true],
+                'last_request_type' => [
+                    'type' => 'select',
+                    'default' => '',
+                    'options' => [
+                        ['value' => 'صدور پروانه', 'label' => 'صدور پروانه'],
+                        ['value' => 'تمدید پروانه کسب', 'label' => 'تمدید پروانه کسب'],
+                        ['value' => 'تغییر نشانی', 'label' => 'تغییر نشانی'],
+                        ['value' => 'تغییر رسته', 'label' => 'تغییر رسته'],
+                        ['value' => 'تغییر مالکیت', 'label' => 'تغییر مالکیت'],
+                    ]
+                ],
                 'guild_catagory' => ['type' => 'text', 'disabled' => true, 'default' => 'شارژ و فروش گازهای طبی و صنعتی', 'required' => false],
                 'catagory' => [
                     'type' => 'select',
@@ -331,6 +369,7 @@ return [
                 'phone' => ['type' => 'text', 'default' => '', 'required' => false],
                 'guild_number' => ['type' => 'text', 'default' => '', 'required' => false],
                 'issued_date' => ['type' => 'text', 'default' => '', 'required' => false],
+                'guild_or_legal_name' => ['type' => 'text', 'default' => '', 'required' => false],
                 'province' => ['type' => 'select', 'default' => '', 'options' => '', 'option-url' => 'city.all'],
                 'status' => ['type' => 'text', 'default' => '', 'disabled' => true],
                 'new_status' => [
@@ -374,7 +413,7 @@ return [
                         ['value' => 'بایگانی', 'label' => 'بایگانی'],
                     ]
                 ],
-                'description' => ['type' => 'text', 'default' => '', 'required' => false],
+                'description' => ['type' => 'textarea', 'default' => '', 'required' => false],
 
             ],
             'memberships' => [
@@ -465,6 +504,18 @@ return [
             'catagory_fa' => 'فروش سیلندرهای آتش نشانی',
             'fields' => [
                 'file_number' => ['type' => 'text', 'required' => true],
+                'last_request_date' => ['type' => 'text', 'required' => true],
+                'last_request_type' => [
+                    'type' => 'select',
+                    'default' => '',
+                    'options' => [
+                        ['value' => 'صدور پروانه', 'label' => 'صدور پروانه'],
+                        ['value' => 'تمدید پروانه کسب', 'label' => 'تمدید پروانه کسب'],
+                        ['value' => 'تغییر نشانی', 'label' => 'تغییر نشانی'],
+                        ['value' => 'تغییر رسته', 'label' => 'تغییر رسته'],
+                        ['value' => 'تغییر مالکیت', 'label' => 'تغییر مالکیت'],
+                    ]
+                ],
                 'guild_catagory' => ['type' => 'text', 'disabled' => true, 'default' => 'فروش سیلندرهای آتش نشانی', 'required' => false],
                 'catagory' => [
                     'type' => 'select',
@@ -481,6 +532,7 @@ return [
                 'phone' => ['type' => 'text', 'default' => '', 'required' => false],
                 'guild_number' => ['type' => 'text', 'default' => '', 'required' => false],
                 'issued_date' => ['type' => 'text', 'default' => '', 'required' => false],
+                'guild_or_legal_name' => ['type' => 'text', 'default' => '', 'required' => false],
                 'province' => ['type' => 'select', 'default' => '', 'options' => '', 'option-url' => 'city.all'],
                 'status' => ['type' => 'text', 'default' => '', 'disabled' => true],
                 'new_status' => [
@@ -524,7 +576,7 @@ return [
                         ['value' => 'بایگانی', 'label' => 'بایگانی'],
                     ]
                 ],
-                'description' => ['type' => 'text', 'default' => '', 'required' => false],
+                'description' => ['type' => 'textarea', 'default' => '', 'required' => false],
 
 
             ],
@@ -616,6 +668,18 @@ return [
             'catagory_fa' => 'عمده فروشی گازهای طبی و صنعتی',
             'fields' => [
                 'file_number' => ['type' => 'text', 'required' => true],
+                'last_request_date' => ['type' => 'text', 'required' => true],
+                'last_request_type' => [
+                    'type' => 'select',
+                    'default' => '',
+                    'options' => [
+                        ['value' => 'صدور پروانه', 'label' => 'صدور پروانه'],
+                        ['value' => 'تمدید پروانه کسب', 'label' => 'تمدید پروانه کسب'],
+                        ['value' => 'تغییر نشانی', 'label' => 'تغییر نشانی'],
+                        ['value' => 'تغییر رسته', 'label' => 'تغییر رسته'],
+                        ['value' => 'تغییر مالکیت', 'label' => 'تغییر مالکیت'],
+                    ]
+                ],
                 'guild_catagory' => ['type' => 'text', 'disabled' => true, 'default' => 'عمده فروشی گازهای طبی و صنعتی', 'required' => false],
                 'catagory' => [
                     'type' => 'select',
@@ -632,6 +696,7 @@ return [
                 'phone' => ['type' => 'text', 'default' => '', 'required' => false],
                 'guild_number' => ['type' => 'text', 'default' => '', 'required' => false],
                 'issued_date' => ['type' => 'text', 'default' => '', 'required' => false],
+                'guild_or_legal_name' => ['type' => 'text', 'default' => '', 'required' => false],
                 'province' => ['type' => 'select', 'default' => '', 'options' => '', 'option-url' => 'city.all'],
                 'status' => ['type' => 'text', 'default' => '', 'disabled' => true],
                 'new_status' => [
@@ -675,7 +740,7 @@ return [
                         ['value' => 'بایگانی', 'label' => 'بایگانی'],
                     ]
                 ],
-                'description' => ['type' => 'text', 'default' => '', 'required' => false],
+                'description' => ['type' => 'textarea', 'default' => '', 'required' => false],
 
 
             ],
@@ -767,6 +832,18 @@ return [
             'catagory_fa' => 'تولیدکننده',
             'fields' => [
                 'file_number' => ['type' => 'text', 'required' => true],
+                'last_request_date' => ['type' => 'text', 'required' => true],
+                'last_request_type' => [
+                    'type' => 'select',
+                    'default' => '',
+                    'options' => [
+                        ['value' => 'صدور پروانه', 'label' => 'صدور پروانه'],
+                        ['value' => 'تمدید پروانه کسب', 'label' => 'تمدید پروانه کسب'],
+                        ['value' => 'تغییر نشانی', 'label' => 'تغییر نشانی'],
+                        ['value' => 'تغییر رسته', 'label' => 'تغییر رسته'],
+                        ['value' => 'تغییر مالکیت', 'label' => 'تغییر مالکیت'],
+                    ]
+                ],
                 'guild_catagory' => ['type' => 'text', 'disabled' => true, 'default' => 'تولیدکننده', 'required' => false],
                 'catagory' => [
                     'type' => 'select',
@@ -783,6 +860,7 @@ return [
                 'phone' => ['type' => 'text', 'default' => '', 'required' => false],
                 'guild_number' => ['type' => 'text', 'default' => '', 'required' => false],
                 'issued_date' => ['type' => 'text', 'default' => '', 'required' => false],
+                'guild_or_legal_name' => ['type' => 'text', 'default' => '', 'required' => false],
                 'province' => ['type' => 'select', 'default' => '', 'options' => '', 'option-url' => 'city.all'],
                 'status' => ['type' => 'text', 'default' => '', 'disabled' => true],
                 'new_status' => [
@@ -826,7 +904,7 @@ return [
                         ['value' => 'بایگانی', 'label' => 'بایگانی'],
                     ]
                 ],
-                'description' => ['type' => 'text', 'default' => '', 'required' => false],
+                'description' => ['type' => 'textarea', 'default' => '', 'required' => false],
 
             ],
             'memberships' => [
@@ -917,6 +995,18 @@ return [
             'catagory_fa' => 'بدون رسته',
             'fields' => [
                 'file_number' => ['type' => 'text', 'required' => true],
+                'last_request_date' => ['type' => 'text', 'required' => true],
+                'last_request_type' => [
+                    'type' => 'select',
+                    'default' => '',
+                    'options' => [
+                        ['value' => 'صدور پروانه', 'label' => 'صدور پروانه'],
+                        ['value' => 'تمدید پروانه کسب', 'label' => 'تمدید پروانه کسب'],
+                        ['value' => 'تغییر نشانی', 'label' => 'تغییر نشانی'],
+                        ['value' => 'تغییر رسته', 'label' => 'تغییر رسته'],
+                        ['value' => 'تغییر مالکیت', 'label' => 'تغییر مالکیت'],
+                    ]
+                ],
                 'guild_catagory' => ['type' => 'text', 'disabled' => true, 'default' => 'بدون رسته', 'required' => false],
                 'catagory' => [
                     'type' => 'select',
@@ -933,6 +1023,7 @@ return [
                 'phone' => ['type' => 'text', 'default' => '', 'required' => false],
                 'guild_number' => ['type' => 'text', 'default' => '', 'required' => false],
                 'issued_date' => ['type' => 'text', 'default' => '', 'required' => false],
+                'guild_or_legal_name' => ['type' => 'text', 'default' => '', 'required' => false],
                 'province' => ['type' => 'select', 'default' => '', 'options' => '', 'option-url' => 'city.all'],
                 'status' => ['type' => 'text', 'default' => '', 'disabled' => true],
                 'new_status' => [
@@ -976,7 +1067,7 @@ return [
                         ['value' => 'بایگانی', 'label' => 'بایگانی'],
                     ]
                 ],
-                'description' => ['type' => 'text', 'default' => '', 'required' => false],
+                'description' => ['type' => 'textarea', 'default' => '', 'required' => false],
 
 
             ],
