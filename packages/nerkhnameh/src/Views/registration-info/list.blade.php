@@ -51,7 +51,7 @@
                     return '<span dir="auto" style="float: left">' + date + ' ' + time + '</span>';
                 }},
                 { data: 'price'},
-                { data: 'fin_payment_file', render: function(data){
+                { data: 'price_payment_file', render: function(data){
                     if(data){
                         return 'آپلود شده';
                     }else{
