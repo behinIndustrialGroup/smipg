@@ -74,6 +74,9 @@
 
                                 </select>
                             @endif
+                            @if ($field_detail['type'] == 'textarea')
+                                {{ $HtmlCreator::createInput($field_key, $field_detail, $value) }}
+                            @endif
                         </td>
                     </tr>
                 @endforeach
