@@ -16,13 +16,17 @@ class AgencyListController extends Controller
     public static function view()
     {
         // return AgencyInfo::groupBy('key')->pluck('key')->toArray();
+        // return self::getKeys();
         return view('AgencyView::list')->with([
             'cols' => self::getKeys()
         ]);
     }
 
     public static function getKeys(){
-        return AgencyInfo::groupBy('key')->pluck('key');
+        $keys = AgencyInfo::groupBy('key')->pluck('key');
+        // $keys[] = 'province';
+        $keys[] = 'city';
+        return $keys;
     }
 
     public static function list()
@@ -58,6 +62,8 @@ class AgencyListController extends Controller
                 $key = $keys[$key_index];
                 if($key === 'province'){
                     $agency->$key = CityController::getById(GetAgencyController::getByKey($agency->parent_id, $key)?->value)->province;
+                }elseif($key === 'city'){
+                    $agency->$key = CityController::getById(GetAgencyController::getByKey($agency->parent_id, 'province')?->value)->city;
                 }else{
                     $agency->$key = __(GetAgencyController::getByKey($agency->parent_id, $key)?->value);
                 }
