@@ -6,6 +6,7 @@
             <thead>
                 <tr>
                     <th>{{ __('id') }}</th>
+                    <th>{{ __('updated_at') }}</th>
                     <th>{{ __('fullname') }}</th>
                     <th>{{ __('national id') }}</th>
                     <th>{{ __('mobile') }}</th>
@@ -15,6 +16,7 @@
                     <th>{{ __('address') }}</th>
                     <th>{{ __('created at') }}</th>
                     <th>{{ __('price') }}</th>
+                    <th>{{ __('fin payment file') }}</th>
                     <th>{{ __('fin validation') }}</th>
                 </tr>
             </thead>
@@ -29,6 +31,12 @@
             "{{ route('nerkhnameh.registration.list') }}",
             [
                 { data: 'id'},
+                { data: 'updated_at', render: function(data){
+                    datetime = new Date(data);
+                    date = datetime.toLocaleDateString('fa-IR');
+                    time = datetime.toLocaleTimeString('fa-IR');
+                    return '<span dir="auto" style="float: left">' + date + ' ' + time + '</span>';
+                }},
                 { data: 'fullname'},
                 { data: 'national_id'},
                 { data: 'mobile'},
@@ -43,6 +51,13 @@
                     return '<span dir="auto" style="float: left">' + date + ' ' + time + '</span>';
                 }},
                 { data: 'price'},
+                { data: 'fin_payment_file', render: function(data){
+                    if(data){
+                        return 'آپلود شده';
+                    }else{
+                        return '';
+                    }
+                }},
                 { data: 'fin_validation'},
 
             ]

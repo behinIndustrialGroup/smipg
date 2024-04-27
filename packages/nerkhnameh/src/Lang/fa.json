@@ -55,5 +55,7 @@
     "Not Found": "یافت نشد",
     "Nerkhnameh Is Generated": "نرخنامه ایجاد شده است.",
     "You cant edit this record because: ": "نمیتوانید این رکورد را ویرایش کنید زیرا: ",
-    "edit request": "ویرایش درخواست"
+    "edit request": "ویرایش درخواست",
+    "updated_at": "تاریخ آخرین تغییرات",
+    "fin payment file": "رسید پرداخت"
 }
