@@ -41,25 +41,7 @@
                 <p>
                     جهت مشاهده وضعیت پرداخت اطلاعات زیر را تکمیل کنید
                 </p>
-                <form action="javascript:void(0)" method="post" id="fin-form" enctype="multipart/form-data">
-                    @csrf
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" name="national_id" placeholder="{{ __('national id') }}">
-                    </div>
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" name="guild_number"
-                            placeholder="{{ __('guild number') }}">
-                    </div>
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" name="mobile" placeholder="{{ __('mobile') }}">
-                    </div>
-                    <div class="input-group mb-3">
-                        <button class="btn btn-success" onclick="check()">{{ __('check') }}</button>
-                    </div>
-                    <div class="col-sm-12" id="fin-datails-div">
-
-                    </div>
-                </form>
+                @include('NerkhnamehView::partial-view.find-inputs')
 
             </div>
 
@@ -76,7 +58,7 @@
         initial_view()
 
         function check() {
-            var form = $('#fin-form')[0]
+            var form = $('#find-form')[0]
             var fd = new FormData(form);
 
             send_ajax_formdata_request(
@@ -85,7 +67,7 @@
                 function(response) {
                     console.log(response);
                     show_message("{{ __('Data Founded') }}")
-                    fin_details_div = $('#fin-datails-div')
+                    fin_details_div = $('#details-div')
                     fin_details_div.html('') // clear the div 
                     fin_details_div.html(response)
                 },

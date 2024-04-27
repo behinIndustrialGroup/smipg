@@ -50,10 +50,11 @@ class UploadFinPaymentController extends Controller{
             'mobile' => 'required|digits:11',
             'price_payment_file' => 'required'
         ]);
-        $row = NerkhnamehRegistrationInfoController::getByNidMobileGuildNumber(
+        $row = NerkhnamehRegistrationInfoController::getByNidMobileGuildNumberCatagory(
             $r->national_id,
             $r->mobile,
-            $r->guild_number
+            $r->guild_number,
+            $r->catagory
         );
         $upload = FileController::store(
             $r->file('price_payment_file'),
