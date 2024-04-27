@@ -13,7 +13,7 @@ use Mkhodroo\Nerkhnameh\Models\NerkhnamehModel;
 use SoapClient;
 
 
-class editInfoValidationController extends Controller{
+class EditInfoValidationController extends Controller{
 
     public static function cantModify($id){
         $row = NerkhnamehRegistrationInfoController::get($id);
@@ -23,7 +23,8 @@ class editInfoValidationController extends Controller{
         if($row->nerkhnameh_word_file){
             return response(
                 trans("You cant edit this record because: ").
-                trans("Nerkhnameh Is Generated"), 402
+                trans("Nerkhnameh Is Generated"), 
+                402
             );
         }
     }

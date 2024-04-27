@@ -13,7 +13,7 @@ use Mkhodroo\Nerkhnameh\Models\NerkhnamehModel;
 use SoapClient;
 
 
-class editRequestController extends Controller{
+class EditRequestController extends Controller{
     public function findForm(){
         return view('NerkhnamehView::edit-request.find');
     }
@@ -26,7 +26,7 @@ class editRequestController extends Controller{
         if(!$row){
             return response(trans("Not Found"), 402);
         }
-        $cantModify  = editInfoValidationController::cantModify($row->id);
+        $cantModify  = EditInfoValidationController::cantModify($row->id);
         if($cantModify){
             return $cantModify;
         }

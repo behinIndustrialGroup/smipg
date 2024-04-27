@@ -13,7 +13,7 @@ use Mkhodroo\Nerkhnameh\Models\NerkhnamehModel;
 use SoapClient;
 
 
-class downloadNerkhnamehController extends Controller{
+class DownloadNerkhnamehController extends Controller{
     public function downloadForm(){
         return view('NerkhnamehView::download');
     }

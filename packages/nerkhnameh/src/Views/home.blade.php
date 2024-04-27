@@ -39,9 +39,10 @@
             </div>
             <div class="card-body">
                 <button class="btn btn-danger col-sm-12 m-1" onclick="goto_page(1)">1- {{ __('register nerkhnameh') }}</button>
-                <button class="btn btn-danger col-sm-12 m-1" onclick="goto_page(4)">1- {{ __('edit request') }}</button>
                 <button class="btn btn-info col-sm-12 m-1" onclick="goto_page(2)">2- {{ __('upload fin payment file') }}</button>
                 <button class="btn btn-success col-sm-12 m-1" onclick="goto_page(3)">3- {{ __('download nerkhnameh') }}</button>
+                <hr>
+                <button class="btn btn-danger col-sm-12 m-1" onclick="goto_page(4)">{{ __('edit request') }}</button>
 
             </div>
 
@@ -67,7 +68,7 @@
                 window.location.href = "{{ route('nerkhnameh.download.downloadForm') }}"
             }
             if(id == 4){
-                window.location.href = "{{ route('nerkhnameh.editRequest.editForm') }}"
+                window.location.href = "{{ route('nerkhnameh.editRequest.findForm') }}"
             }
         }
     </script>

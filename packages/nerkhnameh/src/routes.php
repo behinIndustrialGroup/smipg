@@ -2,8 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use Mkhodroo\DateConvertor\Controllers\SDate;
-use Mkhodroo\Nerkhnameh\Controllers\downloadNerkhnamehController;
-use Mkhodroo\Nerkhnameh\Controllers\editRequestController;
+use Mkhodroo\Nerkhnameh\Controllers\DownloadNerkhnamehController;
+use Mkhodroo\Nerkhnameh\Controllers\EditRequestController;
 use Mkhodroo\Nerkhnameh\Controllers\NerkhnamehRegistrationInfoController;
 use Mkhodroo\Nerkhnameh\Controllers\QrCodeController;
 use Mkhodroo\Nerkhnameh\Controllers\RegisterController;
@@ -35,14 +35,14 @@ Route::name('nerkhnameh.')->prefix('nerkhnameh')->middleware(['web'])->group(fun
     });
 
     Route::name('download.')->prefix('download')->group(function(){
-        Route::get('', [downloadNerkhnamehController::class, 'downloadForm'])->name('downloadForm');
-        Route::post('', [downloadNerkhnamehController::class, 'check'])->name('check');
+        Route::get('', [DownloadNerkhnamehController::class, 'downloadForm'])->name('downloadForm');
+        Route::post('', [DownloadNerkhnamehController::class, 'check'])->name('check');
     });
 
     Route::name('editRequest.')->prefix('edit-request')->group(function(){
-        Route::get('', [editRequestController::class, 'findForm'])->name('findForm');
-        Route::post('find', [editRequestController::class, 'find'])->name('find');
-        Route::post('edit', [editRequestController::class, 'edit'])->name('edit');
+        Route::get('', [EditRequestController::class, 'findForm'])->name('findForm');
+        Route::post('find', [EditRequestController::class, 'find'])->name('find');
+        Route::post('edit', [EditRequestController::class, 'edit'])->name('edit');
 
     });
 
