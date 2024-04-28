@@ -26,7 +26,21 @@ return [
                     ]
                 ],
                 'guild_catagory' => ['type' => 'text', 'disabled' => true, 'default' => 'شارژ سیلندرهای آتش نشانی', 'required' => false],
-                'catagory' => [
+                'guild_catagory' => [
+                    'type' => 'select',
+                    'default' => '',
+                    'options' => [
+                        ['value' => 'charging-fire-cylenders', 'label' => 'شارژ سیلندرهای آتش نشانی'],
+                        ['value' => 'retail', 'label' => 'خرده فروشی'],
+                        ['value' => 'sale-and-charging-insdustrial-gas', 'label' => 'فروش و شارژ گازهای صنعتی'],
+                        ['value' => 'saling-fire-cylenders', 'label' => 'فروش سیلندرهای آتش نشانی'],
+                        ['value' => 'wholesaling-industrial-gas', 'label' => 'عمده فروشی گازهای صنعتی'],
+                        ['value' => 'producer', 'label' => 'تولیدکننده'],
+                        ['value' => 'unknown', 'label' => 'بدون رسته'],
+                        
+                        ['value' => 'safety', 'label' => 'ایمنی'],
+                    ]
+                ],'catagory' => [
                     'type' => 'select',
                     'default' => '',
                     'options' => [
@@ -189,7 +203,21 @@ return [
                     ]
                 ],
                 'guild_catagory' => ['type' => 'text', 'disabled' => true, 'default' => 'خرده فروشی گازهای طبی و صنعتی', 'required' => false],
-                'catagory' => [
+                'guild_catagory' => [
+                    'type' => 'select',
+                    'default' => '',
+                    'options' => [
+                        ['value' => 'charging-fire-cylenders', 'label' => 'شارژ سیلندرهای آتش نشانی'],
+                        ['value' => 'retail', 'label' => 'خرده فروشی'],
+                        ['value' => 'sale-and-charging-insdustrial-gas', 'label' => 'فروش و شارژ گازهای صنعتی'],
+                        ['value' => 'saling-fire-cylenders', 'label' => 'فروش سیلندرهای آتش نشانی'],
+                        ['value' => 'wholesaling-industrial-gas', 'label' => 'عمده فروشی گازهای صنعتی'],
+                        ['value' => 'producer', 'label' => 'تولیدکننده'],
+                        ['value' => 'unknown', 'label' => 'بدون رسته'],
+                        
+                        ['value' => 'safety', 'label' => 'ایمنی'],
+                    ]
+                ],'catagory' => [
                     'type' => 'select',
                     'default' => '',
                     'options' => [
@@ -354,7 +382,21 @@ return [
                     ]
                 ],
                 'guild_catagory' => ['type' => 'text', 'disabled' => true, 'default' => 'شارژ و فروش گازهای طبی و صنعتی', 'required' => false],
-                'catagory' => [
+                'guild_catagory' => [
+                    'type' => 'select',
+                    'default' => '',
+                    'options' => [
+                        ['value' => 'charging-fire-cylenders', 'label' => 'شارژ سیلندرهای آتش نشانی'],
+                        ['value' => 'retail', 'label' => 'خرده فروشی'],
+                        ['value' => 'sale-and-charging-insdustrial-gas', 'label' => 'فروش و شارژ گازهای صنعتی'],
+                        ['value' => 'saling-fire-cylenders', 'label' => 'فروش سیلندرهای آتش نشانی'],
+                        ['value' => 'wholesaling-industrial-gas', 'label' => 'عمده فروشی گازهای صنعتی'],
+                        ['value' => 'producer', 'label' => 'تولیدکننده'],
+                        ['value' => 'unknown', 'label' => 'بدون رسته'],
+                        
+                        ['value' => 'safety', 'label' => 'ایمنی'],
+                    ]
+                ],'catagory' => [
                     'type' => 'select',
                     'default' => '',
                     'options' => [
@@ -517,7 +559,21 @@ return [
                     ]
                 ],
                 'guild_catagory' => ['type' => 'text', 'disabled' => true, 'default' => 'فروش سیلندرهای آتش نشانی', 'required' => false],
-                'catagory' => [
+                'guild_catagory' => [
+                    'type' => 'select',
+                    'default' => '',
+                    'options' => [
+                        ['value' => 'charging-fire-cylenders', 'label' => 'شارژ سیلندرهای آتش نشانی'],
+                        ['value' => 'retail', 'label' => 'خرده فروشی'],
+                        ['value' => 'sale-and-charging-insdustrial-gas', 'label' => 'فروش و شارژ گازهای صنعتی'],
+                        ['value' => 'saling-fire-cylenders', 'label' => 'فروش سیلندرهای آتش نشانی'],
+                        ['value' => 'wholesaling-industrial-gas', 'label' => 'عمده فروشی گازهای صنعتی'],
+                        ['value' => 'producer', 'label' => 'تولیدکننده'],
+                        ['value' => 'unknown', 'label' => 'بدون رسته'],
+                        
+                        ['value' => 'safety', 'label' => 'ایمنی'],
+                    ]
+                ],'catagory' => [
                     'type' => 'select',
                     'default' => '',
                     'options' => [
@@ -681,7 +737,21 @@ return [
                     ]
                 ],
                 'guild_catagory' => ['type' => 'text', 'disabled' => true, 'default' => 'عمده فروشی گازهای طبی و صنعتی', 'required' => false],
-                'catagory' => [
+                'guild_catagory' => [
+                    'type' => 'select',
+                    'default' => '',
+                    'options' => [
+                        ['value' => 'charging-fire-cylenders', 'label' => 'شارژ سیلندرهای آتش نشانی'],
+                        ['value' => 'retail', 'label' => 'خرده فروشی'],
+                        ['value' => 'sale-and-charging-insdustrial-gas', 'label' => 'فروش و شارژ گازهای صنعتی'],
+                        ['value' => 'saling-fire-cylenders', 'label' => 'فروش سیلندرهای آتش نشانی'],
+                        ['value' => 'wholesaling-industrial-gas', 'label' => 'عمده فروشی گازهای صنعتی'],
+                        ['value' => 'producer', 'label' => 'تولیدکننده'],
+                        ['value' => 'unknown', 'label' => 'بدون رسته'],
+                        
+                        ['value' => 'safety', 'label' => 'ایمنی'],
+                    ]
+                ],'catagory' => [
                     'type' => 'select',
                     'default' => '',
                     'options' => [
@@ -845,7 +915,21 @@ return [
                     ]
                 ],
                 'guild_catagory' => ['type' => 'text', 'disabled' => true, 'default' => 'تولیدکننده', 'required' => false],
-                'catagory' => [
+                'guild_catagory' => [
+                    'type' => 'select',
+                    'default' => '',
+                    'options' => [
+                        ['value' => 'charging-fire-cylenders', 'label' => 'شارژ سیلندرهای آتش نشانی'],
+                        ['value' => 'retail', 'label' => 'خرده فروشی'],
+                        ['value' => 'sale-and-charging-insdustrial-gas', 'label' => 'فروش و شارژ گازهای صنعتی'],
+                        ['value' => 'saling-fire-cylenders', 'label' => 'فروش سیلندرهای آتش نشانی'],
+                        ['value' => 'wholesaling-industrial-gas', 'label' => 'عمده فروشی گازهای صنعتی'],
+                        ['value' => 'producer', 'label' => 'تولیدکننده'],
+                        ['value' => 'unknown', 'label' => 'بدون رسته'],
+                        
+                        ['value' => 'safety', 'label' => 'ایمنی'],
+                    ]
+                ],'catagory' => [
                     'type' => 'select',
                     'default' => '',
                     'options' => [
@@ -1008,7 +1092,21 @@ return [
                     ]
                 ],
                 'guild_catagory' => ['type' => 'text', 'disabled' => true, 'default' => 'بدون رسته', 'required' => false],
-                'catagory' => [
+                'guild_catagory' => [
+                    'type' => 'select',
+                    'default' => '',
+                    'options' => [
+                        ['value' => 'charging-fire-cylenders', 'label' => 'شارژ سیلندرهای آتش نشانی'],
+                        ['value' => 'retail', 'label' => 'خرده فروشی'],
+                        ['value' => 'sale-and-charging-insdustrial-gas', 'label' => 'فروش و شارژ گازهای صنعتی'],
+                        ['value' => 'saling-fire-cylenders', 'label' => 'فروش سیلندرهای آتش نشانی'],
+                        ['value' => 'wholesaling-industrial-gas', 'label' => 'عمده فروشی گازهای صنعتی'],
+                        ['value' => 'producer', 'label' => 'تولیدکننده'],
+                        ['value' => 'unknown', 'label' => 'بدون رسته'],
+                        
+                        ['value' => 'safety', 'label' => 'ایمنی'],
+                    ]
+                ],'catagory' => [
                     'type' => 'select',
                     'default' => '',
                     'options' => [

@@ -43,8 +43,5 @@ Route::name('nerkhnameh.')->prefix('nerkhnameh')->middleware(['web'])->group(fun
         Route::get('', [EditRequestController::class, 'findForm'])->name('findForm');
         Route::post('find', [EditRequestController::class, 'find'])->name('find');
         Route::post('edit', [EditRequestController::class, 'edit'])->name('edit');
-
     });
-
-
 });
