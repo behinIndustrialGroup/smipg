@@ -146,7 +146,7 @@ use Mkhodroo\AgencyInfo\Controllers\HtmlCreatorController;
     function foreman_edit() {
         send_ajax_request(
             "{{ route('agencyInfo.foremanEdit') }}",
-            $('#simfa-form').serialize(),
+            $('#foreman-form').serialize(),
             function(res) {
                 console.log(res);
                 show_message("{{ __('Edited') }}");
