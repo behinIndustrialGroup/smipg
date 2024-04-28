@@ -125,6 +125,7 @@ class AgencyController extends Controller
     public static function foremanEdit(Request $r)
     {
         $agency_fields =  AgencyInfo::where('parent_id', $r->id)->get();
+        
         $data = $r->except('id');
         foreach ($data as $key => $value) {
             //files
