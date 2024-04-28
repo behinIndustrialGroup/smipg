@@ -41,6 +41,7 @@ use App\CustomClasses\Access;
                 <a href="{{ url('admin/messages/list') }}" class="dropdown-item dropdown-footer">نمایش تماام پیام ها</a>
             </div>
         </li> --}}
+        @include('UserProfileViews::partial-views.user-profile-icon') |
         <li class="">
             <a class="" href="{{ route('logout') }}">
                 <i class="fa fa-power-off"></i>

@@ -58,6 +58,10 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
             'Whoops\\' => 7,
             'Webmozart\\Assert\\' => 17,
         ),
+        'U' => 
+        array (
+            'UserProfile\\' => 12,
+        ),
         'T' => 
         array (
             'TijsVerkoyen\\CssToInlineStyles\\' => 31,
@@ -239,6 +243,10 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
         'Webmozart\\Assert\\' => 
         array (
             0 => __DIR__ . '/..' . '/webmozart/assert/src',
+        ),
+        'UserProfile\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/packages/user-profile/src',
         ),
         'TijsVerkoyen\\CssToInlineStyles\\' => 
         array (
@@ -4075,7 +4083,11 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
         'Mkhodroo\\MkhodrooProcessMaker\\Models\\PMUsers' => __DIR__ . '/../..' . '/packages/mkhodroo-process-maker/src/Models/PMUsers.php',
         'Mkhodroo\\MkhodrooProcessMaker\\Models\\PMVacation' => __DIR__ . '/../..' . '/packages/mkhodroo-process-maker/src/Models/PMVacation.php',
         'Mkhodroo\\MkhodrooProcessMaker\\Models\\PMVariable' => __DIR__ . '/../..' . '/packages/mkhodroo-process-maker/src/Models/PMVariable.php',
+        'Mkhodroo\\Nerkhnameh\\Controllers\\DownloadNerkhnamehController' => __DIR__ . '/../..' . '/packages/nerkhnameh/src/Controllers/DownloadNerkhnamehController.php',
+        'Mkhodroo\\Nerkhnameh\\Controllers\\EditInfoValidationController' => __DIR__ . '/../..' . '/packages/nerkhnameh/src/Controllers/EditInfoValidationController.php',
+        'Mkhodroo\\Nerkhnameh\\Controllers\\EditRequestController' => __DIR__ . '/../..' . '/packages/nerkhnameh/src/Controllers/EditRequestController.php',
         'Mkhodroo\\Nerkhnameh\\Controllers\\NerkhnamehRegistrationInfoController' => __DIR__ . '/../..' . '/packages/nerkhnameh/src/Controllers/NerkhnamehRegistrationInfoController.php',
+        'Mkhodroo\\Nerkhnameh\\Controllers\\QrCodeController' => __DIR__ . '/../..' . '/packages/nerkhnameh/src/Controllers/QrCodeController.php',
         'Mkhodroo\\Nerkhnameh\\Controllers\\RegisterController' => __DIR__ . '/../..' . '/packages/nerkhnameh/src/Controllers/RegisterController.php',
         'Mkhodroo\\Nerkhnameh\\Controllers\\TemplateController' => __DIR__ . '/../..' . '/packages/nerkhnameh/src/Controllers/TemplateController.php',
         'Mkhodroo\\Nerkhnameh\\Controllers\\UploadFinPaymentController' => __DIR__ . '/../..' . '/packages/nerkhnameh/src/Controllers/UploadFinPaymentController.php',
@@ -8091,6 +8103,11 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Processor' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Processor.php',
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Rule' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Rule.php',
         'UnhandledMatchError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php',
+        'UserProfile\\Controllers\\ChangePasswordController' => __DIR__ . '/../..' . '/packages/user-profile/src/Controllers/ChangePasswordController.php',
+        'UserProfile\\Controllers\\NationalIdController' => __DIR__ . '/../..' . '/packages/user-profile/src/Controllers/NationalIdController.php',
+        'UserProfile\\Controllers\\UserProfileController' => __DIR__ . '/../..' . '/packages/user-profile/src/Controllers/UserProfileController.php',
+        'UserProfile\\Models\\UserProfile' => __DIR__ . '/../..' . '/packages/user-profile/src/Models/UserProfile.php',
+        'UserProfile\\UserProfileProvider' => __DIR__ . '/../..' . '/packages/user-profile/src/UserProfileProvider.php',
         'ValueError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/ValueError.php',
         'Webmozart\\Assert\\Assert' => __DIR__ . '/..' . '/webmozart/assert/src/Assert.php',
         'Webmozart\\Assert\\InvalidArgumentException' => __DIR__ . '/..' . '/webmozart/assert/src/InvalidArgumentException.php',

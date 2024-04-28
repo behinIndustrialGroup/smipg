@@ -170,6 +170,7 @@ return [
         Mkhodroo\AltfuelTicket\AltfuelTicketServiceProvider::class,
         Mkhodroo\CorrespondenceSystem\CorrespondenceSystemProvider::class,
         Mkhodroo\Nerkhnameh\NerkhnamehProvider::class,
+        UserProfile\UserProfileProvider::class,
         /*
          * Application Service Providers...
          */
