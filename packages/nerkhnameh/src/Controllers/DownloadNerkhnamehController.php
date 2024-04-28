@@ -26,7 +26,9 @@ class DownloadNerkhnamehController extends Controller{
             $r->guild_number,
             $r->catagory
         );
-        
+        if(!$data){
+            return response(trans("not found"), 402);
+        }        
         return view('NerkhnamehView::download-details')->with([
             'data' => $data
         ]);
