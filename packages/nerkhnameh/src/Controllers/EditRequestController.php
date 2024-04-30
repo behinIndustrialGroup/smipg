@@ -51,19 +51,19 @@ class EditRequestController extends Controller{
         }else{
             unset($data['personal_image_file']);
         }
-        if($r->file('operaation_license') !== null){
-            $data['operaation_license'] = FileController::store(
-                $r->file('operaation_license'),
+        if($r->file('operation_license') !== null){
+            $data['operation_license'] = FileController::store(
+                $r->file('operation_license'),
                 config('nerkhnameh_config.nerkhnameh_filess') . '/nerkhnameh' );
-            if( $data['operaation_license']['status'] !== 200 ){
+            if( $data['operation_license']['status'] !== 200 ){
                 return response(
-                    trans("nerkhnameh file") . ' ' . $data['operaation_license']['message'],
-                    $data['operaation_license']['status']
+                    trans("nerkhnameh file") . ' ' . $data['operation_license']['message'],
+                    $data['operation_license']['status']
                 );
             }
-            $data['operaation_license'] = $data['operaation_license']['dir'];
+            $data['operation_license'] = $data['operation_license']['dir'];
         }else{
-            unset($data['operaation_license']);
+            unset($data['operation_license']);
         }
         return NerkhnamehModel::where(
             'id', $r->id

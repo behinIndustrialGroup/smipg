@@ -63,7 +63,7 @@
                 @if($data->operation_license)
                     <a href="{{ url($data->operation_license) }}">{{ __('download') }}</a>
                 @endif
-                    <input type="file" name="operaation_license" id="">                
+                    <input type="file" name="operation_license" id="">                
             </div>
         @endif
         <div class="input-group mb-3">
