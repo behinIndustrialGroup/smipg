@@ -20,6 +20,8 @@ class TemplateController extends Controller
 
     public static function createNerkhnameh(Request $r){
         $row = NerkhnamehRegistrationInfoController::get($r->id);
+        unset($row->province);
+        unset($row->city);
         if(!$row->fin_validation){
             return response(trans("fin does not valid"), 402);
         }
@@ -29,6 +31,7 @@ class TemplateController extends Controller
         if(!$row->unique_id){
             $row->unique_id = self::createUniqueId();
         }
+        
         $row->save();
         $nerkhnameh_word_file = self::putContentToTemplate($row);
         if(!$nerkhnameh_word_file){
