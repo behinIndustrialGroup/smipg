@@ -12,7 +12,8 @@
                     <th>{{ __('guild number') }}</th>
                     <th>{{ __('guild name') }}</th>
                     <th>{{ __('catagory') }}</th>
-                    <th>{{ __('address') }}</th>
+                    <th>{{ __('province') }}</th>
+                    <th>{{ __('city') }}</th>
                     <th>{{ __('created at') }}</th>
                     <th>{{ __('updated_at') }}</th>
                     <th>{{ __('price') }}</th>
@@ -39,7 +40,8 @@
                 { data: 'guild_number'},
                 { data: 'guild_name'},
                 { data: 'catagory'},
-                { data: 'address'},
+                { data: 'province'},
+                { data: 'city'},
                 { data: 'created_at', render: function(data){
                     datetime = new Date(data);
                     date = datetime.toLocaleDateString('fa-IR');

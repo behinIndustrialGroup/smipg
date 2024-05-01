@@ -22,12 +22,22 @@ class NerkhnamehRegistrationInfoController extends Controller{
 
     public function list(){
         return [
-            'data' => NerkhnamehModel::get()
+            'data' => self::getAll()
         ];
     }
 
     public static function get($id){
-        return NerkhnamehModel::find($id);
+        $row = NerkhnamehModel::find($id);
+        $row->province = CityController::getById($row->city_id)?->province;
+        $row->city = CityController::getById($row->city_id)?->city;
+        return $row;
+    }
+
+    public static function getAll(){
+        return NerkhnamehModel::get()->each(function($row){
+            $row->province = CityController::getById($row->city_id)?->province;
+            $row->city = CityController::getById($row->city_id)?->city;
+        });
     }
 
     public static function getByUniqueId($unique_id){

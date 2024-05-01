@@ -25,7 +25,7 @@
             <div class="col-sm-3">{{ __('city') }}</div>
             <input type="text" class="form-control" name="city"
                 placeholder="{{ __('city') }}"
-                value="{{ $data->city_id }}"
+                value="{{ $data->province . ' - ' . $data->city }}"
                 disabled>
         </div>
         <div class="input-group mb-3">
