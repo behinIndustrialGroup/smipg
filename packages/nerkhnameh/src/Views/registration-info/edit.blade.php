@@ -92,6 +92,7 @@
 </form>
 
 <hr>
+@if (auth()->user()->access('Show nerkhnameh fin info form'))
 <form action="javascript:void(0)" method="post" id="fin-form" class="row">
     <input type="hidden" name="id" id="" value="{{$data->id}}">
     <div class="col-sm-4">
@@ -116,6 +117,8 @@
         <button class="btn btn-success" onclick="fin_validate()">{{ __('save') }}</button>
     </div>
 </form>
+@endif
+
 
 <hr>
 <form action="javascript:void(0)" method="post" id="nerkhnameh-form" enctype="multipart/form-data">
