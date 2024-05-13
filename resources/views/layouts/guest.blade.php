@@ -33,7 +33,8 @@
     {{-- <link rel="stylesheet" href="{{ url('public/dashboard/dist/css/custom.css')  . '?' . config('app.version') }}"> --}}
     <link rel="stylesheet" type="text/css"
         href="{{ url('public/dashboard/plugins/datatables/dataTables.bootstrap4.css') . '?' . config('app.version') }}" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" href="{{ url('public/dashboard/plugins/toastr/toastr.min.css') }}">
+
     @yield('style')
 
     <script src="{{ url('public/dashboard/plugins/jquery/jquery.min.js') . '?' . config('app.version') }}"></script>
@@ -41,7 +42,8 @@
     </script>
     <script src="{{ url('public/dashboard/plugins/datatables/dataTables.bootstrap4.js') . '?' . config('app.version') }}">
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="{{ url('public/dashboard/plugins/toastr/toastr.min.js') }}"></script>
+
 
     <script src="{{ url('public/js/ajax.js') . '?' . config('app.version') }}"></script>
     <script src="{{ url('public/js/dataTable.js') . '?' . config('app.version') }}"></script>
@@ -60,7 +62,7 @@
 
 
     <!-- jQuery UI 1.11.4 -->
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    {{-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script> --}}
     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
     <script>
         $.widget.bridge('uibutton', $.ui.button)
