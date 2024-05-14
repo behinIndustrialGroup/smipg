@@ -14,6 +14,7 @@
                     <th>{{ __('catagory') }}</th>
                     <th>{{ __('province') }}</th>
                     <th>{{ __('city') }}</th>
+                    <th>{{ __('address') }}</th>
                     <th>{{ __('created at') }}</th>
                     <th>{{ __('updated_at') }}</th>
                     <th>{{ __('price') }}</th>
@@ -42,6 +43,7 @@
                 { data: 'catagory'},
                 { data: 'province'},
                 { data: 'city'},
+                { data: 'address'},
                 { data: 'created_at', render: function(data){
                     datetime = new Date(data);
                     date = datetime.toLocaleDateString('fa-IR');
