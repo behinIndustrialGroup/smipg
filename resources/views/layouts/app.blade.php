@@ -33,7 +33,7 @@
     </script>
     <script src="{{ url('public/dashboard/plugins/datatables/dataTables.bootstrap4.js') . '?' . config('app.version') }}">
     </script>
-    <script src="{{ url('public/dashboard/plugins/toastr/toastr.min.js"') }}></script>
+    <script src="{{ url('public/dashboard/plugins/toastr/toastr.min.js') }}"></script>
 
     <script src="{{ url('public/js/ajax.js') . '?' . config('app.version') }}"></script>
     <script src="{{ url('public/js/dataTable.js') . '?' . config('app.version') }}"></script>
