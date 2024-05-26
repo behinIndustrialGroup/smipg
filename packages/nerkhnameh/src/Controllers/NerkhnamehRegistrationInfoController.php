@@ -47,6 +47,7 @@ class NerkhnamehRegistrationInfoController extends Controller{
     public static function getView(Request $r){
         return view('NerkhnamehView::registration-info.edit')->with([
             'data' => self::get($r->id),
+            'cities' => CityController::all()
         ]);
     }
 

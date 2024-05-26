@@ -23,10 +23,13 @@
         </div>
         <div class="input-group mb-3">
             <div class="col-sm-3">{{ __('city') }}</div>
-            <input type="text" class="form-control" name="city"
-                placeholder="{{ __('city') }}"
-                value="{{ $data->province . ' - ' . $data->city }}"
-                disabled>
+            <div class="col-sm-9">
+                <select name="city_id" id="" class="select2">
+                    @foreach ($cities as $city)
+                        <option value="{{$city->id}}" {{ $city->id === $data->city_id ? 'selected': '' }} >{{$city->province}} - {{ $city->city }}</option>
+                    @endforeach
+                </select>
+            </div>
         </div>
         <div class="input-group mb-3">
             <div class="col-sm-3">{{ __('guild number') }}</div>
@@ -152,6 +155,7 @@
 
 
 <script>
+    initial_view()
     function edit_info(){
         var form = $('#info-form')[0]
         var fd = new FormData(form);

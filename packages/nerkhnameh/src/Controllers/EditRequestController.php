@@ -31,7 +31,8 @@ class EditRequestController extends Controller{
             return $cantModify;
         }
         return view('NerkhnamehView::edit-request.edit')->with([
-            'data' => $row
+            'data' => $row,
+            'cities' => CityController::all()
         ]);
     }
 
