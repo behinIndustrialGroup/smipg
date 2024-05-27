@@ -24,6 +24,7 @@
         <div class="input-group mb-3">
             <div class="col-sm-3">{{ __('city') }}</div>
             <div class="col-sm-9">
+                <input type="hidden" name="" id="" value="{{$data->city_id}}">
                 <select name="city_id" id="" class="select2">
                     @foreach ($cities as $city)
                         <option value="{{$city->id}}" {{ $city->id === $data->city_id ? 'selected': '' }} >{{$city->province}} - {{ $city->city }}</option>
