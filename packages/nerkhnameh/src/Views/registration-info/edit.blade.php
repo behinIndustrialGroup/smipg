@@ -25,11 +25,15 @@
             <div class="col-sm-3">{{ __('city') }}</div>
             <div class="col-sm-9">
                 <input type="hidden" name="" id="" value="{{$data->city_id}}">
-                <select name="city_id" id="" class="select2">
+                <select name="city_id" id="city_id" class="select2">
                     @foreach ($cities as $city)
-                        <option value="{{$city->id}}" {{ $city->id === $data->city_id ? 'selected': '' }} >{{$city->province}} - {{ $city->city }}</option>
+                        <option value="{{$city->id}}">{{$city->province}} - {{ $city->city }}</option>
                     @endforeach
                 </select>
+                <script>
+                    selec_element = $('#city_id')
+                    selec_element.val('{{ $data->city_id }}').trigger('change')
+                </script>
             </div>
         </div>
         <div class="input-group mb-3">
