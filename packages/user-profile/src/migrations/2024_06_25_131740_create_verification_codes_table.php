@@ -13,12 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('user_profiles', function (Blueprint $table) {
+        Schema::create('verification_codes', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('national_id')->nullable();
             $table->integer('user_id');
             $table->foreign('user_id')->references('id')->on('users');
+            $table->smallInteger('verification_code');
+            $table->timestamp('expiration_date');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
@@ -29,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_profile');
+        Schema::dropIfExists('verification_codes');
     }
 };

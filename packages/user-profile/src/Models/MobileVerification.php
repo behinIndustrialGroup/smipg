@@ -6,12 +6,14 @@ use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class UserProfile extends Model
+class MobileVerification extends Model
 {
     use HasFactory;
 
+    public $table = "verification_codes";
+
     protected $fillable = [
-        'national_id', 'user_id', 'user_agent'
+        'user_id', 'verification_code', 'expiration_date'
     ];
 
     public function User()
