@@ -1,4 +1,4 @@
-@if (auth()->user()->access('Show Agency Foreman Info'))
+@if (auth()->user()->access('Show Agency Inspection Info'))
     @php
         $tab_name = 'inspection';
         $prefix_key_name = 'inspection_';
