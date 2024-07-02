@@ -53,7 +53,6 @@
                         "{{ route('user-profile.getUserAgencies') }}",
                         data,
                         function(response) {
-                            console.log(response);
                             $('#agenciesInfo').html(response)
                         }
                     )
