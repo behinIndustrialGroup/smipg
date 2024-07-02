@@ -5,7 +5,7 @@ return [
     'ins_uploads' => 'ins_uploads',
     'doc_uploads' => 'doc_uploads',
     'main_field_name' => 'guild_catagory',
-    'default_fields' => ['file_number','guild_catagory','firstname', 'lastname', 'national_id', 'agency_code', 'mobile', 'new_status', 'last_referral', 'province', 'city'],
+    'default_fields' => ['file_number', 'guild_catagory', 'firstname', 'lastname', 'national_id', 'agency_code', 'mobile', 'new_status', 'last_referral', 'province', 'city'],
     'valid_file_type' => ['image/jpg', 'image/jpeg', 'image/png', 'application/pdf'],
     'customer_type' => [
         'charging-fire-cylenders' => [
@@ -37,10 +37,10 @@ return [
                         ['value' => 'wholesaling-industrial-gas', 'label' => 'عمده فروشی گازهای صنعتی'],
                         ['value' => 'producer', 'label' => 'تولیدکننده'],
                         ['value' => 'unknown', 'label' => 'بدون رسته'],
-                        
+
                         ['value' => 'safety', 'label' => 'ایمنی'],
                     ]
-                ],'catagory' => [
+                ], 'catagory' => [
                     'type' => 'select',
                     'default' => '',
                     'options' => [
@@ -147,15 +147,15 @@ return [
                         ['value' => 'ok', 'label' => 'فعال'],
                     ]
                 ],
-                
+
             ],
             'debts' => [
-                '1' => [ 'debt1', 'debt1_pay_date', 'debt1_ref_id', 'debt1_description' ],
+                '1' => ['debt1', 'debt1_pay_date', 'debt1_ref_id', 'debt1_description'],
             ],
             'docs' => [
                 'national_card',
                 'birth_certificate_image',
-                'personal_image', 
+                'personal_image',
                 'education_degree',
                 'military_card',
                 'business_rules_certificate',
@@ -176,13 +176,16 @@ return [
                 'foreman_lastname' => ['type' => 'text'],
                 'foreman_national_id' => ['type' => 'text'],
                 'foreman_mobile' => ['type' => 'text'],
+                'foreman_national_card' => ['type' => 'file'],
+                'foreman_birth_certificate_image' => ['type' => 'file'],
+                'foreman_personal_image' => ['type' => 'file'],
             ],
             'inspection' => [
-                '01' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
-                '02' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
-                '03' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
-                '04' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
-                '05' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
+                '01' => ['name' => ['type' => 'text'], 'file' => ['type' => 'file']],
+                '02' => ['name' => ['type' => 'text'], 'file' => ['type' => 'file']],
+                '03' => ['name' => ['type' => 'text'], 'file' => ['type' => 'file']],
+                '04' => ['name' => ['type' => 'text'], 'file' => ['type' => 'file']],
+                '05' => ['name' => ['type' => 'text'], 'file' => ['type' => 'file']],
             ],
         ],
         'retail' => [
@@ -214,10 +217,10 @@ return [
                         ['value' => 'wholesaling-industrial-gas', 'label' => 'عمده فروشی گازهای صنعتی'],
                         ['value' => 'producer', 'label' => 'تولیدکننده'],
                         ['value' => 'unknown', 'label' => 'بدون رسته'],
-                        
+
                         ['value' => 'safety', 'label' => 'ایمنی'],
                     ]
-                ],'catagory' => [
+                ], 'catagory' => [
                     'type' => 'select',
                     'default' => '',
                     'options' => [
@@ -326,15 +329,15 @@ return [
                         ['value' => 'ok', 'label' => 'فعال'],
                     ]
                 ],
-                
+
             ],
             'debts' => [
-                '1' => [ 'debt1', 'debt1_pay_date', 'debt1_ref_id', 'debt1_description' ],
+                '1' => ['debt1', 'debt1_pay_date', 'debt1_ref_id', 'debt1_description'],
             ],
             'docs' => [
                 'national_card',
                 'birth_certificate_image',
-                'personal_image', 
+                'personal_image',
                 'education_degree',
                 'military_card',
                 'business_rules_certificate',
@@ -355,13 +358,16 @@ return [
                 'foreman_lastname' => ['type' => 'text'],
                 'foreman_national_id' => ['type' => 'text'],
                 'foreman_mobile' => ['type' => 'text'],
+                'foreman_national_card' => ['type' => 'file'],
+                'foreman_birth_certificate_image' => ['type' => 'file'],
+                'foreman_personal_image' => ['type' => 'file'],
             ],
             'inspection' => [
-                '01' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
-                '02' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
-                '03' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
-                '04' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
-                '05' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
+                '01' => ['name' => ['type' => 'text'], 'file' => ['type' => 'file']],
+                '02' => ['name' => ['type' => 'text'], 'file' => ['type' => 'file']],
+                '03' => ['name' => ['type' => 'text'], 'file' => ['type' => 'file']],
+                '04' => ['name' => ['type' => 'text'], 'file' => ['type' => 'file']],
+                '05' => ['name' => ['type' => 'text'], 'file' => ['type' => 'file']],
             ],
         ],
         'sale-and-charging-insdustrial-gas' => [
@@ -393,10 +399,10 @@ return [
                         ['value' => 'wholesaling-industrial-gas', 'label' => 'عمده فروشی گازهای صنعتی'],
                         ['value' => 'producer', 'label' => 'تولیدکننده'],
                         ['value' => 'unknown', 'label' => 'بدون رسته'],
-                        
+
                         ['value' => 'safety', 'label' => 'ایمنی'],
                     ]
-                ],'catagory' => [
+                ], 'catagory' => [
                     'type' => 'select',
                     'default' => '',
                     'options' => [
@@ -503,15 +509,15 @@ return [
                         ['value' => 'ok', 'label' => 'فعال'],
                     ]
                 ],
-                
+
             ],
             'debts' => [
-                '1' => [ 'debt1', 'debt1_pay_date', 'debt1_ref_id', 'debt1_description' ],
+                '1' => ['debt1', 'debt1_pay_date', 'debt1_ref_id', 'debt1_description'],
             ],
             'docs' => [
                 'national_card',
                 'birth_certificate_image',
-                'personal_image', 
+                'personal_image',
                 'education_degree',
                 'military_card',
                 'business_rules_certificate',
@@ -532,13 +538,16 @@ return [
                 'foreman_lastname' => ['type' => 'text'],
                 'foreman_national_id' => ['type' => 'text'],
                 'foreman_mobile' => ['type' => 'text'],
+                'foreman_national_card' => ['type' => 'file'],
+                'foreman_birth_certificate_image' => ['type' => 'file'],
+                'foreman_personal_image' => ['type' => 'file'],
             ],
             'inspection' => [
-                '01' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
-                '02' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
-                '03' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
-                '04' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
-                '05' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
+                '01' => ['name' => ['type' => 'text'], 'file' => ['type' => 'file']],
+                '02' => ['name' => ['type' => 'text'], 'file' => ['type' => 'file']],
+                '03' => ['name' => ['type' => 'text'], 'file' => ['type' => 'file']],
+                '04' => ['name' => ['type' => 'text'], 'file' => ['type' => 'file']],
+                '05' => ['name' => ['type' => 'text'], 'file' => ['type' => 'file']],
             ],
         ],
         'saling-fire-cylenders' => [
@@ -570,10 +579,10 @@ return [
                         ['value' => 'wholesaling-industrial-gas', 'label' => 'عمده فروشی گازهای صنعتی'],
                         ['value' => 'producer', 'label' => 'تولیدکننده'],
                         ['value' => 'unknown', 'label' => 'بدون رسته'],
-                        
+
                         ['value' => 'safety', 'label' => 'ایمنی'],
                     ]
-                ],'catagory' => [
+                ], 'catagory' => [
                     'type' => 'select',
                     'default' => '',
                     'options' => [
@@ -681,15 +690,15 @@ return [
                         ['value' => 'ok', 'label' => 'فعال'],
                     ]
                 ],
-                
+
             ],
             'debts' => [
-                '1' => [ 'debt1', 'debt1_pay_date', 'debt1_ref_id', 'debt1_description' ],
+                '1' => ['debt1', 'debt1_pay_date', 'debt1_ref_id', 'debt1_description'],
             ],
             'docs' => [
                 'national_card',
                 'birth_certificate_image',
-                'personal_image', 
+                'personal_image',
                 'education_degree',
                 'military_card',
                 'business_rules_certificate',
@@ -710,13 +719,16 @@ return [
                 'foreman_lastname' => ['type' => 'text'],
                 'foreman_national_id' => ['type' => 'text'],
                 'foreman_mobile' => ['type' => 'text'],
+                'foreman_national_card' => ['type' => 'file'],
+                'foreman_birth_certificate_image' => ['type' => 'file'],
+                'foreman_personal_image' => ['type' => 'file'],
             ],
             'inspection' => [
-                '01' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
-                '02' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
-                '03' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
-                '04' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
-                '05' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
+                '01' => ['name' => ['type' => 'text'], 'file' => ['type' => 'file']],
+                '02' => ['name' => ['type' => 'text'], 'file' => ['type' => 'file']],
+                '03' => ['name' => ['type' => 'text'], 'file' => ['type' => 'file']],
+                '04' => ['name' => ['type' => 'text'], 'file' => ['type' => 'file']],
+                '05' => ['name' => ['type' => 'text'], 'file' => ['type' => 'file']],
             ],
         ],
         'wholesaling-industrial-gas' => [
@@ -748,10 +760,10 @@ return [
                         ['value' => 'wholesaling-industrial-gas', 'label' => 'عمده فروشی گازهای صنعتی'],
                         ['value' => 'producer', 'label' => 'تولیدکننده'],
                         ['value' => 'unknown', 'label' => 'بدون رسته'],
-                        
+
                         ['value' => 'safety', 'label' => 'ایمنی'],
                     ]
-                ],'catagory' => [
+                ], 'catagory' => [
                     'type' => 'select',
                     'default' => '',
                     'options' => [
@@ -859,15 +871,15 @@ return [
                         ['value' => 'ok', 'label' => 'فعال'],
                     ]
                 ],
-                
+
             ],
             'debts' => [
-                '1' => [ 'debt1', 'debt1_pay_date', 'debt1_ref_id', 'debt1_description' ],
+                '1' => ['debt1', 'debt1_pay_date', 'debt1_ref_id', 'debt1_description'],
             ],
             'docs' => [
                 'national_card',
                 'birth_certificate_image',
-                'personal_image', 
+                'personal_image',
                 'education_degree',
                 'military_card',
                 'business_rules_certificate',
@@ -888,13 +900,16 @@ return [
                 'foreman_lastname' => ['type' => 'text'],
                 'foreman_national_id' => ['type' => 'text'],
                 'foreman_mobile' => ['type' => 'text'],
+                'foreman_national_card' => ['type' => 'file'],
+                'foreman_birth_certificate_image' => ['type' => 'file'],
+                'foreman_personal_image' => ['type' => 'file'],
             ],
             'inspection' => [
-                '01' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
-                '02' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
-                '03' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
-                '04' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
-                '05' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
+                '01' => ['name' => ['type' => 'text'], 'file' => ['type' => 'file']],
+                '02' => ['name' => ['type' => 'text'], 'file' => ['type' => 'file']],
+                '03' => ['name' => ['type' => 'text'], 'file' => ['type' => 'file']],
+                '04' => ['name' => ['type' => 'text'], 'file' => ['type' => 'file']],
+                '05' => ['name' => ['type' => 'text'], 'file' => ['type' => 'file']],
             ],
         ],
         'producer' => [
@@ -926,10 +941,10 @@ return [
                         ['value' => 'wholesaling-industrial-gas', 'label' => 'عمده فروشی گازهای صنعتی'],
                         ['value' => 'producer', 'label' => 'تولیدکننده'],
                         ['value' => 'unknown', 'label' => 'بدون رسته'],
-                        
+
                         ['value' => 'safety', 'label' => 'ایمنی'],
                     ]
-                ],'catagory' => [
+                ], 'catagory' => [
                     'type' => 'select',
                     'default' => '',
                     'options' => [
@@ -1036,15 +1051,15 @@ return [
                         ['value' => 'ok', 'label' => 'فعال'],
                     ]
                 ],
-                
+
             ],
             'debts' => [
-                '1' => [ 'debt1', 'debt1_pay_date', 'debt1_ref_id', 'debt1_description' ],
+                '1' => ['debt1', 'debt1_pay_date', 'debt1_ref_id', 'debt1_description'],
             ],
             'docs' => [
                 'national_card',
                 'birth_certificate_image',
-                'personal_image', 
+                'personal_image',
                 'education_degree',
                 'military_card',
                 'business_rules_certificate',
@@ -1065,13 +1080,16 @@ return [
                 'foreman_lastname' => ['type' => 'text'],
                 'foreman_national_id' => ['type' => 'text'],
                 'foreman_mobile' => ['type' => 'text'],
+                'foreman_national_card' => ['type' => 'file'],
+                'foreman_birth_certificate_image' => ['type' => 'file'],
+                'foreman_personal_image' => ['type' => 'file'],
             ],
             'inspection' => [
-                '01' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
-                '02' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
-                '03' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
-                '04' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
-                '05' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
+                '01' => ['name' => ['type' => 'text'], 'file' => ['type' => 'file']],
+                '02' => ['name' => ['type' => 'text'], 'file' => ['type' => 'file']],
+                '03' => ['name' => ['type' => 'text'], 'file' => ['type' => 'file']],
+                '04' => ['name' => ['type' => 'text'], 'file' => ['type' => 'file']],
+                '05' => ['name' => ['type' => 'text'], 'file' => ['type' => 'file']],
             ],
         ],
         'unknown' => [
@@ -1103,10 +1121,10 @@ return [
                         ['value' => 'wholesaling-industrial-gas', 'label' => 'عمده فروشی گازهای صنعتی'],
                         ['value' => 'producer', 'label' => 'تولیدکننده'],
                         ['value' => 'unknown', 'label' => 'بدون رسته'],
-                        
+
                         ['value' => 'safety', 'label' => 'ایمنی'],
                     ]
-                ],'catagory' => [
+                ], 'catagory' => [
                     'type' => 'select',
                     'default' => '',
                     'options' => [
@@ -1214,15 +1232,15 @@ return [
                         ['value' => 'ok', 'label' => 'فعال'],
                     ]
                 ],
-                
+
             ],
             'debts' => [
-                '1' => [ 'debt1', 'debt1_pay_date', 'debt1_ref_id', 'debt1_description' ],
+                '1' => ['debt1', 'debt1_pay_date', 'debt1_ref_id', 'debt1_description'],
             ],
             'docs' => [
                 'national_card',
                 'birth_certificate_image',
-                'personal_image', 
+                'personal_image',
                 'education_degree',
                 'military_card',
                 'business_rules_certificate',
@@ -1243,13 +1261,16 @@ return [
                 'foreman_lastname' => ['type' => 'text'],
                 'foreman_national_id' => ['type' => 'text'],
                 'foreman_mobile' => ['type' => 'text'],
+                'foreman_national_card' => ['type' => 'file'],
+                'foreman_birth_certificate_image' => ['type' => 'file'],
+                'foreman_personal_image' => ['type' => 'file'],
             ],
             'inspection' => [
-                '01' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
-                '02' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
-                '03' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
-                '04' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
-                '05' => ['name' => ['type' => 'text'] , 'file' => ['type' => 'file']],
+                '01' => ['name' => ['type' => 'text'], 'file' => ['type' => 'file']],
+                '02' => ['name' => ['type' => 'text'], 'file' => ['type' => 'file']],
+                '03' => ['name' => ['type' => 'text'], 'file' => ['type' => 'file']],
+                '04' => ['name' => ['type' => 'text'], 'file' => ['type' => 'file']],
+                '05' => ['name' => ['type' => 'text'], 'file' => ['type' => 'file']],
             ],
         ],
     ]

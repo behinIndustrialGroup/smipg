@@ -43,7 +43,8 @@
             "Mkhodroo\\AltfuelTicket\\": "packages/altfuel-ticket/src",
             "Mkhodroo\\CorrespondenceSystem\\": "packages/mkhodroo-correspondence-system/src",
             "Mkhodroo\\Nerkhnameh\\": "packages/nerkhnameh/src",
-            "UserProfile\\": "packages/user-profile/src"
+            "UserProfile\\": "packages/user-profile/src",
+            "MyAgencyInfo\\": "packages/my-agency-info/src"
         }
     },
     "autoload-dev": {

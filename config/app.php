@@ -171,6 +171,7 @@ return [
         Mkhodroo\CorrespondenceSystem\CorrespondenceSystemProvider::class,
         Mkhodroo\Nerkhnameh\NerkhnamehProvider::class,
         UserProfile\UserProfileProvider::class,
+        MyAgencyInfo\PackageServiceProvider::class,
         /*
          * Application Service Providers...
          */

@@ -137,6 +137,7 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
         ),
         'M' => 
         array (
+            'MyAgencyInfo\\' => 13,
             'Mpdf\\PsrLogAwareTrait\\' => 22,
             'Mpdf\\PsrHttpMessageShim\\' => 24,
             'Mpdf\\' => 5,
@@ -468,6 +469,10 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
         'NunoMaduro\\Collision\\' => 
         array (
             0 => __DIR__ . '/..' . '/nunomaduro/collision/src',
+        ),
+        'MyAgencyInfo\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/packages/my-agency-info/src',
         ),
         'Mpdf\\PsrLogAwareTrait\\' => 
         array (
@@ -4541,6 +4546,8 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
         'Mpdf\\Writer\\OptionalContentWriter' => __DIR__ . '/..' . '/mpdf/mpdf/src/Writer/OptionalContentWriter.php',
         'Mpdf\\Writer\\PageWriter' => __DIR__ . '/..' . '/mpdf/mpdf/src/Writer/PageWriter.php',
         'Mpdf\\Writer\\ResourceWriter' => __DIR__ . '/..' . '/mpdf/mpdf/src/Writer/ResourceWriter.php',
+        'MyAgencyInfo\\Controllers\\EditMyAgencyInfoController' => __DIR__ . '/../..' . '/packages/my-agency-info/src/Controllers/EditMyAgencyInfoController.php',
+        'MyAgencyInfo\\PackageServiceProvider' => __DIR__ . '/../..' . '/packages/my-agency-info/src/PackageServiceProvider.php',
         'Nette\\ArgumentOutOfRangeException' => __DIR__ . '/..' . '/nette/utils/src/exceptions.php',
         'Nette\\DeprecatedException' => __DIR__ . '/..' . '/nette/utils/src/exceptions.php',
         'Nette\\DirectoryNotFoundException' => __DIR__ . '/..' . '/nette/utils/src/exceptions.php',
@@ -8104,8 +8111,12 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Rule' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Rule.php',
         'UnhandledMatchError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php',
         'UserProfile\\Controllers\\ChangePasswordController' => __DIR__ . '/../..' . '/packages/user-profile/src/Controllers/ChangePasswordController.php',
+        'UserProfile\\Controllers\\GetUserAgenciesController' => __DIR__ . '/../..' . '/packages/user-profile/src/Controllers/GetUserAgenciesController.php',
+        'UserProfile\\Controllers\\MobileVerificationController' => __DIR__ . '/../..' . '/packages/user-profile/src/Controllers/MobileVerificationController.php',
         'UserProfile\\Controllers\\NationalIdController' => __DIR__ . '/../..' . '/packages/user-profile/src/Controllers/NationalIdController.php',
+        'UserProfile\\Controllers\\UserAgentController' => __DIR__ . '/../..' . '/packages/user-profile/src/Controllers/UserAgentController.php',
         'UserProfile\\Controllers\\UserProfileController' => __DIR__ . '/../..' . '/packages/user-profile/src/Controllers/UserProfileController.php',
+        'UserProfile\\Models\\MobileVerification' => __DIR__ . '/../..' . '/packages/user-profile/src/Models/MobileVerification.php',
         'UserProfile\\Models\\UserProfile' => __DIR__ . '/../..' . '/packages/user-profile/src/Models/UserProfile.php',
         'UserProfile\\UserProfileProvider' => __DIR__ . '/../..' . '/packages/user-profile/src/UserProfileProvider.php',
         'ValueError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/ValueError.php',
