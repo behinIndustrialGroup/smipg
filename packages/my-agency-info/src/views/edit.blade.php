@@ -54,7 +54,6 @@ use Mkhodroo\AgencyInfo\Controllers\HtmlCreatorController;
                 filter()
             }
         )
-
     }
 
 
