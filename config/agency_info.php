@@ -4,6 +4,7 @@ return [
     'fin_uploads' => 'fin_uploads',
     'ins_uploads' => 'ins_uploads',
     'doc_uploads' => 'doc_uploads',
+    'show_non_valid_info' => true,
     'main_field_name' => 'guild_catagory',
     'default_fields' => ['file_number', 'guild_catagory', 'firstname', 'lastname', 'national_id', 'agency_code', 'mobile', 'new_status', 'last_referral', 'province', 'city'],
     'valid_file_type' => ['image/jpg', 'image/jpeg', 'image/png', 'application/pdf'],
