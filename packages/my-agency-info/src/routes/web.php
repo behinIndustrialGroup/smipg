@@ -12,6 +12,4 @@ Route::name('myAgency.')->prefix('my-agency')->middleware(['web','auth'])->group
     Route::post('docs-edit', [AgencyDocsController::class, 'docsEdit'])->name('docsEdit');
     Route::post('foreman-edit', [AgencyController::class, 'foremanEdit'])->name('foremanEdit');
     Route::post('inspection-edit', [AgencyController::class, 'InspectionEdit'])->name('InspectionEdit');
-
-
 });
