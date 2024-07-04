@@ -180,6 +180,18 @@ return [
                 'foreman_national_card' => ['type' => 'file'],
                 'foreman_birth_certificate_image' => ['type' => 'file'],
                 'foreman_personal_image' => ['type' => 'file'],
+                'foreman_military_card' => ['type' => 'file'],
+                'foreman_card' => ['type' => 'file']
+            ],
+            'partner' => [
+                'partner_firstname' => ['type' => 'text'],
+                'partner_lastname' => ['type' => 'text'],
+                'partner_national_id' => ['type' => 'text'],
+                'partner_mobile' => ['type' => 'text'],
+                'partner_national_card' => ['type' => 'file'],
+                'partner_birth_certificate_image' => ['type' => 'file'],
+                'partner_personal_image' => ['type' => 'file'],
+                'partner_military_card' => ['type' => 'file'],
             ],
             'inspection' => [
                 '01' => ['name' => ['type' => 'text'], 'file' => ['type' => 'file']],
@@ -362,6 +374,18 @@ return [
                 'foreman_national_card' => ['type' => 'file'],
                 'foreman_birth_certificate_image' => ['type' => 'file'],
                 'foreman_personal_image' => ['type' => 'file'],
+                'foreman_military_card' => ['type' => 'file'],
+                'foreman_card' => ['type' => 'file']
+            ],
+            'partner' => [
+                'partner_firstname' => ['type' => 'text'],
+                'partner_lastname' => ['type' => 'text'],
+                'partner_national_id' => ['type' => 'text'],
+                'partner_mobile' => ['type' => 'text'],
+                'partner_national_card' => ['type' => 'file'],
+                'partner_birth_certificate_image' => ['type' => 'file'],
+                'partner_personal_image' => ['type' => 'file'],
+                'partner_military_card' => ['type' => 'file'],
             ],
             'inspection' => [
                 '01' => ['name' => ['type' => 'text'], 'file' => ['type' => 'file']],
@@ -542,6 +566,18 @@ return [
                 'foreman_national_card' => ['type' => 'file'],
                 'foreman_birth_certificate_image' => ['type' => 'file'],
                 'foreman_personal_image' => ['type' => 'file'],
+                'foreman_military_card' => ['type' => 'file'],
+                'foreman_card' => ['type' => 'file']
+            ],
+            'partner' => [
+                'partner_firstname' => ['type' => 'text'],
+                'partner_lastname' => ['type' => 'text'],
+                'partner_national_id' => ['type' => 'text'],
+                'partner_mobile' => ['type' => 'text'],
+                'partner_national_card' => ['type' => 'file'],
+                'partner_birth_certificate_image' => ['type' => 'file'],
+                'partner_personal_image' => ['type' => 'file'],
+                'partner_military_card' => ['type' => 'file'],
             ],
             'inspection' => [
                 '01' => ['name' => ['type' => 'text'], 'file' => ['type' => 'file']],
@@ -723,6 +759,18 @@ return [
                 'foreman_national_card' => ['type' => 'file'],
                 'foreman_birth_certificate_image' => ['type' => 'file'],
                 'foreman_personal_image' => ['type' => 'file'],
+                'foreman_military_card' => ['type' => 'file'],
+                'foreman_card' => ['type' => 'file']
+            ],
+            'partner' => [
+                'partner_firstname' => ['type' => 'text'],
+                'partner_lastname' => ['type' => 'text'],
+                'partner_national_id' => ['type' => 'text'],
+                'partner_mobile' => ['type' => 'text'],
+                'partner_national_card' => ['type' => 'file'],
+                'partner_birth_certificate_image' => ['type' => 'file'],
+                'partner_personal_image' => ['type' => 'file'],
+                'partner_military_card' => ['type' => 'file'],
             ],
             'inspection' => [
                 '01' => ['name' => ['type' => 'text'], 'file' => ['type' => 'file']],
@@ -904,6 +952,18 @@ return [
                 'foreman_national_card' => ['type' => 'file'],
                 'foreman_birth_certificate_image' => ['type' => 'file'],
                 'foreman_personal_image' => ['type' => 'file'],
+                'foreman_military_card' => ['type' => 'file'],
+                'foreman_card' => ['type' => 'file']
+            ],
+            'partner' => [
+                'partner_firstname' => ['type' => 'text'],
+                'partner_lastname' => ['type' => 'text'],
+                'partner_national_id' => ['type' => 'text'],
+                'partner_mobile' => ['type' => 'text'],
+                'partner_national_card' => ['type' => 'file'],
+                'partner_birth_certificate_image' => ['type' => 'file'],
+                'partner_personal_image' => ['type' => 'file'],
+                'partner_military_card' => ['type' => 'file'],
             ],
             'inspection' => [
                 '01' => ['name' => ['type' => 'text'], 'file' => ['type' => 'file']],
@@ -1084,6 +1144,18 @@ return [
                 'foreman_national_card' => ['type' => 'file'],
                 'foreman_birth_certificate_image' => ['type' => 'file'],
                 'foreman_personal_image' => ['type' => 'file'],
+                'foreman_military_card' => ['type' => 'file'],
+                'foreman_card' => ['type' => 'file']
+            ],
+            'partner' => [
+                'partner_firstname' => ['type' => 'text'],
+                'partner_lastname' => ['type' => 'text'],
+                'partner_national_id' => ['type' => 'text'],
+                'partner_mobile' => ['type' => 'text'],
+                'partner_national_card' => ['type' => 'file'],
+                'partner_birth_certificate_image' => ['type' => 'file'],
+                'partner_personal_image' => ['type' => 'file'],
+                'partner_military_card' => ['type' => 'file'],
             ],
             'inspection' => [
                 '01' => ['name' => ['type' => 'text'], 'file' => ['type' => 'file']],
@@ -1265,6 +1337,18 @@ return [
                 'foreman_national_card' => ['type' => 'file'],
                 'foreman_birth_certificate_image' => ['type' => 'file'],
                 'foreman_personal_image' => ['type' => 'file'],
+                'foreman_military_card' => ['type' => 'file'],
+                'foreman_card' => ['type' => 'file']
+            ],
+            'partner' => [
+                'partner_firstname' => ['type' => 'text'],
+                'partner_lastname' => ['type' => 'text'],
+                'partner_national_id' => ['type' => 'text'],
+                'partner_mobile' => ['type' => 'text'],
+                'partner_national_card' => ['type' => 'file'],
+                'partner_birth_certificate_image' => ['type' => 'file'],
+                'partner_personal_image' => ['type' => 'file'],
+                'partner_military_card' => ['type' => 'file'],
             ],
             'inspection' => [
                 '01' => ['name' => ['type' => 'text'], 'file' => ['type' => 'file']],

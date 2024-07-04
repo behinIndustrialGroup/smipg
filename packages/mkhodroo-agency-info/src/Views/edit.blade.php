@@ -22,6 +22,10 @@ use Mkhodroo\AgencyInfo\Controllers\HtmlCreatorController;
                     aria-selected="true">{{ __('Foreman Info') }}</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" id="partner-tab" data-toggle="pill" href="#partner" role="tab" aria-controls="partner-info"
+                    aria-selected="true">{{ __('Partner Info') }}</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" id="docs-tab" data-toggle="pill" href="#docs" role="tab" aria-controls="docs"
                     aria-selected="false">{{ __('Docs') }}</a>
             </li>
@@ -60,6 +64,10 @@ use Mkhodroo\AgencyInfo\Controllers\HtmlCreatorController;
                 'agency_fields' => $agency_fields
             ])
             @include('AgencyView::edit-tabs.foreman-info', [
+                'customer_type' => $customer_type,
+                'agency_fields' => $agency_fields
+            ])
+            @include('AgencyView::edit-tabs.partner-info', [
                 'customer_type' => $customer_type,
                 'agency_fields' => $agency_fields
             ])

@@ -175,6 +175,19 @@
     "city": "شهرستان",
     "guild_or_legal_name": "نام محل صنفی یا شرکت",
     "number of sended sms": "تعداد پیامک های ارسال شده",
-    "non_valid_": "(تایید نشده)"
-
+    "non_valid_": "(تایید نشده)",
+    "foreman_personal_image": "تصویر پرسنلی 3*4 مباشر",
+    "foreman_birth_certificate_image": "تصویر شناسنامه مباشر",
+    "foreman_national_card": "تصویر کارت ملی مباشر",
+    "foreman_military_card": "کارت پایان خدمت/معافیت/... مباشر",
+    "foreman_card": "کارت مباشرت",
+    "Partner Info": "اطلاعات شریک",
+    "partner_firstname": "نام شریک",
+    "partner_lastname": "نام خانوادگی شریک",
+    "partner_national_id": "کدملی شریک",
+    "partner_personal_image": "تصویر پرسنلی 3*4 شریک",
+    "partner_birth_certificate_image": "تصویر شناسنامه شریک",
+    "partner_national_card": "تصویر کارت ملی شریک",
+    "partner_mobile": "موبایل شریک",
+    "partner_military_card": "کارت پایان خدمت/معافیت/... شریک"
 }
