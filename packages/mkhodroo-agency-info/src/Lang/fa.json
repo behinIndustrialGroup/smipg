@@ -191,5 +191,6 @@
     "partner_mobile": "موبایل شریک",
     "partner_military_card": "کارت پایان خدمت/معافیت/... شریک",
     "last_request_date": "تاریخ آخرین درخواست",
-    "last_request_type": "نوع آخرین درخواست"
+    "last_request_type": "نوع آخرین درخواست",
+    "person_type": "نوع شخص"
 }
