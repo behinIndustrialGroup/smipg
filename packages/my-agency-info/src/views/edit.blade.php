@@ -18,9 +18,14 @@ use Mkhodroo\AgencyInfo\Controllers\HtmlCreatorController;
                     aria-selected="true">{{ __('Foreman Info') }}</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" id="partner-tab" data-toggle="pill" href="#partner" role="tab" aria-controls="partner-info"
+                    aria-selected="true">{{ __('Partner Info') }}</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" id="docs-tab" data-toggle="pill" href="#docs" role="tab" aria-controls="docs"
                     aria-selected="false">{{ __('Docs') }}</a>
             </li>
+            
         </ul>
     </div>
     <div class="card-body">
@@ -30,6 +35,10 @@ use Mkhodroo\AgencyInfo\Controllers\HtmlCreatorController;
                 'agency_fields' => $agency_fields
             ])
             @include('MyAgencyViews::edit-tabs.foreman-info', [
+                'customer_type' => $customer_type,
+                'agency_fields' => $agency_fields
+            ])
+            @include('MyAgencyViews::edit-tabs.partner-info', [
                 'customer_type' => $customer_type,
                 'agency_fields' => $agency_fields
             ])
@@ -57,18 +66,7 @@ use Mkhodroo\AgencyInfo\Controllers\HtmlCreatorController;
     }
 
 
-    function foreman_edit() {
-        send_ajax_request(
-            "{{ route('myAgency.foremanEdit') }}",
-            $('#foreman-form').serialize(),
-            function(res) {
-                console.log(res);
-                show_message("{{ __('Edited') }}");
-                open_edit_form(res.parent_id, 'info')
-                filter()
-            }
-        )
-    }
+    
 
     function delete_fin_pay_file(key) {
         var fd = new FormData();
