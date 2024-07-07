@@ -15,6 +15,14 @@ return [
             'fields' => [
                 'file_number' => ['type' => 'text', 'required' => true],
                 'last_request_date' => ['type' => 'text', 'required' => true],
+                'person_type' => [
+                    'type' => 'select',
+                    'default' => '',
+                    'options' => [
+                        ['value' => 'حقیقی', 'label' => 'حقیقی'],
+                        ['value' => 'حقوقی', 'label' => 'حقوقی'],
+                    ]
+                ],
                 'last_request_type' => [
                     'type' => 'select',
                     'default' => '',
@@ -209,6 +217,14 @@ return [
             'fields' => [
                 'file_number' => ['type' => 'text', 'required' => true],
                 'last_request_date' => ['type' => 'text', 'required' => true],
+                'person_type' => [
+                    'type' => 'select',
+                    'default' => '',
+                    'options' => [
+                        ['value' => 'حقیقی', 'label' => 'حقیقی'],
+                        ['value' => 'حقوقی', 'label' => 'حقوقی'],
+                    ]
+                ],
                 'last_request_type' => [
                     'type' => 'select',
                     'default' => '',
@@ -405,6 +421,14 @@ return [
             'fields' => [
                 'file_number' => ['type' => 'text', 'required' => true],
                 'last_request_date' => ['type' => 'text', 'required' => true],
+                'person_type' => [
+                    'type' => 'select',
+                    'default' => '',
+                    'options' => [
+                        ['value' => 'حقیقی', 'label' => 'حقیقی'],
+                        ['value' => 'حقوقی', 'label' => 'حقوقی'],
+                    ]
+                ],
                 'last_request_type' => [
                     'type' => 'select',
                     'default' => '',
@@ -599,6 +623,14 @@ return [
             'fields' => [
                 'file_number' => ['type' => 'text', 'required' => true],
                 'last_request_date' => ['type' => 'text', 'required' => true],
+                'person_type' => [
+                    'type' => 'select',
+                    'default' => '',
+                    'options' => [
+                        ['value' => 'حقیقی', 'label' => 'حقیقی'],
+                        ['value' => 'حقوقی', 'label' => 'حقوقی'],
+                    ]
+                ],
                 'last_request_type' => [
                     'type' => 'select',
                     'default' => '',
@@ -794,6 +826,14 @@ return [
             'fields' => [
                 'file_number' => ['type' => 'text', 'required' => true],
                 'last_request_date' => ['type' => 'text', 'required' => true],
+                'person_type' => [
+                    'type' => 'select',
+                    'default' => '',
+                    'options' => [
+                        ['value' => 'حقیقی', 'label' => 'حقیقی'],
+                        ['value' => 'حقوقی', 'label' => 'حقوقی'],
+                    ]
+                ],
                 'last_request_type' => [
                     'type' => 'select',
                     'default' => '',
@@ -989,6 +1029,14 @@ return [
             'fields' => [
                 'file_number' => ['type' => 'text', 'required' => true],
                 'last_request_date' => ['type' => 'text', 'required' => true],
+                'person_type' => [
+                    'type' => 'select',
+                    'default' => '',
+                    'options' => [
+                        ['value' => 'حقیقی', 'label' => 'حقیقی'],
+                        ['value' => 'حقوقی', 'label' => 'حقوقی'],
+                    ]
+                ],
                 'last_request_type' => [
                     'type' => 'select',
                     'default' => '',
@@ -1183,6 +1231,14 @@ return [
             'fields' => [
                 'file_number' => ['type' => 'text', 'required' => true],
                 'last_request_date' => ['type' => 'text', 'required' => true],
+                'person_type' => [
+                    'type' => 'select',
+                    'default' => '',
+                    'options' => [
+                        ['value' => 'حقیقی', 'label' => 'حقیقی'],
+                        ['value' => 'حقوقی', 'label' => 'حقوقی'],
+                    ]
+                ],
                 'last_request_type' => [
                     'type' => 'select',
                     'default' => '',
