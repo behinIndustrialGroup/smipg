@@ -189,5 +189,7 @@
     "partner_birth_certificate_image": "تصویر شناسنامه شریک",
     "partner_national_card": "تصویر کارت ملی شریک",
     "partner_mobile": "موبایل شریک",
-    "partner_military_card": "کارت پایان خدمت/معافیت/... شریک"
+    "partner_military_card": "کارت پایان خدمت/معافیت/... شریک",
+    "last_request_date": "تاریخ آخرین درخواست",
+    "last_request_type": "نوع آخرین درخواست"
 }
