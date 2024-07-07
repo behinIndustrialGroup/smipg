@@ -13,7 +13,7 @@ class UserProfileController extends Controller
     public function index(){
         $userAgent = request()->userAgent();
         $user = Auth::user();
-        return view('UserProfileViews::index')->with([
+        return view('user-profile.index')->with([
             'user' => $user,
             'userProfile' => self::getByUserId($user->id),
             'userAgent' => $userAgent

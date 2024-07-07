@@ -24,7 +24,8 @@ class UserProfileProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__. '/config/user_profile.php' => config_path('user_profile.php')
+            __DIR__. '/config/user_profile.php' => config_path('user_profile.php'),
+            __DIR__. '/views' => resource_path('views/user-profile'),
         ], 'user-profile');
         $this->loadMigrationsFrom(__DIR__ . '/migrations');
         $this->loadRoutesFrom(__DIR__ . '/routes/web.php');
