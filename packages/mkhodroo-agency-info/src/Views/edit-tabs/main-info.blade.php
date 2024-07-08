@@ -52,7 +52,7 @@
                                             send_ajax_get_request(
                                                 "{{ Route::has($url) ? route($url) : url($url) }}",
                                                 function(res) {
-                                                    selec_element = $('select[name={{ $field_key }}]')
+                                                    selec_element = $('#{{ $field_key }}')
                                                     res.forEach(function(item) {
                                                         var opt = new Option(item.province + ' - ' + item.city, item.id)
                                                         selec_element.append(opt)
@@ -67,7 +67,7 @@
                                             <option value="{{ $opt['value'] }}">{{ $opt['label'] }}</option>
                                         @endforeach
                                         <script>
-                                            selec_element = $('select[name={{ $field_key }}]')
+                                            selec_element = $('#{{ $field_key }}')
                                             selec_element.val('{{ $value }}').trigger('change')
                                         </script>
                                     @endif
