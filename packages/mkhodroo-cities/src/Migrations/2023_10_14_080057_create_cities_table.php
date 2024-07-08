@@ -11,15 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('cities', function (Blueprint $table) {
-            $table->id();
-            $table->string('province');
-            $table->string('city');
-            $table->string('latitude')->nullable();
-            $table->string('longitude')->nullable();
-            $table->softDeletes();
-            $table->timestamps();
-        });
+        if(!Schema::hasTable('cities')){
+            Schema::create('cities', function (Blueprint $table) {
+                $table->id();
+                $table->string('province');
+                $table->string('city');
+                $table->string('latitude')->nullable();
+                $table->string('longitude')->nullable();
+                $table->softDeletes();
+                $table->timestamps();
+            });
+        }
+
     }
 
     /**
@@ -27,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('agency_info');
+        Schema::dropIfExists('cities');
     }
 };
