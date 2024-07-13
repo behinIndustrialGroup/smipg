@@ -192,5 +192,13 @@
     "partner_military_card": "کارت پایان خدمت/معافیت/... شریک",
     "last_request_date": "تاریخ آخرین درخواست",
     "last_request_type": "نوع آخرین درخواست",
-    "person_type": "نوع شخص"
+    "person_type": "نوع شخص",
+    "brand_or_trademark_registration": "ثبت برند یا علائم تجاری",
+    "usage_certificate": "پروانه بهره برداری",
+    "board_of_directors_approval": "مصوبه هیئت مدیره",
+    "partners_satisfication": "رضایت نامه شرکا",
+    "official_newspaper": "روزنامه رسمی",
+    "last_changes_announcement": "آگهی آخرین تغییرات شرکت",
+    "legal_statute": "اساسنامه",
+    "Additional Docs": "مدارک تکمیلی"
 }

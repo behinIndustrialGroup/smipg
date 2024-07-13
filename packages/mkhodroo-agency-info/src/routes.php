@@ -27,6 +27,7 @@ Route::name('agencyInfo.')->prefix('agency-info')->middleware(['web', 'auth', 'a
     Route::post('edit', [AgencyController::class, 'edit'])->name('edit');
     Route::post('foreman-edit', [AgencyController::class, 'foremanEdit'])->name('foremanEdit');
     Route::post('partner-edit', [AgencyController::class, 'foremanEdit'])->name('partnerEdit');
+    Route::post('additional-docs-edit', [AgencyController::class, 'foremanEdit'])->name('additionalDocsEdit');
     Route::post('fin-edit', [AgencyController::class, 'finEdit'])->name('finEdit');
     Route::post('inspection-edit', [AgencyController::class, 'InspectionEdit'])->name('InspectionEdit');
     Route::post('docs-edit', [AgencyDocsController::class, 'docsEdit'])->name('docsEdit');

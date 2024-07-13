@@ -30,6 +30,10 @@ use Mkhodroo\AgencyInfo\Controllers\HtmlCreatorController;
                     aria-selected="false">{{ __('Docs') }}</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" id="additional_docs-tab" data-toggle="pill" href="#additional_docs" role="tab" aria-controls="additional_docs-info"
+                    aria-selected="true">{{ __('Additional Docs') }}</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" id="inspection-tab" data-toggle="pill" href="#inspection" role="tab" aria-controls="inspection-info"
                     aria-selected="true">{{ __('Inspection Info') }}</a>
             </li>
@@ -56,6 +60,10 @@ use Mkhodroo\AgencyInfo\Controllers\HtmlCreatorController;
                 'agency_fields' => $agency_fields
             ])
             @include('AgencyView::edit-tabs.doc-info', [
+                'customer_type' => $customer_type,
+                'agency_fields' => $agency_fields
+            ])
+            @include('AgencyView::edit-tabs.additional-docs-info', [
                 'customer_type' => $customer_type,
                 'agency_fields' => $agency_fields
             ])

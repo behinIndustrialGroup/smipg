@@ -25,11 +25,9 @@
                                     ?->value;
                             @endphp
                             <tr>
-                                <td>
+                                <td></td>
+                                <td style="text-align: center; font-size: 10px">
                                     {{ __('non_valid_') . __($field_key) }}
-                                </td>
-
-                                <td style="text-align: center">
                                     {{ $HtmlCreator::createInput("non_valid_$field_key", $field_detail, $non_valid_value) }}
                                 </td>
                             </tr>
