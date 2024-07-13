@@ -1,7 +1,7 @@
 {
     "name": "mkhodroo/user-roles",
     "description": "defining roles of users and accessibility of each role. it can use codes in views and controllers.",
-    "version": "1.1",
+    "version": "1.2",
     "autoload": {
         "psr-4": {
             "Mkhodroo\\UserRoles\\": "src/"

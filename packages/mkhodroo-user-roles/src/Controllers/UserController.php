@@ -50,7 +50,6 @@ class UserController extends Controller
 
     public function index($id)
     {
-        Access::check('user_show_all');
         if($id == 'all'):
             $users = User::get();
             return view('URPackageView::user.all')->with(['users' => $users]);

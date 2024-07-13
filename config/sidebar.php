@@ -43,7 +43,7 @@ return [
             'icon' => 'fa fa-user',
             'fa_name' => 'کاربران',
             'submenu' => [
-                'dashboard' => [ 'fa_name' => 'همه', 'route-name' => '', 'route-url' => 'admin/user/all' ],
+                'dashboard' => [ 'fa_name' => 'همه', 'route-name' => '', 'route-url' => 'user/all' ],
                 'role' => [ 'fa_name' => 'نقش ها', 'route-name' => 'role.listForm', 'route-url' => '' ],
             ]
         ],
