@@ -11,7 +11,7 @@
                 <table class="table table-striped table-responsive ">
                     <td>{{ __(config('agency_info.main_field_name')) }}</td>
                     <td>
-                        <select name="{{ config('agency_info.main_field_name') }}" id="" class="form-control">
+                        <select name="{{ config('agency_info.main_field_name') }}_search" id="" class="form-control">
                             <option value="">{{ __('All') }}</option>
                             @foreach (config('agency_info.customer_type') as $catagory => $catagory_detail)
                                 <option value="{{ $catagory }}">{{ __($catagory_detail['name']) }}</option>
@@ -20,7 +20,7 @@
                     </td>
                     <td>استان</td>
                     <td>
-                        <select name="province" id="" class="form-control">
+                        <select name="province_search" id="" class="form-control">
                             <option value="">{{ __('All') }}</option>
                             @foreach ($provinces as $province)
                                 <option value="{{ $province->id }}">{{ $province->name }}</option>
