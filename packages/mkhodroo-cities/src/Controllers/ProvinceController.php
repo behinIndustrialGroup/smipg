@@ -11,4 +11,8 @@ class ProvinceController extends Controller
     public static function all(){
         return NewProvince::get();
     }
+
+    public static function getById($id){
+        return NewProvince::find($id);
+    }
 }
