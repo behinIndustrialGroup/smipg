@@ -18,10 +18,7 @@
                                 @endphp
                                 <input type="text" name="{{ $field_key }}" value="{{ $value }}"
                                     class="form-control" id="{{ $field_key }}"
-                                    @if (isset($field_detail['disabled']) and $field_detail['disabled'] === true)
-                                        disabled
-                                    @endif
-                                    >
+                                    @if (isset($field_detail['disabled']) and $field_detail['disabled'] === true) disabled @endif>
                                 @if ($field_key === 'agency_code')
                                     <span id="gen_code" class="col-sm-3"
                                         style="background: #db4f4f;padding-top:5px; height:32px; text-align:center; font-weight:bold; cursor:pointer">
@@ -52,9 +49,13 @@
                                             send_ajax_get_request(
                                                 "{{ Route::has($url) ? route($url) : url($url) }}",
                                                 function(res) {
-                                                    selec_element = $('#{{ $field_key }}')
+                                                    selec_element = $('select[name={{ $field_key }}]')
                                                     res.forEach(function(item) {
-                                                        var opt = new Option(item.province + ' - ' + item.city, item.id)
+                                                        if (item.name) {
+                                                            var opt = new Option(item.name, item.id)
+                                                        } else {
+                                                            var opt = new Option(item.province + ' - ' + item.city, item.id)
+                                                        }
                                                         selec_element.append(opt)
                                                     })
                                                     selec_element.val('{{ $value }}').trigger('change')
@@ -67,7 +68,7 @@
                                             <option value="{{ $opt['value'] }}">{{ $opt['label'] }}</option>
                                         @endforeach
                                         <script>
-                                            selec_element = $('#{{ $field_key }}')
+                                            selec_element = $('select[name={{ $field_key }}]')
                                             selec_element.val('{{ $value }}').trigger('change')
                                         </script>
                                     @endif

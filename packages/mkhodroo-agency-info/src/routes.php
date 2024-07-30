@@ -11,6 +11,7 @@ use Mkhodroo\AgencyInfo\Controllers\AgencyDocsController;
 use Mkhodroo\AgencyInfo\Controllers\AgencyListController;
 use Mkhodroo\AgencyInfo\Controllers\CreateAgencyController;
 use Mkhodroo\AgencyInfo\Controllers\DebtController;
+use Mkhodroo\AgencyInfo\Controllers\QueryController;
 use Mkhodroo\AgencyInfo\Models\AgencyInfo;
 use Mkhodroo\Cities\Controllers\CityController;
 use Mkhodroo\UserRoles\Controllers\GetRoleController;
@@ -45,4 +46,8 @@ Route::prefix('/bedehi')->group(function () {
 
 Route::prefix('api/agencies')->group(function(){
     Route::get('{type?}', [AgencyListController::class, 'getValidAgencies']);
+});
+
+Route::name('query.')->prefix('query')->group(function(){
+    Route::get('agency-editor', [QueryController::class, 'agencyEditor'])->name('agencyEditor');
 });

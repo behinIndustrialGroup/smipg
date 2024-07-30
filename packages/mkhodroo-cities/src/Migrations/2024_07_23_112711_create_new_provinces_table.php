@@ -13,10 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        // Schema::table('cities', function (Blueprint $table) {
-        //     $table->string('latitude')->default(null)->change();
-        //     $table->string('longitude')->default(null)->change();
-        // });
+        Schema::create('new_provinces', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -26,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('new_provinces');
     }
 };

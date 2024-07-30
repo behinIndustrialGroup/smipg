@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Mkhodroo\AgencyInfo\Models\AgencyInfo;
 use Mkhodroo\Cities\Controllers\CityController;
+use Mkhodroo\Cities\Models\NewProvince;
 use Mkhodroo\DateConvertor\Controllers\SDate;
 
 class AgencyListController extends Controller
@@ -18,8 +19,10 @@ class AgencyListController extends Controller
     {
         // return AgencyInfo::groupBy('key')->pluck('key')->toArray();
         // return self::getKeys();
+        $provinces = NewProvince::all();
         return view('AgencyView::list')->with([
-            'cols' => self::getKeys()
+            'cols' => self::getKeys(),
+            'provinces' => $provinces
         ]);
     }
 
@@ -37,22 +40,55 @@ class AgencyListController extends Controller
         ];
     }
     public static function filterList(Request $r)
-    {   
-        
+    {
+
         $main_field = config('agency_info.main_field_name');
-        if($r->field_value === null and $r->$main_field === null){
-            $agencies =  AgencyInfo::where('parent_id', DB::raw('id'))->get();
-        }else{
-            if($r->field_value == null){
-                $agencies =  AgencyInfo::where('value', $r->$main_field)->groupBy('parent_id')->get();
-            }
-            elseif($r->$main_field == null){
-                $agencies =  AgencyInfo::where('value', 'like', "%". $r->field_value. "%")->groupBy('parent_id')->get();
-            }else{
-                $parent_ids =  AgencyInfo::where('value', 'like', "%". $r->field_value. "%")->groupBy('parent_id')->pluck('parent_id');
-                $agencies = AgencyInfo::whereIn('id', $parent_ids)->where('value', $r->$main_field)->groupBy('parent_id')->get();
-            }
+        $agencies = AgencyInfo::get();
+        $parent_ids = [];
+        if($r->$main_field){
+            $parent_ids[] = AgencyInfo::where('key', $main_field)->where('value', $r->$main_field)->pluck('parent_id')->toArray();
+            // $parent_ids = array_merge($parent_ids, $a);
+            
         }
+        if($r->province){
+            $parent_ids[] = AgencyInfo::where('key', 'province')->where('value', $r->province)->pluck('parent_id')->toArray();
+            // $parent_ids = array_merge($parent_ids, $a);
+        }
+        if($r->field_value){
+            $parent_ids[] = AgencyInfo::where('value' , 'like', "%". $r->field_value. "%")->pluck('parent_id')->toArray();
+            // $parent_ids = array_merge($parent_ids, $a);
+            
+        }
+        $count = count($parent_ids);
+        if($count === 3){
+            $parent_ids = array_intersect($parent_ids[0], $parent_ids[1], $parent_ids[2]);
+        }
+        if($count === 2){
+            $parent_ids = array_intersect($parent_ids[0], $parent_ids[1]);
+        }
+        if($count === 1){
+            $parent_ids = $parent_ids[0];
+        }
+        $agencies = AgencyInfo::whereIn('id', $parent_ids)->groupBy('parent_id')->get();
+        // return $agencies;
+
+
+        // if($r->field_value === null and $r->$main_field === null){
+        //     $agencies =  AgencyInfo::where('parent_id', DB::raw('id'))->get();
+        // }else{
+        //     if($r->field_value == null and $r->province == null){
+        //         $agencies =  AgencyInfo::where('value', $r->$main_field)->groupBy('parent_id')->get();
+        //     }
+        //     elseif($r->$main_field == null and $r->province == null){
+        //         $agencies =  AgencyInfo::where('value', 'like', "%". $r->field_value. "%")->groupBy('parent_id')->get();
+        //     }
+        //     elseif($r->$main_field == null and $r->field_value == null){
+        //         $agencies =  AgencyInfo::where('value', $r->province)->groupBy('parent_id')->get();
+        //     }else{
+        //         $parent_ids =  AgencyInfo::where('value', 'like', "%". $r->field_value. "%")->groupBy('parent_id')->pluck('parent_id');
+        //         $agencies = AgencyInfo::whereIn('id', $parent_ids)->where('value', $r->$main_field)->where('value', $r->province)->groupBy('parent_id')->get();
+        //     }
+        // }
         $key_indexes = explode(',', $r->cols);
         $agencies =  $agencies->each(function ($agency) use($key_indexes) {
             $agency = self::makeCustomFields($agency, $key_indexes);
