@@ -67,7 +67,8 @@ return [
                 'guild_number' => ['type' => 'text', 'default' => '', 'required' => false],
                 'issued_date' => ['type' => 'text', 'default' => '', 'required' => false],
                 'guild_or_legal_name' => ['type' => 'text', 'default' => '', 'required' => false],
-                'province' => ['type' => 'select', 'default' => '', 'options' => '', 'option-url' => 'city.all'],
+                'province' => ['type' => 'select', 'default' => '', 'options' => '', 'option-url' => 'province.all'],
+                'city' => ['type' => 'select', 'options' => '', 'option-url' => 'city.all'],
                 'status' => ['type' => 'text', 'default' => '', 'disabled' => true],
                 'new_status' => [
                     'type' => 'select',
@@ -279,7 +280,8 @@ return [
                 'guild_number' => ['type' => 'text', 'default' => '', 'required' => false],
                 'issued_date' => ['type' => 'text', 'default' => '', 'required' => false],
                 'guild_or_legal_name' => ['type' => 'text', 'default' => '', 'required' => false],
-                'province' => ['type' => 'select', 'default' => '', 'options' => '', 'option-url' => 'city.all'],
+                'province' => ['type' => 'select', 'default' => '', 'options' => '', 'option-url' => 'province.all'],
+                'city' => ['type' => 'select', 'options' => '', 'option-url' => 'city.all'],
                 'status' => ['type' => 'text', 'default' => '', 'disabled' => true],
                 'new_status' => [
                     'type' => 'select',
@@ -491,7 +493,8 @@ return [
                 'guild_number' => ['type' => 'text', 'default' => '', 'required' => false],
                 'issued_date' => ['type' => 'text', 'default' => '', 'required' => false],
                 'guild_or_legal_name' => ['type' => 'text', 'default' => '', 'required' => false],
-                'province' => ['type' => 'select', 'default' => '', 'options' => '', 'option-url' => 'city.all'],
+                'province' => ['type' => 'select', 'default' => '', 'options' => '', 'option-url' => 'province.all'],
+                'city' => ['type' => 'select', 'options' => '', 'option-url' => 'city.all'],
                 'status' => ['type' => 'text', 'default' => '', 'disabled' => true],
                 'new_status' => [
                     'type' => 'select',
@@ -703,7 +706,8 @@ return [
                 'guild_number' => ['type' => 'text', 'default' => '', 'required' => false],
                 'issued_date' => ['type' => 'text', 'default' => '', 'required' => false],
                 'guild_or_legal_name' => ['type' => 'text', 'default' => '', 'required' => false],
-                'province' => ['type' => 'select', 'default' => '', 'options' => '', 'option-url' => 'city.all'],
+                'province' => ['type' => 'select', 'default' => '', 'options' => '', 'option-url' => 'province.all'],
+                'city' => ['type' => 'select', 'options' => '', 'option-url' => 'city.all'],
                 'status' => ['type' => 'text', 'default' => '', 'disabled' => true],
                 'new_status' => [
                     'type' => 'select',
@@ -916,7 +920,8 @@ return [
                 'guild_number' => ['type' => 'text', 'default' => '', 'required' => false],
                 'issued_date' => ['type' => 'text', 'default' => '', 'required' => false],
                 'guild_or_legal_name' => ['type' => 'text', 'default' => '', 'required' => false],
-                'province' => ['type' => 'select', 'default' => '', 'options' => '', 'option-url' => 'city.all'],
+                'province' => ['type' => 'select', 'default' => '', 'options' => '', 'option-url' => 'province.all'],
+                'city' => ['type' => 'select', 'options' => '', 'option-url' => 'city.all'],
                 'status' => ['type' => 'text', 'default' => '', 'disabled' => true],
                 'new_status' => [
                     'type' => 'select',
@@ -1129,7 +1134,8 @@ return [
                 'guild_number' => ['type' => 'text', 'default' => '', 'required' => false],
                 'issued_date' => ['type' => 'text', 'default' => '', 'required' => false],
                 'guild_or_legal_name' => ['type' => 'text', 'default' => '', 'required' => false],
-                'province' => ['type' => 'select', 'default' => '', 'options' => '', 'option-url' => 'city.all'],
+                'province' => ['type' => 'select', 'default' => '', 'options' => '', 'option-url' => 'province.all'],
+                'city' => ['type' => 'select', 'options' => '', 'option-url' => 'city.all'],
                 'status' => ['type' => 'text', 'default' => '', 'disabled' => true],
                 'new_status' => [
                     'type' => 'select',
@@ -1341,7 +1347,8 @@ return [
                 'guild_number' => ['type' => 'text', 'default' => '', 'required' => false],
                 'issued_date' => ['type' => 'text', 'default' => '', 'required' => false],
                 'guild_or_legal_name' => ['type' => 'text', 'default' => '', 'required' => false],
-                'province' => ['type' => 'select', 'default' => '', 'options' => '', 'option-url' => 'city.all'],
+                'province' => ['type' => 'select', 'default' => '', 'options' => '', 'option-url' => 'province.all'],
+                'city' => ['type' => 'select', 'options' => '', 'option-url' => 'city.all'],
                 'status' => ['type' => 'text', 'default' => '', 'disabled' => true],
                 'new_status' => [
                     'type' => 'select',
