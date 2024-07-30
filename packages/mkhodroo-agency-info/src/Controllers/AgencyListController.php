@@ -30,7 +30,7 @@ class AgencyListController extends Controller
     public static function getKeys(){
         $keys = AgencyInfo::groupBy('key')->pluck('key');
         // $keys[] = 'province';
-        $keys[] = 'city';
+        // $keys[] = 'city';
         return $keys;
     }
 
