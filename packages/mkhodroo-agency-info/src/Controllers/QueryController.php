@@ -5,6 +5,8 @@ namespace Mkhodroo\AgencyInfo\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Log;
 use Mkhodroo\AgencyInfo\Models\AgencyInfo;
+use Mkhodroo\Cities\Controllers\CityController;
+use Mkhodroo\Cities\Controllers\ProvinceController;
 use Mkhodroo\Cities\Models\City;
 use Mkhodroo\Cities\Models\NewProvince;
 
@@ -12,7 +14,10 @@ class QueryController extends Controller
 {
     public static function agencyEditor()
     {
-        return self::editProvinceToCity();
+        self::editProvinceToCity();
+        self::createProvince();
+        // 
+
         // $cities = City::all()->groupBy('province');
         // foreach($cities as $province => $city){
         //     NewProvince::create([
@@ -49,6 +54,24 @@ class QueryController extends Controller
                 'parent_id' => $province->parent_id
             ]);
             // return $province;
+        }
+    }
+
+    public static function createProvince(){
+        $provinces = AgencyInfo::where('key', 'province')->get();
+        foreach($provinces as $province){
+            $p_name = CityController::getById($province->value)?->province;
+            $pr = ProvinceController::create($p_name);
+            if(!AgencyInfo::where('key', 'new_province')->where('parent_id', $province->parent_id)->first()){
+                AgencyInfo::create([
+                    'key' => 'new_province',
+                    'value' => $pr->id,
+                    'parent_id' => $province->parent_id
+                ]);
+                echo $pr->id. "<br>";
+
+            }
+            
         }
     }
 }
