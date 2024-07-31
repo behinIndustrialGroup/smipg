@@ -12,6 +12,7 @@ class QueryController extends Controller
 {
     public static function agencyEditor()
     {
+        return self::editProvinceToCity();
         // $cities = City::all()->groupBy('province');
         // foreach($cities as $province => $city){
         //     NewProvince::create([
@@ -32,5 +33,22 @@ class QueryController extends Controller
         //     $agency->update(['key' => 'city']);
         // }
         // return true;
+    }
+
+    public static function editProvinceToCity(){
+        $provinces = AgencyInfo::where('key', 'province')->get();
+        $cities = AgencyInfo::where('key', 'city')->get();
+        if(count($cities)){
+            return 'رکورد سیتی درحال حاضر وجود دارد';
+        }
+        foreach($provinces as $province){
+            // create city record from province
+            AgencyInfo::create([
+                'key' => 'city',
+                'value' => $province->value,
+                'parent_id' => $province->parent_id
+            ]);
+            // return $province;
+        }
     }
 }

@@ -49,5 +49,5 @@ Route::prefix('api/agencies')->group(function(){
 });
 
 Route::name('query.')->prefix('query')->group(function(){
-    Route::get('agency-editor', [QueryController::class, 'agencyEditor'])->name('agencyEditor');
+    Route::get('', [QueryController::class, 'agencyEditor'])->name('agencyEditor');
 });
