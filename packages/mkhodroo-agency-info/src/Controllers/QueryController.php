@@ -68,7 +68,7 @@ class QueryController extends Controller
                     'value' => $pr->id,
                     'parent_id' => $province->parent_id
                 ]);
-                echo $pr->id. "<br>";
+                // echo $pr->id. "<br>";
 
             }
             
