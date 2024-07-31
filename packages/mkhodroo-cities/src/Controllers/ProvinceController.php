@@ -15,4 +15,16 @@ class ProvinceController extends Controller
     public static function getById($id){
         return NewProvince::find($id);
     }
+
+
+    public static function create($province_name){
+        return NewProvince::updateOrCreate(
+            [
+                'name' => $province_name
+            ], 
+            [
+
+            ]
+        );
+    }
 }
