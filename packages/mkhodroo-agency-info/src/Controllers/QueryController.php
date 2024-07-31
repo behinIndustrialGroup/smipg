@@ -14,8 +14,10 @@ class QueryController extends Controller
 {
     public static function agencyEditor()
     {
-        self::editProvinceToCity();
-        self::createProvince();
+        // self::editProvinceToCity();
+        // self::createProvince();
+        self::convertProvinceToOldProvince();
+        self::convertNewProvinceToProvince();
         // 
 
         // $cities = City::all()->groupBy('province');
@@ -72,6 +74,22 @@ class QueryController extends Controller
 
             }
             
+        }
+    }
+
+    public static function convertProvinceToOldProvince(){
+        $provinces = AgencyInfo::where('key', 'province')->get();
+        foreach($provinces as $province){
+            $province->key = 'old_province';
+            $province->save();
+        }
+    }
+
+    public static function convertNewProvinceToProvince(){
+        $provinces = AgencyInfo::where('key', 'new_province')->get();
+        foreach($provinces as $province){
+            $province->key = 'province';
+            $province->save();
         }
     }
 }
