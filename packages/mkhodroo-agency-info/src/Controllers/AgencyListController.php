@@ -102,9 +102,9 @@ class AgencyListController extends Controller
         foreach($cols as $key_index){
             $key = $keys[$key_index];
             if($key === 'province'){
-                $agency->$key = ProvinceController::getById(GetAgencyController::getByKey($agency->parent_id, $key)?->value)?->name;
+                $agency->$key = CityController::getById(GetAgencyController::getByKey($agency->parent_id, $key)?->value)?->province;
             }elseif($key === 'city'){
-                $agency->$key = CityController::getById(GetAgencyController::getByKey($agency->parent_id, 'city')?->value)?->city;
+                $agency->$key = CityController::getById(GetAgencyController::getByKey($agency->parent_id, 'province')?->value)?->city;
             }else{
                 $agency->$key = __(GetAgencyController::getByKey($agency->parent_id, $key)?->value);
             }
