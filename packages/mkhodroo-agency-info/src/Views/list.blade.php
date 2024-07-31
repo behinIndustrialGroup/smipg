@@ -18,7 +18,7 @@
                             @endforeach
                         </select>
                     </td>
-                    <td>استان</td>
+                    {{-- <td>استان</td>
                     <td>
                         <select name="province_search" id="" class="form-control">
                             <option value="">{{ __('All') }}</option>
@@ -26,7 +26,7 @@
                                 <option value="{{ $province->id }}">{{ $province->name }}</option>
                             @endforeach
                         </select>
-                    </td>
+                    </td> --}}
                     <td>
                         <input type="text" name="field_value" id="" class="form-control"
                             placeholder="{{ __('Everything') }}">
