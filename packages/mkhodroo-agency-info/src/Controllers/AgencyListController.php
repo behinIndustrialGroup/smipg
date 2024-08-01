@@ -43,11 +43,12 @@ class AgencyListController extends Controller
     public static function filterList(Request $r)
     {
 
-        $main_field = config('agency_info.main_field_name'). "_search";
+        $main_field_search = config('agency_info.main_field_name'). "_search";
+        $main_field = config('agency_info.main_field_name');
         $agencies = AgencyInfo::get();
         $parent_ids = [];
-        if($r->$main_field){
-            $parent_ids[] = AgencyInfo::where('key', $main_field)->where('value', $r->$main_field)->pluck('parent_id')->toArray();
+        if($r->$main_field_search){
+            $parent_ids[] = AgencyInfo::where('key', $main_field)->where('value', $r->$main_field_search)->pluck('parent_id')->toArray();
             // $parent_ids = array_merge($parent_ids, $a);
             
         }
