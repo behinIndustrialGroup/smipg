@@ -51,19 +51,15 @@ class AgencyListController extends Controller
         $parent_ids = [];
         if($r->$main_field_search){
             $parent_ids[] = AgencyInfo::where('key', $main_field)->where('value', $r->$main_field_search)->pluck('parent_id')->toArray();
-            // $parent_ids = array_merge($parent_ids, $a);
-            
         }
         if($r->province_search){
             $parent_ids[] = AgencyInfo::where('key', 'province')->where('value', $r->province_search)->pluck('parent_id')->toArray();
-            // $parent_ids = array_merge($parent_ids, $a);
         }
         if($r->last_referral_search){
             $parent_ids[] = AgencyInfo::where('key', 'last_referral')->where('value', $r->last_referral_search)->pluck('parent_id')->toArray();
         }
         if($r->field_value){
             $parent_ids[] = AgencyInfo::where('value' , 'like', "%". $r->field_value. "%")->pluck('parent_id')->toArray();
-            // $parent_ids = array_merge($parent_ids, $a);
             
         }
         $count = count($parent_ids);
