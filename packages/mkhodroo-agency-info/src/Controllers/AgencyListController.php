@@ -21,9 +21,11 @@ class AgencyListController extends Controller
         // return AgencyInfo::groupBy('key')->pluck('key')->toArray();
         // return self::getKeys();
         $provinces = NewProvince::all();
+        $last_referrals = GetAgencyController::getUniqueValueOfKey('last_referral');
         return view('AgencyView::list')->with([
             'cols' => self::getKeys(),
-            'provinces' => $provinces
+            'provinces' => $provinces,
+            'last_refferals' => $last_referrals
         ]);
     }
 
@@ -56,41 +58,27 @@ class AgencyListController extends Controller
             $parent_ids[] = AgencyInfo::where('key', 'province')->where('value', $r->province_search)->pluck('parent_id')->toArray();
             // $parent_ids = array_merge($parent_ids, $a);
         }
+        if($r->last_referral_search){
+            $parent_ids[] = AgencyInfo::where('key', 'last_referral')->where('value', $r->last_referral_search)->pluck('parent_id')->toArray();
+        }
         if($r->field_value){
             $parent_ids[] = AgencyInfo::where('value' , 'like', "%". $r->field_value. "%")->pluck('parent_id')->toArray();
             // $parent_ids = array_merge($parent_ids, $a);
             
         }
         $count = count($parent_ids);
-        if($count === 3){
-            $parent_ids = array_intersect($parent_ids[0], $parent_ids[1], $parent_ids[2]);
-        }
-        if($count === 2){
-            $parent_ids = array_intersect($parent_ids[0], $parent_ids[1]);
+        if($count > 1){
+            $intersects = $parent_ids[0];
+            foreach($parent_ids as $parent_id){
+                $intersects = array_intersect($intersects, $parent_id);
+            }
+            $parent_ids = $intersects;
         }
         if($count === 1){
             $parent_ids = $parent_ids[0];
         }
         $agencies = AgencyInfo::whereIn('id', $parent_ids)->groupBy('parent_id')->get();
-        // return $agencies;
-
-
-        // if($r->field_value === null and $r->$main_field === null){
-        //     $agencies =  AgencyInfo::where('parent_id', DB::raw('id'))->get();
-        // }else{
-        //     if($r->field_value == null and $r->province == null){
-        //         $agencies =  AgencyInfo::where('value', $r->$main_field)->groupBy('parent_id')->get();
-        //     }
-        //     elseif($r->$main_field == null and $r->province == null){
-        //         $agencies =  AgencyInfo::where('value', 'like', "%". $r->field_value. "%")->groupBy('parent_id')->get();
-        //     }
-        //     elseif($r->$main_field == null and $r->field_value == null){
-        //         $agencies =  AgencyInfo::where('value', $r->province)->groupBy('parent_id')->get();
-        //     }else{
-        //         $parent_ids =  AgencyInfo::where('value', 'like', "%". $r->field_value. "%")->groupBy('parent_id')->pluck('parent_id');
-        //         $agencies = AgencyInfo::whereIn('id', $parent_ids)->where('value', $r->$main_field)->where('value', $r->province)->groupBy('parent_id')->get();
-        //     }
-        // }
+        
         $key_indexes = explode(',', $r->cols);
         $agencies =  $agencies->each(function ($agency) use($key_indexes) {
             $agency = self::makeCustomFields($agency, $key_indexes);

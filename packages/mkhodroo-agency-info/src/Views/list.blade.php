@@ -36,6 +36,19 @@
                         </div>
                     </div>
                     <div class="col-sm-3 row">
+                        <div class="col-sm-4">
+                            {{__('last referal')}}
+                        </div>
+                        <div class="col-sm-8">
+                            <select name="last_referral_search" id="" class="form-control col-sm-12">
+                                <option value="">{{ __('All') }}</option>
+                                @foreach ($last_refferals as $last_refferal)
+                                    <option value="{{ $last_refferal->value }}">{{ $last_refferal->value }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 row">
                         <div class="-col-sm-8">
                             <input type="text" name="field_value" id="" class="form-control col-sm-12"
                             placeholder="{{ __('Everything') }}">
