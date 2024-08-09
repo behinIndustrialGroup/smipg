@@ -1,6 +1,7 @@
+<button type="button" class="btn-close border-0 bg-transparent" style="font-size:32px" data-dismiss="modal" aria-label="Close">&times;</button>
 <div class="row">
     <div class="col-sm-4">
-        {{ $ticket->user()->display_name }} <br>
+        {{ $ticket->user()->name }} @if($ticket->user()->role_id == config('user_profile.agency_role')) <i style="color:royalblue" class="fa fa-check-circle"></i> @endif <br>
         شماره همراه: {{ $ticket->user()->email ?? '' }}
     </div>
     <div class="row col-sm-8">
@@ -12,6 +13,7 @@
             </div>
         @endforeach
     </div>
+    @include('ATView::partial-view.score', ['ticket_id' => $ticket->ticket_id])
 </div>
 <hr>
 <div class="direct-chat-messages" style="height: 500px">
@@ -29,7 +31,10 @@
                 </div>
 
                 <hr>
-                {{ $comment->text ?? '' }} <br>
+                <p style="white-space: pre-line">
+                    {{ $comment->text ?? '' }}
+                </p>
+                <br>
                 @empty(!$comment->voice)
                     <div class="green-player">
                         <audio controls>
@@ -38,8 +43,9 @@
                         </audio>
                     </div>
                 @endempty
-                @foreach ($comment->attachments() as $attach)
-                    <a href="{{ url("$attach->file") }}" target="_blank">پیوست</a>
+                @foreach ($comment->attachments() as $index => $attach)
+                    <a href="{{ url("$attach->file") }}" target="_blank">پیوست {{ $index + 1 }}</a>
+                    <br>
                 @endforeach
 
             </div>
