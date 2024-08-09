@@ -42,8 +42,21 @@
                         <div class="col-sm-8">
                             <select name="last_referral_search" id="" class="form-control col-sm-12">
                                 <option value="">{{ __('All') }}</option>
-                                @foreach ($last_refferals as $last_refferal)
+                                @foreach ($last_referrals as $last_refferal)
                                     <option value="{{ $last_refferal->value }}">{{ $last_refferal->value }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 row">
+                        <div class="col-sm-4">
+                            {{__('new status')}}
+                        </div>
+                        <div class="col-sm-8">
+                            <select name="new_status_search" id="" class="form-control col-sm-12">
+                                <option value="">{{ __('All') }}</option>
+                                @foreach ($new_statuses as $new_status)
+                                    <option value="{{ $new_status->value }}">{{ $new_status->value }}</option>
                                 @endforeach
                             </select>
                         </div>

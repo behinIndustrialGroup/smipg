@@ -59,7 +59,7 @@
                     console.log(res);
                     show_message("{{ __('Edited') }}");
                     open_edit_form(res.parent_id, '{{ $tab_name }}-info')
-                    filter()
+                    filter();
                 }
             )
         }
