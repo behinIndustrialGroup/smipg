@@ -100,7 +100,7 @@ return [
                     'type' => 'select',
                     'default' => '',
                     'options' => [
-                        ['value' => 'یگانگی', 'label' => 'باباپور'],
+                        ['value' => 'باباپور', 'label' => 'باباپور'],
                         ['value' => 'حیدری', 'label' => 'حیدری'],
                         ['value' => 'نعمتی', 'label' => 'کریمیان'],
                         ['value' => 'مقدسی', 'label' => 'مقدسی'],
@@ -313,7 +313,7 @@ return [
                     'type' => 'select',
                     'default' => '',
                     'options' => [
-                        ['value' => 'یگانگی', 'label' => 'باباپور'],
+                        ['value' => 'باباپور', 'label' => 'باباپور'],
                         ['value' => 'حیدری', 'label' => 'حیدری'],
                         ['value' => 'نعمتی', 'label' => 'کریمیان'],
                         ['value' => 'مقدسی', 'label' => 'مقدسی'],
@@ -527,7 +527,7 @@ return [
                     'type' => 'select',
                     'default' => '',
                     'options' => [
-                        ['value' => 'یگانگی', 'label' => 'باباپور'],
+                        ['value' => 'باباپور', 'label' => 'باباپور'],
                         ['value' => 'حیدری', 'label' => 'حیدری'],
                         ['value' => 'نعمتی', 'label' => 'کریمیان'],
                         ['value' => 'مقدسی', 'label' => 'مقدسی'],
@@ -740,7 +740,7 @@ return [
                     'type' => 'select',
                     'default' => '',
                     'options' => [
-                        ['value' => 'یگانگی', 'label' => 'باباپور'],
+                        ['value' => 'باباپور', 'label' => 'باباپور'],
                         ['value' => 'حیدری', 'label' => 'حیدری'],
                         ['value' => 'نعمتی', 'label' => 'کریمیان'],
                         ['value' => 'مقدسی', 'label' => 'مقدسی'],
@@ -954,7 +954,7 @@ return [
                     'type' => 'select',
                     'default' => '',
                     'options' => [
-                        ['value' => 'یگانگی', 'label' => 'باباپور'],
+                        ['value' => 'باباپور', 'label' => 'باباپور'],
                         ['value' => 'حیدری', 'label' => 'حیدری'],
                         ['value' => 'نعمتی', 'label' => 'کریمیان'],
                         ['value' => 'مقدسی', 'label' => 'مقدسی'],
@@ -1168,7 +1168,7 @@ return [
                     'type' => 'select',
                     'default' => '',
                     'options' => [
-                        ['value' => 'یگانگی', 'label' => 'باباپور'],
+                        ['value' => 'باباپور', 'label' => 'باباپور'],
                         ['value' => 'حیدری', 'label' => 'حیدری'],
                         ['value' => 'نعمتی', 'label' => 'کریمیان'],
                         ['value' => 'مقدسی', 'label' => 'مقدسی'],
@@ -1381,7 +1381,7 @@ return [
                     'type' => 'select',
                     'default' => '',
                     'options' => [
-                        ['value' => 'یگانگی', 'label' => 'باباپور'],
+                        ['value' => 'باباپور', 'label' => 'باباپور'],
                         ['value' => 'حیدری', 'label' => 'حیدری'],
                         ['value' => 'نعمتی', 'label' => 'کریمیان'],
                         ['value' => 'مقدسی', 'label' => 'مقدسی'],
