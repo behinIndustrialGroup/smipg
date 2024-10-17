@@ -15,12 +15,12 @@ class AgencyController extends Controller
         $prefix = "user_docs";
         $user_dir = $prefix . "/u_" . $id ."/";
 
-        //create user directory 
+        //create user directory
         $full_path = public_path($user_dir);
         if ( !is_dir($full_path)) {
             mkdir($full_path);
         }
-        
+
         if($type === 'doc'){
             return $user_dir. config('agency_info.doc_uploads') ;
         }
@@ -126,7 +126,7 @@ class AgencyController extends Controller
     public static function foremanEdit(Request $r)
     {
         $agency_fields =  AgencyInfo::where('parent_id', $r->id)->get();
-        
+
         $data = $r->except('id');
         foreach ($data as $key => $value) {
             //files

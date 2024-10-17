@@ -198,6 +198,7 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
         ),
         'E' => 
         array (
+            'ExcelReader\\' => 12,
             'Egulias\\EmailValidator\\' => 23,
         ),
         'D' => 
@@ -643,6 +644,10 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
         'Faker\\' => 
         array (
             0 => __DIR__ . '/..' . '/fakerphp/faker/src/Faker',
+        ),
+        'ExcelReader\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/packages/behin-excel-reader/src',
         ),
         'Egulias\\EmailValidator\\' => 
         array (
@@ -1207,6 +1212,9 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
         'Egulias\\EmailValidator\\Warning\\QuotedString' => __DIR__ . '/..' . '/egulias/email-validator/src/Warning/QuotedString.php',
         'Egulias\\EmailValidator\\Warning\\TLD' => __DIR__ . '/..' . '/egulias/email-validator/src/Warning/TLD.php',
         'Egulias\\EmailValidator\\Warning\\Warning' => __DIR__ . '/..' . '/egulias/email-validator/src/Warning/Warning.php',
+        'ExcelReader\\Controllers\\ExcelController' => __DIR__ . '/../..' . '/packages/behin-excel-reader/src/Controllers/ExcelController.php',
+        'ExcelReader\\Controllers\\ExcelReader' => __DIR__ . '/../..' . '/packages/behin-excel-reader/src/Controllers/ExcelReader.php',
+        'ExcelReader\\ExcelReaderServiceProvider' => __DIR__ . '/../..' . '/packages/behin-excel-reader/src/ExcelReaderServiceProvider.php',
         'Faker\\Calculator\\Ean' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/Calculator/Ean.php',
         'Faker\\Calculator\\Iban' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/Calculator/Iban.php',
         'Faker\\Calculator\\Inn' => __DIR__ . '/..' . '/fakerphp/faker/src/Faker/Calculator/Inn.php',
@@ -4003,6 +4011,8 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
         'Mkhodroo\\AgencyInfo\\Controllers\\FileController' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/Controllers/FileController.php',
         'Mkhodroo\\AgencyInfo\\Controllers\\GetAgencyController' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/Controllers/GetAgencyController.php',
         'Mkhodroo\\AgencyInfo\\Controllers\\HtmlCreatorController' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/Controllers/HtmlCreatorController.php',
+        'Mkhodroo\\AgencyInfo\\Controllers\\LastActionController' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/Controllers/LastActionController.php',
+        'Mkhodroo\\AgencyInfo\\Controllers\\QueryController' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/Controllers/QueryController.php',
         'Mkhodroo\\AgencyInfo\\Controllers\\SaveInfoController' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/Controllers/SaveInfoController.php',
         'Mkhodroo\\AgencyInfo\\Models\\AgencyDebtPayment' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/Models/AgencyDebtPayment.php',
         'Mkhodroo\\AgencyInfo\\Models\\AgencyInfo' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/Models/AgencyInfo.php',
@@ -4011,6 +4021,7 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
         'Mkhodroo\\AltfuelTicket\\AltfuelTicketServiceProvider' => __DIR__ . '/../..' . '/packages/altfuel-ticket/src/AltfuelTicketServiceProvider.php',
         'Mkhodroo\\AltfuelTicket\\Controllers\\AddTicketCommentAttachmentController' => __DIR__ . '/../..' . '/packages/altfuel-ticket/src/Controllers/AddTicketCommentAttachmentController.php',
         'Mkhodroo\\AltfuelTicket\\Controllers\\AddTicketCommentController' => __DIR__ . '/../..' . '/packages/altfuel-ticket/src/Controllers/AddTicketCommentController.php',
+        'Mkhodroo\\AltfuelTicket\\Controllers\\CatagoryController' => __DIR__ . '/../..' . '/packages/altfuel-ticket/src/Controllers/CatagoryController.php',
         'Mkhodroo\\AltfuelTicket\\Controllers\\CommentAttachmentController' => __DIR__ . '/../..' . '/packages/altfuel-ticket/src/Controllers/CommentAttachmentController.php',
         'Mkhodroo\\AltfuelTicket\\Controllers\\CommentVoiceController' => __DIR__ . '/../..' . '/packages/altfuel-ticket/src/Controllers/CommentVoiceController.php',
         'Mkhodroo\\AltfuelTicket\\Controllers\\CreateTicketController' => __DIR__ . '/../..' . '/packages/altfuel-ticket/src/Controllers/CreateTicketController.php',
@@ -4027,7 +4038,11 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
         'Mkhodroo\\AltfuelTicket\\Requests\\TicketRequest' => __DIR__ . '/../..' . '/packages/altfuel-ticket/src/Requests/TicketRequest.php',
         'Mkhodroo\\Cities\\CityProvider' => __DIR__ . '/../..' . '/packages/mkhodroo-cities/src/CityProvider.php',
         'Mkhodroo\\Cities\\Controllers\\CityController' => __DIR__ . '/../..' . '/packages/mkhodroo-cities/src/Controllers/CityController.php',
+        'Mkhodroo\\Cities\\Controllers\\CityViewController' => __DIR__ . '/../..' . '/packages/mkhodroo-cities/src/Controllers/CityViewController.php',
+        'Mkhodroo\\Cities\\Controllers\\ProvinceController' => __DIR__ . '/../..' . '/packages/mkhodroo-cities/src/Controllers/ProvinceController.php',
         'Mkhodroo\\Cities\\Models\\City' => __DIR__ . '/../..' . '/packages/mkhodroo-cities/src/Models/City.php',
+        'Mkhodroo\\Cities\\Models\\NewProvince' => __DIR__ . '/../..' . '/packages/mkhodroo-cities/src/Models/NewProvince.php',
+        'Mkhodroo\\Cities\\Models\\Province' => __DIR__ . '/../..' . '/packages/mkhodroo-cities/src/Models/Province.php',
         'Mkhodroo\\CorrespondenceSystem\\Controllers\\ActivityController' => __DIR__ . '/../..' . '/packages/mkhodroo-correspondence-system/src/Controllers/ActivityController.php',
         'Mkhodroo\\CorrespondenceSystem\\Controllers\\AttachmentController' => __DIR__ . '/../..' . '/packages/mkhodroo-correspondence-system/src/Controllers/AttachmentController.php',
         'Mkhodroo\\CorrespondenceSystem\\Controllers\\BodyController' => __DIR__ . '/../..' . '/packages/mkhodroo-correspondence-system/src/Controllers/BodyController.php',
@@ -4089,7 +4104,6 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
         'Mkhodroo\\MkhodrooProcessMaker\\Models\\PMVacation' => __DIR__ . '/../..' . '/packages/mkhodroo-process-maker/src/Models/PMVacation.php',
         'Mkhodroo\\MkhodrooProcessMaker\\Models\\PMVariable' => __DIR__ . '/../..' . '/packages/mkhodroo-process-maker/src/Models/PMVariable.php',
         'Mkhodroo\\Nerkhnameh\\Controllers\\DownloadNerkhnamehController' => __DIR__ . '/../..' . '/packages/nerkhnameh/src/Controllers/DownloadNerkhnamehController.php',
-        'Mkhodroo\\Nerkhnameh\\Controllers\\EditInfoValidationController' => __DIR__ . '/../..' . '/packages/nerkhnameh/src/Controllers/EditInfoValidationController.php',
         'Mkhodroo\\Nerkhnameh\\Controllers\\EditRequestController' => __DIR__ . '/../..' . '/packages/nerkhnameh/src/Controllers/EditRequestController.php',
         'Mkhodroo\\Nerkhnameh\\Controllers\\NerkhnamehRegistrationInfoController' => __DIR__ . '/../..' . '/packages/nerkhnameh/src/Controllers/NerkhnamehRegistrationInfoController.php',
         'Mkhodroo\\Nerkhnameh\\Controllers\\QrCodeController' => __DIR__ . '/../..' . '/packages/nerkhnameh/src/Controllers/QrCodeController.php',
@@ -4101,10 +4115,12 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
         'Mkhodroo\\UserRoles\\Controllers\\AccessController' => __DIR__ . '/../..' . '/packages/mkhodroo-user-roles/src/Controllers/AccessController.php',
         'Mkhodroo\\UserRoles\\Controllers\\GetMethodsController' => __DIR__ . '/../..' . '/packages/mkhodroo-user-roles/src/Controllers/GetMethodsController.php',
         'Mkhodroo\\UserRoles\\Controllers\\GetRoleController' => __DIR__ . '/../..' . '/packages/mkhodroo-user-roles/src/Controllers/GetRoleController.php',
+        'Mkhodroo\\UserRoles\\Controllers\\UserController' => __DIR__ . '/../..' . '/packages/mkhodroo-user-roles/src/Controllers/UserController.php',
         'Mkhodroo\\UserRoles\\Middlewares\\Access' => __DIR__ . '/../..' . '/packages/mkhodroo-user-roles/src/Middlewares/Access.php',
         'Mkhodroo\\UserRoles\\Models\\Access' => __DIR__ . '/../..' . '/packages/mkhodroo-user-roles/src/Models/Access.php',
         'Mkhodroo\\UserRoles\\Models\\Method' => __DIR__ . '/../..' . '/packages/mkhodroo-user-roles/src/Models/Method.php',
         'Mkhodroo\\UserRoles\\Models\\Role' => __DIR__ . '/../..' . '/packages/mkhodroo-user-roles/src/Models/Role.php',
+        'Mkhodroo\\UserRoles\\Models\\User' => __DIR__ . '/../..' . '/packages/mkhodroo-user-roles/src/Models/User.php',
         'Mkhodroo\\UserRoles\\UserRolesServiceProvider' => __DIR__ . '/../..' . '/packages/mkhodroo-user-roles/src/UserRolesServiceProvider.php',
         'Mockery\\Adapter\\Phpunit\\MockeryPHPUnitIntegration' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Adapter/Phpunit/MockeryPHPUnitIntegration.php',
         'Mockery\\Adapter\\Phpunit\\MockeryPHPUnitIntegrationAssertPostConditions' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Adapter/Phpunit/MockeryPHPUnitIntegrationAssertPostConditions.php',

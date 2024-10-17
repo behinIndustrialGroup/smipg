@@ -16,12 +16,18 @@ class ProvinceController extends Controller
         return NewProvince::find($id);
     }
 
+    public static function getByName($province){
+        return NewProvince::where('name', $province)->firstOrCreate([
+            'name' => $province
+        ]);
+    }
+
 
     public static function create($province_name){
         return NewProvince::updateOrCreate(
             [
                 'name' => $province_name
-            ], 
+            ],
             [
 
             ]

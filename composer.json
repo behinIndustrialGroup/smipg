@@ -44,7 +44,8 @@
             "Mkhodroo\\CorrespondenceSystem\\": "packages/mkhodroo-correspondence-system/src",
             "Mkhodroo\\Nerkhnameh\\": "packages/nerkhnameh/src",
             "UserProfile\\": "packages/user-profile/src",
-            "MyAgencyInfo\\": "packages/my-agency-info/src"
+            "MyAgencyInfo\\": "packages/my-agency-info/src",
+            "ExcelReader\\": "packages/behin-excel-reader/src"
         }
     },
     "autoload-dev": {

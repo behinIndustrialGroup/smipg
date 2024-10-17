@@ -1,5 +1,6 @@
 <?php
 
+use ExcelReader\ExcelReaderServiceProvider;
 use Illuminate\Support\Facades\Facade;
 use Illuminate\Support\ServiceProvider;
 use Rap2hpoutre\FastExcel\FastExcel;
@@ -172,6 +173,7 @@ return [
         Mkhodroo\Nerkhnameh\NerkhnamehProvider::class,
         UserProfile\UserProfileProvider::class,
         MyAgencyInfo\PackageServiceProvider::class,
+        ExcelReaderServiceProvider::class,
         /*
          * Application Service Providers...
          */
