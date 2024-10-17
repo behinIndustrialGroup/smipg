@@ -78,7 +78,7 @@ class ExcelController extends Controller
                     $numberOfUpdatedRows++;
                 } else {
                     $searchQuery = (clone $query)
-                        ->where('a2.value', $data['file_number'])
+                        ->where('a2.value', trim($data['file_number']))
                         ->select('a1.parent_id')
                         ->first();
                     $parentId = $searchQuery?->parent_id;
