@@ -54,6 +54,7 @@ class ExcelController extends Controller
                 $data['province'] = ProvinceController::getByName($data['province'])->id;
                 $data['last_request_type'] = MapAgencyInfoController::mapLastRequestType($data['last_request_type']);
                 $data['new_status'] = MapAgencyInfoController::mapLastStatus($data['new_status']);
+                $data['catagory'] = MapAgencyInfoController::mapCategory($data['catagory']);
                 // $data = ExcelController::headerRenameAndFilter($data);
 
 

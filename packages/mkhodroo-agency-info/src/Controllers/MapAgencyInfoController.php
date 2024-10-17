@@ -41,4 +41,13 @@ class MapAgencyInfoController extends Controller
 
         return isset($array[$data]) ? $array[$data] : $data;
     }
+
+    public static function mapCategory($data){
+        $array = [
+            "صنعتی" => "industrial",
+            "ایمنی" => "safety",
+        ];
+
+        return isset($array[$data]) ? $array[$data] : $data;
+    }
 }
