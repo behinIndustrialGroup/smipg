@@ -10,7 +10,7 @@ use Mkhodroo\AgencyInfo\Requests\AgencyDocRequest;
 
 class HtmlCreatorController extends Controller
 {
-    
+
 
     public static function createInput($field_name, array $attr, $default_value = '')
     {
@@ -34,8 +34,9 @@ class HtmlCreatorController extends Controller
             echo "</select>";
         }
         if($attr['type'] === 'textarea'){
+            $rows = isset($attr['rows']) ? $attr['rows'] : 5;
             echo trans($field_name);
-            echo "<textarea name='$field_name' class='form-control'>$default_value</textarea>";
+            echo "<textarea name='$field_name' class='form-control' rows='$rows'>$default_value</textarea>";
         }
         if($attr['type'] === 'file'){
             if($default_value){
@@ -47,6 +48,6 @@ class HtmlCreatorController extends Controller
                 echo "<input type='file' name='$field_name' id='' class='form-control'>";
             }
         }
-        
+
     }
 }

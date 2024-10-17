@@ -9,9 +9,10 @@
 
     @endphp
     <div class="tab-pane fade show" id="{{ $tab_name }}" role="tabpanel" aria-labelledby="{{ $tab_name }}-info">
-        <form action="javascript:void(0)" id="{{ $tab_name }}-form" enctype="multipart/form-data">
+        <form action="javascript:void(0)" id="{{ $tab_name }}-form" class="table-responsive"
+            enctype="multipart/form-data">
             <input type="hidden" name="id" id="" value="{{ $customer_type->id ?? '' }}">
-            <table class="table table-striped ">
+            <table class="table table-striped">
                 @foreach ($fields as $item)
                     @php
                         $timestamp = explode('@', $item->key)[1];
@@ -23,9 +24,8 @@
                             <script>
                                 var date = new persianDate.unix({{ $timestamp }});
                                 console.log(date);
-                                
+
                                 $('#{{ $timestamp }}').html(date.year() + '/' + date.month() + '/' + date.date())
-                                
                             </script>
                         </td>
                         <td>{{ $action }}</td>
@@ -39,7 +39,8 @@
                 @endforeach
                 <tr>
                     <td colspan="2">
-                        <input type="text" name="last_action" id="" class="form-control">
+                        <textarea name="last_action" id="" class="form-control" cols="50" rows="5" style="width: 250px"></textarea>
+                        {{-- <input type="text" name="last_action" id="" class="form-control"> --}}
                     </td>
                     <td>
                         <input type="file" name="last_action_file" id="">

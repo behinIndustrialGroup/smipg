@@ -6,9 +6,9 @@
     @endphp
     @isset($fields)
         <div class="tab-pane fade show" id="{{ $tab_name }}" role="tabpanel" aria-labelledby="{{ $tab_name }}-info">
-            <form action="javascript:void(0)" id="{{ $tab_name }}-form" enctype="multipart/form-data">
+            <form action="javascript:void(0)" id="{{ $tab_name }}-form" enctype="multipart/form-data" class="table-responsive">
                 <input type="hidden" name="id" id="" value="{{ $customer_type->id ?? '' }}">
-                <table class="table table-striped ">
+                <table class="table table-striped " style="min-width: 600px">
                     @foreach ($fields as $number => $field_details)
                         <tr>
                             @foreach ($fields[$number] as $field_key => $field_detail)

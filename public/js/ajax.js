@@ -1,7 +1,7 @@
 function send_ajax_request(url, data, callback, erCallback = null){
     show_loading()
     if(erCallback == null){
-        erCallback= function(data){ 
+        erCallback= function(data){
             hide_loading();
             show_error(data);
             // error_notification('<p dir="ltr">' + JSON.stringify(data) + '</p>');
@@ -27,7 +27,7 @@ function send_ajax_request(url, data, callback, erCallback = null){
 function send_ajax_formdata_request(url, data, callback, erCallback = null){
     show_loading()
     if(erCallback == null){
-        erCallback= function(data){ 
+        erCallback= function(data){
             hide_loading();
             show_error(data)
         }
@@ -54,7 +54,7 @@ function send_ajax_request_with_confirm(url, data, callback, erCallback = null, 
     if (confirm(message) == true) {
         show_loading()
         if(erCallback == null){
-            erCallback= function(data){ 
+            erCallback= function(data){
                 hide_loading();
                 show_error(data)
             }
@@ -82,7 +82,7 @@ function send_ajax_formdata_request_with_confirm(url, data, callback, erCallback
     if (confirm(message) == true) {
         show_loading()
         if(erCallback == null){
-            erCallback= function(data){ 
+            erCallback= function(data){
                 hide_loading();
                 show_error(data)
             }
@@ -111,7 +111,7 @@ function send_ajax_formdata_request_with_confirm(url, data, callback, erCallback
 function send_ajax_get_request(url, callback, erCallback = null){
     show_loading()
     if(erCallback == null){
-        erCallback= function(data){ 
+        erCallback= function(data){
             hide_loading();
             show_error(data)
         }
@@ -135,7 +135,7 @@ function send_ajax_get_request_with_confirm(url, callback, message = "Are you su
     if (confirm(message) == true) {
         show_loading()
         if(erCallback == null){
-            erCallback= function(data){ 
+            erCallback= function(data){
                 hide_loading();
                 show_error(data)
             }
@@ -182,14 +182,14 @@ function open_admin_modal(url, title = ''){
                     '</div>' +
                     '</div>' +
                     '</div>');
-    
+
     $('body').append(modal);
-    
+
     $('#admin-modal').on('hidden.bs.modal', function () {
         $(this).remove();
       });
-      
-      
+
+
     send_ajax_get_request(
         url,
         function(data){
@@ -212,9 +212,9 @@ function open_admin_modal_with_data(data, title = '', customFun = null){
                     '</div>' +
                     '</div>' +
                     '</div>');
-    
+
     $('body').append(modal);
-    
+
     $('#admin-modal').on('hidden.bs.modal', function () {
         $(this).remove();
       });
@@ -222,6 +222,10 @@ function open_admin_modal_with_data(data, title = '', customFun = null){
     $('#admin-modal #modal-body').html(data);
     $('#admin-modal').modal('show')
     setTimeout(customFun(), 1000);
+}
+
+function close_admin_modal(){
+    $('#admin-modal').modal('hide')
 }
 
 

@@ -1,8 +1,8 @@
 @if (auth()->user()->access('Show Agency Debt Info'))
 <div class="tab-pane fade show" id="debts" role="tabpanel" aria-labelledby="debts-tab">
-    <form action="javascript:void(0)" id="debt-form">
+    <form action="javascript:void(0)" id="debt-form" class="table-responsive">
         <input type="hidden" name="id" id="" value="{{ $customer_type->id ?? '' }}">
-        <table class="table table-striped">
+        <table class="table table-striped" style="min-width: 600px">
             <tr>
                 <th>{{ __('Debt Price') }}</th>
                 <th>{{ __('Debt Pay Date') }}</th>
@@ -17,7 +17,7 @@
                         @endphp
                         <td>
                             @if (str_contains($field_name, 'description'))
-                                <textarea name="{{ $field_name }}" id="" class="form-control" {{$disabled}}>{{ $agency_fields->where('key', $field_name)->first()?->value }}</textarea>
+                                <textarea name="{{ $field_name }}" rows="5" id="" class="form-control" {{$disabled}}>{{ $agency_fields->where('key', $field_name)->first()?->value }}</textarea>
                             @else
                                 <input type="text" name="{{ $field_name }}" {{$disabled}}
                                     class="form-control {{ (str_contains($field_name, 'date') or str_contains($field_name, 'ref_id')) ? '' : 'cama-seprator' }}"

@@ -1,8 +1,8 @@
 @if (auth()->user()->access('Show Agency Doc Info'))
 <div class="tab-pane fade" id="docs" role="tabpanel" aria-labelledby="docs">
-    <form action="javascript:void(0)" id="docs-form" enctype="multipart/form-data">
+    <form action="javascript:void(0)" id="docs-form" enctype="multipart/form-data" class="table-responsive">
         <input type="hidden" name="id" id="" value="{{ $customer_type->id ?? '' }}">
-        <table class="table table-striped ">
+        <table class="table table-striped " style="min-width: 600px">
             <thead>
                 <tr>
                     <th>{{ __('Title') }}</th>

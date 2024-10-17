@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="box">
-        <div class="card p-4">
+        <div class="card p-4 mt-2">
             <button onclick="new_agency()" class="btn btn-primary col-sm-2">{{ __('Add New Agency') }}</button>
         </div>
 
@@ -61,19 +61,23 @@
                             </select>
                         </div>
                     </div>
-                    <div class="col-sm-3 row">
-                        <div class="-col-sm-8">
+                    <div class="col-sm-3 row mt-2">
+                        <div class="col-sm-4">
+                            {{__('Custom')}}
+                        </div>
+                        <div class="col-sm-8">
                             <input type="text" name="field_value" id="" class="form-control col-sm-12"
                             placeholder="{{ __('Everything') }}">
                         </div>
                     </div>
-                    <div class="col-sm-3 row">
-                        <div class="col-sm-6">
-                            <button onclick="filter()" class="btn btn-primary">{{ __('Filter') }}</button>
-                        </div>
-                        <div class="col-sm-6">
-                            <button class="btn btn-default" onclick="show_columns()">{{ __('Columns') }}</button>
-                        </div>
+
+                </div>
+                <div class="col-sm-3 row mt-2">
+                    <div class="col-sm-6">
+                        <button onclick="filter()" class="btn btn-success">{{ __('Filter') }}</button>
+                    </div>
+                    <div class="col-sm-6">
+                        <button class="btn btn-default" onclick="show_columns()">{{ __('Columns') }}</button>
                     </div>
                 </div>
             </form>
@@ -91,9 +95,9 @@
             </div>
         </div>
 
-        <div class="card p-4">
+        <div class="card p-4 table-responsive">
 
-            <table class="table table-stripped" id="infos">
+            <table class="table table-stripped" id="infos" style="min-width: 100%">
                 <thead>
                     <tr>
                         @for ($i = 0; $i < count($cols); $i++)

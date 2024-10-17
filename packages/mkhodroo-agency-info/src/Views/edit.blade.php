@@ -41,7 +41,7 @@ use Mkhodroo\AgencyInfo\Controllers\HtmlCreatorController;
                 <a class="nav-link" id="fin-info-tab" data-toggle="pill" href="#fin-info" role="tab"
                     aria-controls="fin-info" aria-selected="false">{{ __('Agency Fin Info') }}</a>
             </li>
-            
+
             <li class="nav-item">
                 <a class="nav-link" id="debts-tab" data-toggle="pill" href="#debts" role="tab" aria-controls="info"
                     aria-selected="true">{{ __('Debts Info') }}</a>
@@ -58,7 +58,7 @@ use Mkhodroo\AgencyInfo\Controllers\HtmlCreatorController;
                 'customer_type' => $customer_type,
                 'agency_fields' => $agency_fields
             ])
-            
+
             @include('AgencyView::edit-tabs.fin-info', [
                 'customer_type' => $customer_type,
                 'agency_fields' => $agency_fields
@@ -95,6 +95,7 @@ use Mkhodroo\AgencyInfo\Controllers\HtmlCreatorController;
     </div>
 
 </div>
+<button class="btn btn-default" onclick="close_admin_modal()">{{ trans('Close') }}</button>
 
 
 <script>

@@ -1,8 +1,8 @@
 @if (auth()->user()->access('نمایش اطلاعات مرکز'))
     <div class="tab-pane fade show" id="info" role="tabpanel" aria-labelledby="info-tab">
-        <form action="javascript:void(0)" id="edit-form">
+        <form action="javascript:void(0)" id="edit-form" class="table-responsive">
             <input type="hidden" name="id" id="" value="{{ $customer_type->id ?? '' }}">
-            <table class="table table-striped ">
+            <table class="table table-striped " style="min-width: 400px">
                 @foreach (config("agency_info.customer_type.$customer_type->value")['fields'] as $field_key => $field_detail)
                     @php
                         $value = $agency_fields->where('key', $field_key)->first()?->value;

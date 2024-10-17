@@ -1,8 +1,8 @@
 @if (auth()->user()->access('Show Agency Fin Info'))
 <div class="tab-pane fade" id="fin-info" role="tabpanel" aria-labelledby="fin-info-tab">
-    <form action="javascript:void(0)" id="fin-form" enctype="multipart/form-data">
+    <form action="javascript:void(0)" id="fin-form" enctype="multipart/form-data" class="table-responsive">
         <input type="hidden" name="id" id="" value="{{ $customer_type->id ?? '' }}">
-        <table class="table table-striped ">
+        <table class="table table-striped" style="min-width: 800px">
             <thead>
                 <tr>
                     <th>{{ __('Year') }}</th>
