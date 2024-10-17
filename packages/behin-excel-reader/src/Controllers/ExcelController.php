@@ -43,6 +43,7 @@ class ExcelController extends Controller
             $numberOfUpdatedRows = 0;
             $numberOfAddedRows = 0;
             $errorRows = [];
+            $insertData = [];
             foreach ($xlsx->rows() as $index => $row) {
                 if ($index == 0) {
                     continue;
@@ -67,7 +68,12 @@ class ExcelController extends Controller
 
                 if ($parentId) {
                     foreach ($data as $key => $value) {
-                        AgencyController::create($parentId, $key, trim($value));
+                        // AgencyController::create($parentId, $key, trim($value));
+                        $insertData[] = [
+                            'key' => $key,
+                            'value' => trim($value),
+                            'parent_id' => $parentId
+                        ];
                     }
                     $numberOfUpdatedRows++;
                 } else {
@@ -95,11 +101,16 @@ class ExcelController extends Controller
 
                         foreach ($data as $key => $value) {
                             if ($key !== 'guild_catagory') {
-                                AgencyInfo::create([
+                                // AgencyInfo::create([
+                                //     'key' => $key,
+                                //     'value' => trim($value),
+                                //     'parent_id' => $parentId
+                                // ]);
+                                $insertData[] = [
                                     'key' => $key,
                                     'value' => trim($value),
                                     'parent_id' => $parentId
-                                ]);
+                                ];
                             }
                         }
                         $numberOfAddedRows++;
@@ -108,6 +119,10 @@ class ExcelController extends Controller
                 }
                 $i++;
             }
+            foreach($insertData as $row){
+                AgencyController::create($row['parent_id'], $row['key'], trim($row['value']));
+            }
+            // AgencyInfo::upsert($insertData, ['key', 'parent_id'], ['value']);
             return response()->json([
                 'msg' => "تعداد $i ردیف ذخیره شد",
                 "numberOfAddedRows" => $numberOfAddedRows,
