@@ -67,7 +67,7 @@ class ExcelController extends Controller
 
                 if ($parentId) {
                     foreach ($data as $key => $value) {
-                        AgencyController::create($parentId, $key, $value);
+                        AgencyController::create($parentId, $key, trim($value));
                     }
                     $numberOfUpdatedRows++;
                 } else {
@@ -97,7 +97,7 @@ class ExcelController extends Controller
                             if ($key !== 'guild_catagory') {
                                 AgencyInfo::create([
                                     'key' => $key,
-                                    'value' => $value,
+                                    'value' => trim($value),
                                     'parent_id' => $parentId
                                 ]);
                             }
