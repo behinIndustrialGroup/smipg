@@ -83,19 +83,19 @@ return [
                         ['value' => 'منقضی شده', 'label' => 'منقضی شده'],
                     ]
                 ],
-                'reviewer' => [
-                    'type' => 'select',
-                    'default' => '',
-                    'options' => [
-                        ['value' => 'اصفهانی', 'label' => 'اصفهانی'],
-                        ['value' => 'اسدی', 'label' => 'اسدی'],
-                        ['value' => 'حیدری', 'label' => 'حیدری'],
-                        ['value' => 'نعمتی', 'label' => 'نعمتی'],
-                        ['value' => 'مقدسی', 'label' => 'مقدسی'],
-                        ['value' => 'میرزایی', 'label' => 'میرزایی'],
-                        ['value' => 'بام افکن', 'label' => 'بام افکن'],
-                    ]
-                ],
+                // 'reviewer' => [
+                //     'type' => 'select',
+                //     'default' => '',
+                //     'options' => [
+                //         ['value' => 'اصفهانی', 'label' => 'اصفهانی'],
+                //         ['value' => 'اسدی', 'label' => 'اسدی'],
+                //         ['value' => 'حیدری', 'label' => 'حیدری'],
+                //         ['value' => 'نعمتی', 'label' => 'نعمتی'],
+                //         ['value' => 'مقدسی', 'label' => 'مقدسی'],
+                //         ['value' => 'میرزایی', 'label' => 'میرزایی'],
+                //         ['value' => 'بام افکن', 'label' => 'بام افکن'],
+                //     ]
+                // ],
                 'last_referral' => [
                     'type' => 'select',
                     'default' => '',
@@ -296,19 +296,19 @@ return [
                         ['value' => 'منقضی شده', 'label' => 'منقضی شده'],
                     ]
                 ],
-                'reviewer' => [
-                    'type' => 'select',
-                    'default' => '',
-                    'options' => [
-                        ['value' => 'اصفهانی', 'label' => 'اصفهانی'],
-                        ['value' => 'اسدی', 'label' => 'اسدی'],
-                        ['value' => 'حیدری', 'label' => 'حیدری'],
-                        ['value' => 'نعمتی', 'label' => 'نعمتی'],
-                        ['value' => 'مقدسی', 'label' => 'مقدسی'],
-                        ['value' => 'میرزایی', 'label' => 'میرزایی'],
-                        ['value' => 'بام افکن', 'label' => 'بام افکن'],
-                    ]
-                ],
+                // 'reviewer' => [
+                //     'type' => 'select',
+                //     'default' => '',
+                //     'options' => [
+                //         ['value' => 'اصفهانی', 'label' => 'اصفهانی'],
+                //         ['value' => 'اسدی', 'label' => 'اسدی'],
+                //         ['value' => 'حیدری', 'label' => 'حیدری'],
+                //         ['value' => 'نعمتی', 'label' => 'نعمتی'],
+                //         ['value' => 'مقدسی', 'label' => 'مقدسی'],
+                //         ['value' => 'میرزایی', 'label' => 'میرزایی'],
+                //         ['value' => 'بام افکن', 'label' => 'بام افکن'],
+                //     ]
+                // ],
                 'last_referral' => [
                     'type' => 'select',
                     'default' => '',
@@ -510,19 +510,19 @@ return [
                         ['value' => 'منقضی شده', 'label' => 'منقضی شده'],
                     ]
                 ],
-                'reviewer' => [
-                    'type' => 'select',
-                    'default' => '',
-                    'options' => [
-                        ['value' => 'اصفهانی', 'label' => 'اصفهانی'],
-                        ['value' => 'اسدی', 'label' => 'اسدی'],
-                        ['value' => 'حیدری', 'label' => 'حیدری'],
-                        ['value' => 'نعمتی', 'label' => 'نعمتی'],
-                        ['value' => 'مقدسی', 'label' => 'مقدسی'],
-                        ['value' => 'میرزایی', 'label' => 'میرزایی'],
-                        ['value' => 'بام افکن', 'label' => 'بام افکن'],
-                    ]
-                ],
+                // 'reviewer' => [
+                //     'type' => 'select',
+                //     'default' => '',
+                //     'options' => [
+                //         ['value' => 'اصفهانی', 'label' => 'اصفهانی'],
+                //         ['value' => 'اسدی', 'label' => 'اسدی'],
+                //         ['value' => 'حیدری', 'label' => 'حیدری'],
+                //         ['value' => 'نعمتی', 'label' => 'نعمتی'],
+                //         ['value' => 'مقدسی', 'label' => 'مقدسی'],
+                //         ['value' => 'میرزایی', 'label' => 'میرزایی'],
+                //         ['value' => 'بام افکن', 'label' => 'بام افکن'],
+                //     ]
+                // ],
                 'last_referral' => [
                     'type' => 'select',
                     'default' => '',
@@ -723,19 +723,19 @@ return [
                         ['value' => 'منقضی شده', 'label' => 'منقضی شده'],
                     ]
                 ],
-                'reviewer' => [
-                    'type' => 'select',
-                    'default' => '',
-                    'options' => [
-                        ['value' => 'اصفهانی', 'label' => 'اصفهانی'],
-                        ['value' => 'اسدی', 'label' => 'اسدی'],
-                        ['value' => 'حیدری', 'label' => 'حیدری'],
-                        ['value' => 'نعمتی', 'label' => 'نعمتی'],
-                        ['value' => 'مقدسی', 'label' => 'مقدسی'],
-                        ['value' => 'میرزایی', 'label' => 'میرزایی'],
-                        ['value' => 'بام افکن', 'label' => 'بام افکن'],
-                    ]
-                ],
+                // 'reviewer' => [
+                //     'type' => 'select',
+                //     'default' => '',
+                //     'options' => [
+                //         ['value' => 'اصفهانی', 'label' => 'اصفهانی'],
+                //         ['value' => 'اسدی', 'label' => 'اسدی'],
+                //         ['value' => 'حیدری', 'label' => 'حیدری'],
+                //         ['value' => 'نعمتی', 'label' => 'نعمتی'],
+                //         ['value' => 'مقدسی', 'label' => 'مقدسی'],
+                //         ['value' => 'میرزایی', 'label' => 'میرزایی'],
+                //         ['value' => 'بام افکن', 'label' => 'بام افکن'],
+                //     ]
+                // ],
                 'last_referral' => [
                     'type' => 'select',
                     'default' => '',
@@ -937,19 +937,19 @@ return [
                         ['value' => 'منقضی شده', 'label' => 'منقضی شده'],
                     ]
                 ],
-                'reviewer' => [
-                    'type' => 'select',
-                    'default' => '',
-                    'options' => [
-                        ['value' => 'اصفهانی', 'label' => 'اصفهانی'],
-                        ['value' => 'اسدی', 'label' => 'اسدی'],
-                        ['value' => 'حیدری', 'label' => 'حیدری'],
-                        ['value' => 'نعمتی', 'label' => 'نعمتی'],
-                        ['value' => 'مقدسی', 'label' => 'مقدسی'],
-                        ['value' => 'میرزایی', 'label' => 'میرزایی'],
-                        ['value' => 'بام افکن', 'label' => 'بام افکن'],
-                    ]
-                ],
+                // 'reviewer' => [
+                //     'type' => 'select',
+                //     'default' => '',
+                //     'options' => [
+                //         ['value' => 'اصفهانی', 'label' => 'اصفهانی'],
+                //         ['value' => 'اسدی', 'label' => 'اسدی'],
+                //         ['value' => 'حیدری', 'label' => 'حیدری'],
+                //         ['value' => 'نعمتی', 'label' => 'نعمتی'],
+                //         ['value' => 'مقدسی', 'label' => 'مقدسی'],
+                //         ['value' => 'میرزایی', 'label' => 'میرزایی'],
+                //         ['value' => 'بام افکن', 'label' => 'بام افکن'],
+                //     ]
+                // ],
                 'last_referral' => [
                     'type' => 'select',
                     'default' => '',
@@ -1151,19 +1151,19 @@ return [
                         ['value' => 'منقضی شده', 'label' => 'منقضی شده'],
                     ]
                 ],
-                'reviewer' => [
-                    'type' => 'select',
-                    'default' => '',
-                    'options' => [
-                        ['value' => 'اصفهانی', 'label' => 'اصفهانی'],
-                        ['value' => 'اسدی', 'label' => 'اسدی'],
-                        ['value' => 'حیدری', 'label' => 'حیدری'],
-                        ['value' => 'نعمتی', 'label' => 'نعمتی'],
-                        ['value' => 'مقدسی', 'label' => 'مقدسی'],
-                        ['value' => 'میرزایی', 'label' => 'میرزایی'],
-                        ['value' => 'بام افکن', 'label' => 'بام افکن'],
-                    ]
-                ],
+                // 'reviewer' => [
+                //     'type' => 'select',
+                //     'default' => '',
+                //     'options' => [
+                //         ['value' => 'اصفهانی', 'label' => 'اصفهانی'],
+                //         ['value' => 'اسدی', 'label' => 'اسدی'],
+                //         ['value' => 'حیدری', 'label' => 'حیدری'],
+                //         ['value' => 'نعمتی', 'label' => 'نعمتی'],
+                //         ['value' => 'مقدسی', 'label' => 'مقدسی'],
+                //         ['value' => 'میرزایی', 'label' => 'میرزایی'],
+                //         ['value' => 'بام افکن', 'label' => 'بام افکن'],
+                //     ]
+                // ],
                 'last_referral' => [
                     'type' => 'select',
                     'default' => '',
@@ -1364,19 +1364,19 @@ return [
                         ['value' => 'منقضی شده', 'label' => 'منقضی شده'],
                     ]
                 ],
-                'reviewer' => [
-                    'type' => 'select',
-                    'default' => '',
-                    'options' => [
-                        ['value' => 'اصفهانی', 'label' => 'اصفهانی'],
-                        ['value' => 'اسدی', 'label' => 'اسدی'],
-                        ['value' => 'حیدری', 'label' => 'حیدری'],
-                        ['value' => 'نعمتی', 'label' => 'نعمتی'],
-                        ['value' => 'مقدسی', 'label' => 'مقدسی'],
-                        ['value' => 'میرزایی', 'label' => 'میرزایی'],
-                        ['value' => 'بام افکن', 'label' => 'بام افکن'],
-                    ]
-                ],
+                // 'reviewer' => [
+                //     'type' => 'select',
+                //     'default' => '',
+                //     'options' => [
+                //         ['value' => 'اصفهانی', 'label' => 'اصفهانی'],
+                //         ['value' => 'اسدی', 'label' => 'اسدی'],
+                //         ['value' => 'حیدری', 'label' => 'حیدری'],
+                //         ['value' => 'نعمتی', 'label' => 'نعمتی'],
+                //         ['value' => 'مقدسی', 'label' => 'مقدسی'],
+                //         ['value' => 'میرزایی', 'label' => 'میرزایی'],
+                //         ['value' => 'بام افکن', 'label' => 'بام افکن'],
+                //     ]
+                // ],
                 'last_referral' => [
                     'type' => 'select',
                     'default' => '',
