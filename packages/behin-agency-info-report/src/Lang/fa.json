@@ -1,3 +1,8 @@
 {
-
+    "Reports": "گزارشات",
+    "Report by province by status": "گزارش بر اساس وضعیت در هر استان",
+    "View reports categorized by province and status.": "مشاهده گزارشات دسته بندی شده بر اساس وضعیت در هر استان",
+    "Report by last referral by status": "گزارش وضعیت پروانه بر حسب آخرین کارشناس",
+    "View reports based on the last referral status.": "مشاهده گزارشات بر اساس وضعیت آخرین ارجاعات",
+    "View Report": "مشاهده گزارش"
 }

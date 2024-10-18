@@ -4,6 +4,7 @@ use App\Models\FinInfo;
 use App\Models\HidroModel;
 use App\Models\KamFesharModel;
 use App\Models\MarakezModel;
+use Behin\AgencyInfoReport\Controllers\AgencyReportByLastRefererController;
 use Behin\AgencyInfoReport\Controllers\AgencyReportByProvinceController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -23,7 +24,12 @@ Route::name('agencyInfoReport.')->prefix('agency-info-report')->middleware(['web
     Route::get('index', function(){
         return view('AgencyReportView::index');
     })->name('index');
+
     Route::name('byProvince.')->prefix('by-province')->group(function(){
         Route::get('by-status', [AgencyReportByProvinceController::class, 'byStatus'])->name('byStatus');
+    });
+
+    Route::name('byLastReferer.')->prefix('by-last-referer')->group(function(){
+        Route::get('by-status', [AgencyReportByLastRefererController::class, 'byStatus'])->name('byStatus');
     });
 });
