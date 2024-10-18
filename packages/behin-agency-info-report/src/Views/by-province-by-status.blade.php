@@ -17,7 +17,7 @@
         <tbody>
             @foreach (collect($data)->sortByDesc('total_centers') as $row)
                 <tr>
-                    <td>{{ $row->province_name }}</td>
+                    <td>{{ $row->province .$row->province_name }}</td>
                     <td>{{ $row->total_centers }}</td>
                     <td>{{ $row->issued }}</td>
                     <td>{{ $row->under_review }}</td>
