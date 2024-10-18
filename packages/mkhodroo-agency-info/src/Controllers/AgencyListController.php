@@ -117,8 +117,7 @@ class AgencyListController extends Controller
                 DB::raw("MAX(CASE WHEN `key` = 'city' THEN value END) as city"),
             )
             ->groupBy('parent_id')
-            // ->having('new_status', 'صادر شده');
-            ->having('province', '36');
+            ->having('new_status', 'صادر شده');
         $searchResults = $searchQuery->get()->each(function($row){
             $row->guild_catagory_fa = trans($row->guild_catagory);
             $row->province_name = ProvinceController::getById($row->province)?->name;

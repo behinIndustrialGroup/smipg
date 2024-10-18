@@ -221,6 +221,7 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
         'B' => 
         array (
             'Brick\\Math\\' => 11,
+            'Behin\\AgencyInfoReport\\' => 23,
             'BaconQrCode\\' => 12,
         ),
         'A' => 
@@ -703,6 +704,10 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
         array (
             0 => __DIR__ . '/..' . '/brick/math/src',
         ),
+        'Behin\\AgencyInfoReport\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/packages/behin-agency-info-report/src',
+        ),
         'BaconQrCode\\' => 
         array (
             0 => __DIR__ . '/..' . '/bacon/bacon-qr-code/src',
@@ -811,6 +816,8 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
         'BaconQrCode\\Renderer\\RendererStyle\\GradientType' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Renderer/RendererStyle/GradientType.php',
         'BaconQrCode\\Renderer\\RendererStyle\\RendererStyle' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Renderer/RendererStyle/RendererStyle.php',
         'BaconQrCode\\Writer' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Writer.php',
+        'Behin\\AgencyInfoReport\\AgencyInfoReportProvider' => __DIR__ . '/../..' . '/packages/behin-agency-info-report/src/AgencyInfoReportProvider.php',
+        'Behin\\AgencyInfoReport\\Controllers\\AgencyReportByProvinceController' => __DIR__ . '/../..' . '/packages/behin-agency-info-report/src/Controllers/AgencyReportByProvinceController.php',
         'Brick\\Math\\BigDecimal' => __DIR__ . '/..' . '/brick/math/src/BigDecimal.php',
         'Brick\\Math\\BigInteger' => __DIR__ . '/..' . '/brick/math/src/BigInteger.php',
         'Brick\\Math\\BigNumber' => __DIR__ . '/..' . '/brick/math/src/BigNumber.php',
@@ -4012,6 +4019,8 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
         'Mkhodroo\\AgencyInfo\\Controllers\\GetAgencyController' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/Controllers/GetAgencyController.php',
         'Mkhodroo\\AgencyInfo\\Controllers\\HtmlCreatorController' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/Controllers/HtmlCreatorController.php',
         'Mkhodroo\\AgencyInfo\\Controllers\\LastActionController' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/Controllers/LastActionController.php',
+        'Mkhodroo\\AgencyInfo\\Controllers\\MapAgencyGuildCatagoryController' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/Controllers/MapAgencyGuildCatagoryController.php',
+        'Mkhodroo\\AgencyInfo\\Controllers\\MapAgencyInfoController' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/Controllers/MapAgencyInfoController.php',
         'Mkhodroo\\AgencyInfo\\Controllers\\QueryController' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/Controllers/QueryController.php',
         'Mkhodroo\\AgencyInfo\\Controllers\\SaveInfoController' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/Controllers/SaveInfoController.php',
         'Mkhodroo\\AgencyInfo\\Models\\AgencyDebtPayment' => __DIR__ . '/../..' . '/packages/mkhodroo-agency-info/src/Models/AgencyDebtPayment.php',

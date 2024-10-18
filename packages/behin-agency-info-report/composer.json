@@ -1,0 +1,17 @@
+{
+    "name": "mkhodroo/agency-info-report",
+    "description": "agency information report",
+    "version": "1.5.8",
+    "autoload": {
+        "psr-4": {
+            "Behin\\AgencyInfoReport\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "mkhodroo",
+            "email": "mkhodroo@yahoo.com"
+        }
+    ],
+    "require": {}
+}

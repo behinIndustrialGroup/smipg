@@ -45,7 +45,8 @@
             "Mkhodroo\\Nerkhnameh\\": "packages/nerkhnameh/src",
             "UserProfile\\": "packages/user-profile/src",
             "MyAgencyInfo\\": "packages/my-agency-info/src",
-            "ExcelReader\\": "packages/behin-excel-reader/src"
+            "ExcelReader\\": "packages/behin-excel-reader/src",
+            "Behin\\AgencyInfoReport\\": "packages/behin-agency-info-report/src/"
         }
     },
     "autoload-dev": {

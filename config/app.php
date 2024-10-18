@@ -1,5 +1,6 @@
 <?php
 
+use Behin\AgencyInfoReport\AgencyInfoReportProvider;
 use ExcelReader\ExcelReaderServiceProvider;
 use Illuminate\Support\Facades\Facade;
 use Illuminate\Support\ServiceProvider;
@@ -174,6 +175,7 @@ return [
         UserProfile\UserProfileProvider::class,
         MyAgencyInfo\PackageServiceProvider::class,
         ExcelReaderServiceProvider::class,
+        AgencyInfoReportProvider::class,
         /*
          * Application Service Providers...
          */
