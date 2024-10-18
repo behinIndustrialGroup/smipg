@@ -15,7 +15,7 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($data as $row)
+            @foreach (collect($data)->sortByDesc('total_centers') as $row)
                 <tr>
                     <td>{{ $row->province_name }}</td>
                     <td>{{ $row->total_centers }}</td>
