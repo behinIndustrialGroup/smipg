@@ -26,6 +26,8 @@
         href="{{ url('public/dashboard/plugins/persian-date/persian-datepicker.css') . '?' . config('app.version') }}">
 
     <link rel="stylesheet" href="{{ url('public/dashboard/plugins/toastr/toastr.min.css') }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
     @yield('style')
 
     <script src="{{ url('public/dashboard/plugins/jquery/jquery.min.js') . '?' . config('app.version') }}"></script>
