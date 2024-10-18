@@ -20,6 +20,9 @@ use Mkhodroo\UserRoles\Controllers\GetRoleController;
 use Rap2hpoutre\FastExcel\FastExcel;
 
 Route::name('agencyInfoReport.')->prefix('agency-info-report')->middleware(['web', 'auth'])->group(function () {
+    Route::get('index', function(){
+        return view('AgencyReportView::index');
+    })->name('index');
     Route::name('byProvince.')->prefix('by-province')->group(function(){
         Route::get('by-status', [AgencyReportByProvinceController::class, 'byStatus'])->name('byStatus');
     });

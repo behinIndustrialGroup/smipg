@@ -35,7 +35,7 @@ return [
             'icon' => 'fa fa-file',
             'fa_name' => 'گزارشات',
             'submenu' => [
-                'all' => [ 'fa_name' => 'همه', 'route-name' => 'agencyInfoReport.byProvince.byStatus', 'route-url' => '' ],
+                'all' => [ 'fa_name' => 'همه', 'route-name' => 'agencyInfoReport.index', 'route-url' => '' ],
             ]
         ],
         'tickets' => [
