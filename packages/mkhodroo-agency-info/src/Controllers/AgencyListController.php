@@ -20,7 +20,7 @@ class AgencyListController extends Controller
     {
         // return AgencyInfo::groupBy('key')->pluck('key')->toArray();
         // return self::getKeys();
-        $provinces = NewProvince::all();
+        $provinces = NewProvince::orderBy('name')->get();
         $last_referrals = GetAgencyController::getUniqueValueOfKey('last_referral');
         $new_statuses = GetAgencyController::getUniqueValueOfKey('new_status');
         return view('AgencyView::list')->with([
@@ -117,7 +117,8 @@ class AgencyListController extends Controller
                 DB::raw("MAX(CASE WHEN `key` = 'city' THEN value END) as city"),
             )
             ->groupBy('parent_id')
-            ->having('new_status', 'صادر شده');
+            // ->having('new_status', 'صادر شده');
+            ->having('province', '36');
         $searchResults = $searchQuery->get()->each(function($row){
             $row->guild_catagory_fa = trans($row->guild_catagory);
             $row->province_name = ProvinceController::getById($row->province)?->name;
