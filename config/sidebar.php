@@ -2,7 +2,7 @@
 
 return [
     'menu' =>[
-        
+
         'dashboard' => [
             'icon' => 'fa fa-dashboard',
             'fa_name' => 'داشبرد',
@@ -29,6 +29,13 @@ return [
             'fa_name' => 'اطلاعات مراکز',
             'submenu' => [
                 'all' => [ 'fa_name' => 'همه', 'route-name' => 'agencyInfo.listForm', 'route-url' => '' ],
+            ]
+        ],
+        'agency-report' => [
+            'icon' => 'fa fa-file',
+            'fa_name' => 'گزارشات',
+            'submenu' => [
+                'all' => [ 'fa_name' => 'همه', 'route-name' => 'agencyInfoReport.byProvince.byStatus', 'route-url' => '' ],
             ]
         ],
         'tickets' => [
@@ -61,7 +68,7 @@ return [
                 'show' => [ 'fa_name' => 'نمایش لیست', 'route-name' => 'city.index' ]
             ]
         ],
-        
+
 
     ]
 ];
