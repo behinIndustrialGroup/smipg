@@ -65,7 +65,7 @@ class AgencyListController extends Controller
         }
         if($r->field_value){
             $parent_ids[] = AgencyInfo::where('value' , 'like', "%". $r->field_value. "%")->pluck('parent_id')->toArray();
-            
+
         }
         $count = count($parent_ids);
         if($count > 1){
@@ -79,7 +79,7 @@ class AgencyListController extends Controller
             $parent_ids = $parent_ids[0];
         }
         $agencies = AgencyInfo::whereIn('id', $parent_ids)->groupBy('parent_id')->get();
-        
+
         $key_indexes = explode(',', $r->cols);
         $agencies =  $agencies->each(function ($agency) use($key_indexes) {
             $agency = self::makeCustomFields($agency, $key_indexes);
@@ -104,6 +104,26 @@ class AgencyListController extends Controller
     }
 
     public static function getValidAgencies($type = 'agency'){
+        $searchQuery = DB::table('agency_info')
+            ->select(
+                'id',
+                'parent_id',
+                DB::raw("MAX(CASE WHEN `key` = 'new_status' THEN value END) as new_status"),
+                DB::raw("MAX(CASE WHEN `key` = 'firstname' THEN value END) as firstname"),
+                DB::raw("MAX(CASE WHEN `key` = 'lastname' THEN value END) as lastname"),
+                DB::raw("MAX(CASE WHEN `key` = 'phone' THEN value END) as phone"),
+                DB::raw("MAX(CASE WHEN `key` = 'guild_catagory' THEN value END) as guild_catagory"),
+                DB::raw("MAX(CASE WHEN `key` = 'province' THEN value END) as province"),
+                DB::raw("MAX(CASE WHEN `key` = 'city' THEN value END) as city"),
+            )
+            ->groupBy('parent_id')
+            ->having('new_status', 'صادر شده');
+        $searchResults = $searchQuery->get()->each(function($row){
+            $row->guild_catagory_fa = trans($row->guild_catagory);
+            $row->province_name = ProvinceController::getById($row->province)?->name;
+            $row->city_name = CityController::getById($row->city)?->city;
+        });
+        return $searchResults;
         $parent_ids = AgencyInfo::where('key', config('agency_info.main_field_name'))->where('value', $type)->pluck('id');
         // $parent_ids = AgencyInfo::whereIn('parent_id', $parent_ids)->where('key', 'enable')->where('value', '1')->pluck('parent_id');
         // $exp_dates = AgencyInfo::whereIn('parent_id', $parent_ids)->where('key', 'exp_date')->whereNotNull('value')->where('value', '!=', '')->get();
