@@ -123,7 +123,10 @@ class AgencyListController extends Controller
             $row->province_name = ProvinceController::getById($row->province)?->name;
             $row->city_name = CityController::getById($row->city)?->city;
         });
-        return $searchResults;
+        return [
+            'count' => $searchQuery->count(),
+            'data' => $searchResults
+        ];
         $parent_ids = AgencyInfo::where('key', config('agency_info.main_field_name'))->where('value', $type)->pluck('id');
         // $parent_ids = AgencyInfo::whereIn('parent_id', $parent_ids)->where('key', 'enable')->where('value', '1')->pluck('parent_id');
         // $exp_dates = AgencyInfo::whereIn('parent_id', $parent_ids)->where('key', 'exp_date')->whereNotNull('value')->where('value', '!=', '')->get();
