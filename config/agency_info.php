@@ -51,12 +51,21 @@ return [
 
                         ['value' => 'safety', 'label' => 'ایمنی'],
                     ]
-                ], 'catagory' => [
+                ],
+                'catagory' => [
                     'type' => 'select',
                     'default' => '',
                     'options' => [
                         ['value' => 'industrial', 'label' => 'صنعتی'],
                         ['value' => 'safety', 'label' => 'ایمنی'],
+                    ]
+                ],
+                'file_type' => [
+                    'type' => 'select',
+                    'default' => '',
+                    'options' => [
+                        ['value' => 'فیزیکی', 'label' => 'فیزیکی'],
+                        ['value' => 'الکترونیکی', 'label' => 'الکترونیکی'],
                     ]
                 ],
                 'firstname' => ['type' => 'text', 'default' => '', 'required' => false],
@@ -264,12 +273,21 @@ return [
 
                         ['value' => 'safety', 'label' => 'ایمنی'],
                     ]
-                ], 'catagory' => [
+                ],
+                'catagory' => [
                     'type' => 'select',
                     'default' => '',
                     'options' => [
                         ['value' => 'industrial', 'label' => 'صنعتی'],
                         ['value' => 'safety', 'label' => 'ایمنی'],
+                    ]
+                ],
+                'file_type' => [
+                    'type' => 'select',
+                    'default' => '',
+                    'options' => [
+                        ['value' => 'فیزیکی', 'label' => 'فیزیکی'],
+                        ['value' => 'الکترونیکی', 'label' => 'الکترونیکی'],
                     ]
                 ],
                 'firstname' => ['type' => 'text', 'default' => '', 'required' => false],
@@ -478,12 +496,21 @@ return [
 
                         ['value' => 'safety', 'label' => 'ایمنی'],
                     ]
-                ], 'catagory' => [
+                ],
+                'catagory' => [
                     'type' => 'select',
                     'default' => '',
                     'options' => [
                         ['value' => 'industrial', 'label' => 'صنعتی'],
                         ['value' => 'safety', 'label' => 'ایمنی'],
+                    ]
+                ],
+                'file_type' => [
+                    'type' => 'select',
+                    'default' => '',
+                    'options' => [
+                        ['value' => 'فیزیکی', 'label' => 'فیزیکی'],
+                        ['value' => 'الکترونیکی', 'label' => 'الکترونیکی'],
                     ]
                 ],
                 'firstname' => ['type' => 'text', 'default' => '', 'required' => false],
@@ -691,12 +718,21 @@ return [
 
                         ['value' => 'safety', 'label' => 'ایمنی'],
                     ]
-                ], 'catagory' => [
+                ],
+                'catagory' => [
                     'type' => 'select',
                     'default' => '',
                     'options' => [
                         ['value' => 'industrial', 'label' => 'صنعتی'],
                         ['value' => 'safety', 'label' => 'ایمنی'],
+                    ]
+                ],
+                'file_type' => [
+                    'type' => 'select',
+                    'default' => '',
+                    'options' => [
+                        ['value' => 'فیزیکی', 'label' => 'فیزیکی'],
+                        ['value' => 'الکترونیکی', 'label' => 'الکترونیکی'],
                     ]
                 ],
                 'firstname' => ['type' => 'text', 'default' => '', 'required' => false],
@@ -905,12 +941,21 @@ return [
 
                         ['value' => 'safety', 'label' => 'ایمنی'],
                     ]
-                ], 'catagory' => [
+                ],
+                'catagory' => [
                     'type' => 'select',
                     'default' => '',
                     'options' => [
                         ['value' => 'industrial', 'label' => 'صنعتی'],
                         ['value' => 'safety', 'label' => 'ایمنی'],
+                    ]
+                ],
+                'file_type' => [
+                    'type' => 'select',
+                    'default' => '',
+                    'options' => [
+                        ['value' => 'فیزیکی', 'label' => 'فیزیکی'],
+                        ['value' => 'الکترونیکی', 'label' => 'الکترونیکی'],
                     ]
                 ],
                 'firstname' => ['type' => 'text', 'default' => '', 'required' => false],
@@ -1119,12 +1164,21 @@ return [
 
                         ['value' => 'safety', 'label' => 'ایمنی'],
                     ]
-                ], 'catagory' => [
+                ],
+                'catagory' => [
                     'type' => 'select',
                     'default' => '',
                     'options' => [
                         ['value' => 'industrial', 'label' => 'صنعتی'],
                         ['value' => 'safety', 'label' => 'ایمنی'],
+                    ]
+                ],
+                'file_type' => [
+                    'type' => 'select',
+                    'default' => '',
+                    'options' => [
+                        ['value' => 'فیزیکی', 'label' => 'فیزیکی'],
+                        ['value' => 'الکترونیکی', 'label' => 'الکترونیکی'],
                     ]
                 ],
                 'firstname' => ['type' => 'text', 'default' => '', 'required' => false],
@@ -1332,12 +1386,21 @@ return [
 
                         ['value' => 'safety', 'label' => 'ایمنی'],
                     ]
-                ], 'catagory' => [
+                ],
+                'catagory' => [
                     'type' => 'select',
                     'default' => '',
                     'options' => [
                         ['value' => 'industrial', 'label' => 'صنعتی'],
                         ['value' => 'safety', 'label' => 'ایمنی'],
+                    ]
+                ],
+                'file_type' => [
+                    'type' => 'select',
+                    'default' => '',
+                    'options' => [
+                        ['value' => 'فیزیکی', 'label' => 'فیزیکی'],
+                        ['value' => 'الکترونیکی', 'label' => 'الکترونیکی'],
                     ]
                 ],
                 'firstname' => ['type' => 'text', 'default' => '', 'required' => false],
