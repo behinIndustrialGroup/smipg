@@ -29,6 +29,7 @@ return [
             'fa_name' => 'اطلاعات مراکز',
             'submenu' => [
                 'all' => [ 'fa_name' => 'همه', 'route-name' => 'agencyInfo.listForm', 'route-url' => '' ],
+                'excel-input' => [ 'fa_name' => 'ورود با اکسل', 'route-name' => 'excelReader.input', 'route-url' => '' ],
             ]
         ],
         'agency-report' => [

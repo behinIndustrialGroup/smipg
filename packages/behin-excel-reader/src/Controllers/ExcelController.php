@@ -148,7 +148,7 @@ class ExcelController extends Controller
             'تاریخ آخرین درخواست' => 'last_request_date',
             'استان' => 'province',
             'شهر' => 'city',
-            'رسته صنفی' => 'catagory',
+            'دسته بندی' => 'catagory',
             'نوع شخص' => 'person_type',
             'نوع درخواست' => 'last_request_type',
             'آخرین ارجاع' => 'last_referral',
