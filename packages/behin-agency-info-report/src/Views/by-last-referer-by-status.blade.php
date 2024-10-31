@@ -8,10 +8,8 @@
                 <th>تعداد کل</th>
                 <th>صادر شده</th>
                 <th>درحال بررسی</th>
-                <th>منقضی شده</th>
+                <th>منقضی شده / فاقد پروانه</th>
                 <th>جدید</th>
-                <th>فاقد پروانه</th>
-                <th>در حال تکمیل</th>
             </tr>
         </thead>
         <tbody>
@@ -23,8 +21,6 @@
                     <td>{{ $row->under_review }}</td>
                     <td>{{ $row->expired }}</td>
                     <td>{{ $row->new }}</td>
-                    <td>{{ $row->without_license }}</td>
-                    <td>{{ $row->in_progress }}</td>
                 </tr>
             @endforeach
         </tbody>
@@ -106,10 +102,10 @@
 
         function drawCharts3() {
             var data = google.visualization.arrayToDataTable([
-                ['استان', 'درحال بررسی و در حال تکمیل', ],
+                ['استان', 'درحال بررسی', ],
                 @foreach (collect($data)->sortByDesc('under_review') as $row)
                     ['{{ $row->last_referral }}',
-                        {{ $row->in_progress + $row->under_review }},
+                        {{ $row->under_review }},
                     ],
                 @endforeach
             ]);
@@ -141,7 +137,7 @@
                 ['استان', 'منقضی و بدون پروانه', ],
                 @foreach (collect($data)->sortByDesc('without_license') as $row)
                     ['{{ $row->last_referral }}',
-                        {{ $row->without_license + $row->expired }},
+                        {{ $row->expired }},
                     ],
                 @endforeach
             ]);
