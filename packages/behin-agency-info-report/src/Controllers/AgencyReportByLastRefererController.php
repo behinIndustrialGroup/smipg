@@ -24,10 +24,8 @@ class AgencyReportByLastRefererController extends Controller
                 DB::raw('COUNT(*) as total_centers'),
                 DB::raw("SUM(CASE WHEN new_status = 'صادر شده' THEN 1 ELSE 0 END) as issued"),
                 DB::raw("SUM(CASE WHEN new_status = 'درحال بررسی' THEN 1 ELSE 0 END) as under_review"),
-                DB::raw("SUM(CASE WHEN new_status = 'منقضی شده' THEN 1 ELSE 0 END) as expired"),
+                DB::raw("SUM(CASE WHEN new_status = 'منقضی شده / فاقد پروانه' THEN 1 ELSE 0 END) as expired"),
                 DB::raw("SUM(CASE WHEN new_status = 'جدید' THEN 1 ELSE 0 END) as new"),
-                DB::raw("SUM(CASE WHEN new_status = 'فاقد پروانه' THEN 1 ELSE 0 END) as without_license"),
-                DB::raw("SUM(CASE WHEN new_status = 'در حال تکمیل' THEN 1 ELSE 0 END) as in_progress")
             )
             ->groupBy('last_referral')
             ->get();
