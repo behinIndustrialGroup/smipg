@@ -65,6 +65,7 @@ return array(
     'PhpOption\\' => array($vendorDir . '/phpoption/phpoption/src/PhpOption'),
     'PhpOffice\\PhpWord\\' => array($vendorDir . '/phpoffice/phpword/src/PhpWord'),
     'OpenSpout\\' => array($vendorDir . '/openspout/openspout/src'),
+    'Nwidart\\Modules\\' => array($vendorDir . '/nwidart/laravel-modules/src'),
     'NunoMaduro\\Collision\\' => array($vendorDir . '/nunomaduro/collision/src'),
     'MyAgencyInfo\\' => array($baseDir . '/packages/my-agency-info/src'),
     'Mpdf\\PsrLogAwareTrait\\' => array($vendorDir . '/mpdf/psr-log-aware-trait/src'),
