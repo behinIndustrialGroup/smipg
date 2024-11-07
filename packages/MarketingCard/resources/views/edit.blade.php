@@ -47,13 +47,13 @@
 
                 <div class="form-group">
                     <label for="issue_date">{{ __('marketingTrans::msg.issue_date') }}</label>
-                    <input type="text" name="issueDate" id="issueDate" value="{{ $row->issueDate }}">
+                    <input type="hidden" name="issueDate" id="issueDate" value="{{ $row->issueDate }}">
                     <input type="text" name="" id="issueDateValue" class="form-control" value="{{ $row->issueDate() }}" required>
                 </div>
 
                 <div class="form-group">
                     <label for="expiry_date">{{ __('marketingTrans::msg.expiry_date') }}</label>
-                    <input type="text" name="expiryDate" id="expiryDate" value="{{ $row->expiryDate }}">
+                    <input type="hidden" name="expiryDate" id="expiryDate" value="{{ $row->expiryDate }}">
                     <input type="text" name="" id="expiryDateValue" class="form-control" value="{{ $row->expiryDate() }}" required>
                 </div>
 
