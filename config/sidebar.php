@@ -39,8 +39,15 @@ return [
                 'all' => [ 'fa_name' => 'همه', 'route-name' => 'agencyInfoReport.index', 'route-url' => '' ],
             ]
         ],
+        'marketing-card' => [
+            'icon' => 'fa fa-credit-card',
+            'fa_name' => 'کارت بازاریابی',
+            'submenu' => [
+                'list' => [ 'fa_name' => 'لیست', 'route-name' => 'marketingcard.index', 'route-url' => '/marketingcard' ],
+            ]
+        ],
         'tickets' => [
-            'icon' => 'fa fa-ticket',
+            'icon' => 'fa fa-ticket-alt',
             'fa_name' => 'تیکت پشتیبانی',
             'submenu' => [
                 'create' => [ 'fa_name' => 'ایجاد', 'route-name' => 'ATRoutes.index', 'route-url' => '' ],
