@@ -144,6 +144,7 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
             'Mpdf\\PsrHttpMessageShim\\' => 24,
             'Mpdf\\' => 5,
             'Monolog\\' => 8,
+            'Modules\\MarketingCard\\' => 22,
             'Mockery\\' => 8,
             'Mkhodroo\\UserRoles\\' => 19,
             'Mkhodroo\\Nerkhnameh\\' => 20,
@@ -497,6 +498,10 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
         'Monolog\\' => 
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
+        ),
+        'Modules\\MarketingCard\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/packages/MarketingCard',
         ),
         'Mockery\\' => 
         array (
@@ -4228,6 +4233,10 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
         'Mockery\\Undefined' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/Undefined.php',
         'Mockery\\VerificationDirector' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/VerificationDirector.php',
         'Mockery\\VerificationExpectation' => __DIR__ . '/..' . '/mockery/mockery/library/Mockery/VerificationExpectation.php',
+        'Modules\\MarketingCard\\App\\Http\\Controllers\\MarketingCardController' => __DIR__ . '/../..' . '/packages/MarketingCard/App/Http/Controllers/MarketingCardController.php',
+        'Modules\\MarketingCard\\App\\Providers\\MarketingCardServiceProvider' => __DIR__ . '/../..' . '/packages/MarketingCard/App/Providers/MarketingCardServiceProvider.php',
+        'Modules\\MarketingCard\\App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/packages/MarketingCard/App/Providers/RouteServiceProvider.php',
+        'Modules\\MarketingCard\\Database\\Seeders\\MarketingCardDatabaseSeeder' => __DIR__ . '/../..' . '/packages/MarketingCard/Database/Seeders/MarketingCardDatabaseSeeder.php',
         'Monolog\\Attribute\\AsMonologProcessor' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/Attribute/AsMonologProcessor.php',
         'Monolog\\DateTimeImmutable' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/DateTimeImmutable.php',
         'Monolog\\ErrorHandler' => __DIR__ . '/..' . '/monolog/monolog/src/Monolog/ErrorHandler.php',

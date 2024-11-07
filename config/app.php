@@ -4,6 +4,7 @@ use Behin\AgencyInfoReport\AgencyInfoReportProvider;
 use ExcelReader\ExcelReaderServiceProvider;
 use Illuminate\Support\Facades\Facade;
 use Illuminate\Support\ServiceProvider;
+use Modules\MarketingCard\App\Providers\MarketingCardServiceProvider;
 use Rap2hpoutre\FastExcel\FastExcel;
 
 return [
@@ -176,6 +177,7 @@ return [
         MyAgencyInfo\PackageServiceProvider::class,
         ExcelReaderServiceProvider::class,
         AgencyInfoReportProvider::class,
+        MarketingCardServiceProvider::class,
         /*
          * Application Service Providers...
          */

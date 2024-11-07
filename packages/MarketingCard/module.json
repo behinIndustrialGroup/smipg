@@ -1,0 +1,11 @@
+{
+    "name": "MarketingCard",
+    "alias": "marketingcard",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\MarketingCard\\App\\Providers\\MarketingCardServiceProvider"
+    ],
+    "files": []
+}

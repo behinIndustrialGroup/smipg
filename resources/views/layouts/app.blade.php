@@ -73,7 +73,7 @@
     {{-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script> --}}
     <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
     <script>
-        $.widget.bridge('uibutton', $.ui.button)
+        // $.widget.bridge('uibutton', $.ui.button)
     </script>
     <!-- Bootstrap 4 -->
     <script
@@ -113,7 +113,7 @@
         function initial_view() {
             $('.select2').select2();
             $(".persian-date").persianDatepicker({
-                viewMode: 'year',
+                viewMode: 'day',
                 format: 'YYYY-MM-DD',
                 initialValueType: 'gregorian',
                 calendar: {

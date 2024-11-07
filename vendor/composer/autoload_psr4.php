@@ -72,6 +72,7 @@ return array(
     'Mpdf\\PsrHttpMessageShim\\' => array($vendorDir . '/mpdf/psr-http-message-shim/src'),
     'Mpdf\\' => array($vendorDir . '/mpdf/mpdf/src'),
     'Monolog\\' => array($vendorDir . '/monolog/monolog/src/Monolog'),
+    'Modules\\MarketingCard\\' => array($baseDir . '/packages/MarketingCard'),
     'Mockery\\' => array($vendorDir . '/mockery/mockery/library/Mockery'),
     'Mkhodroo\\UserRoles\\' => array($baseDir . '/packages/mkhodroo-user-roles/src'),
     'Mkhodroo\\Nerkhnameh\\' => array($baseDir . '/packages/nerkhnameh/src'),
