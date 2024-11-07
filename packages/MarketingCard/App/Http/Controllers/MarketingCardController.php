@@ -50,7 +50,7 @@ class MarketingCardController extends Controller
         // ذخیره رکورد جدید
         $row = MarketingCard::create($request->all());
 
-        $link = route('marketingcard.show', ['id', $row->id]);
+        $link = route('marketingcard.show', ['marketingcard' => $row->id]);
         $qrCodeFilePath = public_path($row->id . '.png');
         $qrCodeFilePath2 = asset('public/'. $row->id . '.png');
 
