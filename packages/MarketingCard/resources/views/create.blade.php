@@ -44,16 +44,16 @@
 
             <div class="form-group">
                 <label for="issue_date">{{ __('marketingTrans::msg.issue_date') }}</label>
-                <input type="text" name="issueDate" id="issueDate" value="{{ old('issueDate') }}">
+                <input type="hidden" name="issueDate" id="issueDate" value="{{ old('issueDate') }}">
                 <input type="text" name="" id="issueDateValue" class="form-control"
                     value="{{ old('issueDate') }}" required>
             </div>
 
             <div class="form-group">
                 <label for="expiry_date">{{ __('marketingTrans::msg.expiry_date') }}</label>
-                <input type="text" name="expirtDate" id="expirtDate" value="{{ old('expirtDate') }}">
-                <input type="text" name="" id="expirtDateValue" class="form-control"
-                    value="{{ old('expirtDate') }}" required>
+                <input type="hidden" name="expiryDate" id="expiryDate" value="{{ old('expiryDate') }}">
+                <input type="text" name="" id="expiryDateValue" class="form-control"
+                    value="{{ old('expiryDate') }}" required>
             </div>
 
             <button type="submit" class="btn btn-primary">ایجاد</button>
