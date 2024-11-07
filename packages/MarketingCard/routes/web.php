@@ -14,7 +14,7 @@ use Modules\MarketingCard\App\Http\Controllers\MarketingCardController;
 |
 */
 
-Route::group([], function () {
+Route::middleware(['web'])->group(function () {
     Route::resource('marketingcard', MarketingCardController::class)->names('marketingcard');
     Route::get('/download-qrcode/{marketingcard}', [MarketingCardController::class, 'downloadQRCode'])->name('marketingcard.downloadQr');
 });
