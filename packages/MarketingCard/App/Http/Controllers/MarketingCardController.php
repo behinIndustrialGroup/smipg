@@ -62,7 +62,7 @@ class MarketingCardController extends Controller
         $row->save();
 
         // بازگشت به صفحه لیست با پیام موفقیت
-        return redirect()->route('marketingcard.index')->with('success', 'رکورد با موفقیت ایجاد شد.');
+        return redirect()->route('marketingcard.edit', ['marketingcard' => $row->id])->with('success', 'رکورد با موفقیت ایجاد شد.');
     }
 
     /**
