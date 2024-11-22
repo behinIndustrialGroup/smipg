@@ -37,7 +37,7 @@
                             <input type="text" name="date[{{$payment->id}}]" id="" value="{{ $value->date ?? '' }}">
                         </td>
                         <td>
-                            @if ($value->file)
+                            @if ($value?->file)
                                 <a href="{{ url("public/$value->file") }}" download="{{ $payment->id }}">{{ trans('Download') }}</a>
                             @endif
                             <input type="file" name="file[{{$payment->id}}]" id="">
