@@ -21,10 +21,10 @@
                     @endphp
                     <tr>
                         <td>
-                            <input type="text" name="title[{{$payment->id}}]" class="" value="{{ $value->title }}">
+                            <input type="text" name="title[{{$payment->id}}]" class="" value="{{ $value->title ?? '' }}">
                         </td>
                         <td>
-                            <input type="text" name="price[{{$payment->id}}]" class="cama-seprator" value="{{ $value->price }}">
+                            <input type="text" name="price[{{$payment->id}}]" class="cama-seprator" value="{{ $value->price ?? '' }}">
                         </td>
                         <td>
                             <select name="type[{{$payment->id}}]" id="">
@@ -34,7 +34,7 @@
                             </select>
                         </td>
                         <td>
-                            <input type="text" name="date[{{$payment->id}}]" id="" value="{{ $value->date }}">
+                            <input type="text" name="date[{{$payment->id}}]" id="" value="{{ $value->date ?? '' }}">
                         </td>
                         <td>
                             @if ($value->file)
