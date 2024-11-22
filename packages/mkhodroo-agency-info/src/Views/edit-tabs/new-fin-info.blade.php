@@ -29,7 +29,7 @@
                         <td>
                             <select name="type[{{$payment->id}}]" id="">
                                 @foreach (config('agency_info.payment_type_options') as $option)
-                                    <option value="{{$option}}" {{ $option == $value->type ? 'selected' : '' }} >{{$option}}</option>
+                                    <option value="{{$option}}" {{ $option == $value?->type ? 'selected' : '' }} >{{$option}}</option>
                                 @endforeach
                             </select>
                         </td>
