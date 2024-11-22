@@ -61,6 +61,53 @@ class AgencyController extends Controller
 
     public static function finEdit(Request $r)
     {
+        $titles = $r->title;
+        foreach($titles as $id => $title){
+            $file_dir = null;
+            if(isset($r->file('file')[$id])){
+                $file = FileController::store($r->file('file')[$id], self::docDir($id, 'fin'));
+                if($file['status'] == 200){
+                    $file_dir = $file['dir'];
+                }
+            }
+            $updateData[] = [
+                'key' => 'payment',
+                'value' => json_encode(array(
+                    'title' => $r->title[$id],
+                    'price' => str_replace(',', '',$r->price[$id]),
+                    'type' => $r->type[$id],
+                    'date' => $r->date[$id],
+                    'file' => $file_dir
+                )),
+                'id' => $id
+            ];
+        }
+        foreach($updateData as $row){
+            self::updateById($row['id'], $row['key'], $row['value']);
+        }
+        if($r->title_new){
+            $file_dir = null;
+            if($r->file('file_new')){
+                $file = FileController::store($r->file('file_new'), self::docDir($id, 'fin'));
+                if($file['status'] == 200){
+                    $file_dir = $file['dir'];
+                }
+            }
+            $insertData = [
+                'key' => 'payment',
+                'value' => json_encode(array(
+                    'title' => $r->title_new,
+                    'price' => str_replace(',', '',$r->price_new),
+                    'date' => $r->date_new,
+                    'type' => $r->type_new,
+                    'file' => $file_dir
+                )),
+                'parent_id' => $r->id
+            ];
+            self::createNew($insertData['key'], $insertData['value'], $insertData['parent_id']);
+        }
+
+        return;
         $agency_fields =  AgencyInfo::where('parent_id', $r->id)->get();
         $data = $r->except('id');
         foreach ($data as $key => $value) {
@@ -165,6 +212,32 @@ class AgencyController extends Controller
             ],
             [
                 'value' => $value,
+                'description' => $des
+            ]
+        );
+    }
+
+    public static function updateById($id, $key, $value, $des = null)
+    {
+        AgencyInfo::updateOrCreate(
+            [
+                'key' => $key,
+                'id' => $id,
+            ],
+            [
+                'value' => $value,
+                'description' => $des
+            ]
+        );
+    }
+
+    public static function createNew($key, $value, $parent_id, $des = null)
+    {
+        AgencyInfo::create(
+            [
+                'key' => $key,
+                'value' => $value,
+                'parent_id' => $parent_id,
                 'description' => $des
             ]
         );

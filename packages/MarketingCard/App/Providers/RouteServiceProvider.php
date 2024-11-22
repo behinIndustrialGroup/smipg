@@ -39,9 +39,9 @@ class RouteServiceProvider extends ServiceProvider
      */
     protected function mapWebRoutes(): void
     {
-        Route::middleware('web')
-            ->namespace($this->moduleNamespace)
-            ->group('packages/MarketingCard/routes/web.php');
+        // Route::middleware('web')
+        //     ->namespace($this->moduleNamespace)
+        //     ->group('packages/MarketingCard/routes/web.php');
     }
 
     /**
@@ -51,9 +51,9 @@ class RouteServiceProvider extends ServiceProvider
      */
     protected function mapApiRoutes(): void
     {
-        Route::prefix('api')
-            ->middleware('api')
-            ->namespace($this->moduleNamespace)
-            ->group('packages/MarketingCard/routes/api.php');
+        // Route::prefix('api')
+        //     ->middleware('api')
+        //     ->namespace($this->moduleNamespace)
+        //     ->group('packages/MarketingCard/routes/api.php');
     }
 }

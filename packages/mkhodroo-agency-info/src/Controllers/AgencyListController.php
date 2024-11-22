@@ -46,7 +46,6 @@ class AgencyListController extends Controller
     }
     public static function filterList(Request $r)
     {
-
         $main_field_search = config('agency_info.main_field_name'). "_search";
         $main_field = config('agency_info.main_field_name');
         $agencies = AgencyInfo::get();

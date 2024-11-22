@@ -8,6 +8,18 @@ return [
     'main_field_name' => 'guild_catagory',
     'default_fields' => ['file_number', 'guild_catagory', 'firstname', 'lastname', 'national_id', 'agency_code', 'mobile', 'new_status', 'last_referral', 'province', 'city'],
     'valid_file_type' => ['image/jpg', 'image/jpeg', 'image/png', 'application/pdf'],
+    'payment_type_options' => [
+        '0',
+        'پایا',
+        'پوز',
+        'چک',
+        'حواله پایا',
+        'سامانه',
+        'کارت به کارت',
+        'واریز به حساب',
+        'واریز به حساب تامین کننده',
+        'وصول مطالبات',
+    ],
     'customer_type' => [
         'charging-fire-cylenders' => [
             'name' => 'charging fire cylenders',
