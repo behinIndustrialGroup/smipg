@@ -108,6 +108,9 @@
                     </tr>
                 </tbody>
             </table>
+            <div style="height: 50px">
+
+            </div>
         @endif
     </div>
 @endsection
