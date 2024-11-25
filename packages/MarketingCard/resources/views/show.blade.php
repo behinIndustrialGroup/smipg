@@ -99,6 +99,18 @@
                         <td>{{ $person->fatherName }}</td>
                     </tr>
                     <tr>
+                        <th>واحد صنفی</th>
+                        <td>{{ $person->guildUnit }}</td>
+                    </tr>
+                    <tr>
+                        <th>شماره صنفی</th>
+                        <td>{{ $person->guildNumber }}</td>
+                    </tr>
+                    <tr>
+                        <th>استان</th>
+                        <td>{{ $person->province }}</td>
+                    </tr>
+                    <tr>
                         <th>تاریخ صدور</th>
                         <td>{{ $person->issueDate('persian') }}</td>
                     </tr>
