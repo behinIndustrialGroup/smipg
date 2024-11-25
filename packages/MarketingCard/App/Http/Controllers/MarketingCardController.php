@@ -71,7 +71,7 @@ class MarketingCardController extends Controller
     public function show($id)
     {
         $row = MarketingCard::find($id);
-        $row->expired = $row->expiryDate/1000 < Carbon::today()->timestamp ? true : false;
+        $row->expired = (int)$row->expiryDate/1000 < Carbon::today()->timestamp ? true : false;
         return view('marketingcard::show')->with([
             'person' => $row
         ]);
