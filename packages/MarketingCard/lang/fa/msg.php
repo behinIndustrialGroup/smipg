@@ -12,5 +12,10 @@ return [
     'updated' => 'ویرایش شد',
     'expired' => 'منقضی شده',
     'valid' => 'معتبر',
-    'not_found' => 'پیدا نشد'
+    'not_found' => 'پیدا نشد',
+    'bornDate' => 'تاریخ تولد',
+    'guildUnit' => 'واحد صنفی',
+    'guildNumber' => 'شماره صنفی',
+    'province' => 'استان',
+    'city' => 'شهر'
 ];

@@ -21,7 +21,7 @@
         var form = $('#excel-form')[0];
         var data = new FormData(form);
         send_ajax_formdata_request(
-            "{{ route('finExcelReader.read') }}",
+            "{{ route('marketingCardExcelReader.read') }}",
             data,
             function(response) {
                 show_message("{{ trans('ok') }}")

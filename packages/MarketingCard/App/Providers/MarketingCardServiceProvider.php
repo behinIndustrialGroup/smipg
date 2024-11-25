@@ -23,6 +23,7 @@ class MarketingCardServiceProvider extends ServiceProvider
         $this->registerViews();
         $this->loadMigrationsFrom( __DIR__ . '/../../Database/Migrations');
         $this->loadTranslationsFrom(__DIR__ . '/../../lang','marketingTrans');
+        $this->loadRoutesFrom(__DIR__. '/../../routes/web.php');
     }
 
     /**

@@ -43,6 +43,36 @@
             </div>
 
             <div class="form-group">
+                <label for="bornDate">{{ __('marketingTrans::msg.bornDate') }}</label>
+                <input type="text" name="bornDate" id="bornDate" class="form-control" value="{{ old('bornDate') }}"
+                    required>
+            </div>
+
+            <div class="form-group">
+                <label for="guildUnit">{{ __('marketingTrans::msg.guildUnit') }}</label>
+                <input type="text" name="guildUnit" id="guildUnit" class="form-control" value="{{ old('guildUnit') }}"
+                    required>
+            </div>
+
+            <div class="form-group">
+                <label for="guildNumber">{{ __('marketingTrans::msg.guildNumber') }}</label>
+                <input type="text" name="guildNumber" id="guildNumber" class="form-control" value="{{ old('guildNumber') }}"
+                    required>
+            </div>
+
+            <div class="form-group">
+                <label for="province">{{ __('marketingTrans::msg.province') }}</label>
+                <input type="text" name="province" id="province" class="form-control" value="{{ old('province') }}"
+                    required>
+            </div>
+
+            <div class="form-group">
+                <label for="city">{{ __('marketingTrans::msg.city') }}</label>
+                <input type="text" name="city" id="city" class="form-control" value="{{ old('city') }}"
+                    required>
+            </div>
+
+            <div class="form-group">
                 <label for="issue_date">{{ __('marketingTrans::msg.issue_date') }}</label>
                 <input type="hidden" name="issueDate" id="issueDate" value="{{ old('issueDate') }}">
                 <input type="text" name="" id="issueDateValue" class="form-control"

@@ -31,6 +31,11 @@ class MarketingCard extends Model
         'lastName',
         'nationalId',
         'fatherName',
+        'bornDate',
+        'guildUnit',
+        'guildNumber',
+        'province',
+        'city',
         'issueDate',
         'expiryDate',
         'qrCodeFilePath'

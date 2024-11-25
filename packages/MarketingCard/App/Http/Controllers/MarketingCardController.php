@@ -35,16 +35,16 @@ class MarketingCardController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public static function store(Request $request)
     {
         // اعتبارسنجی داده‌ها
         $request->validate([
-            'nationalId' => 'required|digits:10|unique:marketing_cards',
-            'firstName' => 'required|string|max:255',
-            'lastName' => 'required|string|max:255',
-            'fatherName' => 'required|string|max:255',
-            'issueDate' => 'required',
-            'expiryDate' => 'required',
+            // 'nationalId' => 'required|digits:10|unique:marketing_cards',
+            // 'firstName' => 'required|string|max:255',
+            // 'lastName' => 'required|string|max:255',
+            // 'fatherName' => 'required|string|max:255',
+            // 'issueDate' => 'required',
+            // 'expiryDate' => 'required',
         ]);
 
         // ذخیره رکورد جدید

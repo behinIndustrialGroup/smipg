@@ -16,6 +16,11 @@ use Mkhodroo\Cities\Controllers\ProvinceController;
 
 class FinExcelController extends Controller
 {
+    protected static $index = 0;
+    public static function returnIndex(){
+        return self::$index;
+    }
+
     public function index()
     {
         return view('ExcelView::Fin.index');
