@@ -11,18 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('marketing_cards', function (Blueprint $table) {
-            $table->uuid('id')->primary();
-            $table->string('firstName');
-            $table->string('lastName');
-            $table->string('nationalId');
-            $table->string('fatherName');
-            $table->string('issueDate');
-            $table->string('expiryDate');
-            $table->string('qrCodeFilePath');
-            $table->timestamps();
-            $table->softDeletes();
-        });
+        // Schema::create('marketing_cards', function (Blueprint $table) {
+        //     $table->uuid('id')->primary();
+        //     $table->string('firstName');
+        //     $table->string('lastName');
+        //     $table->string('nationalId');
+        //     $table->string('fatherName');
+        //     $table->string('issueDate');
+        //     $table->string('expiryDate');
+        //     $table->string('qrCodeFilePath');
+        //     $table->timestamps();
+        //     $table->softDeletes();
+        // });
     }
 
     /**
