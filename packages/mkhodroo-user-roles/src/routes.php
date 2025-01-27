@@ -22,7 +22,7 @@ Route::prefix('/user')->middleware(['web', 'auth','access'])->group(function () 
     Route::get('/{id}', [UserController::class, 'index'])->name('user.all');
     Route::post('/{id}', [UserController::class, 'AccessReg']);
 
-    Route::post('/{id}/changepass', [UserController::class, 'ChangePass']);
+    Route::post('/{id}/changepass', [UserController::class, 'ChangePass'])->name('user.ChangePass');
     Route::post('/{id}/change-pm-username', [UserController::class, 'changePMUsername'])->name('change-pm-username');
     Route::post('/{id}/change-ip', [UserController::class, 'ChangeIp'])->name('change-user-ip');
 

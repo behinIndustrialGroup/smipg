@@ -79,7 +79,7 @@ legend {
 }
 
 #alert-success .modal-content{
-  background-color: green; 
+  background-color: green;
   color: white;
 }
 
@@ -88,7 +88,7 @@ legend {
 }
 
 #alert-error .modal-content{
-  background-color: rgb(166, 41, 41); 
+  background-color: rgb(166, 41, 41);
   color: white;
 }
 
@@ -174,8 +174,8 @@ legend {
   }
 
 .dv-header{
-  background: #3d98c2; 
-  padding: 10px; 
+  background: #3d98c2;
+  padding: 10px;
   margin: 0px 0 20px 0
 }
 
@@ -199,5 +199,9 @@ legend {
   background-color: #DDF0C2;
   border-color: #DDF0C2;
   color: black;
+}
+
+table th {
+    white-space: nowrap;
 }
 
