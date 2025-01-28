@@ -31,43 +31,59 @@
                 <div class="col-6">
                     <div class="form-group">
                         <label for="role">نقش</label>
-                        <input type="text" class="form-control" id="role" value="{{ $user->role()->name ?? '' }}" readonly>
+                        <input type="text" class="form-control" id="role" value="{{ $user->role()->name ?? '' }}"
+                            readonly>
                     </div>
                 </div>
             </div>
             <form action="{{ route('user.ChangePass', ['id' => $user->id]) }}" method="POST">
                 @csrf
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1">{{ __('New Password') }}</span>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">{{ __('New Password') }}</span>
+                    </div>
+                    <input type="password" class="form-control" name="pass" placeholder="{{ __('New Password') }}"
+                        aria-label="Password" aria-describedby="basic-addon1">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-primary" type="submit">{{ __('Change') }}</button>
+                    </div>
                 </div>
-                <input type="password" class="form-control" name="pass" placeholder="{{ __('New Password') }}" aria-label="Password" aria-describedby="basic-addon1">
-                <div class="input-group-append">
-                    <button class="btn btn-outline-primary" type="submit">{{ __('Change') }}</button>
-                </div>
-            </div>
             </form>
             <hr>
             <form action="{{ route('role.changeUserRole') }}" method="POST">
 
-            <div class="input-group mb-3">
+                <div class="input-group mb-3">
                     @csrf
                     @method('PUT')
                     <input type="hidden" name="id" value="{{ $user->id }}">
-                <div class="input-group-prepend">
-                    <label class="input-group-text" for="role_id">{{ __('Role') }}</label>
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="role_id">{{ __('Role') }}</label>
+                    </div>
+                    <select class="custom-select" name="role_id" id="role_id">
+                        @foreach ($roles as $role)
+                            <option value="{{ $role->id }}"
+                                @if ($user->role_id == $role->id) {{ 'selected' }} @endif>
+                                {{ $role->name }}</option>
+                        @endforeach
+                    </select>
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-primary" type="submit">{{ __('Change') }}</button>
+                    </div>
                 </div>
-                <select class="custom-select" name="role_id" id="role_id">
-                    @foreach ($roles as $role)
-                        <option value="{{ $role->id }}" @if ($user->role_id == $role->id) {{ 'selected' }} @endif>
-                            {{ $role->name }}</option>
-                    @endforeach
-                </select>
-                <div class="input-group-append">
-                    <button class="btn btn-outline-primary" type="submit">{{ __('Change') }}</button>
-                </div>
+            </form>
+            <div class="input-group mb-3">
+                @if (!$user->validation_link)
+                    <form action="{{ route('user.createQrCode', $user->id) }}" method="post">
+                        @csrf
+                        <button class="btn btn-danger">{{ trans('Create Qr Code') }}</button>
+                    </form>
+                @endif
+
+                <a href="{{ url("storage/app/users/$user->validation_link" . '.png') }}" download>
+                    <img src="{{ url("storage/app/users/$user->validation_link" . '.png') }}" alt="">
+
+                </a>
             </div>
-        </form>
 
         </div>
     </div>

@@ -27,4 +27,11 @@ Route::prefix('/user')->middleware(['web', 'auth','access'])->group(function () 
     Route::post('/{id}/change-ip', [UserController::class, 'ChangeIp'])->name('change-user-ip');
 
     Route::post('/{id}/changeShowInReport', [UserController::class, 'changeShowInReport']);
+    Route::post('createQrCode/{id}', [UserController::class, 'createQrCode'])->name('user.createQrCode');
 });
+
+Route::get('users/{validation_link}/show',function($validation_link){
+    $user = UserController::getByValidationLink($validation_link);
+    return view('URPackageView::user.show', compact('user'));
+})->name('users.show');
+

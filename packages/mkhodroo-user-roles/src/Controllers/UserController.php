@@ -7,6 +7,7 @@ use App\Models\MethodsModel;
 use App\CustomClasses\Access;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\RandomStringController;
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Validator;
@@ -15,6 +16,7 @@ use Illuminate\Support\Facades\Auth;
 use Mkhodroo\UserRoles\Controllers\GetRoleController;
 use Mkhodroo\UserRoles\Models\Method;
 use Mkhodroo\UserRoles\Models\User;
+use Illuminate\Support\Str; 
 
 class UserController extends Controller
 {
@@ -112,6 +114,38 @@ class UserController extends Controller
         $user->api_token = $token;
         $user->save();
         return $user;
+    }
+
+    public static function getByValidationLink($validation_link)
+    {
+        return User::where('validation_link', $validation_link)->first();
+    }
+
+    public static function createQrCode($id)
+    {
+        $user = User::find($id);
+        if($user->validation_link){
+            return redirect()->back()->with('error', trans('Code is generated previously'));
+        }
+        $validation_string = Str::random(10);
+        $qrCodeFilePath = storage_path('app/users/'.$validation_string . '.png');
+        $link = route('users.show', $validation_string);
+
+        $qrCodes['simple'] = QrCode::format('png')->size(300)->generate($link);
+        $file = fopen($qrCodeFilePath, 'wb');
+        fwrite($file, $qrCodes['simple']);
+        fclose($file);
+        $user->validation_link = $validation_string;
+        $user->save();
+
+        return redirect()->back();
+    }
+
+    public function show($validation_link)
+    {
+        return 'asd';
+        $user = self::getByValidationLink($validation_link);
+        return view('URPackageView::user.show', compact('user'));
     }
 
 }
