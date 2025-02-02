@@ -55,7 +55,7 @@
                 <div class="input-group mb-3">
                     @csrf
                     @method('PUT')
-                    <input type="hidden" name="id" value="{{ $user->id }}">
+                    <input type="hidden" name="user_id" value="{{ $user->id }}">
                     <div class="input-group-prepend">
                         <label class="input-group-text" for="role_id">{{ __('Role') }}</label>
                     </div>
