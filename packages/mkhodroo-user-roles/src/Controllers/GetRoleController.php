@@ -67,6 +67,7 @@ class GetRoleController extends Controller
         User::where('id', $r->user_id)->update([
             'role_id' => $r->role_id
         ]);
+        return redirect()->back()->with('success', 'Role updated successfully');
         return response('ok');
     }
 
