@@ -8,6 +8,7 @@ use Modules\MarketingCard\App\Providers\MarketingCardServiceProvider;
 use Rap2hpoutre\FastExcel\FastExcel;
 
 return [
+    'version' => 'v=1.0',
     'default_user_role_id' => 3,
     'valid_upload_file_type' => ['image/jpg', 'image/jpeg', 'image/png', 'application/pdf'],
 
