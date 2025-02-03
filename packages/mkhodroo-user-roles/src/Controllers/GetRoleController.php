@@ -68,7 +68,6 @@ class GetRoleController extends Controller
             'role_id' => $r->role_id
         ]);
         return redirect()->back()->with('success', 'Role updated successfully');
-        return response('ok');
     }
 
     public static function getByName($name){
