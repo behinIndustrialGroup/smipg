@@ -275,8 +275,7 @@ return [
                         ['value' => 'افزودن مباشر', 'label' => 'افزودن مباشر'],
                         ['value' => 'حذف مباشر', 'label' => 'حذف مباشر'],
                         ['value' => 'افزودن شریک', 'label' => 'افزودن شریک'],
-                        ['value' => 'حذف شریک', 'laحذف شریک'],
-
+                        ['value' => 'حذف شریک', 'label' => 'حذف شریک'],
                     ]
                 ],
                 'guild_catagory' => ['type' => 'text', 'disabled' => true, 'default' => 'خرده فروشی گازهای طبی و صنعتی', 'required' => false],
