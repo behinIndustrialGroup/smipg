@@ -60,8 +60,8 @@
                         <td><input type="file" name="file_new" id=""></td>
                     </tr>
                 </tbody>
-                <button onclick="add()">{{ trans('Add') }}</button>
             </table>
+            <button class="btn btn-sm btn-primary" onclick="add()">{{ trans('Add') }}</button>
         </form>
     </div>
 @endif
@@ -75,7 +75,7 @@
             function(res) {
                 console.log(res);
                 show_message("{{ __('Edited') }}");
-                // open_edit_form(res.parent_id, 'fin-info')
+                open_edit_form(res.id, 'fin-info')
                 // filter()
             }
         )
