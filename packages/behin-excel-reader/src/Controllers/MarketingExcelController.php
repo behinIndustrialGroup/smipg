@@ -61,6 +61,12 @@ class MarketingExcelController extends Controller
                     'guildNumber' => trim($data['guildNumber']),
                     'province' => trim($data['province']),
                     'city' => trim($data['city']),
+                    'gender' => trim($data['gender']),
+                    'phone' => trim($data['phone']),
+                    'mobile' => trim($data['mobile']),
+                    'postalCode' => trim($data['postalCode']),
+                    'address' => trim($data['address']),
+
                 ]);
 
                 MarketingCardController::store($r);
@@ -83,6 +89,11 @@ class MarketingExcelController extends Controller
             'شناسه صنفی' => 'guildNumber',
             'استان' => 'province',
             'شهرستان' => 'city',
+            'جنسیت' => 'gender',
+            'تلفن ثابت' => 'phone',
+            'موبایل' => 'mobile',
+            'کدپستی' => 'postalCode',
+            'آدرس' => 'address',
         ];
 
         $result = [];

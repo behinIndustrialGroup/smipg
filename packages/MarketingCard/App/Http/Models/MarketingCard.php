@@ -38,6 +38,7 @@ class MarketingCard extends Model
         'city',
         'issueDate',
         'expiryDate',
+        'otherFields',
         'qrCodeFilePath'
     ];
 

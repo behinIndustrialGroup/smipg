@@ -49,6 +49,14 @@ class MarketingCardController extends Controller
 
         // ذخیره رکورد جدید
         $row = MarketingCard::create($request->all());
+        $row->otherFields = json_encode([
+            'gender' => $request->gender ?? null,
+            'phone' => $request->phone ?? null,
+            'mobile' => $request->mobile ?? null,
+            'postalCode' => $request->postalCode ?? null,
+            'address' => $request->address ?? null,
+        ]);
+        $row->save();
 
         $link = route('marketingcard.show', ['marketingcard' => $row->id]);
         $qrCodeFilePath = public_path($row->id . '.png');
