@@ -4,7 +4,7 @@
     <div class="row table-responsive">
         <a href="{{ route('marketingcard.create') }}" class="btn btn-primary">{{ trans('marketingTrans::msg.create') }}</a>
 
-        <table class="table table-bordered">
+        <table class="table table-bordered" id="peopleTable">
             <thead>
                 <tr>
                     <th>{{ trans('marketingTrans::msg.national_code') }}</th>
@@ -36,3 +36,11 @@
 
     </div>
 @endsection
+
+@section('script')
+    <script>
+        $(document).ready(function() {
+            $('#peopleTable').DataTable();
+        });
+    </script>
+@endSection
