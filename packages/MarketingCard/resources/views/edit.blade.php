@@ -97,7 +97,7 @@
             @endif
             <!-- دکمه دانلود QR Code به صورت PNG -->
             <a
-                href="{{ route('marketingcard.downloadQr', ['marketingcard' => $row->id]) }}">{{ trans('marketingTrans::msg.download_qr_code_file') }}</a>
+                href="{{ $row->qrCodeFilePath }}" download>{{ trans('marketingTrans::msg.download_qr_code_file') }}</a>
         </div>
 
     </div>
