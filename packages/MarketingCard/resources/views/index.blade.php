@@ -40,7 +40,11 @@
 @section('script')
     <script>
         $(document).ready(function() {
-            $('#peopleTable').DataTable();
+            $('#peopleTable').DataTable({
+                'language': {
+                    'url': 'https://cdn.datatables.net/plug-ins/1.11.3/i18n/fa.json'
+                }
+            });
         });
     </script>
 @endSection
