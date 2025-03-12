@@ -11,6 +11,9 @@ use Mkhodroo\AgencyInfo\Requests\AgencyInfoRequest;
 
 class AgencyController extends Controller
 {
+    public static function getById($id){
+        return AgencyInfo::find($id);
+    }
     public static function docDir($id, $type = "fin")
     {
         $prefix = "user_docs";
@@ -70,6 +73,13 @@ class AgencyController extends Controller
                     $file = FileController::store($r->file('file')[$id], self::docDir($id, 'fin'));
                     if ($file['status'] == 200) {
                         $file_dir = $file['dir'];
+                    }
+                }
+                if(!$file_dir){
+                    $row = self::getById($id);
+                    $value = json_decode($row->value);
+                    if($value->file){
+                        $file_dir = $value->file;
                     }
                 }
                 $updateData[] = [
