@@ -19,7 +19,7 @@ Route::name('user-profile.')->prefix('user-profile')->middleware(['web','auth'])
 
     Route::get('/change-password', [ChangePasswordController::class, 'edit'])->name('change-password');
     Route::post('', [NationalIdController::class, 'store'])->name('storeNationalId');
-    Route::patch('/', [ChangePasswordController::class, 'update'])->name('update-password');
+    Route::put('/', [ChangePasswordController::class, 'update'])->name('update-password');
 
     Route::post('/code', [MobileVerificationController::class, 'codeGenerator'])->name('codeGenerator');
     Route::post('/verify', [MobileVerificationController::class, 'verify'])->name('verify');
