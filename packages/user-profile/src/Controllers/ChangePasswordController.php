@@ -17,9 +17,10 @@ class ChangePasswordController extends Controller
     }
 
     public function update(Request $request){
-        $user = Auth::user();
-        $newPassword = Hash::make($request->new_password);
-        User::where('id', $user->id)->update(['password' => $newPassword]);
+        $request->validate([
+            'new_password' => 'required'
+        ]);
+        User::find(Auth::id())->update(['password' => Hash::make($request->new_password)]);
         return response(trans("ok"));
     }
 
