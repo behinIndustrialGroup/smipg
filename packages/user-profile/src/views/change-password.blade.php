@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <form action="javascript:void(0)" method="POST" id="change-pass-form">
+    <form action="{{ route('user-profile.change-password') }}" method="POST" id="change-pass-form">
         @csrf
         <section class="row pt-2">
             <section class="col-12 col-md-6 my-2">
@@ -15,7 +15,7 @@
                 </div>
             </section>
             <section class="col-12 m-1">
-                <button class="btn btn-primary btn-sm" onclick="change_pass()">ثبت</button>
+                <button class="btn btn-primary btn-sm">ثبت</button>
             </section>
         </section>
     </form>

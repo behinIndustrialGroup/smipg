@@ -20,8 +20,10 @@ class ChangePasswordController extends Controller
         $request->validate([
             'new_password' => 'required'
         ]);
-        User::find(Auth::id())->update(['password' => Hash::make($request->new_password)]);
-        return response(trans("ok"));
+        $user = User::find(Auth::id());
+        $user->password = Hash::make($request->new_password);
+        $user->save();
+        return redirect()->back();
     }
 
 
