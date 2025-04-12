@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <form action="{{ route('user-profile.change-password') }}" method="POST" id="change-pass-form">
+    <form action="{{ route('user-profile.update-password') }}" method="POST" id="change-pass-form">
         @csrf
         @method('PUT')
         <section class="row pt-2">
