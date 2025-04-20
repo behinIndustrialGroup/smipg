@@ -19,6 +19,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'barryvdh/laravel-translation-manager' => array(
+            'pretty_version' => 'v0.6.7',
+            'version' => '0.6.7.0',
+            'reference' => '5be9386b0e11887ad6b7d573d6215e40b9ffce88',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../barryvdh/laravel-translation-manager',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'brick/math' => array(
             'pretty_version' => '0.11.0',
             'version' => '0.11.0.0',

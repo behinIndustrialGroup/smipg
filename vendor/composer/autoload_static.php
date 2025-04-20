@@ -228,6 +228,7 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
             'Brick\\Math\\' => 11,
             'Behin\\SimpleWorkflow\\' => 21,
             'Behin\\AgencyInfoReport\\' => 23,
+            'Barryvdh\\TranslationManager\\' => 28,
             'BaconQrCode\\' => 12,
         ),
         'A' => 
@@ -730,6 +731,10 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
         array (
             0 => __DIR__ . '/../..' . '/packages/behin-agency-info-report/src',
         ),
+        'Barryvdh\\TranslationManager\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/barryvdh/laravel-translation-manager/src',
+        ),
         'BaconQrCode\\' => 
         array (
             0 => __DIR__ . '/..' . '/bacon/bacon-qr-code/src',
@@ -838,6 +843,18 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
         'BaconQrCode\\Renderer\\RendererStyle\\GradientType' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Renderer/RendererStyle/GradientType.php',
         'BaconQrCode\\Renderer\\RendererStyle\\RendererStyle' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Renderer/RendererStyle/RendererStyle.php',
         'BaconQrCode\\Writer' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Writer.php',
+        'Barryvdh\\TranslationManager\\Console\\CleanCommand' => __DIR__ . '/..' . '/barryvdh/laravel-translation-manager/src/Console/CleanCommand.php',
+        'Barryvdh\\TranslationManager\\Console\\ExportCommand' => __DIR__ . '/..' . '/barryvdh/laravel-translation-manager/src/Console/ExportCommand.php',
+        'Barryvdh\\TranslationManager\\Console\\FindCommand' => __DIR__ . '/..' . '/barryvdh/laravel-translation-manager/src/Console/FindCommand.php',
+        'Barryvdh\\TranslationManager\\Console\\ImportCommand' => __DIR__ . '/..' . '/barryvdh/laravel-translation-manager/src/Console/ImportCommand.php',
+        'Barryvdh\\TranslationManager\\Console\\ResetCommand' => __DIR__ . '/..' . '/barryvdh/laravel-translation-manager/src/Console/ResetCommand.php',
+        'Barryvdh\\TranslationManager\\Controller' => __DIR__ . '/..' . '/barryvdh/laravel-translation-manager/src/Controller.php',
+        'Barryvdh\\TranslationManager\\Events\\TranslationsExportedEvent' => __DIR__ . '/..' . '/barryvdh/laravel-translation-manager/src/Events/TranslationsExportedEvent.php',
+        'Barryvdh\\TranslationManager\\Manager' => __DIR__ . '/..' . '/barryvdh/laravel-translation-manager/src/Manager.php',
+        'Barryvdh\\TranslationManager\\ManagerServiceProvider' => __DIR__ . '/..' . '/barryvdh/laravel-translation-manager/src/ManagerServiceProvider.php',
+        'Barryvdh\\TranslationManager\\Models\\Translation' => __DIR__ . '/..' . '/barryvdh/laravel-translation-manager/src/Models/Translation.php',
+        'Barryvdh\\TranslationManager\\TranslationServiceProvider' => __DIR__ . '/..' . '/barryvdh/laravel-translation-manager/src/TranslationServiceProvider.php',
+        'Barryvdh\\TranslationManager\\Translator' => __DIR__ . '/..' . '/barryvdh/laravel-translation-manager/src/Translator.php',
         'Behin\\AgencyInfoReport\\AgencyInfoReportProvider' => __DIR__ . '/../..' . '/packages/behin-agency-info-report/src/AgencyInfoReportProvider.php',
         'Behin\\AgencyInfoReport\\Controllers\\AgencyReportByLastRefererController' => __DIR__ . '/../..' . '/packages/behin-agency-info-report/src/Controllers/AgencyReportByLastRefererController.php',
         'Behin\\AgencyInfoReport\\Controllers\\AgencyReportByProvinceController' => __DIR__ . '/../..' . '/packages/behin-agency-info-report/src/Controllers/AgencyReportByProvinceController.php',
