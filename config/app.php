@@ -181,7 +181,6 @@ return [
         MarketingCardServiceProvider::class,
         Behin\SimpleWorkflow\SimpleWorkflowProvider::class,
         MyFormBuilder\FormBuilderServiceProvider::class,
-        Barryvdh\TranslationManager\TranslationServiceProvider::class,
         /*
          * Application Service Providers...
          */
