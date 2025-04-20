@@ -24,6 +24,29 @@ return [
         //         'dashboard' => [ 'fa_name' => 'همه', 'route-name' => 'agency.list-form', 'route-url' => '' ],
         //     ]
         // ],
+        'workflow-inbox' => [
+            'icon' => '',
+            'fa_name' => 'کارتابل',
+            'submenu' => [
+                'new-process' => [ 'fa_name' => 'فرایند جدید', 'route-name' => 'simpleWorkflow.process.startListView' ],
+                'inbox' => [ 'fa_name' => 'کارتابل من', 'route-name' => 'simpleWorkflow.inbox.index' ],
+                'done-inbox' => [ 'fa_name' => 'انجام شده ها', 'route-name' => 'simpleWorkflow.inbox.done' ],
+            ]
+        ],
+        'workflow' => [
+            'icon' => '',
+            'fa_name' => 'گردش کار',
+            'submenu' => [
+                'process' => [ 'fa_name' => 'فرایند', 'route-name' => 'simpleWorkflow.process.index' ],
+                'task-actors' => [ 'fa_name' => 'تسک ها', 'route-name' => 'simpleWorkflow.task-actors.index' ],
+                'forms' => [ 'fa_name' => 'فرم ها', 'route-name' => 'simpleWorkflow.form.index'  ],
+                'scripts' => [ 'fa_name' => 'اسکریپت ها', 'route-name' => 'simpleWorkflow.scripts.index' ],
+                'conditions' => [ 'fa_name' => 'شرط ها', 'route-name' => 'simpleWorkflow.conditions.index' ],
+                'fields' => [ 'fa_name' => 'فیلدها', 'route-name' => 'simpleWorkflow.fields.index' ],
+                'entities' => [ 'fa_name' => 'موجودیت ها', 'route-name' => 'simpleWorkflow.entities.index' ],
+                'all-inbox' => [ 'fa_name' => 'کارتابل همه', 'route-name' => 'simpleWorkflow.inbox.cases.list' ],
+            ]
+        ],
         'agencies' => [
             'icon' => 'fa fa-building',
             'fa_name' => 'اطلاعات مراکز',

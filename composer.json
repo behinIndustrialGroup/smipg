@@ -48,8 +48,13 @@
             "MyAgencyInfo\\": "packages/my-agency-info/src",
             "ExcelReader\\": "packages/behin-excel-reader/src",
             "Behin\\AgencyInfoReport\\": "packages/behin-agency-info-report/src/",
-            "Modules\\MarketingCard\\": "packages/MarketingCard/"
-        }
+            "Modules\\MarketingCard\\": "packages/MarketingCard/",
+            "Behin\\SimpleWorkflow\\": "packages/behin-simple-workflow/src/",
+            "MyFormBuilder\\": "packages/behin-form-builder/src/"
+        },
+        "files": [
+            "packages/behin-simple-workflow/src/Helper/behin-simple-workflow.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {

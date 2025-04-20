@@ -179,6 +179,8 @@ return [
         ExcelReaderServiceProvider::class,
         AgencyInfoReportProvider::class,
         MarketingCardServiceProvider::class,
+        Behin\SimpleWorkflow\SimpleWorkflowProvider::class,
+        MyFormBuilder\FormBuilderServiceProvider::class,
         /*
          * Application Service Providers...
          */
