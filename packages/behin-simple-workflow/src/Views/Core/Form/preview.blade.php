@@ -7,7 +7,7 @@
 <div class="row col-sm-12 p-0 m-0 dynamic-form" id="{{ $form->id }}">
     @foreach ($content as $field)
         @php
-            $fieldLabel = trans('SimpleWorkflowLang::fields.' . $field->fieldName);
+            $fieldLabel = trans('fields.' . $field->fieldName);
             $fieldClass = $field->class;
             $fieldId = $field->fieldName;
             $required = $field->required;
