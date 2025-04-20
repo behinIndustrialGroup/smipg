@@ -329,7 +329,7 @@ class RoutingController extends Controller
             }
         } catch (Exception $th) {
             // BotController::sendMessage(681208098, $th->getMessage());
-            return response()->json(['status' => 500, 'msg' => $th->getMessage()]);
+            return response()->json(['status' => 500, 'msg' => $th->getMessage() . ' ' . $th->getLine() . ' ' . $th->getFile()]);
         }
     }
 }
