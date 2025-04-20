@@ -6,7 +6,7 @@
 
 @section('content')
     {{-- @include('user-profile.partial-views.user-profile-div') --}}
-    @if (auth()->user()->access('ثبت درخواست صدور پروانه'))
+    @if (auth()->user()->access('ثبت درخواست صدور نرخنامه'))
             <div class="col-sm-3 ">
                 <!-- small box -->
                 <div class="small-box bg-primary">
