@@ -231,12 +231,12 @@ class RoutingController extends Controller
                     $taskActors = TaskActorController::getActorsByTaskId($task->id)->pluck('actor');
                     foreach ($taskActors as $actor) {
                         $inbox = InboxController::create($task->id, $caseId, $actor, 'new');
-                        SendPushNotification::dispatch(
-                            $inbox->actor,
-                            'کار جدید',
-                            'کار جدید بهتون ارجاع داده شد: ' . $inbox->case_name,
-                            route('simpleWorkflow.inbox.view', $inbox->id)
-                        );
+                        // SendPushNotification::dispatch(
+                        //     $inbox->actor,
+                        //     'کار جدید',
+                        //     'کار جدید بهتون ارجاع داده شد: ' . $inbox->case_name,
+                        //     route('simpleWorkflow.inbox.view', $inbox->id)
+                        // );
                     }
                     // echo json_encode($taskActors);
                 }
@@ -244,12 +244,12 @@ class RoutingController extends Controller
                     $taskActors = TaskActorController::getDynamicTaskActors($task->id, $caseId)->pluck('actor');
                     foreach ($taskActors as $actor) {
                         $inbox = InboxController::create($task->id, $caseId, $actor, 'new');
-                        SendPushNotification::dispatch(
-                            $inbox->actor,
-                            'کار جدید',
-                            'کار جدید بهتون ارجاع داده شد: ' . $inbox->case_name,
-                            route('simpleWorkflow.inbox.view', $inbox->id)
-                        );
+                        // SendPushNotification::dispatch(
+                        //     $inbox->actor,
+                        //     'کار جدید',
+                        //     'کار جدید بهتون ارجاع داده شد: ' . $inbox->case_name,
+                        //     route('simpleWorkflow.inbox.view', $inbox->id)
+                        // );
                     }
                 }
                 if ($task->assignment_type == 'parallel') {
