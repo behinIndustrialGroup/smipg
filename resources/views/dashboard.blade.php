@@ -28,7 +28,7 @@
                 </div>
             </div>
         @endauth
-    <div class="row card m-2 p-2">
+    {{-- <div class="row card m-2 p-2">
         <div class="col-md-6 col-lg-4 mb-4">
             <div class="card shadow-sm h-100">
                 <div class="card-header bg-warning text-white text-center">
@@ -45,6 +45,6 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
 @endsection
