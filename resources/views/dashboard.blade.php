@@ -11,9 +11,9 @@
                 <!-- small box -->
                 <div class="small-box bg-primary">
                     <div class="inner">
-                        <h3>{{ trans('پذیرش دستگاه') }}</h3>
+                        <h3>{{ trans('صدور نرخنامه') }}</h3>
 
-                        <p>{{ trans('ثبت پذیرش دستگاه جدید') }}</p>
+                        <p>{{ trans('ثبت درخواست صدور نرخنامه ') }}</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-bag"></i>
