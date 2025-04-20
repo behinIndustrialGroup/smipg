@@ -121,6 +121,8 @@ return array(
     'Barryvdh\\TranslationManager\\Models\\Translation' => $vendorDir . '/barryvdh/laravel-translation-manager/src/Models/Translation.php',
     'Barryvdh\\TranslationManager\\TranslationServiceProvider' => $vendorDir . '/barryvdh/laravel-translation-manager/src/TranslationServiceProvider.php',
     'Barryvdh\\TranslationManager\\Translator' => $vendorDir . '/barryvdh/laravel-translation-manager/src/Translator.php',
+    'BehinFileControl\\BehinFileControlProvider' => $baseDir . '/packages/behin-file-control/src/BehinFileControlProvider.php',
+    'BehinFileControl\\Controllers\\FileController' => $baseDir . '/packages/behin-file-control/src/Controllers/FileController.php',
     'Behin\\AgencyInfoReport\\AgencyInfoReportProvider' => $baseDir . '/packages/behin-agency-info-report/src/AgencyInfoReportProvider.php',
     'Behin\\AgencyInfoReport\\Controllers\\AgencyReportByLastRefererController' => $baseDir . '/packages/behin-agency-info-report/src/Controllers/AgencyReportByLastRefererController.php',
     'Behin\\AgencyInfoReport\\Controllers\\AgencyReportByProvinceController' => $baseDir . '/packages/behin-agency-info-report/src/Controllers/AgencyReportByProvinceController.php',

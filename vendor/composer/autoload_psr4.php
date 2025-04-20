@@ -129,6 +129,7 @@ return array(
     'Brick\\Math\\' => array($vendorDir . '/brick/math/src'),
     'Behin\\SimpleWorkflow\\' => array($baseDir . '/packages/behin-simple-workflow/src'),
     'Behin\\AgencyInfoReport\\' => array($baseDir . '/packages/behin-agency-info-report/src'),
+    'BehinFileControl\\' => array($baseDir . '/packages/behin-file-control/src'),
     'Barryvdh\\TranslationManager\\' => array($vendorDir . '/barryvdh/laravel-translation-manager/src'),
     'BaconQrCode\\' => array($vendorDir . '/bacon/bacon-qr-code/src'),
     'Assert\\' => array($vendorDir . '/beberlei/assert/lib/Assert'),

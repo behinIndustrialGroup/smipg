@@ -181,6 +181,8 @@ return [
         MarketingCardServiceProvider::class,
         Behin\SimpleWorkflow\SimpleWorkflowProvider::class,
         MyFormBuilder\FormBuilderServiceProvider::class,
+        BehinFileControl\BehinFileControlProvider::class,
+
         /*
          * Application Service Providers...
          */

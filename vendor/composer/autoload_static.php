@@ -231,6 +231,7 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
             'Brick\\Math\\' => 11,
             'Behin\\SimpleWorkflow\\' => 21,
             'Behin\\AgencyInfoReport\\' => 23,
+            'BehinFileControl\\' => 17,
             'Barryvdh\\TranslationManager\\' => 28,
             'BaconQrCode\\' => 12,
         ),
@@ -739,6 +740,10 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
         array (
             0 => __DIR__ . '/../..' . '/packages/behin-agency-info-report/src',
         ),
+        'BehinFileControl\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/packages/behin-file-control/src',
+        ),
         'Barryvdh\\TranslationManager\\' => 
         array (
             0 => __DIR__ . '/..' . '/barryvdh/laravel-translation-manager/src',
@@ -874,6 +879,8 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
         'Barryvdh\\TranslationManager\\Models\\Translation' => __DIR__ . '/..' . '/barryvdh/laravel-translation-manager/src/Models/Translation.php',
         'Barryvdh\\TranslationManager\\TranslationServiceProvider' => __DIR__ . '/..' . '/barryvdh/laravel-translation-manager/src/TranslationServiceProvider.php',
         'Barryvdh\\TranslationManager\\Translator' => __DIR__ . '/..' . '/barryvdh/laravel-translation-manager/src/Translator.php',
+        'BehinFileControl\\BehinFileControlProvider' => __DIR__ . '/../..' . '/packages/behin-file-control/src/BehinFileControlProvider.php',
+        'BehinFileControl\\Controllers\\FileController' => __DIR__ . '/../..' . '/packages/behin-file-control/src/Controllers/FileController.php',
         'Behin\\AgencyInfoReport\\AgencyInfoReportProvider' => __DIR__ . '/../..' . '/packages/behin-agency-info-report/src/AgencyInfoReportProvider.php',
         'Behin\\AgencyInfoReport\\Controllers\\AgencyReportByLastRefererController' => __DIR__ . '/../..' . '/packages/behin-agency-info-report/src/Controllers/AgencyReportByLastRefererController.php',
         'Behin\\AgencyInfoReport\\Controllers\\AgencyReportByProvinceController' => __DIR__ . '/../..' . '/packages/behin-agency-info-report/src/Controllers/AgencyReportByProvinceController.php',
