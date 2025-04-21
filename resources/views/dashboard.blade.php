@@ -21,7 +21,7 @@
                     <a href="{{ route('simpleWorkflow.process.start', [
                         'taskId' => 'bd2c34d2-d602-4c18-8069-e418221be27f',
                         'inDraft' => 0,
-                        'force' => 0,
+                        'force' => 1,
                         'redirect' => true,
                         ]) }}" class="small-box-footer">{{ trans('ثبت') }} <i
                         class="fa fa-arrow-circle-left"></i></a>
