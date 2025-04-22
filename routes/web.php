@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +22,27 @@ Route::get('/migrate', function () {
 
 Route::get('/', function () {
     return view('auth.login');
+});
+
+
+Route::get('/test', function () {
+    $rows = file_get_contents(base_path('/packages/mkhodroo-agency-info/src/Lang/fa.json'));
+    $rows = json_decode($rows);
+    foreach($rows as $key => $value){
+        
+        $tr = DB::table('ltm_translations')->where('key', $key)->first();
+        if($tr){
+            DB::table('ltm_translations')->where('key', $key)->update(['value' => $value]);
+        }else{
+            DB::table('ltm_translations')->insert([
+                'status' => 0,
+                'locale' => 'fa',
+                'group' => 'key',
+                'key' => $key,
+                'value' => $value
+            ]);
+        }
+    }
 });
 
 Route::get('/dashboard', function () {
