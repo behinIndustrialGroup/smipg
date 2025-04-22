@@ -24,6 +24,11 @@
                                 <span class="fa fa-envelope"></span>
                             </div>
                         </div>
+                        <div class="col-sm-12">
+                            <p style="font-size: 13px">
+                                با اعداد انگلیسی وارد کنید
+                            </p>
+                        </div>
                     </div>
                     <div class="input-group mb-3">
                         <input type="password" class="form-control" name="password" placeholder="رمز عبور">
@@ -32,12 +37,11 @@
                                 <span class="fa fa-lock"></span>
                             </div>
                         </div>
-                        <div>
+                        <div class="col-sm-12">
                             <p style="font-size: 13px">
                                 حداقل 8 کارکتر
                             </p>
                         </div>
-                        
                     </div>
 
                     <div class="row">

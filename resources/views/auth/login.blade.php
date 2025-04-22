@@ -54,7 +54,7 @@
 @section('script')
     <script>
         @if(Auth::id())
-        window.location = "{{ url('dashboard') }}"
+            window.location = "{{ url('dashboard') }}"
         @endif
         function submit() {
             send_ajax_request(
