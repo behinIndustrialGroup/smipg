@@ -32,6 +32,9 @@
                                 <span class="fa fa-lock"></span>
                             </div>
                         </div>
+                        <p style="fondt-size: 13px">
+                            حداقل 8 کارکتر
+                        </p>
                     </div>
 
                     <div class="row">
