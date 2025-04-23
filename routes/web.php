@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Behin\SimpleWorkflow\Controllers\Core\CaseController;
+use Behin\SimpleWorkflow\Controllers\Core\InboxController;
 use Behin\SimpleWorkflow\Models\Core\Inbox;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\DB;
@@ -28,17 +29,15 @@ Route::get('/', function () {
 
 
 Route::get('/test', function () {
-    $rows = Inbox::where('case_name', '')->get();
+    $rows = Inbox::where('task_id', '255001b9-162c-4474-9b7d-b58bd2c1832c')->where('status','new')->get();
     foreach($rows as $row){
-        $case = CaseController::getById($row->case_id);
-        $fullname = $case->getVariable('fullname');
-        if($fullname){
-            $nationalId = $case->getVariable('national_id');
-            if($nationalId){
-                $row->case_name = "$fullname | کدملی: $nationalId";
-                $row->save();
-            }
-        }
+        Inbox::create([
+            'task_id'=> '255001b9-162c-4474-9b7d-b58bd2c1832c',
+            'case_id' => $row->case_id,
+            'case_name' => $row->case_name,
+            'status' => 'new',
+            'actor' => 10
+        ]);
     }
 
 });
