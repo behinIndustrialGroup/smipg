@@ -7,6 +7,8 @@ return [
         'customer_city',
         'customer_mobile',
         'device_name',
-        'creator_name'
+        'creator_name',
+        'fullname',
+        'national_id'
     ],
 ];
