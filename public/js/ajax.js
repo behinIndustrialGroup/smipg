@@ -228,4 +228,13 @@ function close_admin_modal(){
     $('#admin-modal').modal('hide')
 }
 
+function runScript(scriptId, data,callback){
+    url = "/workflow/scripts/" + scriptId + "/run";
+    return send_ajax_formdata_request(
+        url,
+        data,
+        callback
+    );
+}
+
 
