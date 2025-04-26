@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\FileController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Mkhodroo\Cities\Controllers\CityController;
 use Mkhodroo\MkhodrooProcessMaker\Models\PMCase;
@@ -98,7 +99,7 @@ class NerkhnamehRegistrationInfoController extends Controller{
 
     public static function inquiry($unique_id){
         return view('NerkhnamehView::inquiry')->with([
-            'data' => self::getByUniqueId($unique_id)
+            'data' => DB::table('wf_entity_nerkhnameh')->where('id', $unique_id)->first()
         ]);
     }
 
