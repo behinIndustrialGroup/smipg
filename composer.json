@@ -53,6 +53,7 @@
             "Modules\\MarketingCard\\": "packages/MarketingCard/",
             "Behin\\SimpleWorkflow\\": "packages/behin-simple-workflow/src/",
             "BehinFileControl\\": "packages/behin-file-control/src/",
+            "Behin\\SimpleWorkflowReport\\": "packages/behin-simple-workflow-report/src/",
             "MyFormBuilder\\": "packages/behin-form-builder/src/"
         },
         "files": [

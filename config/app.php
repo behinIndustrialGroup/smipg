@@ -182,6 +182,7 @@ return [
         Behin\SimpleWorkflow\SimpleWorkflowProvider::class,
         MyFormBuilder\FormBuilderServiceProvider::class,
         BehinFileControl\BehinFileControlProvider::class,
+        Behin\SimpleWorkflowReport\SimpleWorkflowReportProvider::class,
 
         /*
          * Application Service Providers...

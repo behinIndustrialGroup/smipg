@@ -47,6 +47,15 @@ return [
                 'all-inbox' => [ 'fa_name' => 'کارتابل همه', 'route-name' => 'simpleWorkflow.inbox.cases.list' ],
             ]
         ],
+        'workflow-report' => [
+            'icon' => '',
+            'fa_name' => 'گزارشات کارتابل',
+            'submenu' => [
+                // 'list' => [ 'fa_name' => 'لیست', 'route-name' => 'simpleWorkflowReport.index' ],
+                'summary' => [ 'fa_name' => 'خلاصه گزارش', 'route-name' => 'simpleWorkflowReport.summary-report.index' ],
+                'role-form-control' => [ 'fa_name' => 'فرم گزارش نقش ها', 'route-name' => 'simpleWorkflowReport.role.index' ],
+            ]
+        ],
         'agencies' => [
             'icon' => 'fa fa-building',
             'fa_name' => 'اطلاعات مراکز',

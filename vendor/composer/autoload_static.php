@@ -230,6 +230,7 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
         array (
             'Brick\\Math\\' => 11,
             'Behin\\SimpleWorkflow\\' => 21,
+            'Behin\\SimpleWorkflowReport\\' => 27,
             'Behin\\AgencyInfoReport\\' => 23,
             'BehinFileControl\\' => 17,
             'Barryvdh\\TranslationManager\\' => 28,
@@ -736,6 +737,10 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
         array (
             0 => __DIR__ . '/../..' . '/packages/behin-simple-workflow/src',
         ),
+        'Behin\\SimpleWorkflowReport\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/packages/behin-simple-workflow-report/src',
+        ),
         'Behin\\AgencyInfoReport\\' => 
         array (
             0 => __DIR__ . '/../..' . '/packages/behin-agency-info-report/src',
@@ -884,6 +889,18 @@ class ComposerStaticInit4621e637a24c9c98cad7f8b25cffe436
         'Behin\\AgencyInfoReport\\AgencyInfoReportProvider' => __DIR__ . '/../..' . '/packages/behin-agency-info-report/src/AgencyInfoReportProvider.php',
         'Behin\\AgencyInfoReport\\Controllers\\AgencyReportByLastRefererController' => __DIR__ . '/../..' . '/packages/behin-agency-info-report/src/Controllers/AgencyReportByLastRefererController.php',
         'Behin\\AgencyInfoReport\\Controllers\\AgencyReportByProvinceController' => __DIR__ . '/../..' . '/packages/behin-agency-info-report/src/Controllers/AgencyReportByProvinceController.php',
+        'Behin\\SimpleWorkflowReport\\Controllers\\Core\\ExpiredController' => __DIR__ . '/../..' . '/packages/behin-simple-workflow-report/src/Controllers/Core/ExpiredController.php',
+        'Behin\\SimpleWorkflowReport\\Controllers\\Core\\FinReportController' => __DIR__ . '/../..' . '/packages/behin-simple-workflow-report/src/Controllers/Core/FinReportController.php',
+        'Behin\\SimpleWorkflowReport\\Controllers\\Core\\ProcessController' => __DIR__ . '/../..' . '/packages/behin-simple-workflow-report/src/Controllers/Core/ProcessController.php',
+        'Behin\\SimpleWorkflowReport\\Controllers\\Core\\ReportController' => __DIR__ . '/../..' . '/packages/behin-simple-workflow-report/src/Controllers/Core/ReportController.php',
+        'Behin\\SimpleWorkflowReport\\Controllers\\Core\\RoleReportFormController' => __DIR__ . '/../..' . '/packages/behin-simple-workflow-report/src/Controllers/Core/RoleReportFormController.php',
+        'Behin\\SimpleWorkflowReport\\Controllers\\Core\\SummaryReportController' => __DIR__ . '/../..' . '/packages/behin-simple-workflow-report/src/Controllers/Core/SummaryReportController.php',
+        'Behin\\SimpleWorkflowReport\\Controllers\\Core\\TimeoffController' => __DIR__ . '/../..' . '/packages/behin-simple-workflow-report/src/Controllers/Core/TimeoffController.php',
+        'Behin\\SimpleWorkflowReport\\Controllers\\Scripts\\TotalTimeoff' => __DIR__ . '/../..' . '/packages/behin-simple-workflow-report/src/Controllers/Scripts/TotalTimeoff.php',
+        'Behin\\SimpleWorkflowReport\\Controllers\\Scripts\\UserTimeoffs' => __DIR__ . '/../..' . '/packages/behin-simple-workflow-report/src/Controllers/Scripts/UserTimeoffs.php',
+        'Behin\\SimpleWorkflowReport\\Helper\\ReportHelper' => __DIR__ . '/../..' . '/packages/behin-simple-workflow-report/src/Helper/ReportHelper.php',
+        'Behin\\SimpleWorkflowReport\\Models\\Core\\RoleForm' => __DIR__ . '/../..' . '/packages/behin-simple-workflow-report/src/Models/Core/RoleForm.php',
+        'Behin\\SimpleWorkflowReport\\SimpleWorkflowReportProvider' => __DIR__ . '/../..' . '/packages/behin-simple-workflow-report/src/SimpleWorkflowReportProvider.php',
         'Behin\\SimpleWorkflow\\Controllers\\Core\\CaseController' => __DIR__ . '/../..' . '/packages/behin-simple-workflow/src/Controllers/Core/CaseController.php',
         'Behin\\SimpleWorkflow\\Controllers\\Core\\ConditionController' => __DIR__ . '/../..' . '/packages/behin-simple-workflow/src/Controllers/Core/ConditionController.php',
         'Behin\\SimpleWorkflow\\Controllers\\Core\\DoneInboxController' => __DIR__ . '/../..' . '/packages/behin-simple-workflow/src/Controllers/Core/DoneInboxController.php',
