@@ -46,7 +46,7 @@
 
                                             <td>{{ $case->getVariable('fullname') }}</td>
                                             <td>{{ $case->getVariable('national_id') }}</td>
-                                            <td>{{ $case->getVariable('category') }}</td>
+                                            <td>{{ $case->getVariable('catagory') }}</td>
                                             <td>{{ $case->getVariable('guild_number') }}</td>
                                             @php
                                                 $w = '';
