@@ -1,4 +1,4 @@
-@extends('behin-layouts.app')
+@extends('layouts.app')
 
 @section('title')
 گزارش‌های گردش کار

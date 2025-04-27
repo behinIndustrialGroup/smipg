@@ -1,4 +1,4 @@
-@extends('behin-layouts.app')
+@extends('layouts.app')
 
 @php
     $variables = $case->variables();
