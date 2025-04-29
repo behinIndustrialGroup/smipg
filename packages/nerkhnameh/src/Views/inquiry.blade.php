@@ -57,23 +57,3 @@
     </div>
 @endsection
 
-@section('script')
-    <script>
-        var register_box_h = parseInt(($('.register-box').css('height')).split('px')[0])
-        var login_page_h = parseInt(($('.login-page').css('height')).split('px')[0])
-        var footer_h = parseInt(($('footer').css('height')).split('px')[0])
-        $('.register-box').css('height', login_page_h + footer_h + 150 + 'px')
-        initial_view()
-        function goto_page(id){
-            if(id == 1){
-                window.location.href = "{{ route('nerkhnameh.registerForm') }}"
-            }
-            if(id == 2){
-                window.location.href = "{{ route('nerkhnameh.finPayment.uploadForm') }}"
-            }
-            if(id == 3){
-                window.location.href = "{{ route('nerkhnameh.download.downloadForm') }}"
-            }
-        }
-    </script>
-@endsection
