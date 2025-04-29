@@ -6,44 +6,46 @@
 
 @section('content')
     {{-- @include('user-profile.partial-views.user-profile-div') --}}
-    @if (auth()->user()->access('ثبت درخواست صدور نرخنامه'))
+    <div class="row">
+        @if (auth()->user()->access('ثبت درخواست صدور نرخنامه'))
+            <div class="col-sm-3 ">
+                <!-- small box -->
+                <div class="small-box bg-primary">
+                    <div class="inner">
+                        <h3>{{ trans('صدور نرخنامه') }}</h3>
+
+                        <p>{{ trans('ثبت درخواست صدور نرخنامه ') }}</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-bag"></i>
+                    </div>
+                    <a href="{{ route('simpleWorkflow.process.start', [
+                        'taskId' => 'bd2c34d2-d602-4c18-8069-e418221be27f',
+                        'inDraft' => 0,
+                        'force' => 1,
+                        'redirect' => true,
+                    ]) }}"
+                        class="small-box-footer">{{ trans('ثبت') }} <i class="fa fa-arrow-circle-left"></i></a>
+                </div>
+            </div>
+        @endauth
         <div class="col-sm-3 ">
             <!-- small box -->
-            <div class="small-box bg-primary">
+            <div class="small-box bg-info">
                 <div class="inner">
-                    <h3>{{ trans('صدور نرخنامه') }}</h3>
+                    <h3>{{ trans('کارتابل من') }}</h3>
 
-                    <p>{{ trans('ثبت درخواست صدور نرخنامه ') }}</p>
+                    <p>{{ trans('لیست پرونده هایی که باید انجام دهید') }}</p>
                 </div>
                 <div class="icon">
                     <i class="ion ion-bag"></i>
                 </div>
-                <a href="{{ route('simpleWorkflow.process.start', [
-                    'taskId' => 'bd2c34d2-d602-4c18-8069-e418221be27f',
-                    'inDraft' => 0,
-                    'force' => 1,
-                    'redirect' => true,
-                ]) }}"
-                    class="small-box-footer">{{ trans('ثبت') }} <i class="fa fa-arrow-circle-left"></i></a>
+                <a href="{{ route('simpleWorkflow.inbox.index') }}" class="small-box-footer">{{ trans('مشاهده') }}
+                    <i class="fa fa-arrow-circle-left"></i></a>
             </div>
         </div>
-    @endauth
-    <div class="col-sm-3 ">
-        <!-- small box -->
-        <div class="small-box bg-info">
-            <div class="inner">
-                <h3>{{ trans('کارتابل من') }}</h3>
-
-                <p>{{ trans('لیست پرونده هایی که باید انجام دهید') }}</p>
-            </div>
-            <div class="icon">
-                <i class="ion ion-bag"></i>
-            </div>
-            <a href="{{ route('simpleWorkflow.inbox.index') }}" class="small-box-footer">{{ trans('مشاهده') }}
-                <i class="fa fa-arrow-circle-left"></i></a>
-        </div>
-    </div>
-    {{-- <div class="row card m-2 p-2">
+</div>
+{{-- <div class="row card m-2 p-2">
         <div class="col-md-6 col-lg-4 mb-4">
             <div class="card shadow-sm h-100">
                 <div class="card-header bg-warning text-white text-center">
