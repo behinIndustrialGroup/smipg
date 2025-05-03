@@ -36,7 +36,7 @@
                             <td>{{ $row->task->process->name }}</td>
                             <td>{{ $row->task->name }}</td>
                             <td>{{ $row->case->number ?? '' }}</td>
-                            <td>{{ $row->case_name }}</td>
+                            <td>{{ $row->case_name }} {{ $row->case->getVariable('catagory') ?? '' }}</td>
                             <td>
                                 @if ($row->status == 'new')
                                     <span class="badge bg-primary">{{ trans('fields.New') }}</span>
