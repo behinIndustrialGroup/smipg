@@ -24,7 +24,7 @@ Route::name('nerkhnameh.')->prefix('nerkhnameh')->middleware(['web'])->group(fun
         Route::get('', [NerkhnamehRegistrationInfoController::class, 'listForm'])->name('listForm');
         Route::get('list', [NerkhnamehRegistrationInfoController::class, 'list'])->name('list');
         Route::post('get', [NerkhnamehRegistrationInfoController::class, 'getView'])->name('getView');
-        // Route::post('edit', [NerkhnamehRegistrationInfoController::class, 'edit'])->name('edit');
+        Route::post('edit', [NerkhnamehRegistrationInfoController::class, 'edit'])->name('edit');
         // Route::post('delete', [NerkhnamehRegistrationInfoController::class, 'delete'])->name('delete');
         // Route::post('create-nerkhnameh', [TemplateController::class, 'createNerkhnameh'])->name('createNerkhnameh');
     });
