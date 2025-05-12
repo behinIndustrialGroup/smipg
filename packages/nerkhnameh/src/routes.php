@@ -20,14 +20,14 @@ Route::name('nerkhnameh.')->prefix('nerkhnameh')->middleware(['web'])->group(fun
     Route::get('get/1404/{link}', [NerkhnamehRegistrationInfoController::class, 'inquiry'])->name('inquiry');
 
 
-    // Route::name('registration.')->middleware(['auth'])->prefix('registration')->group(function(){
-    //     Route::get('', [NerkhnamehRegistrationInfoController::class, 'listForm'])->name('listForm');
-    //     Route::get('list', [NerkhnamehRegistrationInfoController::class, 'list'])->name('list');
-    //     Route::post('get', [NerkhnamehRegistrationInfoController::class, 'getView'])->name('getView');
-    //     Route::post('edit', [NerkhnamehRegistrationInfoController::class, 'edit'])->name('edit');
-    //     Route::post('delete', [NerkhnamehRegistrationInfoController::class, 'delete'])->name('delete');
-    //     Route::post('create-nerkhnameh', [TemplateController::class, 'createNerkhnameh'])->name('createNerkhnameh');
-    // });
+    Route::name('registration.')->middleware(['auth'])->prefix('registration')->group(function(){
+        Route::get('', [NerkhnamehRegistrationInfoController::class, 'listForm'])->name('listForm');
+        Route::get('list', [NerkhnamehRegistrationInfoController::class, 'list'])->name('list');
+        Route::post('get', [NerkhnamehRegistrationInfoController::class, 'getView'])->name('getView');
+        // Route::post('edit', [NerkhnamehRegistrationInfoController::class, 'edit'])->name('edit');
+        // Route::post('delete', [NerkhnamehRegistrationInfoController::class, 'delete'])->name('delete');
+        // Route::post('create-nerkhnameh', [TemplateController::class, 'createNerkhnameh'])->name('createNerkhnameh');
+    });
 
     // Route::name('finPayment.')->prefix('fin-payment')->group(function(){
     //     Route::get('', [UploadFinPaymentController::class, 'uploadForm'])->name('uploadForm');
