@@ -83,7 +83,7 @@
             "order": [
                 [1, "desc"]
             ],
-            buttons: [{
+            "buttons": [{
                 extend: 'excelHtml5',
                 exportOptions: {
                     columns: ':visible'
