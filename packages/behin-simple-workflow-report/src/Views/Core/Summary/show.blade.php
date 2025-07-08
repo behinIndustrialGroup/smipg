@@ -80,6 +80,7 @@
     <script>
         initial_view();
         $('#draft-list').DataTable({
+            "dom": 'Bfrtip',
             "order": [
                 [1, "desc"]
             ],
