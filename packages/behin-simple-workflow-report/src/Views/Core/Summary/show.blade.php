@@ -17,7 +17,7 @@
                 @include('SimpleWorkflowView::Core.Partial.back-btn')
                 <div class="card">
                     <div class="card-header">لیست پرونده های فرآیند {{ $process->name }}</div>
-                    
+
                     <div class="card-body">
                         <div class="table-responsive">
                             <table class="table table-bordered" id="draft-list">
@@ -41,7 +41,9 @@
                                         <tr>
                                             {{-- <td>{{ $loop->iteration }}</td> --}}
                                             <td class="d-none">{{ $case->id }}</td>
-                                            <td>{{ $case->number }} <a href="{{ route('simpleWorkflowReport.summary-report.edit', [ 'summary_report' => $case->id ]) }}"><i class="fa fa-external-link"></i></a></td>
+                                            <td>{{ $case->number }} <a
+                                                    href="{{ route('simpleWorkflowReport.summary-report.edit', ['summary_report' => $case->id]) }}"><i
+                                                        class="fa fa-external-link"></i></a></td>
                                             <td>{{ $case->creator()?->name }}</td>
 
                                             <td>{{ $case->getVariable('fullname') }}</td>
@@ -58,7 +60,10 @@
                                             @endphp
                                             <td>{!! $w !!}</td>
                                             <td dir="ltr">{{ toJalali($case->created_at)->format('Y-m-d H:i') }}</td>
-                                            <td><a href="{{ route('simpleWorkflowReport.summary-report.edit', [ 'summary_report' => $case->id ]) }}"><button class="btn btn-primary btn-sm">{{ trans('fields.Show More') }}</button></a></td>
+                                            <td><a
+                                                    href="{{ route('simpleWorkflowReport.summary-report.edit', ['summary_report' => $case->id]) }}"><button
+                                                        class="btn btn-primary btn-sm">{{ trans('fields.Show More') }}</button></a>
+                                            </td>
                                         </tr>
                                     @endforeach
                                 </tbody>
@@ -78,6 +83,16 @@
             "order": [
                 [1, "desc"]
             ],
+            buttons: [{
+                extend: 'excelHtml5',
+                exportOptions: {
+                    columns: ':visible'
+                },
+                className: 'btn btn-danger',
+                attr: {
+                    style: 'direction: ltr'
+                }
+            }],
             "language": {
                 "url": "https://cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Persian.json"
             }
