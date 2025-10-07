@@ -28,6 +28,8 @@ use Maatwebsite\Excel\Facades\Excel;
 use Mkhodroo\UserRoles\Middlewares\Access;
 
 Route::name('simpleWorkflowReport.')->prefix('workflow-report')->middleware(['web', 'auth'])->group(function () {
+    Route::get('index', [ReportController::class, 'index'])->name('index');
+    Route::resource('summary-report', SummaryReportController::class);
     Route::get('all-requests/export', [AllRequestsReportController::class, 'export'])->middleware(Access::class. ':گزارش کل درخواست های ثبت شده')->name('all-requests.export');
     Route::get('all-requests/{case_number}', [AllRequestsReportController::class, 'show'])->middleware(Access::class. ':گزارش کل درخواست های ثبت شده')->name('all-requests.show');
     Route::get('all-requests', [AllRequestsReportController::class, 'index'])->middleware(Access::class. ':گزارش کل درخواست های ثبت شده')->name('all-requests.index');
