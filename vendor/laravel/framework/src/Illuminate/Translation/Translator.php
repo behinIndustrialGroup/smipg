@@ -128,7 +128,6 @@ class Translator extends NamespacedItemResolver implements TranslatorContract
      */
     public function get($key, array $replace = [], $locale = null, $fallback = true)
     {
-        Log::info('Translator used');
         $locale = $locale ?: $this->locale;
 
         $s = explode('.', $key);
