@@ -43,48 +43,32 @@
                                             <input type="text" name="case_number" value="{{ $filters['case_number'] ?? '' }}" class="form-control" placeholder="مثال: 1234">
                                         </div>
                                         <div class="col-md-3">
-                                            <label class="form-label">نام</label>
-                                            <input type="text" name="user_firstname" value="{{ $filters['user_firstname'] ?? '' }}" class="form-control">
+                                            <label class="form-label">نام کامل</label>
+                                            <input type="text" name="fullname" value="{{ $filters['fullname'] ?? '' }}" class="form-control">
                                         </div>
                                         <div class="col-md-3">
-                                            <label class="form-label">نام خانوادگی</label>
-                                            <input type="text" name="user_lastname" value="{{ $filters['user_lastname'] ?? '' }}" class="form-control">
+                                            <label class="form-label">شماره موبایل</label>
+                                            <input type="text" name="mobile" value="{{ $filters['mobile'] ?? '' }}" class="form-control">
                                         </div>
                                         <div class="col-md-3">
-                                            <label class="form-label">شناسه قبض برق</label>
-                                            <input type="text" name="electricity_bill_id" value="{{ $filters['electricity_bill_id'] ?? '' }}" class="form-control">
+                                            <label class="form-label">شماره تلفن</label>
+                                            <input type="text" name="tel" value="{{ $filters['tel'] ?? '' }}" class="form-control">
                                         </div>
                                         <div class="col-md-3">
-                                            <label class="form-label">نوع نیروگاه</label>
-                                            <input type="text" name="powerhouse_type" value="{{ $filters['powerhouse_type'] ?? '' }}" class="form-control">
+                                            <label class="form-label">شماره واحد صنفی</label>
+                                            <input type="text" name="guild_number" value="{{ $filters['guild_number'] ?? '' }}" class="form-control">
                                         </div>
                                         <div class="col-md-3">
-                                            <label class="form-label">استان محل نیروگاه</label>
-                                            <input type="text" name="powerhouse_province" value="{{ $filters['powerhouse_province'] ?? '' }}" class="form-control">
+                                            <label class="form-label">نام واحد صنفی</label>
+                                            <input type="text" name="guild_name" value="{{ $filters['guild_name'] ?? '' }}" class="form-control">
                                         </div>
                                         <div class="col-md-3">
-                                            <label class="form-label">ظرفیت درخواستی</label>
-                                            <input type="text" name="requested_capacity_of_powerhouse" value="{{ $filters['requested_capacity_of_powerhouse'] ?? '' }}" class="form-control">
+                                            <label class="form-label">استان محل نصب</label>
+                                            <input type="text" name="city" value="{{ $filters['city'] ?? '' }}" class="form-control">
                                         </div>
                                         <div class="col-md-3">
-                                            <label class="form-label">نتیجه اولین تماس</label>
-                                            <input type="text" name="first_call_result" value="{{ $filters['first_call_result'] ?? '' }}" class="form-control">
-                                        </div>
-                                        <div class="col-md-3">
-                                            <label class="form-label">تمایل به دریافت وام</label>
-                                            <input type="text" name="loan_interest" value="{{ $filters['loan_interest'] ?? '' }}" class="form-control">
-                                        </div>
-                                        <div class="col-md-3">
-                                            <label class="form-label">مبلغ اولیه</label>
-                                            <input type="text" name="initial_amount" value="{{ $filters['initial_amount'] ?? '' }}" class="form-control">
-                                        </div>
-                                        <div class="col-md-3">
-                                            <label class="form-label">امکان‌سنجی</label>
-                                            <input type="text" name="feasibility_study" value="{{ $filters['feasibility_study'] ?? '' }}" class="form-control">
-                                        </div>
-                                        <div class="col-md-3">
-                                            <label class="form-label">نتیجه تماس رابط مالی با متقاضی</label>
-                                            <input type="text" name="fin_interface_call_result" value="{{ $filters['fin_interface_call_result'] ?? '' }}" class="form-control">
+                                            <label class="form-label">نظرات مشتری</label>
+                                            <input type="text" name="customer_info_is_aaproved" value="{{ $filters['customer_info_is_aaproved'] ?? '' }}" class="form-control">
                                         </div>
                                         <div class="col-md-3">
                                             <label class="form-label">آخرین وضعیت درخواست</label>
@@ -112,19 +96,14 @@
                                 <thead class="table-light">
                                 <tr>
                                     <th>شماره پرونده</th>
-                                    <th>نام</th>
-                                    <th>نام خانوادگی</th>
+                                    <th>نام کامل</th>
+                                    <th>شماره موبایل</th>
                                     <th>کدملی</th>
-                                    <th>موبایل</th>
-                                    <th>شناسه قبض برق</th>
-                                    <th>نوع نیروگاه</th>
-                                    <th>استان محل نیروگاه</th>
-                                    <th>ظرفیت درخواستی</th>
-                                    <th>نتیجه اولین تماس</th>
-                                    <th>تمایل به دریافت وام</th>
-                                    <th>مبلغ اولیه</th>
-                                    <th>امکان‌سنجی</th>
-                                    <th>نتیجه تماس رابط مالی با متقاضی</th>
+                                    <th>تلفن</th>
+                                    <th>شماره صنفی</th>
+                                    <th>نام واحد صنفی</th>
+                                    <th>استان محل نصب</th>
+                                    <th>نظرات مشتری</th>
                                     <th>آخرین وضعیت درخواست</th>
                                     <th class="text-center">جزئیات</th>
                                 </tr>
@@ -133,19 +112,14 @@
                                 @forelse($rows as $row)
                                     <tr>
                                         <td>{{ $row->number ?? '---' }}</td>
-                                        <td>{{ $row->user_firstname ?? '---' }}</td>
-                                        <td>{{ $row->user_lastname ?? '---' }}</td>
-                                        <td>{{ $row->user_national_id ?? '---' }}</td>
+                                        <td>{{ $row->fullname ?? '---' }}</td>
                                         <td>{{ $row->mobile ?? '---' }}</td>
-                                        <td dir="ltr">{{ $row->electricity_bill_id ?? '---' }}</td>
-                                        <td>{{ $row->powerhouse_type ?? '---' }}</td>
-                                        <td>{{ $row->powerhouse_place_info_province ?? '---' }}</td>
-                                        <td>{{ $row->requested_capacity_of_powerhouse ?? '---' }}</td>
-                                        <td>{{ $row->first_call_result ?? '---' }}</td>
-                                        <td>{{ $row->loan_interest ?? '---' }}</td>
-                                        <td>{{ $row->initial_amount ?? '---' }}</td>
-                                        <td>{{ $row->feasibility_study ?? '---' }}</td>
-                                        <td>{{ $row->fin_interface_call_result ?? '---' }}</td>
+                                        <td>{{ $row->national_id ?? '---' }}</td>
+                                        <td dir="ltr">{{ $row->tel ?? '---' }}</td>
+                                        <td>{{ $row->guild_number ?? '---' }}</td>
+                                        <td>{{ $row->guild_name ?? '---' }}</td>
+                                        <td>{{ $row->city ?? '---' }}</td>
+                                        <td>{{ $row->customer_info_is_aaproved ?? '---' }}</td>
                                         <td>
                                             @foreach ($row->last_status as $last_status)
                                                 {{ $last_status->task->name ?? '' }}

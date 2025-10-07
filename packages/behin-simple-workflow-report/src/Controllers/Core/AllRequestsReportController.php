@@ -53,22 +53,14 @@ class AllRequestsReportController extends Controller
             ->select(
                 'c.id',
                 'c.number',
-                DB::raw("MAX(CASE WHEN v.key IN ('user-firstname', 'user_firstname') THEN v.value END) as user_firstname"),
+                DB::raw("MAX(CASE WHEN v.key IN ('fullname') THEN v.value END) as fullname"),
                 DB::raw("MAX(CASE WHEN v.key = 'user-lastname' THEN v.value END) as user_lastname"),
-                DB::raw("MAX(CASE WHEN `key` IN ('electricity_bill_id') THEN value END) as electricity_bill_id"),
-                DB::raw("MAX(CASE WHEN `key` IN ('powerhouse_type', 'powerhouse-type') THEN value END) as powerhouse_type"),
-                DB::raw("MAX(CASE WHEN `key` IN ('powerhouse_place_info-id', 'powerhouse_place_info_id') THEN value END) as powerhouse_place_info_id"),
-                DB::raw("MAX(CASE WHEN `key` = 'powerhouse_place_info-province' THEN value END) as powerhouse_place_info_province"),
-                DB::raw("MAX(CASE WHEN `key` IN ('requested_capacity_of_powerhouse', 'requested-capacity-of-powerhouse') THEN value END) as requested_capacity_of_powerhouse"),
-                DB::raw("MAX(CASE WHEN `key` IN ('first_call_result', 'first-call-result') THEN value END) as first_call_result"),
-                DB::raw("MAX(CASE WHEN `key` IN ('loan_interest', 'loan-interest') THEN value END) as loan_interest"),
-                DB::raw("MAX(CASE WHEN `key` IN ('initial_amount', 'initial-amount') THEN value END) as initial_amount"),
-                DB::raw("MAX(CASE WHEN `key` IN ('feasibility_study', 'feasibility-study') THEN value END) as feasibility_study"),
-                DB::raw("MAX(CASE WHEN `key` IN ('mobile', 'user-mobile', 'user_mobile') THEN value END) as mobile"),
-                DB::raw("MAX(CASE WHEN `key` IN ('user-national_id', 'user_national_id', 'national_id') THEN value END) as user_national_id"),
-                DB::raw("MAX(CASE WHEN `key` IN ('powerhouse_place_info-postal_code', 'powerhouse_place_info_postal_code') THEN value END) as powerhouse_place_info_postal_code"),
-                DB::raw("MAX(CASE WHEN `key` IN ('powerhouse_place_info-address', 'powerhouse_place_info_address') THEN value END) as powerhouse_place_info_address"),
-                DB::raw("MAX(CASE WHEN `key` IN ('fin_interface_call_result') THEN value END) as fin_interface_call_result")
+                DB::raw("MAX(CASE WHEN `key` IN ('tel') THEN value END) as tel"),
+                DB::raw("MAX(CASE WHEN `key` IN ('guild_number') THEN value END) as guild_number"),
+                DB::raw("MAX(CASE WHEN `key` IN ('guild_name') THEN value END) as guild_name"),
+                DB::raw("MAX(CASE WHEN `key` = 'catagory' THEN value END) as catagory"),
+                DB::raw("MAX(CASE WHEN `key` IN ('city') THEN value END) as city"),
+                DB::raw("MAX(CASE WHEN `key` IN ('customer_info_is_aaproved') THEN value END) as customer_info_is_aaproved"),
             )
             ->groupBy('c.id', 'c.number');
     }
@@ -85,44 +77,36 @@ class AllRequestsReportController extends Controller
             $query->having('number', 'like', '%' . $filters['case_number'] . '%');
         }
 
-        if (!empty($filters['user_firstname'])) {
-            $query->having('user_firstname', 'like', '%' . $filters['user_firstname'] . '%');
+        if (!empty($filters['fullname'])) {
+            $query->having('fullname', 'like', '%' . $filters['fullname'] . '%');
         }
 
-        if (!empty($filters['user_lastname'])) {
-            $query->having('user_lastname', 'like', '%' . $filters['user_lastname'] . '%');
+        if (!empty($filters['mobile'])) {
+            $query->having('mobile', 'like', '%' . $filters['mobile'] . '%');
         }
 
-        if (!empty($filters['electricity_bill_id'])) {
-            $query->having('electricity_bill_id', 'like', '%' . $filters['electricity_bill_id'] . '%');
+        if (!empty($filters['tel'])) {
+            $query->having('tel', 'like', '%' . $filters['tel'] . '%');
         }
 
-        if (!empty($filters['powerhouse_type'])) {
-            $query->having('powerhouse_type', 'like', '%' . $filters['powerhouse_type'] . '%');
+        if (!empty($filters['guild_number'])) {
+            $query->having('guild_number', 'like', '%' . $filters['guild_number'] . '%');
         }
 
-        if (!empty($filters['requested_capacity_of_powerhouse'])) {
-            $query->having('requested_capacity_of_powerhouse', 'like', '%' . $filters['requested_capacity_of_powerhouse'] . '%');
+        if (!empty($filters['guild_name'])) {
+            $query->having('guild_name', 'like', '%' . $filters['guild_name'] . '%');
         }
 
-        if (!empty($filters['first_call_result'])) {
-            $query->having('first_call_result', 'like', '%' . $filters['first_call_result'] . '%');
+        if (!empty($filters['catagory'])) {
+            $query->having('catagory', 'like', '%' . $filters['catagory'] . '%');
         }
 
-        if (!empty($filters['loan_interest'])) {
-            $query->having('loan_interest', 'like', '%' . $filters['loan_interest'] . '%');
+        if (!empty($filters['city'])) {
+            $query->having('city', 'like', '%' . $filters['city'] . '%');
         }
 
-        if (!empty($filters['initial_amount'])) {
-            $query->having('initial_amount', 'like', '%' . $filters['initial_amount'] . '%');
-        }
-
-        if (!empty($filters['feasibility_study'])) {
-            $query->having('feasibility_study', 'like', '%' . $filters['feasibility_study'] . '%');
-        }
-
-        if (!empty($filters['fin_interface_call_result'])) {
-            $query->having('fin_interface_call_result', 'like', '%' . $filters['fin_interface_call_result'] . '%');
+        if (!empty($filters['customer_info_is_aaproved'])) {
+            $query->having('customer_info_is_aaproved', 'like', '%' . $filters['customer_info_is_aaproved'] . '%');
         }
 
         if (!empty($filters['last_status'])) {
