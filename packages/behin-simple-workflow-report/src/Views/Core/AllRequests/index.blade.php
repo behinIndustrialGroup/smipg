@@ -126,9 +126,9 @@
                                             @endforeach
                                         </td>
                                         <td class="text-center">
-                                            <a href="{{ route('simpleWorkflowReport.all-requests.show', $row->number) }}" class="btn btn-sm btn-outline-primary px-3">
+                                            {{-- <a href="{{ route('simpleWorkflowReport.all-requests.show', $row->number) }}" class="btn btn-sm btn-outline-primary px-3">
                                                 مشاهده جزئیات
-                                            </a>
+                                            </a> --}}
                                         </td>
                                     </tr>
                                 @empty
