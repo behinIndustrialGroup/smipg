@@ -50,7 +50,10 @@ class AllRequestsReportExport implements FromCollection, WithHeadings, WithMappi
             $row['tel'] ?? null,
             $row['guild_number'] ?? null,
             $row['guild_name'] ?? null,
-            $row['city'] ?? null,
+            $row['city'] ?? collect([
+                $row['province_name'] ?? null,
+                $row['city_name'] ?? null,
+            ])->filter()->implode(' - '),
             $row['customer_info_is_aproved'] ?? null,
             $row['last_status'] ?? null,
         ];
