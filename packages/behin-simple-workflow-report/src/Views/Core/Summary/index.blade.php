@@ -41,7 +41,7 @@
                                             <tr>
                                                 <td>گزارش کل درخواست های ثبت شده</td>
                                                 <td>
-                                                    <a href="{{ route('simpleWorkflowReport.all-requests') }}" class="btn btn-primary btn-sm">مشاهده گزارش</a>
+                                                    <a href="{{ route('simpleWorkflowReport.all-requests.index') }}" class="btn btn-primary btn-sm">مشاهده گزارش</a>
                                                 </td>
                                             </tr>
                                         @endif
