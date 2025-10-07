@@ -53,7 +53,7 @@ return [
             'submenu' => [
                 // 'list' => [ 'fa_name' => 'لیست', 'route-name' => 'simpleWorkflowReport.index' ],
                 'summary' => [ 'fa_name' => 'خلاصه گزارش', 'route-name' => 'simpleWorkflowReport.summary-report.index' ],
-                'role-form-control' => [ 'fa_name' => 'فرم گزارش نقش ها', 'route-name' => 'simpleWorkflowReport.role.index' ],
+                // 'role-form-control' => [ 'fa_name' => 'فرم گزارش نقش ها', 'route-name' => 'simpleWorkflowReport.role.index' ],
             ]
         ],
         'agencies' => [
