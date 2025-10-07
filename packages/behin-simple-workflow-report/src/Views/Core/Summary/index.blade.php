@@ -37,6 +37,14 @@
                                             </tr>
                                         @endif
                                     @endforeach
+                                    @if(auth()->user()->access('گزارش کل درخواست های ثبت شده'))
+                                            <tr>
+                                                <td>گزارش کل درخواست های ثبت شده</td>
+                                                <td>
+                                                    <a href="{{ route('simpleWorkflowReport.all-requests') }}" class="btn btn-primary btn-sm">مشاهده گزارش</a>
+                                                </td>
+                                            </tr>
+                                        @endif
                                 </tbody>
                             </table>
                         </div>
