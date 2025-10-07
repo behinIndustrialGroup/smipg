@@ -22,17 +22,14 @@ class AllRequestsReportExport implements FromCollection, WithHeadings, WithMappi
     {
         return [
             'شماره پرونده',
-            'نام',
-            'نام خانوادگی',
-            'شناسه قبض برق',
-            'نوع نیروگاه',
-            'استان محل نیروگاه',
-            'ظرفیت درخواستی',
-            'نتیجه اولین تماس',
-            'سود تسهیلات',
-            'مبلغ اولیه',
-            'امکان‌سنجی',
-            'نتیجه تماس رابط مالی با متقاضی',
+            'نام کامل',
+            'شماره موبایل',
+            'کدملی',
+            'تلفن',
+            'شماره صنفی',
+            'نام واحد صنفی',
+            'استان محل نصب',
+            'اطلاعات متقاضی تایید است',
             'آخرین وضعیت درخواست',
         ];
     }
@@ -47,17 +44,14 @@ class AllRequestsReportExport implements FromCollection, WithHeadings, WithMappi
 
         return [
             $row['case_number'] ?? null,
-            $row['user_firstname'] ?? null,
-            $row['user_lastname'] ?? null,
-            $row['electricity_bill_id'] ?? null,
-            $row['powerhouse_type'] ?? null,
-            $row['powerhouse_place_info_province'] ?? null,
-            $row['requested_capacity_of_powerhouse'] ?? null,
-            $row['first_call_result'] ?? null,
-            $row['loan_interest'] ?? null,
-            $row['initial_amount'] ?? null,
-            $row['feasibility_study'] ?? null,
-            $row['fin_interface_call_result'] ?? null,
+            $row['fullname'] ?? null,
+            $row['mobile'] ?? null,
+            $row['national_id'] ?? null,
+            $row['tel'] ?? null,
+            $row['guild_number'] ?? null,
+            $row['guild_name'] ?? null,
+            $row['city'] ?? null,
+            $row['customer_info_is_aproved'] ?? null,
             $row['last_status'] ?? null,
         ];
     }
