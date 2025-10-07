@@ -51,6 +51,7 @@ class AllRequestsReportController extends Controller
     {
         $caseDataQuery = DB::table('wf_cases as c')
             ->leftJoin('wf_variables as v', 'c.id', '=', 'v.case_id')
+            ->where('c.deleted_at', null)
             ->select(
                 'c.id',
                 'c.number',
