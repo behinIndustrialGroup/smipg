@@ -61,7 +61,7 @@ class AllRequestsReportController extends Controller
                 DB::raw("MAX(CASE WHEN `key` IN ('guild_name') THEN value END) as guild_name"),
                 DB::raw("MAX(CASE WHEN `key` = 'catagory' THEN value END) as catagory"),
                 DB::raw("MAX(CASE WHEN `key` IN ('city') THEN value END) as city"),
-                DB::raw("MAX(CASE WHEN `key` IN ('customer_info_is_aaproved') THEN value END) as customer_info_is_aaproved"),
+                DB::raw("MAX(CASE WHEN `key` IN ('customer_info_is_aproved') THEN value END) as customer_info_is_aproved"),
             )
             ->groupBy('c.id', 'c.number');
     }

@@ -67,8 +67,8 @@
                                             <input type="text" name="city" value="{{ $filters['city'] ?? '' }}" class="form-control">
                                         </div>
                                         <div class="col-md-3">
-                                            <label class="form-label">نظرات مشتری</label>
-                                            <input type="text" name="customer_info_is_aaproved" value="{{ $filters['customer_info_is_aaproved'] ?? '' }}" class="form-control">
+                                            <label class="form-label">اطلاعات متقاضی تایید است</label>
+                                            <input type="text" name="customer_info_is_aproved" value="{{ $filters['customer_info_is_aproved'] ?? '' }}" class="form-control">
                                         </div>
                                         <div class="col-md-3">
                                             <label class="form-label">آخرین وضعیت درخواست</label>
@@ -103,7 +103,7 @@
                                     <th>شماره صنفی</th>
                                     <th>نام واحد صنفی</th>
                                     <th>استان محل نصب</th>
-                                    <th>نظرات مشتری</th>
+                                    <th>اطلاعات متقاضی تایید است</th>
                                     <th>آخرین وضعیت درخواست</th>
                                     <th class="text-center">جزئیات</th>
                                 </tr>
@@ -119,7 +119,7 @@
                                         <td>{{ $row->guild_number ?? '---' }}</td>
                                         <td>{{ $row->guild_name ?? '---' }}</td>
                                         <td>{{ $row->city ?? '---' }}</td>
-                                        <td>{{ $row->customer_info_is_aaproved ?? '---' }}</td>
+                                        <td>{{ $row->customer_info_is_aproved ?? '---' }}</td>
                                         <td>
                                             @foreach ($row->last_status as $last_status)
                                                 {{ $last_status->task->name ?? '' }}
