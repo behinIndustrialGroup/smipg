@@ -114,9 +114,9 @@ class AllRequestsReportController extends Controller
 
         if (!empty($filters['city'])) {
             $query->where(function ($cityQuery) use ($filters) {
-                $cityQuery->where('city_name', 'like', '%' . $filters['city'] . '%')
-                    ->orWhere('province_name', 'like', '%' . $filters['city'] . '%')
-                    ->orWhere('city_id', 'like', '%' . $filters['city'] . '%');
+                $cityQuery->where('city_lookup.city', 'like', '%' . $filters['city'] . '%')
+                    ->orWhere('city_lookup.province', 'like', '%' . $filters['city'] . '%')
+                    ->orWhere('case_data.city_id', 'like', '%' . $filters['city'] . '%');
             });
         }
 
