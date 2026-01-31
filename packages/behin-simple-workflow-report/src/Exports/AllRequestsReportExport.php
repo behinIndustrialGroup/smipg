@@ -44,7 +44,7 @@ class AllRequestsReportExport implements FromCollection, WithHeadings, WithMappi
         }
 
         return [
-            $row['case_created_at'] ?? null,
+            toJalali($row['case_created_at'])->format('Y-m-d') ?? null,
             $row['case_number'] ?? null,
             $row['fullname'] ?? null,
             $row['mobile'] ?? null,
