@@ -54,7 +54,7 @@ class AllRequestsReportController extends Controller
             ->where('c.deleted_at', null)
             ->select(
                 'c.id',
-                'c.number',
+                'c.number as case_number',
                 'c.created_at as case_created_at',
                 DB::raw("MAX(CASE WHEN v.key IN ('fullname') THEN v.value END) as fullname"),
                 DB::raw("MAX(CASE WHEN v.key = 'national_id' THEN v.value END) as national_id"),
