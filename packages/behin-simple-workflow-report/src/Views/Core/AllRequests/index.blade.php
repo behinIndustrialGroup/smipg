@@ -111,6 +111,7 @@
                                 <tbody>
                                 @forelse($rows as $row)
                                     <tr>
+                                        <td>{{ toJalali($row->case_created_at) ?? '---' }}</td>
                                         <td>{{ $row->number ?? '---' }}</td>
                                         <td>{{ $row->fullname ?? '---' }}</td>
                                         <td>{{ $row->mobile ?? '---' }}</td>

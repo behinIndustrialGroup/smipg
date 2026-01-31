@@ -55,6 +55,7 @@ class AllRequestsReportController extends Controller
             ->select(
                 'c.id',
                 'c.number',
+                'c.created_at as case_created_at',
                 DB::raw("MAX(CASE WHEN v.key IN ('fullname') THEN v.value END) as fullname"),
                 DB::raw("MAX(CASE WHEN v.key = 'national_id' THEN v.value END) as national_id"),
                 DB::raw("MAX(CASE WHEN v.key = 'mobile' THEN v.value END) as mobile"),

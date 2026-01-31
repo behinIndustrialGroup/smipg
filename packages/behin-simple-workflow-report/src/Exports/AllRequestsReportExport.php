@@ -21,6 +21,7 @@ class AllRequestsReportExport implements FromCollection, WithHeadings, WithMappi
     public function headings(): array
     {
         return [
+            'تاریخ ثبت',
             'شماره پرونده',
             'نام کامل',
             'شماره موبایل',
@@ -43,6 +44,7 @@ class AllRequestsReportExport implements FromCollection, WithHeadings, WithMappi
         }
 
         return [
+            $row['case_created_at'] ?? null,
             $row['case_number'] ?? null,
             $row['fullname'] ?? null,
             $row['mobile'] ?? null,
