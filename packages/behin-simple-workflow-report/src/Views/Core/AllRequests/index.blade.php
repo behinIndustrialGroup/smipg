@@ -95,6 +95,7 @@
                             <table class="table table-striped table-hover align-middle">
                                 <thead class="table-light">
                                 <tr>
+                                    <th>تاریخ ایجاد</th>
                                     <th>شماره پرونده</th>
                                     <th>نام کامل</th>
                                     <th>شماره موبایل</th>
