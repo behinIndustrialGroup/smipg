@@ -3,7 +3,7 @@
 @section('content')
 <form action="javascript:void(0)" id="excel-form">
     @csrf
-    <input type="text" name="last_row_index" id="" placeholder="شماره ردیف اخرین رکورد جدول قبلی">
+    <input type="text" name="last_row_index" class="form-control" placeholder="شماره ردیف اخرین رکورد جدول قبلی">
     <input type="file" name="file">
     <button onclick="submitForm()">excel upload</button>
 </form>
