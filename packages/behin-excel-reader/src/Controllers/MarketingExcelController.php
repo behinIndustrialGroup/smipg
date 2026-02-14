@@ -18,7 +18,8 @@ use Modules\MarketingCard\App\Http\Controllers\MarketingCardController;
 class MarketingExcelController extends Controller
 {
     protected static $index = 0;
-    public static function returnIndex(){
+    public static function returnIndex()
+    {
         return self::$index;
     }
 
@@ -26,6 +27,40 @@ class MarketingExcelController extends Controller
     {
         return view('ExcelView::Marketing.index');
     }
+
+    public static function requiredHeaders(): array
+    {
+        return [
+            'نام',
+            'نام خانوادگی',
+            'نام پدر',
+            'کد ملی',
+            'تاریخ تولد',
+            'واحد صنفی',
+            'شناسه صنفی',
+            'استان',
+            'شهرستان',
+            'جنسیت',
+            'تلفن ثابت',
+            'موبایل',
+            'کدپستی',
+            'آدرس',
+        ];
+    }
+
+
+    public static function validateExcelHeaders(array $header): array
+    {
+        $required = self::requiredHeaders();
+
+        $missing = array_diff($required, $header);
+
+        return [
+            'status' => empty($missing),
+            'missing' => $missing
+        ];
+    }
+
 
     public static function read(Request $request)
     {
@@ -39,16 +74,26 @@ class MarketingExcelController extends Controller
 
             $header = $xlsx->rows()[0];
             $header = self::headerRenameAndFilter($header);
+            // تست هدر قبل از rename
+            $validation = self::validateExcelHeaders($header);
+
+            if (!$validation['status']) {
+                return response()->json([
+                    'status' => false,
+                    'message' => 'ستون‌های زیر در فایل اکسل وجود ندارند:',
+                    'missing_columns' => $validation['missing']
+                ], 422);
+            }
             $numberOfUpdatedRows = 0;
             $numberOfAddedRows = 0;
             $errorRows = [];
             $insertData = [];
             $index = 0;
-            for ( $index; $index <= count($xlsx->rows()); $index++) {
+            for ($index; $index <= count($xlsx->rows()); $index++) {
                 if ($index == 0) {
                     continue;
                 }
-                $row = $xlsx->rows()[$index-1];
+                $row = $xlsx->rows()[$index - 1];
                 $data = array_combine($header, $row);
 
                 $r = new Request([
