@@ -76,6 +76,7 @@ return [
             'fa_name' => 'کارت بازاریابی',
             'submenu' => [
                 'list' => [ 'fa_name' => 'لیست', 'route-name' => 'marketingcard.index', 'route-url' => '/marketingcard' ],
+                'upload' => [ 'fa_name' => 'آپلود اکسل', 'route-name' => 'marketingCardExcelReader.index', 'route-url' => '' ],
             ]
         ],
         'tickets' => [
