@@ -73,7 +73,6 @@ class MarketingExcelController extends Controller
         if ($xlsx = ExcelReader::parse($file->getPathname())) {
 
             $header = $xlsx->rows()[0];
-            $header = self::headerRenameAndFilter($header);
             // تست هدر قبل از rename
             $validation = self::validateExcelHeaders($header);
 
@@ -84,6 +83,8 @@ class MarketingExcelController extends Controller
                     'missing_columns' => $validation['missing']
                 ], 422);
             }
+            $header = self::headerRenameAndFilter($header);
+
             $numberOfUpdatedRows = 0;
             $numberOfAddedRows = 0;
             $errorRows = [];
