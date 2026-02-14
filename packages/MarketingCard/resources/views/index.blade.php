@@ -9,9 +9,7 @@
             </a>
 </div>
     <div class="card m-2">
-        <div class="row table-responsive">
-            
-
+        <div class="table-responsive">
             <table class="table table-bordered" id="peopleTable">
                 <thead>
                     <tr>
