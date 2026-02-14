@@ -1,10 +1,16 @@
 @extends('marketingcard::layouts.master')
 
 @section('content')
-    <div class="card">
+<div class="card m-2">
+    <a href="{{ route('marketingcard.create') }}"
+                class="btn btn-primary">
+            <i class="fa fa-plus"></i>
+            ایجاد رکورد جدید
+            </a>
+</div>
+    <div class="card m-2">
         <div class="row table-responsive">
-            <a href="{{ route('marketingcard.create') }}"
-                class="btn btn-primary">{{ trans('marketingTrans::msg.create') }}</a>
+            
 
             <table class="table table-bordered" id="peopleTable">
                 <thead>
