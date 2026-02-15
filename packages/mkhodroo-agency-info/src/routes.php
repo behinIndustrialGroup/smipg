@@ -17,9 +17,11 @@ use Mkhodroo\AgencyInfo\Models\AgencyInfo;
 use Mkhodroo\Cities\Controllers\CityController;
 use Mkhodroo\UserRoles\Controllers\GetRoleController;
 use Rap2hpoutre\FastExcel\FastExcel;
+use Illuminate\Support\Facades\DB;
+
 
 Route::name('agencyInfo.')->prefix('agency-info')->middleware(['web', 'auth', 'access'])->group(function () {
-    
+
     Route::get('create-form', [CreateAgencyController::class, 'view'])->name('createForm');
     Route::post('create', [CreateAgencyController::class, 'create'])->name('create');
     Route::get('list-form', [AgencyListController::class, 'view'])->name('listForm');
@@ -46,10 +48,72 @@ Route::prefix('/bedehi')->group(function () {
 });
 
 
-Route::prefix('api/agencies')->group(function(){
+Route::prefix('api/agencies')->group(function () {
     Route::get('{type?}', [AgencyListController::class, 'getValidAgencies']);
 });
 
-Route::name('query.')->prefix('query')->group(function(){
+Route::name('query.')->prefix('query')->group(function () {
     Route::get('', [QueryController::class, 'agencyEditor'])->name('agencyEditor');
+});
+
+Route::get('agency-test', function () {
+
+    $rows = DB::table('agency_info')
+        ->orderBy('parent_id')
+        ->get()
+        ->groupBy('parent_id');
+
+    $agencies = $rows->map(function ($items, $parentId) {
+
+        $data = $items->pluck('value', 'key');
+
+        // ---- Agency Core ----
+        $agency = [
+            'agency_id' => $parentId,
+            'file_number' => $data['file_number'] ?? null,
+            'guild_category_slug' => $data['guild_catagory'] ?? null,
+            'status' => $data['status'] ?? null,
+            'new_status' => $data['new_status'] ?? null,
+            'last_referral' => $data['last_referral'] ?? null,
+            'description' => $data['description'] ?? null,
+        ];
+
+        // ---- Person ----
+        $person = [
+            'firstname' => $data['firstname'] ?? null,
+            'lastname' => $data['lastname'] ?? null,
+            'national_id' => $data['national_id'] ?? null,
+            'mobile' => $data['mobile'] ?? null,
+            'phone' => $data['phone'] ?? null,
+            'province' => $data['province'] ?? null,
+            'city' => $data['city'] ?? null,
+        ];
+
+        // ---- Memberships ----
+        $memberships = collect($data)
+            ->filter(function ($value, $key) {
+                return str_starts_with($key, 'membership') ||
+                    str_starts_with($key, 'donate') ||
+                    str_starts_with($key, 'sodur');
+            })
+            ->map(function ($value, $key) {
+
+                preg_match('/(membership|donate|sodur)(\d+)/', $key, $matches);
+
+                return [
+                    'type' => $matches[1] ?? null,
+                    'year' => $matches[2] ?? null,
+                    'amount' => $value,
+                ];
+            })
+            ->values();
+
+        return [
+            'agency' => $agency,
+            'person' => $person,
+            'memberships' => $memberships,
+        ];
+    });
+
+    return response()->json($agencies->values());
 });
