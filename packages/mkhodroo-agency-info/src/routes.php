@@ -58,9 +58,17 @@ Route::name('query.')->prefix('query')->group(function () {
 
 Route::get('agency-test', function () {
 
+    // فقط 30 parent_id اول
+    $parentIds = DB::table('agency_info')
+        ->select('parent_id')
+        ->distinct()
+        ->limit(30)
+        ->pluck('parent_id');
+
+    // فقط رکوردهای مربوط به همان 30 مرکز
     $rows = DB::table('agency_info')
+        ->whereIn('parent_id', $parentIds)
         ->orderBy('parent_id')
-        ->take(30)
         ->get()
         ->groupBy('parent_id');
 
@@ -90,33 +98,30 @@ Route::get('agency-test', function () {
             'city' => $data['city'] ?? null,
         ];
 
-        // ---- Memberships ----
-        // $memberships = collect($data)
-        //     ->filter(function ($value, $key) {
-        //         return str_starts_with($key, 'membership') ||
-        //             str_starts_with($key, 'donate') ||
-        //             str_starts_with($key, 'sodur');
-        //     })
-        //     ->map(function ($value, $key) {
+        // ---- Payments (decode json) ----
+        $payments = $items
+            ->where('key', 'payment')
+            ->map(function ($row) {
 
-        //         preg_match('/(membership|donate|sodur)(\d+)/', $key, $matches);
+                $value = json_decode($row->value, true);
 
-        //         return [
-        //             'type' => $matches[1] ?? null,
-        //             'year' => $matches[2] ?? null,
-        //             'amount' => $value,
-        //         ];
-        //     })
-        //     ->values();
-
-
+                return [
+                    'title' => $value['title'] ?? null,
+                    'amount' => $value['price'] ?? null,
+                    'type' => $value['type'] ?? null,
+                    'date' => $value['date'] ?? null,
+                    'file' => $value['file'] ?? null,
+                ];
+            })
+            ->values();
 
         return [
             'agency' => $agency,
             'person' => $person,
-            'memberships' => $data['payment'],
+            'payments' => $payments,
         ];
     });
 
     return response()->json($agencies->values());
 });
+
