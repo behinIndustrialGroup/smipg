@@ -91,28 +91,30 @@ Route::get('agency-test', function () {
         ];
 
         // ---- Memberships ----
-        $memberships = collect($data)
-            ->filter(function ($value, $key) {
-                return str_starts_with($key, 'membership') ||
-                    str_starts_with($key, 'donate') ||
-                    str_starts_with($key, 'sodur');
-            })
-            ->map(function ($value, $key) {
+        // $memberships = collect($data)
+        //     ->filter(function ($value, $key) {
+        //         return str_starts_with($key, 'membership') ||
+        //             str_starts_with($key, 'donate') ||
+        //             str_starts_with($key, 'sodur');
+        //     })
+        //     ->map(function ($value, $key) {
 
-                preg_match('/(membership|donate|sodur)(\d+)/', $key, $matches);
+        //         preg_match('/(membership|donate|sodur)(\d+)/', $key, $matches);
 
-                return [
-                    'type' => $matches[1] ?? null,
-                    'year' => $matches[2] ?? null,
-                    'amount' => $value,
-                ];
-            })
-            ->values();
+        //         return [
+        //             'type' => $matches[1] ?? null,
+        //             'year' => $matches[2] ?? null,
+        //             'amount' => $value,
+        //         ];
+        //     })
+        //     ->values();
+
+
 
         return [
             'agency' => $agency,
             'person' => $person,
-            'memberships' => $memberships,
+            'memberships' => $data['payment'],
         ];
     });
 
