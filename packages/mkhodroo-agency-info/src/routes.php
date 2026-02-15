@@ -60,6 +60,7 @@ Route::get('agency-test', function () {
 
     $rows = DB::table('agency_info')
         ->orderBy('parent_id')
+        ->take(30)
         ->get()
         ->groupBy('parent_id');
 
